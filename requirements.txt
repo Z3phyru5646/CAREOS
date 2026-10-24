@@ -1,0 +1,34 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# CARE'OS Module 3 — Genomics-Informed Treatment Recommendation Engine
+# Dependencies
+# ═══════════════════════════════════════════════════════════════════════════
+
+# Core scientific computing
+numpy>=1.23
+pandas>=1.5
+scipy>=1.10
+
+# Machine Learning
+scikit-learn>=1.2
+xgboost>=2.0
+
+# Deep Learning (VAE)
+torch>=2.0
+
+# Hyperparameter Optimization
+optuna>=3.0
+
+# Explainability
+shap>=0.42
+
+# Data Validation
+pydantic>=2.0
+
+# Dashboard
+streamlit>=1.28
+
+# Visualization
+plotly>=5.15
+
+# Utilities
+tqdm>=4.65
