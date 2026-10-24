@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "careos-module2"
+version = "1.0.0"
+description = "CARE'OS Module 2: Ambient AI Scribe with Dual-Tier 2nd-Pass Clinical Verifier"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "CSET343 Team", email = "team@careos.ai"},
+]
+
+dependencies = [
+    # --- Core ML / NLP ---
+    "torch>=2.1.0",
+    "transformers>=4.40.0",
+    "accelerate>=0.28.0",
+    "bitsandbytes>=0.43.0",
+    "peft>=0.10.0",
+    "datasets>=2.18.0",
+    "sentencepiece>=0.2.0",
+    
+    # --- ASR & Audio ---
+    "faster-whisper>=1.0.0",
+    "whisperx>=3.1.0",
+    "pyannote.audio>=3.1.0",
+    "soundfile>=0.12.1",
+    "librosa>=0.10.1",
+    "scipy>=1.12.0",
+    "numba>=0.59.0",
+    
+    # --- Clinical NLP ---
+    "spacy>=3.7.0",
+    "scispacy>=0.5.4",
+    "negspacy>=1.0.4",
+    "medspacy>=1.2.0",
+    
+    # --- Structured Generation ---
+    "pydantic>=2.6.0",
+    "instructor>=1.3.0",
+    
+    # --- NLI Verification ---
+    "sentence-transformers>=2.5.0",
+    
+    # --- Web UI ---
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "jinja2>=3.1.3",
+    "python-multipart>=0.0.9",
+    "websockets>=12.0",
+    "aiofiles>=23.2.1",
+    
+    # --- FHIR Export ---
+    "fhir.resources>=7.1.0",
+    
+    # --- Utilities ---
+    "pyyaml>=6.0.1",
+    "rich>=13.7.0",
+    "loguru>=0.7.2",
+    "tqdm>=4.66.0",
+    "httpx>=0.27.0",
+    "orjson>=3.9.0",
+]
+
+[project.optional-dependencies]
+training = [
+    "trl>=0.8.0",
+    "wandb>=0.16.0",
+    "evaluate>=0.4.0",
+    "rouge-score>=0.1.2",
+    "bert-score>=0.3.13",
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "black>=24.0.0",
+    "ruff>=0.3.0",
+]
+
+[project.scripts]
+careos-m2 = "module2_careos.main:main"
+careos-m2-server = "module2_careos.web_ui.app:run_server"
+careos-m2-train = "training.finetune_soap:main"
+
+[tool.setuptools.packages.find]
+include = ["module2_careos*"]

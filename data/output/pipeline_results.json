@@ -1,0 +1,2930 @@
+{
+  "encounter_id": "d01c1f2e-16d",
+  "patient_id": "anonymous",
+  "processing_time_sec": 1.74,
+  "transcript": {
+    "audio_file": "C:\\Users\\Admin\\Downloads\\AI IN HEALTHCARE\\module2_careos\\data\\sample_audio\\demo.wav",
+    "duration_seconds": 52.0,
+    "sample_rate": 16000,
+    "num_speakers": 2,
+    "utterances": [
+      {
+        "utterance_id": "utt_0000",
+        "speaker_id": "SPEAKER_00",
+        "speaker_role": "Doctor",
+        "text": "Good morning. What brings you in today?",
+        "words": [
+          {
+            "word": "Good",
+            "start": 0.0,
+            "end": 0.3,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "morning.",
+            "start": 0.35,
+            "end": 0.7,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "What",
+            "start": 1.0,
+            "end": 1.2,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "brings",
+            "start": 1.25,
+            "end": 1.5,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "you",
+            "start": 1.55,
+            "end": 1.7,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "in",
+            "start": 1.75,
+            "end": 1.85,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "today?",
+            "start": 1.9,
+            "end": 2.3,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          }
+        ],
+        "start_time": 0.0,
+        "end_time": 3.5,
+        "language": "en",
+        "is_overlap": false
+      },
+      {
+        "utterance_id": "utt_0001",
+        "speaker_id": "SPEAKER_01",
+        "speaker_role": "Patient",
+        "text": "Doctor, I've been having this terrible pain after I eat for about two weeks now. It's like a burning feeling right here in my upper stomach. Sometimes it wakes me up at night too.",
+        "words": [
+          {
+            "word": "Doctor,",
+            "start": 3.8,
+            "end": 4.2,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "I've",
+            "start": 4.3,
+            "end": 4.5,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "been",
+            "start": 4.55,
+            "end": 4.7,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "having",
+            "start": 4.75,
+            "end": 5.0,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "this",
+            "start": 5.05,
+            "end": 5.2,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "terrible",
+            "start": 5.25,
+            "end": 5.6,
+            "confidence": 0.93,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "pain",
+            "start": 5.65,
+            "end": 5.9,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "after",
+            "start": 5.95,
+            "end": 6.2,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "I",
+            "start": 6.25,
+            "end": 6.35,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "eat",
+            "start": 6.4,
+            "end": 6.6,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "for",
+            "start": 6.65,
+            "end": 6.8,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "about",
+            "start": 6.85,
+            "end": 7.1,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "two",
+            "start": 7.15,
+            "end": 7.3,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "weeks",
+            "start": 7.35,
+            "end": 7.6,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "now.",
+            "start": 7.65,
+            "end": 7.85,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "It's",
+            "start": 8.0,
+            "end": 8.2,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "like",
+            "start": 8.25,
+            "end": 8.4,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "a",
+            "start": 8.45,
+            "end": 8.5,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "burning",
+            "start": 8.55,
+            "end": 8.85,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "feeling",
+            "start": 8.9,
+            "end": 9.15,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "right",
+            "start": 9.2,
+            "end": 9.4,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "here",
+            "start": 9.45,
+            "end": 9.6,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "in",
+            "start": 9.65,
+            "end": 9.75,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "my",
+            "start": 9.8,
+            "end": 9.9,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "upper",
+            "start": 9.95,
+            "end": 10.15,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "stomach.",
+            "start": 10.2,
+            "end": 10.6,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "Sometimes",
+            "start": 10.8,
+            "end": 11.2,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "it",
+            "start": 11.25,
+            "end": 11.35,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "wakes",
+            "start": 11.4,
+            "end": 11.6,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "me",
+            "start": 11.65,
+            "end": 11.75,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "up",
+            "start": 11.8,
+            "end": 11.9,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "at",
+            "start": 11.95,
+            "end": 12.05,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "night",
+            "start": 12.1,
+            "end": 12.3,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "too.",
+            "start": 12.35,
+            "end": 12.5,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          }
+        ],
+        "start_time": 3.8,
+        "end_time": 12.5,
+        "language": "en",
+        "is_overlap": false
+      },
+      {
+        "utterance_id": "utt_0002",
+        "speaker_id": "SPEAKER_00",
+        "speaker_role": "Doctor",
+        "text": "I see. Any nausea or vomiting? Have you noticed any blood in your stool?",
+        "words": [
+          {
+            "word": "I",
+            "start": 13.0,
+            "end": 13.1,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "see.",
+            "start": 13.15,
+            "end": 13.4,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "Any",
+            "start": 13.6,
+            "end": 13.8,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "nausea",
+            "start": 13.85,
+            "end": 14.2,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "or",
+            "start": 14.25,
+            "end": 14.35,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "vomiting?",
+            "start": 14.4,
+            "end": 14.8,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "Have",
+            "start": 15.0,
+            "end": 15.15,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "you",
+            "start": 15.2,
+            "end": 15.3,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "noticed",
+            "start": 15.35,
+            "end": 15.65,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "any",
+            "start": 15.7,
+            "end": 15.85,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "blood",
+            "start": 15.9,
+            "end": 16.1,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "in",
+            "start": 16.15,
+            "end": 16.2,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "your",
+            "start": 16.25,
+            "end": 16.35,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "stool?",
+            "start": 16.4,
+            "end": 16.5,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_00"
+          }
+        ],
+        "start_time": 13.0,
+        "end_time": 16.5,
+        "language": "en",
+        "is_overlap": false
+      },
+      {
+        "utterance_id": "utt_0003",
+        "speaker_id": "SPEAKER_01",
+        "speaker_role": "Patient",
+        "text": "No vomiting, but I do feel nauseous sometimes. No blood that I've noticed. I've also been taking ibuprofen almost every day for the past six months for my back pain.",
+        "words": [
+          {
+            "word": "No",
+            "start": 17.0,
+            "end": 17.15,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "vomiting,",
+            "start": 17.2,
+            "end": 17.5,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "but",
+            "start": 17.55,
+            "end": 17.7,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "I",
+            "start": 17.75,
+            "end": 17.85,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "do",
+            "start": 17.9,
+            "end": 18.0,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "feel",
+            "start": 18.05,
+            "end": 18.2,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "nauseous",
+            "start": 18.25,
+            "end": 18.6,
+            "confidence": 0.93,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "sometimes.",
+            "start": 18.65,
+            "end": 19.0,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "No",
+            "start": 19.1,
+            "end": 19.2,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "blood",
+            "start": 19.25,
+            "end": 19.5,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "that",
+            "start": 19.55,
+            "end": 19.7,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "I've",
+            "start": 19.75,
+            "end": 19.9,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "noticed.",
+            "start": 19.95,
+            "end": 20.2,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "I've",
+            "start": 20.3,
+            "end": 20.45,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "also",
+            "start": 20.5,
+            "end": 20.65,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "been",
+            "start": 20.7,
+            "end": 20.85,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "taking",
+            "start": 20.9,
+            "end": 21.1,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "ibuprofen",
+            "start": 21.15,
+            "end": 21.55,
+            "confidence": 0.89,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "almost",
+            "start": 21.6,
+            "end": 21.78,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "every",
+            "start": 21.8,
+            "end": 21.95,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "day",
+            "start": 22.0,
+            "end": 22.15,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          }
+        ],
+        "start_time": 17.0,
+        "end_time": 22.0,
+        "language": "en",
+        "is_overlap": false
+      },
+      {
+        "utterance_id": "utt_0004",
+        "speaker_id": "SPEAKER_00",
+        "speaker_role": "Doctor",
+        "text": "Are you on any other medications? Any allergies?",
+        "words": [
+          {
+            "word": "Are",
+            "start": 22.5,
+            "end": 22.65,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "you",
+            "start": 22.7,
+            "end": 22.8,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "on",
+            "start": 22.85,
+            "end": 22.95,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "any",
+            "start": 23.0,
+            "end": 23.15,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "other",
+            "start": 23.2,
+            "end": 23.4,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "medications?",
+            "start": 23.45,
+            "end": 24.0,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "Any",
+            "start": 24.5,
+            "end": 24.65,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "allergies?",
+            "start": 24.7,
+            "end": 25.1,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_00"
+          }
+        ],
+        "start_time": 22.5,
+        "end_time": 26.0,
+        "language": "en",
+        "is_overlap": false
+      },
+      {
+        "utterance_id": "utt_0005",
+        "speaker_id": "SPEAKER_01",
+        "speaker_role": "Patient",
+        "text": "Yes, I take Zestril for my blood pressure, 10 milligrams daily. And omeprizole 20 milligrams but I ran out last month. No allergies to any medications. I don't smoke but I do have two drinks on weekends.",
+        "words": [
+          {
+            "word": "Yes,",
+            "start": 26.5,
+            "end": 26.7,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "I",
+            "start": 26.75,
+            "end": 26.85,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "take",
+            "start": 26.9,
+            "end": 27.05,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "Zestril",
+            "start": 27.1,
+            "end": 27.5,
+            "confidence": 0.85,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "for",
+            "start": 27.55,
+            "end": 27.65,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "my",
+            "start": 27.7,
+            "end": 27.8,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "blood",
+            "start": 27.85,
+            "end": 28.05,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "pressure,",
+            "start": 28.1,
+            "end": 28.4,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "10",
+            "start": 28.45,
+            "end": 28.6,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "milligrams",
+            "start": 28.65,
+            "end": 29.0,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "daily.",
+            "start": 29.05,
+            "end": 29.3,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "And",
+            "start": 29.4,
+            "end": 29.55,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "omeprizole",
+            "start": 29.6,
+            "end": 30.1,
+            "confidence": 0.72,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "20",
+            "start": 30.15,
+            "end": 30.3,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "milligrams",
+            "start": 30.35,
+            "end": 30.7,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "but",
+            "start": 30.75,
+            "end": 30.9,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "I",
+            "start": 30.95,
+            "end": 31.05,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "ran",
+            "start": 31.1,
+            "end": 31.25,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "out",
+            "start": 31.3,
+            "end": 31.45,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "last",
+            "start": 31.5,
+            "end": 31.65,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_01"
+          },
+          {
+            "word": "month.",
+            "start": 31.7,
+            "end": 31.9,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_01"
+          }
+        ],
+        "start_time": 26.5,
+        "end_time": 32.0,
+        "language": "en",
+        "is_overlap": false
+      },
+      {
+        "utterance_id": "utt_0006",
+        "speaker_id": "SPEAKER_00",
+        "speaker_role": "Doctor",
+        "text": "Let me examine you. Blood pressure is 134 over 82. Heart rate 78, regular. Abdomen is soft but there is tenderness in the epigastric area. No rebound. No guarding. Bowel sounds are normal. I don't feel any masses.",
+        "words": [
+          {
+            "word": "Let",
+            "start": 32.5,
+            "end": 32.65,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "me",
+            "start": 32.7,
+            "end": 32.8,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "examine",
+            "start": 32.85,
+            "end": 33.15,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "you.",
+            "start": 33.2,
+            "end": 33.4,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "Blood",
+            "start": 33.8,
+            "end": 34.0,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "pressure",
+            "start": 34.05,
+            "end": 34.35,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "is",
+            "start": 34.4,
+            "end": 34.5,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "134",
+            "start": 34.55,
+            "end": 34.85,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "over",
+            "start": 34.9,
+            "end": 35.05,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "82.",
+            "start": 35.1,
+            "end": 35.3,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "Heart",
+            "start": 35.5,
+            "end": 35.7,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "rate",
+            "start": 35.75,
+            "end": 35.9,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "78,",
+            "start": 35.95,
+            "end": 36.15,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "regular.",
+            "start": 36.2,
+            "end": 36.5,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "Abdomen",
+            "start": 36.7,
+            "end": 37.0,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "is",
+            "start": 37.05,
+            "end": 37.15,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "soft",
+            "start": 37.2,
+            "end": 37.4,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "but",
+            "start": 37.45,
+            "end": 37.55,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "there",
+            "start": 37.6,
+            "end": 37.75,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "is",
+            "start": 37.8,
+            "end": 37.9,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "tenderness",
+            "start": 37.95,
+            "end": 38.35,
+            "confidence": 0.93,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "in",
+            "start": 38.4,
+            "end": 38.5,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "the",
+            "start": 38.55,
+            "end": 38.65,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "epigastric",
+            "start": 38.7,
+            "end": 39.15,
+            "confidence": 0.88,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "area.",
+            "start": 39.2,
+            "end": 39.4,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "No",
+            "start": 39.5,
+            "end": 39.6,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "rebound.",
+            "start": 39.65,
+            "end": 39.9,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          }
+        ],
+        "start_time": 32.5,
+        "end_time": 40.0,
+        "language": "en",
+        "is_overlap": false
+      },
+      {
+        "utterance_id": "utt_0007",
+        "speaker_id": "SPEAKER_00",
+        "speaker_role": "Doctor",
+        "text": "Based on your symptoms, the burning pain after eating, the nocturnal awakening, and especially the daily ibuprofen use for six months, I'm concerned about peptic ulcer disease or possibly GERD. I'd like to start you back on omeprazole 20 milligrams daily and we need to stop the ibuprofen. Let's also check an H. pylori stool antigen test. I want to see you back in four weeks. If the pain gets worse or you notice any blood, please come to the emergency room right away.",
+        "words": [
+          {
+            "word": "Based",
+            "start": 40.5,
+            "end": 40.7,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "on",
+            "start": 40.75,
+            "end": 40.85,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "your",
+            "start": 40.9,
+            "end": 41.05,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "symptoms,",
+            "start": 41.1,
+            "end": 41.45,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "the",
+            "start": 41.5,
+            "end": 41.6,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "burning",
+            "start": 41.65,
+            "end": 41.9,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "pain",
+            "start": 41.95,
+            "end": 42.15,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "after",
+            "start": 42.2,
+            "end": 42.4,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "eating,",
+            "start": 42.45,
+            "end": 42.7,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "the",
+            "start": 42.75,
+            "end": 42.85,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "nocturnal",
+            "start": 42.9,
+            "end": 43.3,
+            "confidence": 0.91,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "awakening,",
+            "start": 43.35,
+            "end": 43.7,
+            "confidence": 0.93,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "and",
+            "start": 43.75,
+            "end": 43.85,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "especially",
+            "start": 43.9,
+            "end": 44.3,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "the",
+            "start": 44.35,
+            "end": 44.45,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "daily",
+            "start": 44.5,
+            "end": 44.7,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "ibuprofen",
+            "start": 44.75,
+            "end": 45.2,
+            "confidence": 0.9,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "use",
+            "start": 45.25,
+            "end": 45.4,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "for",
+            "start": 45.45,
+            "end": 45.55,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "six",
+            "start": 45.6,
+            "end": 45.75,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "months,",
+            "start": 45.8,
+            "end": 46.05,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "I'm",
+            "start": 46.1,
+            "end": 46.25,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "concerned",
+            "start": 46.3,
+            "end": 46.6,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "about",
+            "start": 46.65,
+            "end": 46.8,
+            "confidence": 0.97,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "peptic",
+            "start": 46.85,
+            "end": 47.15,
+            "confidence": 0.88,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "ulcer",
+            "start": 47.2,
+            "end": 47.45,
+            "confidence": 0.92,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "disease",
+            "start": 47.5,
+            "end": 47.75,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "or",
+            "start": 47.8,
+            "end": 47.9,
+            "confidence": 0.98,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "possibly",
+            "start": 47.95,
+            "end": 48.25,
+            "confidence": 0.95,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "GERD.",
+            "start": 48.3,
+            "end": 48.55,
+            "confidence": 0.91,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "omeprazole",
+            "start": 49.0,
+            "end": 49.45,
+            "confidence": 0.87,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "20",
+            "start": 49.5,
+            "end": 49.65,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "milligrams",
+            "start": 49.7,
+            "end": 50.05,
+            "confidence": 0.94,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "daily",
+            "start": 50.1,
+            "end": 50.3,
+            "confidence": 0.96,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "ibuprofen.",
+            "start": 50.5,
+            "end": 50.9,
+            "confidence": 0.92,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "H.",
+            "start": 51.0,
+            "end": 51.1,
+            "confidence": 0.9,
+            "speaker_id": "SPEAKER_00"
+          },
+          {
+            "word": "pylori",
+            "start": 51.15,
+            "end": 51.45,
+            "confidence": 0.85,
+            "speaker_id": "SPEAKER_00"
+          }
+        ],
+        "start_time": 40.5,
+        "end_time": 52.0,
+        "language": "en",
+        "is_overlap": false
+      }
+    ],
+    "language": "en",
+    "hinglish_mode": false,
+    "created_at": "2026-10-24T19:19:16.170896"
+  },
+  "corrections": [
+    {
+      "original_text": "omeprizole",
+      "corrected_text": "omeprazole",
+      "rxnorm_cui": "C0028978",
+      "rxnorm_name": "omeprazole",
+      "correction_type": "phonetic",
+      "confidence": 0.95,
+      "formulary_match": true
+    }
+  ],
+  "fact_sheet": {
+    "patient_id": "anonymous",
+    "encounter_id": "d01c1f2e-16d",
+    "encounter_date": "2026-10-24T19:19:16.176502",
+    "symptoms": [
+      {
+        "text": "pain after eating",
+        "label": "SYMPTOM",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "affirmed",
+        "umls_cui": "C0232498",
+        "umls_name": "Postprandial pain",
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0001",
+        "confidence": 0.0
+      },
+      {
+        "text": "burning feeling in upper stomach",
+        "label": "SYMPTOM",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "affirmed",
+        "umls_cui": "C0232500",
+        "umls_name": "Epigastric pain",
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0001",
+        "confidence": 0.0
+      },
+      {
+        "text": "nocturnal awakening",
+        "label": "SYMPTOM",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "affirmed",
+        "umls_cui": "C0548070",
+        "umls_name": "Nocturnal awakening",
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0001",
+        "confidence": 0.0
+      },
+      {
+        "text": "nauseous",
+        "label": "SYMPTOM",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "affirmed",
+        "umls_cui": "C0027497",
+        "umls_name": "Nausea",
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0003",
+        "confidence": 0.0
+      },
+      {
+        "text": "back pain",
+        "label": "SYMPTOM",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "affirmed",
+        "umls_cui": "C0004604",
+        "umls_name": "Back pain",
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0003",
+        "confidence": 0.0
+      },
+      {
+        "text": "tenderness in epigastric area",
+        "label": "FINDING",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "affirmed",
+        "umls_cui": "C0232498",
+        "umls_name": "Epigastric tenderness",
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0006",
+        "confidence": 0.0
+      }
+    ],
+    "diagnoses": [],
+    "medications": [
+      {
+        "drug_name": "ibuprofen",
+        "strength": null,
+        "dosage": null,
+        "frequency": "daily",
+        "route": null,
+        "form": null,
+        "duration": "six months",
+        "rxnorm_cui": "C0020740",
+        "negation": "affirmed",
+        "source_utterance_id": "utt_0003"
+      },
+      {
+        "drug_name": "lisinopril",
+        "strength": "10 mg",
+        "dosage": null,
+        "frequency": "daily",
+        "route": null,
+        "form": null,
+        "duration": null,
+        "rxnorm_cui": "C0065374",
+        "negation": "affirmed",
+        "source_utterance_id": "utt_0005"
+      },
+      {
+        "drug_name": "omeprazole",
+        "strength": "20 mg",
+        "dosage": null,
+        "frequency": "daily",
+        "route": null,
+        "form": null,
+        "duration": null,
+        "rxnorm_cui": "C0028978",
+        "negation": "affirmed",
+        "source_utterance_id": "utt_0005"
+      }
+    ],
+    "procedures": [],
+    "lab_results": [],
+    "vitals": [
+      {
+        "text": "Blood pressure 134/82",
+        "label": "VITAL",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "affirmed",
+        "umls_cui": "C0005823",
+        "umls_name": null,
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0006",
+        "confidence": 0.0
+      },
+      {
+        "text": "Heart rate 78",
+        "label": "VITAL",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "affirmed",
+        "umls_cui": "C0018810",
+        "umls_name": null,
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0006",
+        "confidence": 0.0
+      }
+    ],
+    "allergies": [],
+    "social_history": [
+      {
+        "text": "two drinks on weekends",
+        "label": "SOCIAL_HISTORY",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "affirmed",
+        "umls_cui": null,
+        "umls_name": null,
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0005",
+        "confidence": 0.0
+      }
+    ],
+    "family_history": [],
+    "pertinent_negatives": [
+      {
+        "text": "vomiting",
+        "label": "SYMPTOM",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "negated",
+        "umls_cui": "C0042963",
+        "umls_name": "Vomiting",
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0003",
+        "confidence": 0.0
+      },
+      {
+        "text": "blood in stool",
+        "label": "SYMPTOM",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "negated",
+        "umls_cui": "C0018932",
+        "umls_name": "Hematochezia",
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0003",
+        "confidence": 0.0
+      },
+      {
+        "text": "allergies to medications",
+        "label": "ALLERGY",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "negated",
+        "umls_cui": null,
+        "umls_name": null,
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0005",
+        "confidence": 0.0
+      },
+      {
+        "text": "smoking",
+        "label": "SOCIAL_HISTORY",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "negated",
+        "umls_cui": null,
+        "umls_name": null,
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0005",
+        "confidence": 0.0
+      },
+      {
+        "text": "rebound",
+        "label": "FINDING",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "negated",
+        "umls_cui": "C0278092",
+        "umls_name": null,
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0006",
+        "confidence": 0.0
+      },
+      {
+        "text": "guarding",
+        "label": "FINDING",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "negated",
+        "umls_cui": "C0427198",
+        "umls_name": null,
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0006",
+        "confidence": 0.0
+      },
+      {
+        "text": "masses",
+        "label": "FINDING",
+        "start_char": 0,
+        "end_char": 0,
+        "negation": "negated",
+        "umls_cui": null,
+        "umls_name": null,
+        "rxnorm_cui": null,
+        "snomed_code": null,
+        "icd10_code": null,
+        "source_utterance_id": "utt_0006",
+        "confidence": 0.0
+      }
+    ],
+    "chief_complaint": "Epigastric pain after eating for 2 weeks",
+    "chief_complaint_utterance_id": null
+  },
+  "soap_note": {
+    "encounter_id": "d01c1f2e-16d",
+    "patient_id": "anonymous",
+    "subjective": [
+      {
+        "claim_id": "c_1a5a3e41",
+        "soap_section": "S",
+        "claim_text": "Patient presents with a 2-week history of postprandial epigastric pain described as a burning sensation.",
+        "source_utterance_ids": [
+          "utt_0001"
+        ],
+        "audio_start_sec": 3.8,
+        "audio_end_sec": 12.5,
+        "extracted_cuis": [
+          "C0232498",
+          "C0232500"
+        ],
+        "original_lay_text": "terrible pain after I eat... burning feeling in my upper stomach"
+      },
+      {
+        "claim_id": "c_94332de6",
+        "soap_section": "S",
+        "claim_text": "Pain causes nocturnal awakening.",
+        "source_utterance_ids": [
+          "utt_0001"
+        ],
+        "audio_start_sec": 10.8,
+        "audio_end_sec": 12.5,
+        "extracted_cuis": [
+          "C0548070"
+        ],
+        "original_lay_text": "Sometimes it wakes me up at night"
+      },
+      {
+        "claim_id": "c_8001788d",
+        "soap_section": "S",
+        "claim_text": "Patient reports intermittent nausea without emesis.",
+        "source_utterance_ids": [
+          "utt_0003"
+        ],
+        "audio_start_sec": 17.0,
+        "audio_end_sec": 20.2,
+        "extracted_cuis": [
+          "C0027497"
+        ],
+        "original_lay_text": "No vomiting, but I do feel nauseous sometimes"
+      },
+      {
+        "claim_id": "c_c6461678",
+        "soap_section": "S",
+        "claim_text": "Patient denies hematochezia.",
+        "source_utterance_ids": [
+          "utt_0003"
+        ],
+        "audio_start_sec": 19.1,
+        "audio_end_sec": 20.2,
+        "extracted_cuis": [
+          "C0018932"
+        ],
+        "original_lay_text": "No blood that I've noticed"
+      },
+      {
+        "claim_id": "c_2e7ff9d6",
+        "soap_section": "S",
+        "claim_text": "Patient has been taking ibuprofen daily for approximately 6 months for chronic back pain.",
+        "source_utterance_ids": [
+          "utt_0003"
+        ],
+        "audio_start_sec": 20.3,
+        "audio_end_sec": 22.15,
+        "extracted_cuis": [
+          "C0020740",
+          "C0004604"
+        ],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_44586c19",
+        "soap_section": "S",
+        "claim_text": "Current medications include lisinopril 10 mg daily for hypertension.",
+        "source_utterance_ids": [
+          "utt_0005"
+        ],
+        "audio_start_sec": 26.5,
+        "audio_end_sec": 29.3,
+        "extracted_cuis": [
+          "C0065374"
+        ],
+        "original_lay_text": "I take Zestril for my blood pressure, 10 milligrams daily"
+      },
+      {
+        "claim_id": "c_274570b7",
+        "soap_section": "S",
+        "claim_text": "Patient was previously taking omeprazole 20 mg but discontinued approximately 1 month ago.",
+        "source_utterance_ids": [
+          "utt_0005"
+        ],
+        "audio_start_sec": 29.4,
+        "audio_end_sec": 31.9,
+        "extracted_cuis": [
+          "C0028978"
+        ],
+        "original_lay_text": "omeprazole 20 milligrams but I ran out last month"
+      },
+      {
+        "claim_id": "c_43d42be1",
+        "soap_section": "S",
+        "claim_text": "No known drug allergies (NKDA).",
+        "source_utterance_ids": [
+          "utt_0005"
+        ],
+        "audio_start_sec": 31.9,
+        "audio_end_sec": 32.0,
+        "extracted_cuis": [],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_9dcfacaa",
+        "soap_section": "S",
+        "claim_text": "Social history: Non-smoker. Reports moderate alcohol use (2 drinks on weekends).",
+        "source_utterance_ids": [
+          "utt_0005"
+        ],
+        "audio_start_sec": 31.9,
+        "audio_end_sec": 32.0,
+        "extracted_cuis": [],
+        "original_lay_text": null
+      }
+    ],
+    "objective_exam": [
+      {
+        "claim_id": "c_342749ef",
+        "soap_section": "O",
+        "claim_text": "Blood pressure 134/82 mmHg.",
+        "source_utterance_ids": [
+          "utt_0006"
+        ],
+        "audio_start_sec": 33.8,
+        "audio_end_sec": 35.3,
+        "extracted_cuis": [
+          "C0005823"
+        ],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_08621693",
+        "soap_section": "O",
+        "claim_text": "Heart rate 78 bpm, regular rhythm.",
+        "source_utterance_ids": [
+          "utt_0006"
+        ],
+        "audio_start_sec": 35.5,
+        "audio_end_sec": 36.5,
+        "extracted_cuis": [
+          "C0018810"
+        ],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_b03c7c63",
+        "soap_section": "O",
+        "claim_text": "Abdomen soft with epigastric tenderness on palpation.",
+        "source_utterance_ids": [
+          "utt_0006"
+        ],
+        "audio_start_sec": 36.7,
+        "audio_end_sec": 39.4,
+        "extracted_cuis": [
+          "C0232498"
+        ],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_e2012df6",
+        "soap_section": "O",
+        "claim_text": "No rebound tenderness. No guarding.",
+        "source_utterance_ids": [
+          "utt_0006"
+        ],
+        "audio_start_sec": 39.5,
+        "audio_end_sec": 39.9,
+        "extracted_cuis": [
+          "C0278092",
+          "C0427198"
+        ],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_70180f3f",
+        "soap_section": "O",
+        "claim_text": "Bowel sounds normoactive.",
+        "source_utterance_ids": [
+          "utt_0006"
+        ],
+        "audio_start_sec": 39.9,
+        "audio_end_sec": 40.0,
+        "extracted_cuis": [],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_044d86d1",
+        "soap_section": "O",
+        "claim_text": "No palpable abdominal masses.",
+        "source_utterance_ids": [
+          "utt_0006"
+        ],
+        "audio_start_sec": 39.9,
+        "audio_end_sec": 40.0,
+        "extracted_cuis": [],
+        "original_lay_text": null
+      }
+    ],
+    "objective_results": [],
+    "assessment_plan": [
+      {
+        "claim_id": "c_dda7cb79",
+        "soap_section": "A",
+        "claim_text": "Suspected peptic ulcer disease (PUD) / gastroesophageal reflux disease (GERD), likely NSAID-induced given 6-month daily ibuprofen use.",
+        "source_utterance_ids": [
+          "utt_0007"
+        ],
+        "audio_start_sec": 40.5,
+        "audio_end_sec": 48.55,
+        "extracted_cuis": [
+          "C0030920",
+          "C0017168"
+        ],
+        "original_lay_text": "concerned about peptic ulcer disease or possibly GERD"
+      },
+      {
+        "claim_id": "c_0f256206",
+        "soap_section": "P",
+        "claim_text": "Resume omeprazole 20 mg PO daily.",
+        "source_utterance_ids": [
+          "utt_0007"
+        ],
+        "audio_start_sec": 49.0,
+        "audio_end_sec": 50.3,
+        "extracted_cuis": [
+          "C0028978"
+        ],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_a88246da",
+        "soap_section": "P",
+        "claim_text": "Discontinue ibuprofen. Counsel on NSAID gastropathy risk.",
+        "source_utterance_ids": [
+          "utt_0007"
+        ],
+        "audio_start_sec": 50.5,
+        "audio_end_sec": 50.9,
+        "extracted_cuis": [
+          "C0020740"
+        ],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_e01dc72a",
+        "soap_section": "P",
+        "claim_text": "Order H. pylori stool antigen test.",
+        "source_utterance_ids": [
+          "utt_0007"
+        ],
+        "audio_start_sec": 51.0,
+        "audio_end_sec": 51.45,
+        "extracted_cuis": [
+          "C0079488"
+        ],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_b1f504e0",
+        "soap_section": "P",
+        "claim_text": "Follow-up in 4 weeks to reassess symptoms.",
+        "source_utterance_ids": [
+          "utt_0007"
+        ],
+        "audio_start_sec": 51.45,
+        "audio_end_sec": 52.0,
+        "extracted_cuis": [],
+        "original_lay_text": null
+      },
+      {
+        "claim_id": "c_c3823fdc",
+        "soap_section": "P",
+        "claim_text": "Patient instructed to seek emergency care if pain worsens or hematochezia develops.",
+        "source_utterance_ids": [
+          "utt_0007"
+        ],
+        "audio_start_sec": 51.45,
+        "audio_end_sec": 52.0,
+        "extracted_cuis": [
+          "C0018932"
+        ],
+        "original_lay_text": null
+      }
+    ],
+    "generated_by": "MedGemma-27B-Simulated",
+    "generation_temperature": 0.1,
+    "created_at": "2026-10-24T19:19:16.177402"
+  },
+  "verification": {
+    "encounter_id": "d01c1f2e-16d",
+    "claim_results": [
+      {
+        "claim_id": "c_1a5a3e41",
+        "claim_text": "Patient presents with a 2-week history of postprandial epigastric pain described as a burning sensation.",
+        "soap_section": "S",
+        "minicheck_score": 0.1,
+        "minicheck_label": 0,
+        "mednli_label": "contradiction",
+        "mednli_confidence": 0.9,
+        "bidirectional_entailment": 0.1,
+        "verification_tier": "tier_5_contradiction",
+        "verdict": "hallucinated_contradiction",
+        "remediation": "auto_repair",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": null,
+        "polarity_flip_detected": true,
+        "audio_start_sec": 3.8,
+        "audio_end_sec": 12.5
+      },
+      {
+        "claim_id": "c_94332de6",
+        "claim_text": "Pain causes nocturnal awakening.",
+        "soap_section": "S",
+        "minicheck_score": 0.2692307692307692,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.2692307692307692,
+        "verification_tier": "tier_2a_terminology_upgrade",
+        "verdict": "supported_terminology_upgrade",
+        "remediation": "retain_with_tooltip",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [
+          "Terminology: wakes me up at night \u2192 nocturnal awakening"
+        ],
+        "slow_path_reasoning": "**Claim:** Pain causes nocturnal awakening.\n**Facts scanned:** 18 entities across all SOAP sections\n**Terminology Upgrade:** 'wakes me up at night' \u2192 'nocturnal awakening' (valid clinical terminology upgrade)",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 10.8,
+        "audio_end_sec": 12.5
+      },
+      {
+        "claim_id": "c_8001788d",
+        "claim_text": "Patient reports intermittent nausea without emesis.",
+        "soap_section": "S",
+        "minicheck_score": 0.1,
+        "minicheck_label": 0,
+        "mednli_label": "contradiction",
+        "mednli_confidence": 0.9,
+        "bidirectional_entailment": 0.1,
+        "verification_tier": "tier_5_contradiction",
+        "verdict": "hallucinated_contradiction",
+        "remediation": "auto_repair",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": null,
+        "polarity_flip_detected": true,
+        "audio_start_sec": 17.0,
+        "audio_end_sec": 20.2
+      },
+      {
+        "claim_id": "c_c6461678",
+        "claim_text": "Patient denies hematochezia.",
+        "soap_section": "S",
+        "minicheck_score": 0.26865671641791045,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.26865671641791045,
+        "verification_tier": "tier_4_unsupported",
+        "verdict": "hallucinated_unsupported",
+        "remediation": "auto_trim",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Patient denies hematochezia.\n**Facts scanned:** 18 entities across all SOAP sections\n**No supporting evidence found. Marking as unsupported.**",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 19.1,
+        "audio_end_sec": 20.2
+      },
+      {
+        "claim_id": "c_2e7ff9d6",
+        "claim_text": "Patient has been taking ibuprofen daily for approximately 6 months for chronic back pain.",
+        "soap_section": "S",
+        "minicheck_score": 0.1,
+        "minicheck_label": 0,
+        "mednli_label": "contradiction",
+        "mednli_confidence": 0.9,
+        "bidirectional_entailment": 0.1,
+        "verification_tier": "tier_5_contradiction",
+        "verdict": "hallucinated_contradiction",
+        "remediation": "auto_repair",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": null,
+        "polarity_flip_detected": true,
+        "audio_start_sec": 20.3,
+        "audio_end_sec": 22.15
+      },
+      {
+        "claim_id": "c_44586c19",
+        "claim_text": "Current medications include lisinopril 10 mg daily for hypertension.",
+        "soap_section": "S",
+        "minicheck_score": 0.41379310344827586,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.6,
+        "bidirectional_entailment": 0.41379310344827586,
+        "verification_tier": "tier_1_verbatim",
+        "verdict": "supported",
+        "remediation": "retain",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Current medications include lisinopril 10 mg daily for hypertension.\n**Facts scanned:** 18 entities across all SOAP sections\n**Direct Match:** Found in transcript",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 26.5,
+        "audio_end_sec": 29.3
+      },
+      {
+        "claim_id": "c_274570b7",
+        "claim_text": "Patient was previously taking omeprazole 20 mg but discontinued approximately 1 month ago.",
+        "soap_section": "S",
+        "minicheck_score": 0.35802469135802467,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.6,
+        "bidirectional_entailment": 0.35802469135802467,
+        "verification_tier": "tier_1_verbatim",
+        "verdict": "supported",
+        "remediation": "retain",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Patient was previously taking omeprazole 20 mg but discontinued approximately 1 month ago.\n**Facts scanned:** 18 entities across all SOAP sections\n**Direct Match:** Found in transcript",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 29.4,
+        "audio_end_sec": 31.9
+      },
+      {
+        "claim_id": "c_43d42be1",
+        "claim_text": "No known drug allergies (NKDA).",
+        "soap_section": "S",
+        "minicheck_score": 0.4050632911392405,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.6,
+        "bidirectional_entailment": 0.4050632911392405,
+        "verification_tier": "tier_4_unsupported",
+        "verdict": "hallucinated_unsupported",
+        "remediation": "auto_trim",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** No known drug allergies (NKDA).\n**Facts scanned:** 18 entities across all SOAP sections\n**No supporting evidence found. Marking as unsupported.**",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 31.9,
+        "audio_end_sec": 32.0
+      },
+      {
+        "claim_id": "c_9dcfacaa",
+        "claim_text": "Social history: Non-smoker. Reports moderate alcohol use (2 drinks on weekends).",
+        "soap_section": "S",
+        "minicheck_score": 0.1,
+        "minicheck_label": 0,
+        "mednli_label": "contradiction",
+        "mednli_confidence": 0.9,
+        "bidirectional_entailment": 0.1,
+        "verification_tier": "tier_5_contradiction",
+        "verdict": "hallucinated_contradiction",
+        "remediation": "auto_repair",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": null,
+        "polarity_flip_detected": true,
+        "audio_start_sec": 31.9,
+        "audio_end_sec": 32.0
+      },
+      {
+        "claim_id": "c_342749ef",
+        "claim_text": "Blood pressure 134/82 mmHg.",
+        "soap_section": "O",
+        "minicheck_score": 0.21212121212121213,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.21212121212121213,
+        "verification_tier": "tier_1_verbatim",
+        "verdict": "supported",
+        "remediation": "retain",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Blood pressure 134/82 mmHg.\n**Facts scanned:** 18 entities across all SOAP sections\n**Direct Match:** Found in transcript",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 33.8,
+        "audio_end_sec": 35.3
+      },
+      {
+        "claim_id": "c_08621693",
+        "claim_text": "Heart rate 78 bpm, regular rhythm.",
+        "soap_section": "O",
+        "minicheck_score": 0.2830188679245283,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.2830188679245283,
+        "verification_tier": "tier_1_verbatim",
+        "verdict": "supported",
+        "remediation": "retain",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Heart rate 78 bpm, regular rhythm.\n**Facts scanned:** 18 entities across all SOAP sections\n**Direct Match:** Found in transcript",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 35.5,
+        "audio_end_sec": 36.5
+      },
+      {
+        "claim_id": "c_b03c7c63",
+        "claim_text": "Abdomen soft with epigastric tenderness on palpation.",
+        "soap_section": "O",
+        "minicheck_score": 0.26605504587155965,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.26605504587155965,
+        "verification_tier": "tier_4_unsupported",
+        "verdict": "hallucinated_unsupported",
+        "remediation": "auto_trim",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Abdomen soft with epigastric tenderness on palpation.\n**Facts scanned:** 18 entities across all SOAP sections\n**No supporting evidence found. Marking as unsupported.**",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 36.7,
+        "audio_end_sec": 39.4
+      },
+      {
+        "claim_id": "c_e2012df6",
+        "claim_text": "No rebound tenderness. No guarding.",
+        "soap_section": "O",
+        "minicheck_score": 0.2891566265060241,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.2891566265060241,
+        "verification_tier": "tier_4_unsupported",
+        "verdict": "hallucinated_unsupported",
+        "remediation": "auto_trim",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** No rebound tenderness. No guarding.\n**Facts scanned:** 18 entities across all SOAP sections\n**No supporting evidence found. Marking as unsupported.**",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 39.5,
+        "audio_end_sec": 39.9
+      },
+      {
+        "claim_id": "c_70180f3f",
+        "claim_text": "Bowel sounds normoactive.",
+        "soap_section": "O",
+        "minicheck_score": 0.273972602739726,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.273972602739726,
+        "verification_tier": "tier_3_clinical_inference",
+        "verdict": "supported_inference",
+        "remediation": "retain_with_badge",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Bowel sounds normoactive.\n**Facts scanned:** 18 entities across all SOAP sections\n**Clinical Inference:** Standard clinical summary phrase supported by examination findings",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 39.9,
+        "audio_end_sec": 40.0
+      },
+      {
+        "claim_id": "c_044d86d1",
+        "claim_text": "No palpable abdominal masses.",
+        "soap_section": "O",
+        "minicheck_score": 0.2597402597402597,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.2597402597402597,
+        "verification_tier": "tier_3_clinical_inference",
+        "verdict": "supported_inference",
+        "remediation": "retain_with_badge",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** No palpable abdominal masses.\n**Facts scanned:** 18 entities across all SOAP sections\n**Clinical Inference:** Standard clinical summary phrase supported by examination findings",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 39.9,
+        "audio_end_sec": 40.0
+      },
+      {
+        "claim_id": "c_dda7cb79",
+        "claim_text": "Suspected peptic ulcer disease (PUD) / gastroesophageal reflux disease (GERD), likely NSAID-induced given 6-month daily ibuprofen use.",
+        "soap_section": "A",
+        "minicheck_score": 0.24749163879598662,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.24749163879598662,
+        "verification_tier": "tier_1_verbatim",
+        "verdict": "supported",
+        "remediation": "retain",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Suspected peptic ulcer disease (PUD) / gastroesophageal reflux disease (GERD), likely NSAID-induced given 6-month daily ibuprofen use.\n**Facts scanned:** 18 entities across all SOAP sections\n**Direct Match:** Found in transcript",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 40.5,
+        "audio_end_sec": 48.55
+      },
+      {
+        "claim_id": "c_0f256206",
+        "claim_text": "Resume omeprazole 20 mg PO daily.",
+        "soap_section": "P",
+        "minicheck_score": 0.3055555555555556,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.6,
+        "bidirectional_entailment": 0.3055555555555556,
+        "verification_tier": "tier_1_verbatim",
+        "verdict": "supported",
+        "remediation": "retain",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Resume omeprazole 20 mg PO daily.\n**Facts scanned:** 18 entities across all SOAP sections\n**Direct Match:** Found in transcript",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 49.0,
+        "audio_end_sec": 50.3
+      },
+      {
+        "claim_id": "c_a88246da",
+        "claim_text": "Discontinue ibuprofen. Counsel on NSAID gastropathy risk.",
+        "soap_section": "P",
+        "minicheck_score": 0.31007751937984496,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.6,
+        "bidirectional_entailment": 0.31007751937984496,
+        "verification_tier": "tier_2a_terminology_upgrade",
+        "verdict": "supported_terminology_upgrade",
+        "remediation": "retain_with_tooltip",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [
+          "ATC: M01AE01 (Ibuprofen, NSAID)"
+        ],
+        "slow_path_reasoning": "**Claim:** Discontinue ibuprofen. Counsel on NSAID gastropathy risk.\n**Facts scanned:** 18 entities across all SOAP sections\n**Terminology Upgrade:** ibuprofen \u2192 NSAID classification (valid medical terminology)",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 50.5,
+        "audio_end_sec": 50.9
+      },
+      {
+        "claim_id": "c_e01dc72a",
+        "claim_text": "Order H. pylori stool antigen test.",
+        "soap_section": "P",
+        "minicheck_score": 0.35135135135135137,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.6,
+        "bidirectional_entailment": 0.35135135135135137,
+        "verification_tier": "tier_4_unsupported",
+        "verdict": "hallucinated_unsupported",
+        "remediation": "auto_trim",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Order H. pylori stool antigen test.\n**Facts scanned:** 18 entities across all SOAP sections\n**No supporting evidence found. Marking as unsupported.**",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 51.0,
+        "audio_end_sec": 51.45
+      },
+      {
+        "claim_id": "c_b1f504e0",
+        "claim_text": "Follow-up in 4 weeks to reassess symptoms.",
+        "soap_section": "P",
+        "minicheck_score": 0.2962962962962963,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.2962962962962963,
+        "verification_tier": "tier_4_unsupported",
+        "verdict": "hallucinated_unsupported",
+        "remediation": "auto_trim",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Follow-up in 4 weeks to reassess symptoms.\n**Facts scanned:** 18 entities across all SOAP sections\n**No supporting evidence found. Marking as unsupported.**",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 51.45,
+        "audio_end_sec": 52.0
+      },
+      {
+        "claim_id": "c_c3823fdc",
+        "claim_text": "Patient instructed to seek emergency care if pain worsens or hematochezia develops.",
+        "soap_section": "P",
+        "minicheck_score": 0.2903225806451613,
+        "minicheck_label": 0,
+        "mednli_label": "neutral",
+        "mednli_confidence": 0.4,
+        "bidirectional_entailment": 0.2903225806451613,
+        "verification_tier": "tier_4_unsupported",
+        "verdict": "hallucinated_unsupported",
+        "remediation": "auto_trim",
+        "supporting_evidence": [],
+        "matched_transcript_utterance_ids": [],
+        "ontology_matches": [],
+        "slow_path_reasoning": "**Claim:** Patient instructed to seek emergency care if pain worsens or hematochezia develops.\n**Facts scanned:** 18 entities across all SOAP sections\n**No supporting evidence found. Marking as unsupported.**",
+        "polarity_flip_detected": false,
+        "audio_start_sec": 51.45,
+        "audio_end_sec": 52.0
+      }
+    ],
+    "medec_results": [],
+    "total_claims": 21,
+    "tier1_count": 6,
+    "tier2a_count": 2,
+    "tier2b_count": 0,
+    "tier3_count": 2,
+    "tier4_count": 7,
+    "tier5_count": 4,
+    "literal_hallucination_rate": 71.42857142857143,
+    "inference_aware_hallucination_rate": 52.38095238095239,
+    "created_at": "2026-10-24T19:19:16.178900"
+  },
+  "fhir_bundle": {
+    "resourceType": "Bundle",
+    "id": "c3a26d56-5329-46c6-bf4c-f5b542c3c88d",
+    "type": "document",
+    "timestamp": "2026-10-24T19:19:16.202194",
+    "meta": {
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+      ]
+    },
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Patient",
+          "id": "anonymous",
+          "active": true
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Encounter",
+          "id": "d01c1f2e-16d",
+          "status": "finished",
+          "class": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "code": "AMB",
+            "display": "ambulatory"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "period": {
+            "start": "2026-10-24T19:19:16.176502",
+            "end": "2026-10-24T19:19:16.202204"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "0fc77462",
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "Vital Signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "display": "Blood pressure 134/82",
+                "code": "C0005823"
+              }
+            ],
+            "text": "Blood pressure 134/82"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "ad8a3c26",
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                  "code": "vital-signs",
+                  "display": "Vital Signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "display": "Heart rate 78",
+                "code": "C0018810"
+              }
+            ],
+            "text": "Heart rate 78"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Condition",
+          "id": "4a611182",
+          "clinicalStatus": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active"
+              }
+            ]
+          },
+          "code": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "C0232498",
+                "display": "Postprandial pain"
+              }
+            ],
+            "text": "pain after eating"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Condition",
+          "id": "9da25e22",
+          "clinicalStatus": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active"
+              }
+            ]
+          },
+          "code": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "C0232500",
+                "display": "Epigastric pain"
+              }
+            ],
+            "text": "burning feeling in upper stomach"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Condition",
+          "id": "11bf76a0",
+          "clinicalStatus": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active"
+              }
+            ]
+          },
+          "code": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "C0548070",
+                "display": "Nocturnal awakening"
+              }
+            ],
+            "text": "nocturnal awakening"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Condition",
+          "id": "a8c38489",
+          "clinicalStatus": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active"
+              }
+            ]
+          },
+          "code": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "C0027497",
+                "display": "Nausea"
+              }
+            ],
+            "text": "nauseous"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Condition",
+          "id": "4d85725c",
+          "clinicalStatus": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active"
+              }
+            ]
+          },
+          "code": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "C0004604",
+                "display": "Back pain"
+              }
+            ],
+            "text": "back pain"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Condition",
+          "id": "2b77711f",
+          "clinicalStatus": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active"
+              }
+            ]
+          },
+          "code": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "C0232498",
+                "display": "Epigastric tenderness"
+              }
+            ],
+            "text": "tenderness in epigastric area"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "MedicationRequest",
+          "id": "bbcd5dbe",
+          "status": "active",
+          "intent": "order",
+          "medicationCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code": "C0020740",
+                "display": "ibuprofen"
+              }
+            ],
+            "text": "ibuprofen"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          },
+          "dosageInstruction": [
+            {
+              "text": "ibuprofen  daily",
+              "timing": {
+                "code": {
+                  "text": "daily"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "MedicationRequest",
+          "id": "34fecf55",
+          "status": "active",
+          "intent": "order",
+          "medicationCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code": "C0065374",
+                "display": "lisinopril"
+              }
+            ],
+            "text": "lisinopril"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          },
+          "dosageInstruction": [
+            {
+              "text": "lisinopril 10 mg daily",
+              "timing": {
+                "code": {
+                  "text": "daily"
+                }
+              },
+              "doseAndRate": [
+                {
+                  "doseQuantity": {
+                    "value": "10 mg"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "MedicationRequest",
+          "id": "9c203854",
+          "status": "active",
+          "intent": "order",
+          "medicationCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code": "C0028978",
+                "display": "omeprazole"
+              }
+            ],
+            "text": "omeprazole"
+          },
+          "subject": {
+            "reference": "Patient/anonymous"
+          },
+          "encounter": {
+            "reference": "Encounter/d01c1f2e-16d"
+          },
+          "dosageInstruction": [
+            {
+              "text": "omeprazole 20 mg daily",
+              "timing": {
+                "code": {
+                  "text": "daily"
+                }
+              },
+              "doseAndRate": [
+                {
+                  "doseQuantity": {
+                    "value": "20 mg"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "em_coding": {
+    "chief_complaint_present": true,
+    "hpi_elements_count": 9,
+    "ros_documented": true,
+    "medications_documented": true,
+    "allergies_documented": true,
+    "social_history_documented": true,
+    "vitals_documented": true,
+    "exam_findings_count": 6,
+    "assessment_present": true,
+    "plan_present": true,
+    "follow_up_documented": true,
+    "differentials_documented": true,
+    "suggested_em_level": "99215 (High complexity)"
+  },
+  "patient_summary_en": {
+    "encounter_id": "d01c1f2e-16d",
+    "patient_id": "anonymous",
+    "language": "en",
+    "assessment_summary": "Based on your symptoms (stomach pain after eating, burning sensation, and night-time discomfort) along with your regular use of ibuprofen, your doctor suspects you may have a stomach ulcer or acid reflux (GERD). These conditions are treatable with the right medication and lifestyle changes.",
+    "plan_summary": "Your doctor has made the following plan:\n\u2022 Start taking omeprazole 20 mg once daily (this helps reduce stomach acid)\n\u2022 Stop taking ibuprofen (it can irritate your stomach lining)\n\u2022 Get an H. pylori test (a stool test to check for a stomach bacteria)\n\u2022 Come back for a follow-up visit in 4 weeks",
+    "medications_list": [
+      "Omeprazole 20 mg \u2014 Take once daily before breakfast",
+      "Lisinopril 10 mg \u2014 Continue taking daily for blood pressure",
+      "STOP ibuprofen \u2014 Do not take until your doctor says it's safe"
+    ],
+    "red_flag_warnings": [
+      "\ud83d\udea8 Go to the Emergency Room IMMEDIATELY if you experience:",
+      "\u2022 Severe or sudden worsening of stomach pain",
+      "\u2022 Blood in your stool (dark or tarry stools)",
+      "\u2022 Vomiting blood or material that looks like coffee grounds",
+      "\u2022 Feeling faint, dizzy, or extremely weak"
+    ],
+    "follow_up_instructions": "Follow-up visit in 4 weeks.",
+    "teach_back_questions": [
+      "Can you tell me what medication you will start taking?",
+      "What medicine should you STOP taking and why?",
+      "What test will you need to get done?",
+      "When should you come back to see the doctor?",
+      "What warning signs should make you go to the ER?"
+    ],
+    "created_at": "2026-10-24T19:19:16.202331"
+  },
+  "patient_summary_hi": {
+    "encounter_id": "d01c1f2e-16d",
+    "patient_id": "anonymous",
+    "language": "hinglish",
+    "assessment_summary": "Aapke symptoms ke basis par (khana khane ke baad pet mein dard, jalan ka ehsaas, aur raat ko taklif) aur aapke regular ibuprofen use ke saath, aapke doctor ko lagta hai ki aapko stomach ulcer ya acid reflux (GERD) ho sakta hai. Ye conditions sahi dawai aur lifestyle changes se theek ho sakti hain.",
+    "plan_summary": "Aapke doctor ne ye plan banaya hai:\n\u2022 Omeprazole 20 mg roz lena shuru karein (ye stomach acid kam karta hai)\n\u2022 Ibuprofen lena band karein (ye aapke pet ko irritate kar sakta hai)\n\u2022 H. pylori test karwayein (stool test \u2014 pet ke bacteria check karne ke liye)\n\u2022 4 hafton baad follow-up visit ke liye aayein",
+    "medications_list": [
+      "Omeprazole 20 mg \u2014 Roz subah nashte se pehle lein",
+      "Lisinopril 10 mg \u2014 Blood pressure ke liye roz lena jaari rakhein",
+      "Ibuprofen BAND karein \u2014 Jab tak doctor na kahe, mat lein"
+    ],
+    "red_flag_warnings": [
+      "\ud83d\udea8 Emergency Room TURANT jayein agar ye ho:",
+      "\u2022 Pet mein bahut tez ya achanak dard badhna",
+      "\u2022 Stool mein blood (kala ya tar jaisa stool)",
+      "\u2022 Khoon ki ulti ya coffee grounds jaisa material",
+      "\u2022 Behoshi, chakkar, ya bahut zyada kamzori"
+    ],
+    "follow_up_instructions": "Follow-up visit in 4 weeks.",
+    "teach_back_questions": [
+      "Bataiye aap kaun si nayi dawai lena shuru karenge?",
+      "Kaun si dawai BAND karni hai aur kyun?",
+      "Kaun sa test karwana hai?",
+      "Doctor se milne kab aana hai?",
+      "Kaun si warning signs hone par ER jaana chahiye?"
+    ],
+    "created_at": "2026-10-24T19:19:16.202369"
+  },
+  "copilot": {
+    "timestamp": "2026-10-24T19:19:16.171679",
+    "current_soap_phase": "objective",
+    "hypotheses": [
+      {
+        "hypothesis": "Peptic Ulcer Disease (PUD)",
+        "confidence": 0.75,
+        "supporting_symptoms": [],
+        "icd10_code": "K27.9"
+      },
+      {
+        "hypothesis": "Gastroesophageal Reflux Disease (GERD)",
+        "confidence": 0.7,
+        "supporting_symptoms": [],
+        "icd10_code": "K21.0"
+      },
+      {
+        "hypothesis": "Gastritis (NSAID-induced)",
+        "confidence": 0.65,
+        "supporting_symptoms": [],
+        "icd10_code": "K29.6"
+      },
+      {
+        "hypothesis": "Cholelithiasis",
+        "confidence": 0.3,
+        "supporting_symptoms": [
+          "pain"
+        ],
+        "icd10_code": "K80.20"
+      },
+      {
+        "hypothesis": "Pancreatitis",
+        "confidence": 0.2,
+        "supporting_symptoms": [
+          "pain",
+          "back",
+          "nausea"
+        ],
+        "icd10_code": "K85.9"
+      }
+    ],
+    "red_flag_questions": [
+      {
+        "question": "Have you experienced any unintentional weight loss recently?",
+        "rationale": "Unintentional weight loss with epigastric pain raises concern for gastric malignancy",
+        "priority": "high",
+        "related_hypothesis": "Peptic Ulcer Disease (PUD)"
+      },
+      {
+        "question": "Do you have any difficulty swallowing (dysphagia)?",
+        "rationale": "Dysphagia with epigastric symptoms may indicate esophageal pathology or stricture",
+        "priority": "high",
+        "related_hypothesis": "Peptic Ulcer Disease (PUD)"
+      },
+      {
+        "question": "Have you noticed any jaundice (yellowing of eyes or skin)?",
+        "rationale": "Jaundice with epigastric pain raises concern for biliary obstruction or pancreatic pathology",
+        "priority": "high",
+        "related_hypothesis": "Peptic Ulcer Disease (PUD)"
+      },
+      {
+        "question": "Does the pain radiate to your back?",
+        "rationale": "Back radiation of epigastric pain is a red flag for pancreatitis or aortic pathology",
+        "priority": "medium",
+        "related_hypothesis": "Peptic Ulcer Disease (PUD)"
+      },
+      {
+        "question": "Any family history of stomach cancer or H. pylori infection?",
+        "rationale": "Family history guides risk stratification for upper GI pathology",
+        "priority": "medium",
+        "related_hypothesis": "Peptic Ulcer Disease (PUD)"
+      }
+    ],
+    "pertinent_negatives_to_ask": [
+      "Weight loss",
+      "Dysphagia",
+      "Hematemesis",
+      "Melena",
+      "Jaundice"
+    ],
+    "elapsed_duration_sec": 52.0
+  },
+  "cpic_triggers": [
+    {
+      "trigger": {
+        "patient_id": "anonymous",
+        "encounter_id": "d01c1f2e-16d",
+        "rxnorm_cui": "C0028978",
+        "drug_name": "omeprazole",
+        "prescribed_dose": "20 mg daily",
+        "target_genes": [
+          "CYP2C19"
+        ],
+        "therapeutic_class": "Proton Pump Inhibitor",
+        "timestamp": "2026-10-24T19:19:16.177606"
+      },
+      "alert": {
+        "patient_id": "anonymous",
+        "drug_name": "omeprazole",
+        "gene": "CYP2C19",
+        "phenotype": "CYP2C19 metabolizer variants",
+        "risk_level": "moderate",
+        "clinical_action": "Dosing & Interaction Alert: Adjust PPI dosing per CYP2C19 status; warn that clopidogrel cannot be co-administered with omeprazole.",
+        "alternative_drugs": []
+      },
+      "watchlist_entry": {
+        "therapeutic_class": "Proton Pump Inhibitor",
+        "target_genes": [
+          "CYP2C19"
+        ],
+        "high_risk_phenotype": "CYP2C19 metabolizer variants",
+        "clinical_action": "Dosing & Interaction Alert: Adjust PPI dosing per CYP2C19 status; warn that clopidogrel cannot be co-administered with omeprazole.",
+        "risk_level": "moderate"
+      }
+    }
+  ],
+  "telemetry": {
+    "encounter_id": "d01c1f2e-16d",
+    "patient_id": "anonymous",
+    "elapsed_duration_sec": 52.0,
+    "current_soap_phase": "assessment_plan",
+    "active_concept_count": 9,
+    "speaker_overlap_ratio": 0.0,
+    "estimated_remaining_sec": null,
+    "timestamp": "2026-10-24T19:19:16.178796"
+  }
+}
