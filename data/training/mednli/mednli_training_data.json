@@ -1,0 +1,1502 @@
+[
+  {
+    "premise": "Patient reports sore throat for 1 week.",
+    "hypothesis": "The patient has been diagnosed with diabetes.",
+    "label": "neutral"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports blurred vision for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with coronary artery disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports diarrhea for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with heart failure.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports diarrhea for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with diabetes.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports numbness in extremities for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with deep vein thrombosis.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports swelling in legs for 1 week.",
+    "hypothesis": "The patient has been diagnosed with atrial fibrillation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient works night shifts at a factory 5 days per week.",
+    "hypothesis": "The patient has circadian rhythm sleep disorder.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient had COVID-19 infection 6 months ago with mild symptoms.",
+    "hypothesis": "The patient has long COVID syndrome.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports insomnia for 2 days.",
+    "hypothesis": "The patient has been diagnosed with stroke.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient is currently taking metformin for diabetes management.",
+    "hypothesis": "Patient is not on any medications for diabetes.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports itching for 6 months.",
+    "hypothesis": "The patient has been diagnosed with atrial fibrillation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Current medications: omeprazole 20mg before breakfast.",
+    "hypothesis": "Patient is taking omeprazole at a dose of 20mg before breakfast.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient denies nausea.",
+    "hypothesis": "Patient presents with nausea.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has no history of liver cirrhosis.",
+    "hypothesis": "Patient has a well-documented history of liver cirrhosis.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Chest X-ray shows a 2cm nodule in the right upper lobe.",
+    "hypothesis": "The patient has lung cancer.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: losartan 50mg daily.",
+    "hypothesis": "Patient is taking losartan at a dose of 50mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports nausea for 1 year.",
+    "hypothesis": "The patient has been diagnosed with COPD.",
+    "label": "neutral"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "No evidence of atrial fibrillation on imaging.",
+    "hypothesis": "Imaging reveals atrial fibrillation.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Creatinine is 1.8 mg/dL. GFR is estimated at 42 mL/min.",
+    "hypothesis": "The patient will require dialysis within 6 months.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient denies fever, chills, or night sweats.",
+    "hypothesis": "Patient presents with high-grade fever.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient has been taking metformin 500mg twice daily for type 2 diabetes.",
+    "hypothesis": "The patient is on an oral hypoglycemic agent for diabetes management.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports difficulty sleeping for the past 2 weeks.",
+    "hypothesis": "The patient is clinically depressed.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: furosemide 40mg daily.",
+    "hypothesis": "Patient is taking furosemide at a dose of 40mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Throat is red and swollen with tonsillar exudates. Rapid strep test positive.",
+    "hypothesis": "Patient has streptococcal pharyngitis.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient complains of blurred vision. Duration: 1 week.",
+    "hypothesis": "The patient has been experiencing blurred vision for 1 week.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports itching for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with stroke.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports numbness in extremities for 6 months.",
+    "hypothesis": "The patient has been diagnosed with urinary tract infection.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports blurred vision for 6 months.",
+    "hypothesis": "The patient has been diagnosed with heart failure.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient denies swelling in legs.",
+    "hypothesis": "Patient presents with swelling in legs.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient has no history of stroke.",
+    "hypothesis": "Patient has a well-documented history of stroke.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "BMI is 34.5. Waist circumference is 110 cm. Patient reports sedentary lifestyle.",
+    "hypothesis": "Patient is classified as obese with cardiovascular risk factors.",
+    "label": "entailment"
+  },
+  {
+    "premise": "No evidence of hypertension on imaging.",
+    "hypothesis": "Imaging reveals hypertension.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "No evidence of heart failure on imaging.",
+    "hypothesis": "Imaging reveals heart failure.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "ECG shows ST elevation in leads II, III, and aVF.",
+    "hypothesis": "The ECG findings suggest an inferior wall myocardial infarction.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports difficulty swallowing for 6 months.",
+    "hypothesis": "The patient has been diagnosed with deep vein thrombosis.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Abdominal examination is soft, non-tender, with no organomegaly.",
+    "hypothesis": "Patient has acute peritonitis with rebound tenderness.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient is not taking levothyroxine.",
+    "hypothesis": "Patient is currently on levothyroxine therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "No evidence of diabetes on imaging.",
+    "hypothesis": "Imaging reveals diabetes.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports anxiety for 2 weeks.",
+    "hypothesis": "The patient has been diagnosed with pulmonary embolism.",
+    "label": "neutral"
+  },
+  {
+    "premise": "No evidence of pulmonary embolism on imaging.",
+    "hypothesis": "Imaging reveals pulmonary embolism.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient denies rash.",
+    "hypothesis": "Patient presents with rash.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports itching for 2 days.",
+    "hypothesis": "The patient has been diagnosed with peptic ulcer disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports nausea for 1 week.",
+    "hypothesis": "The patient has been diagnosed with peptic ulcer disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports palpitations for 1 month.",
+    "hypothesis": "The patient has been diagnosed with atrial fibrillation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports fatigue for 6 months.",
+    "hypothesis": "The patient has been diagnosed with stroke.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient is a lifelong non-smoker. Denies alcohol or recreational drug use.",
+    "hypothesis": "Patient has a 20 pack-year smoking history.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient has no history of COPD.",
+    "hypothesis": "Patient has a well-documented history of COPD.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Current medications: furosemide 40mg daily.",
+    "hypothesis": "Patient is taking furosemide at a dose of 40mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports sore throat for 6 months.",
+    "hypothesis": "The patient has been diagnosed with urinary tract infection.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: amoxicillin 500mg three times daily.",
+    "hypothesis": "Patient is taking amoxicillin at a dose of 500mg three times daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Blood pressure is 180/110 mmHg. Patient has headache and blurred vision.",
+    "hypothesis": "Patient presents with hypertensive urgency.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports urinary frequency for 2 weeks.",
+    "hypothesis": "The patient has been diagnosed with liver cirrhosis.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports rash for 1 week.",
+    "hypothesis": "The patient has been diagnosed with atrial fibrillation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports vomiting for 1 week.",
+    "hypothesis": "The patient has been diagnosed with peptic ulcer disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient is not taking levothyroxine.",
+    "hypothesis": "Patient is currently on levothyroxine therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient complains of chest pain. Duration: 3 weeks.",
+    "hypothesis": "The patient has been experiencing chest pain for 3 weeks.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports rash for 2 days.",
+    "hypothesis": "The patient has been diagnosed with urinary tract infection.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Chest X-ray is clear. No infiltrates, effusions, or masses identified.",
+    "hypothesis": "Chest X-ray reveals bilateral pneumonia.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient complains of headache. Duration: 1 year.",
+    "hypothesis": "The patient has been experiencing headache for 1 year.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports occasional headaches relieved by acetaminophen.",
+    "hypothesis": "The patient has a brain tumor.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient has no history of chronic kidney disease.",
+    "hypothesis": "Patient has a well-documented history of chronic kidney disease.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports headache for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with hypertension.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports nausea for 2 weeks.",
+    "hypothesis": "The patient has been diagnosed with stroke.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports joint pain for 1 year.",
+    "hypothesis": "The patient has been diagnosed with heart failure.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports urinary frequency for 2 days.",
+    "hypothesis": "The patient has been diagnosed with pneumonia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: prednisone 10mg daily.",
+    "hypothesis": "Patient is taking prednisone at a dose of 10mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Hemoglobin is 7.2 g/dL. MCV is 68 fL. Ferritin is 8 ng/mL.",
+    "hypothesis": "The patient has iron deficiency anemia.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports palpitations for 1 year.",
+    "hypothesis": "The patient has been diagnosed with pneumonia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports blurred vision for 2 days.",
+    "hypothesis": "The patient has been diagnosed with peptic ulcer disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient complains of burning epigastric pain that worsens after meals and is relieved by antacids.",
+    "hypothesis": "Patient has symptoms suggestive of peptic ulcer disease or GERD.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports itching for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with pneumonia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports palpitations for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with atrial fibrillation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient denies vomiting.",
+    "hypothesis": "Patient presents with vomiting.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient denies nausea.",
+    "hypothesis": "Patient presents with nausea.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports diarrhea for 2 days.",
+    "hypothesis": "The patient has been diagnosed with stroke.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports itching for 2 weeks.",
+    "hypothesis": "The patient has been diagnosed with COPD.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient complains of diarrhea. Duration: 2 days.",
+    "hypothesis": "The patient has been experiencing diarrhea for 2 days.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports difficulty swallowing for 1 year.",
+    "hypothesis": "The patient has been diagnosed with atrial fibrillation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient is not taking metoprolol.",
+    "hypothesis": "Patient is currently on metoprolol therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Blood pressure is 118/72 mmHg. All vitals within normal limits.",
+    "hypothesis": "Patient is in hypertensive crisis.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports weight loss for 1 year.",
+    "hypothesis": "The patient has been diagnosed with chronic kidney disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient denies any abdominal pain or discomfort.",
+    "hypothesis": "Patient reports severe epigastric pain rated 8 out of 10.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports rash for 1 month.",
+    "hypothesis": "The patient has been diagnosed with coronary artery disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has no history of chronic kidney disease.",
+    "hypothesis": "Patient has a well-documented history of chronic kidney disease.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports anxiety for 1 week.",
+    "hypothesis": "The patient has been diagnosed with hypertension.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Thyroid function tests are within normal limits. TSH is 2.1 mIU/L.",
+    "hypothesis": "The patient has hyperthyroidism.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports insomnia for 2 days.",
+    "hypothesis": "The patient has been diagnosed with heart failure.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Mother had breast cancer at age 48.",
+    "hypothesis": "The patient carries the BRCA1 mutation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Complete blood count is within normal limits. WBC is 7,200/mcL.",
+    "hypothesis": "The patient has leukocytosis indicating acute infection.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports dizziness for 1 month.",
+    "hypothesis": "The patient has been diagnosed with urinary tract infection.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: furosemide 40mg daily.",
+    "hypothesis": "Patient is taking furosemide at a dose of 40mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient takes atorvastatin 40mg daily.",
+    "hypothesis": "Patient has a history of myocardial infarction.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: aspirin 81mg daily.",
+    "hypothesis": "Patient is taking aspirin at a dose of 81mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports itching for 1 week.",
+    "hypothesis": "The patient has been diagnosed with peptic ulcer disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "No evidence of peptic ulcer disease on imaging.",
+    "hypothesis": "Imaging reveals peptic ulcer disease.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient is a construction worker who lifts heavy objects regularly.",
+    "hypothesis": "The patient has occupational-related musculoskeletal injuries.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: furosemide 40mg daily.",
+    "hypothesis": "Patient is taking furosemide at a dose of 40mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports diarrhea for 1 month.",
+    "hypothesis": "The patient has been diagnosed with stroke.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient has no history of urinary tract infection.",
+    "hypothesis": "Patient has a well-documented history of urinary tract infection.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Auscultation reveals bilateral basal crackles. SpO2 is 88% on room air.",
+    "hypothesis": "Patient shows signs of pulmonary edema or respiratory compromise.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Respiratory rate is 14 breaths per minute. Lungs are clear to auscultation.",
+    "hypothesis": "Patient is in acute respiratory distress.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Blood pressure is 135/85 mmHg on today's visit.",
+    "hypothesis": "The patient needs to start antihypertensive medication.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient is a 65-year-old male smoker with chronic cough and sputum production for 3 years.",
+    "hypothesis": "The patient likely has chronic obstructive pulmonary disease.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports rash for 1 week.",
+    "hypothesis": "The patient has been diagnosed with peptic ulcer disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient was prescribed lisinopril 10mg daily for blood pressure control.",
+    "hypothesis": "The patient is taking an ACE inhibitor for hypertension.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports insomnia for 2 days.",
+    "hypothesis": "The patient has been diagnosed with coronary artery disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports weight loss for 1 month.",
+    "hypothesis": "The patient has been diagnosed with hypertension.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient complains of insomnia. Duration: 2 days.",
+    "hypothesis": "The patient has been experiencing insomnia for 2 days.",
+    "label": "entailment"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports joint pain for 1 week.",
+    "hypothesis": "The patient has been diagnosed with pneumonia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports fever for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with COPD.",
+    "label": "neutral"
+  },
+  {
+    "premise": "The patient exercises 3 times per week and follows a Mediterranean diet.",
+    "hypothesis": "The patient's cholesterol levels are normal.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports vomiting for 3 months.",
+    "hypothesis": "The patient has been diagnosed with coronary artery disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports fatigue for 1 month.",
+    "hypothesis": "The patient has been diagnosed with liver cirrhosis.",
+    "label": "neutral"
+  },
+  {
+    "premise": "No evidence of peptic ulcer disease on imaging.",
+    "hypothesis": "Imaging reveals peptic ulcer disease.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient has no known drug allergies.",
+    "hypothesis": "Patient is allergic to penicillin.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports diarrhea for 1 week.",
+    "hypothesis": "The patient has been diagnosed with atrial fibrillation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient drinks 2 cups of coffee daily.",
+    "hypothesis": "Caffeine is contributing to the patient's insomnia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports itching for 2 days.",
+    "hypothesis": "The patient has been diagnosed with peptic ulcer disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "No evidence of coronary artery disease on imaging.",
+    "hypothesis": "Imaging reveals coronary artery disease.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports diarrhea for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with stroke.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient walked into the clinic independently with steady gait.",
+    "hypothesis": "Patient is non-ambulatory and wheelchair-bound.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient complains of fatigue. Duration: 3 weeks.",
+    "hypothesis": "The patient has been experiencing fatigue for 3 weeks.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient denies swelling in legs.",
+    "hypothesis": "Patient presents with swelling in legs.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient is not taking clopidogrel.",
+    "hypothesis": "Patient is currently on clopidogrel therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports palpitations for 2 days.",
+    "hypothesis": "The patient has been diagnosed with pneumonia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: prednisone 10mg daily.",
+    "hypothesis": "Patient is taking prednisone at a dose of 10mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports excellent appetite and has gained 3 kg in the past month.",
+    "hypothesis": "Patient has significant anorexia and unintentional weight loss.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports swelling in legs for 6 months.",
+    "hypothesis": "The patient has been diagnosed with urinary tract infection.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports swelling in legs for 1 year.",
+    "hypothesis": "The patient has been diagnosed with atrial fibrillation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient denies dizziness.",
+    "hypothesis": "Patient presents with dizziness.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient complains of vomiting. Duration: 2 weeks.",
+    "hypothesis": "The patient has been experiencing vomiting for 2 weeks.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports rash for 3 months.",
+    "hypothesis": "The patient has been diagnosed with urinary tract infection.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports chest pain radiating to the left arm with diaphoresis.",
+    "hypothesis": "The patient is experiencing symptoms consistent with acute coronary syndrome.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient denies headache.",
+    "hypothesis": "Patient presents with headache.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "TSH is 12.5 mIU/L. Free T4 is 0.4 ng/dL. Patient reports fatigue and weight gain.",
+    "hypothesis": "Lab results indicate primary hypothyroidism.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports shortness of breath for 6 months.",
+    "hypothesis": "The patient has been diagnosed with COPD.",
+    "label": "neutral"
+  },
+  {
+    "premise": "HbA1c is 5.4%. Fasting glucose is 92 mg/dL.",
+    "hypothesis": "Patient has uncontrolled diabetes mellitus.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Current medications: levothyroxine 75mcg every morning.",
+    "hypothesis": "Patient is taking levothyroxine at a dose of 75mcg every morning.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient denies any chest pain, shortness of breath, or palpitations.",
+    "hypothesis": "Patient presents with acute chest pain.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient has a history of asthma since childhood.",
+    "hypothesis": "The patient may require intubation during surgery.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient is not taking atorvastatin.",
+    "hypothesis": "Patient is currently on atorvastatin therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient denies headache, dizziness, or visual disturbances.",
+    "hypothesis": "Patient has severe migraine with visual aura.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "ECG shows normal sinus rhythm with no ST changes.",
+    "hypothesis": "ECG reveals atrial fibrillation with rapid ventricular response.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient has diabetes mellitus type 2 diagnosed 5 years ago.",
+    "hypothesis": "The patient has diabetic retinopathy.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient complains of rash. Duration: 2 weeks.",
+    "hypothesis": "The patient has been experiencing rash for 2 weeks.",
+    "label": "entailment"
+  },
+  {
+    "premise": "The patient takes Zestril 20mg every morning for blood pressure.",
+    "hypothesis": "The patient is on lisinopril therapy.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports fatigue for 3 months.",
+    "hypothesis": "The patient has been diagnosed with chronic kidney disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "No evidence of peptic ulcer disease on imaging.",
+    "hypothesis": "Imaging reveals peptic ulcer disease.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Current medications: lisinopril 10mg daily.",
+    "hypothesis": "Patient is taking lisinopril at a dose of 10mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient is not taking warfarin.",
+    "hypothesis": "Patient is currently on warfarin therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Current medications: prednisone 10mg daily.",
+    "hypothesis": "Patient is taking prednisone at a dose of 10mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has no history of heart failure.",
+    "hypothesis": "Patient has a well-documented history of heart failure.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports vomiting for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with atrial fibrillation.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient denies anxiety.",
+    "hypothesis": "Patient presents with anxiety.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "No evidence of pulmonary embolism on imaging.",
+    "hypothesis": "Imaging reveals pulmonary embolism.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "No evidence of hypertension on imaging.",
+    "hypothesis": "Imaging reveals hypertension.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has been symptom-free for the past 3 months.",
+    "hypothesis": "Patient's condition has been worsening progressively.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports numbness in extremities for 2 days.",
+    "hypothesis": "The patient has been diagnosed with pneumonia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "No evidence of pneumonia on imaging.",
+    "hypothesis": "Imaging reveals pneumonia.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports chest pain for 3 months.",
+    "hypothesis": "The patient has been diagnosed with chronic kidney disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports urinary frequency for 2 weeks.",
+    "hypothesis": "The patient has been diagnosed with hypertension.",
+    "label": "neutral"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Current medications: levothyroxine 75mcg every morning.",
+    "hypothesis": "Patient is taking levothyroxine at a dose of 75mcg every morning.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has no history of diabetes.",
+    "hypothesis": "Patient has a well-documented history of diabetes.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient had an appendectomy at age 12.",
+    "hypothesis": "The patient has adhesive bowel obstruction.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient complains of numbness in extremities. Duration: 6 months.",
+    "hypothesis": "The patient has been experiencing numbness in extremities for 6 months.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient is a 45-year-old female presenting with fatigue.",
+    "hypothesis": "The patient likely has iron deficiency anemia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports fatigue for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with pneumonia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has no history of peptic ulcer disease.",
+    "hypothesis": "Patient has a well-documented history of peptic ulcer disease.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports abdominal pain for 1 month.",
+    "hypothesis": "The patient has been diagnosed with chronic kidney disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient is taking omeprazole 20mg daily for acid reflux.",
+    "hypothesis": "The patient is at risk for C. difficile infection.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: levothyroxine 75mcg every morning.",
+    "hypothesis": "Patient is taking levothyroxine at a dose of 75mcg every morning.",
+    "label": "entailment"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient is not taking gabapentin.",
+    "hypothesis": "Patient is currently on gabapentin therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has pain in the right lower quadrant. McBurney point tenderness present.",
+    "hypothesis": "Clinical findings are consistent with acute appendicitis.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient complains of headache. Duration: 6 months.",
+    "hypothesis": "The patient has been experiencing headache for 6 months.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient complains of urinary frequency. Duration: 1 month.",
+    "hypothesis": "The patient has been experiencing urinary frequency for 1 month.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports nausea, vomiting, and watery diarrhea for 2 days. No blood in stool.",
+    "hypothesis": "Patient has acute gastroenteritis.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient is currently taking warfarin for atrial fibrillation.",
+    "hypothesis": "The patient has had a prior stroke.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient has no history of pulmonary embolism.",
+    "hypothesis": "Patient has a well-documented history of pulmonary embolism.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient is not taking sertraline.",
+    "hypothesis": "Patient is currently on sertraline therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient is not taking amoxicillin.",
+    "hypothesis": "Patient is currently on amoxicillin therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient has no history of deep vein thrombosis.",
+    "hypothesis": "Patient has a well-documented history of deep vein thrombosis.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient complains of difficulty swallowing. Duration: 3 weeks.",
+    "hypothesis": "The patient has been experiencing difficulty swallowing for 3 weeks.",
+    "label": "entailment"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports abdominal pain for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with COPD.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Vitals: BP 130/85, HR 78 bpm, Temp 37.2C.",
+    "hypothesis": "Blood pressure is 130/85, heart rate 78 bpm, temperature 37.2C.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports chest pain for 6 months.",
+    "hypothesis": "The patient has been diagnosed with coronary artery disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Fasting blood glucose is 250 mg/dL. HbA1c is 9.2%.",
+    "hypothesis": "The patient has poorly controlled diabetes mellitus.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient is not taking atorvastatin.",
+    "hypothesis": "Patient is currently on atorvastatin therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Family history significant for colon cancer in father at age 55.",
+    "hypothesis": "The patient will develop colon cancer.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports nausea for 1 week.",
+    "hypothesis": "The patient has been diagnosed with diabetes.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Current medications: atorvastatin 20mg at bedtime.",
+    "hypothesis": "Patient is taking atorvastatin at a dose of 20mg at bedtime.",
+    "label": "entailment"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports intermittent lower back pain for 6 months.",
+    "hypothesis": "Patient has a herniated lumbar disc.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient denies vomiting.",
+    "hypothesis": "Patient presents with vomiting.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports itching for 1 year.",
+    "hypothesis": "The patient has been diagnosed with diabetes.",
+    "label": "neutral"
+  },
+  {
+    "premise": "No evidence of liver cirrhosis on imaging.",
+    "hypothesis": "Imaging reveals liver cirrhosis.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient states that his knee has been swollen and warm for 3 days after a fall.",
+    "hypothesis": "The patient has knee joint effusion following trauma.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient denies chest pain but reports shortness of breath on exertion.",
+    "hypothesis": "The patient has exercise-induced dyspnea.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient is not taking furosemide.",
+    "hypothesis": "Patient is currently on furosemide therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient is not taking lisinopril.",
+    "hypothesis": "Patient is currently on lisinopril therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "WBC count is 18,000/mcL with 85% neutrophils. Temperature is 39.2C.",
+    "hypothesis": "Lab findings are consistent with a bacterial infection.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient denies urinary frequency.",
+    "hypothesis": "Patient presents with urinary frequency.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient is not taking sertraline.",
+    "hypothesis": "Patient is currently on sertraline therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports rash for 2 weeks.",
+    "hypothesis": "The patient has been diagnosed with pulmonary embolism.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient has no history of pneumonia.",
+    "hypothesis": "Patient has a well-documented history of pneumonia.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Urinalysis is normal. No protein, glucose, or blood detected.",
+    "hypothesis": "Urinalysis shows significant proteinuria and hematuria.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has no history of atrial fibrillation.",
+    "hypothesis": "Patient has a well-documented history of atrial fibrillation.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports fatigue for 2 weeks.",
+    "hypothesis": "The patient has been diagnosed with liver cirrhosis.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports nausea for 1 year.",
+    "hypothesis": "The patient has been diagnosed with coronary artery disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient has no history of COPD.",
+    "hypothesis": "Patient has a well-documented history of COPD.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports vomiting for 3 months.",
+    "hypothesis": "The patient has been diagnosed with COPD.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports shortness of breath for 2 days.",
+    "hypothesis": "The patient has been diagnosed with liver cirrhosis.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient is not taking metformin.",
+    "hypothesis": "Patient is currently on metformin therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient has no history of peptic ulcer disease.",
+    "hypothesis": "Patient has a well-documented history of peptic ulcer disease.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports shortness of breath for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with pulmonary embolism.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports insomnia for 6 months.",
+    "hypothesis": "The patient has been diagnosed with coronary artery disease.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has no history of chronic kidney disease.",
+    "hypothesis": "Patient has a well-documented history of chronic kidney disease.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has no history of deep vein thrombosis.",
+    "hypothesis": "Patient has a well-documented history of deep vein thrombosis.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient has no history of pneumonia.",
+    "hypothesis": "Patient has a well-documented history of pneumonia.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports urinary frequency for 1 month.",
+    "hypothesis": "The patient has been diagnosed with deep vein thrombosis.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient is not taking levothyroxine.",
+    "hypothesis": "Patient is currently on levothyroxine therapy.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "WBC is within normal range at 6,500/mcL.",
+    "hypothesis": "WBC is critically elevated at 24,000/mcL.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports insomnia for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with heart failure.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient reports fever for 2 weeks.",
+    "hypothesis": "The patient has been diagnosed with pneumonia.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient has no history of COPD.",
+    "hypothesis": "Patient has a well-documented history of COPD.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Hemoglobin result is 11.5 g/dL.",
+    "hypothesis": "Lab work shows Hemoglobin at 11.5 g/dL.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports itching for 3 weeks.",
+    "hypothesis": "The patient has been diagnosed with heart failure.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Current medications: warfarin 5mg daily.",
+    "hypothesis": "Patient is taking warfarin at a dose of 5mg daily.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports no history of surgery or hospitalization.",
+    "hypothesis": "Patient had a coronary artery bypass graft last year.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports pain after I eat, especially fatty foods, with bloating.",
+    "hypothesis": "Patient experiences postprandial pain suggestive of biliary pathology.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient denies nausea.",
+    "hypothesis": "Patient presents with nausea.",
+    "label": "contradiction"
+  },
+  {
+    "premise": "Patient reports palpitations for 2 days.",
+    "hypothesis": "The patient has been diagnosed with deep vein thrombosis.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Physical exam: mild tenderness in the right lower quadrant.",
+    "hypothesis": "On examination, mild tenderness in the right lower quadrant was noted.",
+    "label": "entailment"
+  },
+  {
+    "premise": "Patient reports shortness of breath for 3 months.",
+    "hypothesis": "The patient has been diagnosed with pulmonary embolism.",
+    "label": "neutral"
+  },
+  {
+    "premise": "Patient has no history of diabetes.",
+    "hypothesis": "Patient has a well-documented history of diabetes.",
+    "label": "contradiction"
+  }
+]

@@ -131,6 +131,34 @@ python -m unittest discover tests
 
 ---
 
+## 🧪 Model Fine-Tuning Suite (Academic & Viva Evaluation)
+
+CARE'OS Module 2 includes custom domain-adaptation training scripts and an interactive **Google Colab / Lightning AI Notebook** to fine-tune clinical neural networks:
+
+| Model | Pipeline Stage | Architecture | Dataset | Task |
+| :--- | :--- | :--- | :--- | :--- |
+| **Model 1: Clinical NLI Verifier** | Stage 4 (Verifier) | `DeBERTa-v3` / `distilbert` | MedNLI Clinical Pairs | 3-class NLI (Entailment, Neutral, Contradiction) for hallucination verification |
+| **Model 2: SOAP Section Classifier** | Stage 3 (Structured Note) | `Bio_ClinicalBERT` / `distilbert` | MTS-Dialog & ACI-Bench Sentences | 4-class routing into Subjective, Objective, Assessment, Plan |
+| **Model 3: Phonetic Drug Corrector** | Stage 2 (Entity Linker) | `T5-small` Seq2Seq | RxNorm + Indian Brand Speech Noise | Sequence-to-Sequence phonetic ASR error denoising |
+
+### 🚀 1-Click Interactive Training (Google Colab & Lightning AI):
+- **Master Jupyter Notebook:** [`notebooks/CAREOS_Module2_Model_FineTuning_Colab.ipynb`](notebooks/CAREOS_Module2_Model_FineTuning_Colab.ipynb)
+- **Teacher Viva & Technical Guide:** [`docs/TEACHER_VIVA_AND_MODEL_TRAINING_GUIDE.md`](docs/TEACHER_VIVA_AND_MODEL_TRAINING_GUIDE.md)
+
+### 💻 Local GPU Training Commands (RTX 3050 4GB or CPU):
+```powershell
+# 1. Train MedNLI Verifier (Stage 4)
+python -m training.train_mednli_verifier --epochs 10 --batch-size 8 --lr 2e-5
+
+# 2. Train SOAP Sentence Classifier (Stage 3)
+python -m training.train_soap_classifier --epochs 8 --batch-size 16 --lr 3e-5
+
+# 3. Train T5 Drug ASR Corrector (Stage 2)
+python -m training.train_drug_corrector --epochs 10 --batch-size 16 --lr 5e-4
+```
+
+---
+
 ## 📂 Repository Structure
 
 ```
@@ -138,8 +166,16 @@ module2_careos/
 ├── configs/
 │   └── pipeline_config.yaml         # Complete stage configurations
 ├── data/
-│   ├── sample_audio/demo.wav         # Sample clinical encounter audio
+│   ├── sample_audio/demo.wav        # Sample clinical encounter audio
 │   └── output/pipeline_results.json # Verified output cache
+├── docs/
+│   └── TEACHER_VIVA_AND_MODEL_TRAINING_GUIDE.md # Complete teacher evaluation guide
+├── notebooks/
+│   └── CAREOS_Module2_Model_FineTuning_Colab.ipynb # 1-click Colab / Lightning AI notebook
+├── training/
+│   ├── train_mednli_verifier.py      # Stage 4 DeBERTa MedNLI fine-tuning
+│   ├── train_soap_classifier.py      # Stage 3 Clinical SOAP classifier fine-tuning
+│   └── train_drug_corrector.py       # Stage 2 T5 phonetic drug corrector fine-tuning
 ├── module2_careos/
 │   ├── stage1_audio/                # WhisperX, pyannote, Hinglish ASR
 │   ├── stage2_correction/           # CharBERTDrug, RxNorm grounding
@@ -162,3 +198,4 @@ module2_careos/
 
 ## 📜 Academic Attribution
 Developed for **CARE'OS (CSET343 – AI in Healthcare)**. Grounded in benchmarks including ACI-Bench, PriMock57, MTS-Dialog, DISPLACE-M, MEDEC, MedHallu, and CPIC clinical guidelines.
+

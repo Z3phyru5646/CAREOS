@@ -1,0 +1,1602 @@
+[
+  {
+    "input": "correct: derma dew soap",
+    "target": "Dermadew Soap"
+  },
+  {
+    "input": "correct: taxim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: cal pol 500 mg",
+    "target": "Calpol 500mg (Paracetamol)"
+  },
+  {
+    "input": "correct: dapa gliflozin 5  milligrams",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: tramadol 50 mg zos",
+    "target": "Tramadol 50mg SOS"
+  },
+  {
+    "input": "correct: gabba pentin 300",
+    "target": "Gabapentin 300mg"
+  },
+  {
+    "input": "correct: cef ix ime 200 mg",
+    "target": "Cefixime 200mg"
+  },
+  {
+    "input": "correct: duphaston 10 mg",
+    "target": "Duphaston 10mg (Dydrogesterone)"
+  },
+  {
+    "input": "correct: combiflam aphter food",
+    "target": "Combiflam (Ibuprofen + Paracetamol)"
+  },
+  {
+    "input": "correct: dapa gliflozin 5 mg",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: hydro chloro thiazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: ketrizine 10 mg",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: clopido grel 75",
+    "target": "Clopidogrel 75mg"
+  },
+  {
+    "input": "correct: dollar 650 tablet",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: clopido grel 75",
+    "target": "Clopidogrel 75mg"
+  },
+  {
+    "input": "correct: hydro chloro thiaside 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: dollar 650 tablet",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: augment in 625 mg",
+    "target": "Augmentin 625mg"
+  },
+  {
+    "input": "correct: hydro chloro thyazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: spirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: pan d morning before food",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: kipro flox a cin 500",
+    "target": "Ciprofloxacin 500mg"
+  },
+  {
+    "input": "correct: montair lk night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: perinorm injecshun",
+    "target": "Perinorm (Metoclopramide)"
+  },
+  {
+    "input": "correct: taksim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: combiflam after food",
+    "target": "Combiflam (Ibuprofen + Paracetamol)"
+  },
+  {
+    "input": "correct: spirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: perinorm injection",
+    "target": "Perinorm (Metoclopramide)"
+  },
+  {
+    "input": "correct: losar tan 50",
+    "target": "Losartan 50mg"
+  },
+  {
+    "input": "correct: cef ix ime 200 mg",
+    "target": "Cefixime 200mg"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20 mg",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: rosu vas ta tin 10  milligrams",
+    "target": "Rosuvastatin 10mg"
+  },
+  {
+    "input": "correct: as prin 75 mg",
+    "target": "Aspirin 75mg"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: augment in 625 mg",
+    "target": "Augmentin 625mg"
+  },
+  {
+    "input": "correct: tramadol 50 mg sos",
+    "target": "Tramadol 50mg SOS"
+  },
+  {
+    "input": "correct: levocet 5 mg",
+    "target": "Levocet 5mg (Levocetirizine)"
+  },
+  {
+    "input": "correct: ultra cet sos",
+    "target": "Ultracet (Tramadol + Paracetamol) SOS"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: supradyn daily tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: becosules capsules",
+    "target": "Becosules Z Multivitamin"
+  },
+  {
+    "input": "correct: shelcal 500 daily",
+    "target": "Shelcal 500mg (Calcium + Vitamin D3)"
+  },
+  {
+    "input": "correct: pan d morning before fud",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20 mg",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: becosules capsules",
+    "target": "Becosules Z Multivitamin"
+  },
+  {
+    "input": "correct: lisin o pril 10",
+    "target": "Lisinopril 10mg"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: combiflam after food",
+    "target": "Combiflam (Ibuprofen + Paracetamol)"
+  },
+  {
+    "input": "correct: clopydo grel 75",
+    "target": "Clopidogrel 75mg"
+  },
+  {
+    "input": "correct: duphaston 10 mg",
+    "target": "Duphaston 10mg (Dydrogesterone)"
+  },
+  {
+    "input": "correct: dapa gliflozin 5 mg",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: glyko met 500  milligrams",
+    "target": "Glycomet 500mg (Metformin)"
+  },
+  {
+    "input": "correct: supradyn dayly tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: dapa gliflozin 5 mg",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: montair lc night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: hydro chloro thiazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: cetrizine 10 mg",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: supradyn daily tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20 mg",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: tell me sartan 40  milligrams",
+    "target": "Telmisartan 40mg"
+  },
+  {
+    "input": "correct: cipro flox a cin 500",
+    "target": "Ciprofloxacin 500mg"
+  },
+  {
+    "input": "correct: rosu vas ta tin 10 mg",
+    "target": "Rosuvastatin 10mg"
+  },
+  {
+    "input": "correct: beclomethasone dipropionate cream",
+    "target": "Beclomethasone Dipropionate cream"
+  },
+  {
+    "input": "correct: meftal spas phor cramp",
+    "target": "Meftal-Spas (Mefenamic Acid + Dicyclomine)"
+  },
+  {
+    "input": "correct: supradin daily tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: tell me sartan 40 mg",
+    "target": "Telmisartan 40mg"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: clopido grel 75",
+    "target": "Clopidogrel 75mg"
+  },
+  {
+    "input": "correct: derma dew zoap",
+    "target": "Dermadew Soap"
+  },
+  {
+    "input": "correct: combiflam aphter food",
+    "target": "Combiflam (Ibuprofen + Paracetamol)"
+  },
+  {
+    "input": "correct: beclomethasone dypropionate cream",
+    "target": "Beclomethasone Dipropionate cream"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: taxim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: tell me sartan 40 mg",
+    "target": "Telmisartan 40mg"
+  },
+  {
+    "input": "correct: klopido grel 75",
+    "target": "Clopidogrel 75mg"
+  },
+  {
+    "input": "correct: glyco met 500 mg",
+    "target": "Glycomet 500mg (Metformin)"
+  },
+  {
+    "input": "correct: glyco met 500 mg",
+    "target": "Glycomet 500mg (Metformin)"
+  },
+  {
+    "input": "correct: ultra cet sos",
+    "target": "Ultracet (Tramadol + Paracetamol) SOS"
+  },
+  {
+    "input": "correct: augment in 625 mg",
+    "target": "Augmentin 625mg"
+  },
+  {
+    "input": "correct: mono cef 1 gram iv",
+    "target": "Monocef 1g IV (Ceftriaxone)"
+  },
+  {
+    "input": "correct: levothyroxyne 50 microgram",
+    "target": "Levothyroxine 50mcg"
+  },
+  {
+    "input": "correct: combiflam after food",
+    "target": "Combiflam (Ibuprofen + Paracetamol)"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: clopido grel 75",
+    "target": "Clopidogrel 75mg"
+  },
+  {
+    "input": "correct: zolpidem 5 mg for sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: dufaston 10 mg",
+    "target": "Duphaston 10mg (Dydrogesterone)"
+  },
+  {
+    "input": "correct: levocet 5 mg",
+    "target": "Levocet 5mg (Levocetirizine)"
+  },
+  {
+    "input": "correct: as pryn 75 mg",
+    "target": "Aspirin 75mg"
+  },
+  {
+    "input": "correct: paracetamol 1000 mg stat",
+    "target": "Paracetamol 1000mg stat"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20  milligrams",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: dollar 650 tablet",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: lisin o pril 10",
+    "target": "Lisinopril 10mg"
+  },
+  {
+    "input": "correct: supradyn daily tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: albu terol inhaler 2 puffz",
+    "target": "Albuterol Inhaler 2 puffs"
+  },
+  {
+    "input": "correct: as pryn 75 mg",
+    "target": "Aspirin 75mg"
+  },
+  {
+    "input": "correct: mono cef 1 gram  intravenous",
+    "target": "Monocef 1g IV (Ceftriaxone)"
+  },
+  {
+    "input": "correct: cal pol 500 mg",
+    "target": "Calpol 500mg (Paracetamol)"
+  },
+  {
+    "input": "correct: azithro 500",
+    "target": "Azithromycin 500mg"
+  },
+  {
+    "input": "correct: taksim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: dig ox in zero point two f intravenouse",
+    "target": "Digoxin 0.25mg"
+  },
+  {
+    "input": "correct: paracetamol 1000 mg stat",
+    "target": "Paracetamol 1000mg stat"
+  },
+  {
+    "input": "correct: clopido grel 75",
+    "target": "Clopidogrel 75mg"
+  },
+  {
+    "input": "correct: hydro chloro thiaside 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: supradyn daily tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: dapa gliflozin 5 mg",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: tramadol 50 mg sos",
+    "target": "Tramadol 50mg SOS"
+  },
+  {
+    "input": "correct: pan d morning before food",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: montair lc night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: glyco met 500 mg",
+    "target": "Glycomet 500mg (Metformin)"
+  },
+  {
+    "input": "correct: taxim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: montayr lc night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: montair lk night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: meftal spas phor cramp",
+    "target": "Meftal-Spas (Mefenamic Acid + Dicyclomine)"
+  },
+  {
+    "input": "correct: tell me sartan 40  milligrams",
+    "target": "Telmisartan 40mg"
+  },
+  {
+    "input": "correct: emset 4 mg injection",
+    "target": "Emset 4mg (Ondansetron)"
+  },
+  {
+    "input": "correct: hydro chloro thiazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: levothyroxine 50 microgram",
+    "target": "Levothyroxine 50mcg"
+  },
+  {
+    "input": "correct: beclomethasone dipropionate cream",
+    "target": "Beclomethasone Dipropionate cream"
+  },
+  {
+    "input": "correct: cal pol 500 mg",
+    "target": "Calpol 500mg (Paracetamol)"
+  },
+  {
+    "input": "correct: levothyroxine 50 microgram",
+    "target": "Levothyroxine 50mcg"
+  },
+  {
+    "input": "correct: cal pol 500  milligrams",
+    "target": "Calpol 500mg (Paracetamol)"
+  },
+  {
+    "input": "correct: pantocyd 40",
+    "target": "Pantocid 40mg (Pantoprazole)"
+  },
+  {
+    "input": "correct: montayr lc night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: ultra cet sos",
+    "target": "Ultracet (Tramadol + Paracetamol) SOS"
+  },
+  {
+    "input": "correct: rosu vas ta tin 10 mg",
+    "target": "Rosuvastatin 10mg"
+  },
+  {
+    "input": "correct: taksim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: cypro flox a cin 500",
+    "target": "Ciprofloxacin 500mg"
+  },
+  {
+    "input": "correct: spirono laktone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: levoket 5 mg",
+    "target": "Levocet 5mg (Levocetirizine)"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: supradyn daily tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: supradyn daily tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: beclomethasone dipropionate kream",
+    "target": "Beclomethasone Dipropionate cream"
+  },
+  {
+    "input": "correct: as pryn 75 mg",
+    "target": "Aspirin 75mg"
+  },
+  {
+    "input": "correct: dig ox in zero poynt two five",
+    "target": "Digoxin 0.25mg"
+  },
+  {
+    "input": "correct: albu terol inhaler 2 puffs",
+    "target": "Albuterol Inhaler 2 puffs"
+  },
+  {
+    "input": "correct: beklomethasone dipropionate cream",
+    "target": "Beclomethasone Dipropionate cream"
+  },
+  {
+    "input": "correct: montair lc nyght",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: glyco met 500 mg",
+    "target": "Glycomet 500mg (Metformin)"
+  },
+  {
+    "input": "correct: rosu vas ta tin 10 mg",
+    "target": "Rosuvastatin 10mg"
+  },
+  {
+    "input": "correct: spirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: perinorm injection",
+    "target": "Perinorm (Metoclopramide)"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: dapa gliflozin 5 mg",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: hydro chloro thiazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: zolpidem 5 mg for sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: taxym o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: pan d morning before phood",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: zolpidem 5 mg phor sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: taxim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: taxim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: montair lc night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: hidro chloro thiazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: asithro 500",
+    "target": "Azithromycin 500mg"
+  },
+  {
+    "input": "correct: derma dew soap",
+    "target": "Dermadew Soap"
+  },
+  {
+    "input": "correct: spirono laktone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: augment in 625 mg",
+    "target": "Augmentin 625mg"
+  },
+  {
+    "input": "correct: lizin o pril 10",
+    "target": "Lisinopril 10mg"
+  },
+  {
+    "input": "correct: as pryn 75 mg",
+    "target": "Aspirin 75mg"
+  },
+  {
+    "input": "correct: derma dew soap",
+    "target": "Dermadew Soap"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: empa gliflozin 10",
+    "target": "Empagliflozin 10mg"
+  },
+  {
+    "input": "correct: cipro flox a cin 500",
+    "target": "Ciprofloxacin 500mg"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20 mg",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: levocet 5  milligrams",
+    "target": "Levocet 5mg (Levocetirizine)"
+  },
+  {
+    "input": "correct: dapa gliflozin 5 mg",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: zpirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: dapa gliflozin 5  milligrams",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: ketrizine 10 mg",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: perinorm injection",
+    "target": "Perinorm (Metoclopramide)"
+  },
+  {
+    "input": "correct: pan d morning before food",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: ketrizine 10  milligrams",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: albu terol inhaler 2 puffs",
+    "target": "Albuterol Inhaler 2 puffs"
+  },
+  {
+    "input": "correct: dollar 650 tablet",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: rosu vas ta tin 10  milligrams",
+    "target": "Rosuvastatin 10mg"
+  },
+  {
+    "input": "correct: dig ox in zero point two phive",
+    "target": "Digoxin 0.25mg"
+  },
+  {
+    "input": "correct: taksim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: shelkal 500 daily",
+    "target": "Shelcal 500mg (Calcium + Vitamin D3)"
+  },
+  {
+    "input": "correct: augment in 625 mg",
+    "target": "Augmentin 625mg"
+  },
+  {
+    "input": "correct: pan d morning before food",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: cipro flox a cin 500",
+    "target": "Ciprofloxacin 500mg"
+  },
+  {
+    "input": "correct: augmentin duo syrup",
+    "target": "Augmentin Duo Syrup"
+  },
+  {
+    "input": "correct: dapa gliflozin 5 mg",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: furo semide 40 mg lasix",
+    "target": "Furosemide (Lasix) 40mg"
+  },
+  {
+    "input": "correct: solpidem 5 mg for sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: azithro 500",
+    "target": "Azithromycin 500mg"
+  },
+  {
+    "input": "correct: mono cef 1 gram iv",
+    "target": "Monocef 1g IV (Ceftriaxone)"
+  },
+  {
+    "input": "correct: taxim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: perynorm injection",
+    "target": "Perinorm (Metoclopramide)"
+  },
+  {
+    "input": "correct: taxim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: tramadol 50 mg zos",
+    "target": "Tramadol 50mg SOS"
+  },
+  {
+    "input": "correct: beclomethasone dipropionate cream",
+    "target": "Beclomethasone Dipropionate cream"
+  },
+  {
+    "input": "correct: montair lc nyght",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: ultra cet sos",
+    "target": "Ultracet (Tramadol + Paracetamol) SOS"
+  },
+  {
+    "input": "correct: am lo dip ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: levothyroxine 50 mikrogram",
+    "target": "Levothyroxine 50mcg"
+  },
+  {
+    "input": "correct: emset 4 mg injektion",
+    "target": "Emset 4mg (Ondansetron)"
+  },
+  {
+    "input": "correct: pantocid 40",
+    "target": "Pantocid 40mg (Pantoprazole)"
+  },
+  {
+    "input": "correct: combiflam after food",
+    "target": "Combiflam (Ibuprofen + Paracetamol)"
+  },
+  {
+    "input": "correct: rosu vas ta tin 10 mg",
+    "target": "Rosuvastatin 10mg"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20 mg",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: as prin 75 mg",
+    "target": "Aspirin 75mg"
+  },
+  {
+    "input": "correct: pantocyd 40",
+    "target": "Pantocid 40mg (Pantoprazole)"
+  },
+  {
+    "input": "correct: glyco met 500 mg",
+    "target": "Glycomet 500mg (Metformin)"
+  },
+  {
+    "input": "correct: tell me zartan 40  milligrams",
+    "target": "Telmisartan 40mg"
+  },
+  {
+    "input": "correct: duphaston 10  milligrams",
+    "target": "Duphaston 10mg (Dydrogesterone)"
+  },
+  {
+    "input": "correct: zolpidem 5  milligrams for sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: combiflam after food",
+    "target": "Combiflam (Ibuprofen + Paracetamol)"
+  },
+  {
+    "input": "correct: zpirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: lozar tan 50",
+    "target": "Losartan 50mg"
+  },
+  {
+    "input": "correct: tramadol 50 mg sos",
+    "target": "Tramadol 50mg SOS"
+  },
+  {
+    "input": "correct: supradyn daily tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20  milligrams",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: empa gliflozin 10",
+    "target": "Empagliflozin 10mg"
+  },
+  {
+    "input": "correct: levothyroxyne 50 microgram",
+    "target": "Levothyroxine 50mcg"
+  },
+  {
+    "input": "correct: tramadol 50 mg sos",
+    "target": "Tramadol 50mg SOS"
+  },
+  {
+    "input": "correct: cipro flox a kin 500",
+    "target": "Ciprofloxacin 500mg"
+  },
+  {
+    "input": "correct: derma dew soap",
+    "target": "Dermadew Soap"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: augment in 625 mg",
+    "target": "Augmentin 625mg"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: levothyroxyne 50 microgram",
+    "target": "Levothyroxine 50mcg"
+  },
+  {
+    "input": "correct: augmentin duo syrup",
+    "target": "Augmentin Duo Syrup"
+  },
+  {
+    "input": "correct: pantocid 40",
+    "target": "Pantocid 40mg (Pantoprazole)"
+  },
+  {
+    "input": "correct: am lo dyp ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: derma dew soap",
+    "target": "Dermadew Soap"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: duphaston 10 mg",
+    "target": "Duphaston 10mg (Dydrogesterone)"
+  },
+  {
+    "input": "correct: albu terol inhaler 2 puffs",
+    "target": "Albuterol Inhaler 2 puffs"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: cef ix ime 200 mg",
+    "target": "Cefixime 200mg"
+  },
+  {
+    "input": "correct: spirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: spirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: metro nid a zole 400",
+    "target": "Metronidazole 400mg"
+  },
+  {
+    "input": "correct: spirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: hydro chloro thiazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: ketrizine 10 mg",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: shelcal 500 daily",
+    "target": "Shelcal 500mg (Calcium + Vitamin D3)"
+  },
+  {
+    "input": "correct: spirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: gabba pentin 300",
+    "target": "Gabapentin 300mg"
+  },
+  {
+    "input": "correct: furo semide 40  milligrams lasix",
+    "target": "Furosemide (Lasix) 40mg"
+  },
+  {
+    "input": "correct: cetrisine 10  milligrams",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: meftal spas for kramp",
+    "target": "Meftal-Spas (Mefenamic Acid + Dicyclomine)"
+  },
+  {
+    "input": "correct: montair lc night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: meftal spas for cramp",
+    "target": "Meftal-Spas (Mefenamic Acid + Dicyclomine)"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20  milligrams",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: dollar 650 tablet",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: supradyn daily tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: empa glyflozin 10",
+    "target": "Empagliflozin 10mg"
+  },
+  {
+    "input": "correct: azithro 500",
+    "target": "Azithromycin 500mg"
+  },
+  {
+    "input": "correct: hydro chloro thiaside 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: zolpidem 5  milligrams for sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: solpidem 5 mg for sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: metro nyd a zole 400",
+    "target": "Metronidazole 400mg"
+  },
+  {
+    "input": "correct: am lo dip yne 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: gabba pentin 300",
+    "target": "Gabapentin 300mg"
+  },
+  {
+    "input": "correct: levothyroxine 50 microgram",
+    "target": "Levothyroxine 50mcg"
+  },
+  {
+    "input": "correct: furo semide 40 mg lasix",
+    "target": "Furosemide (Lasix) 40mg"
+  },
+  {
+    "input": "correct: zolpidem 5  milligrams for sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: metro nid a zole 400",
+    "target": "Metronidazole 400mg"
+  },
+  {
+    "input": "correct: losar tan 50",
+    "target": "Losartan 50mg"
+  },
+  {
+    "input": "correct: gabba pentin 300",
+    "target": "Gabapentin 300mg"
+  },
+  {
+    "input": "correct: ultra cet sos",
+    "target": "Ultracet (Tramadol + Paracetamol) SOS"
+  },
+  {
+    "input": "correct: cetrizine 10 mg",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: paracetamol 1000 mg stat",
+    "target": "Paracetamol 1000mg stat"
+  },
+  {
+    "input": "correct: metro nid a zole 400",
+    "target": "Metronidazole 400mg"
+  },
+  {
+    "input": "correct: derma dew soap",
+    "target": "Dermadew Soap"
+  },
+  {
+    "input": "correct: albu terol inhaler 2 puffs",
+    "target": "Albuterol Inhaler 2 puffs"
+  },
+  {
+    "input": "correct: rosu vas ta tin 10  milligrams",
+    "target": "Rosuvastatin 10mg"
+  },
+  {
+    "input": "correct: cypro flox a cin 500",
+    "target": "Ciprofloxacin 500mg"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20 mg",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: duphaston 10 mg",
+    "target": "Duphaston 10mg (Dydrogesterone)"
+  },
+  {
+    "input": "correct: glyco met 500 mg",
+    "target": "Glycomet 500mg (Metformin)"
+  },
+  {
+    "input": "correct: shelcal 500 daily",
+    "target": "Shelcal 500mg (Calcium + Vitamin D3)"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: albu terol inhaler 2 puphfs",
+    "target": "Albuterol Inhaler 2 puffs"
+  },
+  {
+    "input": "correct: azythro 500",
+    "target": "Azithromycin 500mg"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: montair lc night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: gabba pentin 300",
+    "target": "Gabapentin 300mg"
+  },
+  {
+    "input": "correct: cetrizine 10 mg",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: losar tan 50",
+    "target": "Losartan 50mg"
+  },
+  {
+    "input": "correct: lisin o pril 10",
+    "target": "Lisinopril 10mg"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: levoket 5 mg",
+    "target": "Levocet 5mg (Levocetirizine)"
+  },
+  {
+    "input": "correct: losar tan 50",
+    "target": "Losartan 50mg"
+  },
+  {
+    "input": "correct: supradyn dayly tablet",
+    "target": "Supradyn Multivitamin"
+  },
+  {
+    "input": "correct: mono cef 1 gram  intravenous",
+    "target": "Monocef 1g IV (Ceftriaxone)"
+  },
+  {
+    "input": "correct: am lo dyp ine 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: dollar 650 tablet",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: metro nid a zole 400",
+    "target": "Metronidazole 400mg"
+  },
+  {
+    "input": "correct: hydro chloro thiazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: tramadol 50  milligrams sos",
+    "target": "Tramadol 50mg SOS"
+  },
+  {
+    "input": "correct: metro nid a zole 400",
+    "target": "Metronidazole 400mg"
+  },
+  {
+    "input": "correct: pantocid 40",
+    "target": "Pantocid 40mg (Pantoprazole)"
+  },
+  {
+    "input": "correct: emset 4 mg injection",
+    "target": "Emset 4mg (Ondansetron)"
+  },
+  {
+    "input": "correct: albu terol inhaler 2 puffs",
+    "target": "Albuterol Inhaler 2 puffs"
+  },
+  {
+    "input": "correct: taksim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: as prin 75  milligrams",
+    "target": "Aspirin 75mg"
+  },
+  {
+    "input": "correct: dig ox in zero point two f intravenouse",
+    "target": "Digoxin 0.25mg"
+  },
+  {
+    "input": "correct: albu terol inhaler 2 puffs",
+    "target": "Albuterol Inhaler 2 puffs"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: emset 4 mg injection",
+    "target": "Emset 4mg (Ondansetron)"
+  },
+  {
+    "input": "correct: montair lc nyght",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: dig ox in zero point two five",
+    "target": "Digoxin 0.25mg"
+  },
+  {
+    "input": "correct: clopido grel 75",
+    "target": "Clopidogrel 75mg"
+  },
+  {
+    "input": "correct: rosu vas ta tin 10 mg",
+    "target": "Rosuvastatin 10mg"
+  },
+  {
+    "input": "correct: glyco met 500 mg",
+    "target": "Glycomet 500mg (Metformin)"
+  },
+  {
+    "input": "correct: tramadol 50 mg sos",
+    "target": "Tramadol 50mg SOS"
+  },
+  {
+    "input": "correct: pantocid 40",
+    "target": "Pantocid 40mg (Pantoprazole)"
+  },
+  {
+    "input": "correct: ultra cet sos",
+    "target": "Ultracet (Tramadol + Paracetamol) SOS"
+  },
+  {
+    "input": "correct: duphaston 10 mg",
+    "target": "Duphaston 10mg (Dydrogesterone)"
+  },
+  {
+    "input": "correct: spirono lactone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: tramadol 50 mg sos",
+    "target": "Tramadol 50mg SOS"
+  },
+  {
+    "input": "correct: meftal spas phor cramp",
+    "target": "Meftal-Spas (Mefenamic Acid + Dicyclomine)"
+  },
+  {
+    "input": "correct: beclomethasone dypropionate cream",
+    "target": "Beclomethasone Dipropionate cream"
+  },
+  {
+    "input": "correct: levocet 5  milligrams",
+    "target": "Levocet 5mg (Levocetirizine)"
+  },
+  {
+    "input": "correct: lisin o pril 10",
+    "target": "Lisinopril 10mg"
+  },
+  {
+    "input": "correct: cipro flox a cin 500",
+    "target": "Ciprofloxacin 500mg"
+  },
+  {
+    "input": "correct: cetrisine 10 mg",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: am lo dip yne 5",
+    "target": "Amlodipine 5mg"
+  },
+  {
+    "input": "correct: metro nid a zole 400",
+    "target": "Metronidazole 400mg"
+  },
+  {
+    "input": "correct: emset 4 mg injection",
+    "target": "Emset 4mg (Ondansetron)"
+  },
+  {
+    "input": "correct: hydro chloro thiazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: pan d mornyng before food",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: cetrizine 10 mg",
+    "target": "Cetirizine 10mg"
+  },
+  {
+    "input": "correct: levocet 5 mg",
+    "target": "Levocet 5mg (Levocetirizine)"
+  },
+  {
+    "input": "correct: clopido grel 75",
+    "target": "Clopidogrel 75mg"
+  },
+  {
+    "input": "correct: perinorm injection",
+    "target": "Perinorm (Metoclopramide)"
+  },
+  {
+    "input": "correct: mono cef 1 gram yv",
+    "target": "Monocef 1g IV (Ceftriaxone)"
+  },
+  {
+    "input": "correct: dig ox in sero point two five",
+    "target": "Digoxin 0.25mg"
+  },
+  {
+    "input": "correct: combiflam after food",
+    "target": "Combiflam (Ibuprofen + Paracetamol)"
+  },
+  {
+    "input": "correct: pan d morning before food",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: hydro chloro thiaside 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: paracetamol 1000 mg stat",
+    "target": "Paracetamol 1000mg stat"
+  },
+  {
+    "input": "correct: cal pol 500  milligrams",
+    "target": "Calpol 500mg (Paracetamol)"
+  },
+  {
+    "input": "correct: pan d morning before food",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: glyco met 500  milligrams",
+    "target": "Glycomet 500mg (Metformin)"
+  },
+  {
+    "input": "correct: montair lc night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: levoket 5 mg",
+    "target": "Levocet 5mg (Levocetirizine)"
+  },
+  {
+    "input": "correct: spirono laktone 25",
+    "target": "Spironolactone 25mg"
+  },
+  {
+    "input": "correct: furo semide 40 mg lasix",
+    "target": "Furosemide (Lasix) 40mg"
+  },
+  {
+    "input": "correct: shelcal 500 daili",
+    "target": "Shelcal 500mg (Calcium + Vitamin D3)"
+  },
+  {
+    "input": "correct: pantocid 40",
+    "target": "Pantocid 40mg (Pantoprazole)"
+  },
+  {
+    "input": "correct: taxim o 200",
+    "target": "Taxim-O 200mg (Cefixime)"
+  },
+  {
+    "input": "correct: metro nid a zole 400",
+    "target": "Metronidazole 400mg"
+  },
+  {
+    "input": "correct: cal pol 500  milligrams",
+    "target": "Calpol 500mg (Paracetamol)"
+  },
+  {
+    "input": "correct: serra tio pepti dase 10",
+    "target": "Serratiopeptidase 10mg"
+  },
+  {
+    "input": "correct: dollar 650 tablet",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: augmentin duo syrup",
+    "target": "Augmentin Duo Syrup"
+  },
+  {
+    "input": "correct: empa gliflozin 10",
+    "target": "Empagliflozin 10mg"
+  },
+  {
+    "input": "correct: pan d morning before food",
+    "target": "Pan-D (Pantoprazole + Domperidone)"
+  },
+  {
+    "input": "correct: dapa gliflosin 5  milligrams",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: meftal spas for cramp",
+    "target": "Meftal-Spas (Mefenamic Acid + Dicyclomine)"
+  },
+  {
+    "input": "correct: cef ix ime 200 mg",
+    "target": "Cefixime 200mg"
+  },
+  {
+    "input": "correct: emset 4 mg injection",
+    "target": "Emset 4mg (Ondansetron)"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: beclomethasone dipropionate cream",
+    "target": "Beclomethasone Dipropionate cream"
+  },
+  {
+    "input": "correct: augment in 625 mg",
+    "target": "Augmentin 625mg"
+  },
+  {
+    "input": "correct: hydro chloro thiazide 25",
+    "target": "Hydrochlorothiazide 25mg"
+  },
+  {
+    "input": "correct: empa gliflozin 10",
+    "target": "Empagliflozin 10mg"
+  },
+  {
+    "input": "correct: o me pra zole 20 mg",
+    "target": "Omeprazole 20mg"
+  },
+  {
+    "input": "correct: dapa gliflozin 5 mg",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: dyg ox in zero point two five",
+    "target": "Digoxin 0.25mg"
+  },
+  {
+    "input": "correct: furo semyde 40 mg lasix",
+    "target": "Furosemide (Lasix) 40mg"
+  },
+  {
+    "input": "correct: a tor vas ta tin 20 mg",
+    "target": "Atorvastatin 20mg"
+  },
+  {
+    "input": "correct: montair lc night",
+    "target": "Montair-LC (Montelukast + Levocetirizine)"
+  },
+  {
+    "input": "correct: zolpidem 5 mg for zleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: dapa gliflozin 5 mg",
+    "target": "Dapagliflozin 5mg"
+  },
+  {
+    "input": "correct: levothyroxyne 50 microgram",
+    "target": "Levothyroxine 50mcg"
+  },
+  {
+    "input": "correct: zolpidem 5  milligrams for sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: zolpidem 5 mg for sleep",
+    "target": "Zolpidem 5mg at bedtime"
+  },
+  {
+    "input": "correct: tell me sartan 40 mg",
+    "target": "Telmisartan 40mg"
+  },
+  {
+    "input": "correct: azithro 500",
+    "target": "Azithromycin 500mg"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: cef ix ime 200 mg",
+    "target": "Cefixime 200mg"
+  },
+  {
+    "input": "correct: duphaston 10  milligrams",
+    "target": "Duphaston 10mg (Dydrogesterone)"
+  },
+  {
+    "input": "correct: dolo 650",
+    "target": "Dolo 650mg"
+  },
+  {
+    "input": "correct: losar tan 50",
+    "target": "Losartan 50mg"
+  }
+]

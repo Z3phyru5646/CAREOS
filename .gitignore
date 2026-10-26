@@ -32,3 +32,10 @@ venv/
 *.log
 .vscode/
 .idea/
+
+# Large model weights (too large for GitHub standard push limit 100MB)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
