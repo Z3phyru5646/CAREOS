@@ -40,6 +40,9 @@ alembic>=1.12.0
 streamlit>=1.28.0
 plotly>=5.17.0
 
+# Audio & NLP (Module 2)
+soundfile>=0.12.1
+
 # Utilities & Config
 joblib>=1.3.0
 tqdm>=4.66.0

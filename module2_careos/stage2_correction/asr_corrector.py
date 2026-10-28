@@ -26,9 +26,19 @@ logger = logging.getLogger(__name__)
 
 # ─── RxNorm Drug Database ─────────────────────────────────────────────────────
 
-# Embedded subset of 69,824 RxNorm drug strings for phonetic matching
-# In production, load from scispaCy's rxnorm linker (~100,000 concepts)
-RXNORM_COMMON_DRUGS = {
+# Try to load external comprehensive verified RxNorm database (100+ entities)
+_ext_db_path = Path(__file__).resolve().parent.parent.parent / "data" / "rxnorm_drugs.json"
+if _ext_db_path.exists():
+    try:
+        with open(_ext_db_path, "r", encoding="utf-8") as _f:
+            RXNORM_COMMON_DRUGS = json.load(_f)
+    except Exception:
+        RXNORM_COMMON_DRUGS = {}
+else:
+    RXNORM_COMMON_DRUGS = {}
+
+if not RXNORM_COMMON_DRUGS:
+    RXNORM_COMMON_DRUGS = {
     "omeprazole": {"cui": "C0028978", "brand": ["Prilosec"], "class": "PPI"},
     "esomeprazole": {"cui": "C0939400", "brand": ["Nexium"], "class": "PPI"},
     "pantoprazole": {"cui": "C0081876", "brand": ["Protonix"], "class": "PPI"},

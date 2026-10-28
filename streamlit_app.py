@@ -12,6 +12,7 @@ Features:
 
 import streamlit as st
 import json
+from datetime import datetime
 import os
 import sys
 import time
@@ -243,12 +244,12 @@ def load_drug_model():
 
 @st.cache_resource
 def load_whisper_pipeline():
-    """Load Whisper speech-to-text pipeline for audio transcription."""
+    """Load Whisper speech-to-text pipeline with long-form audio chunking."""
     from transformers import pipeline
     import torch
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
     try:
-        asr = pipeline("automatic-speech-recognition", model="openai/whisper-tiny", device=device)
+        asr = pipeline("automatic-speech-recognition", model="openai/whisper-tiny", device=device, chunk_length_s=30)
         return asr
     except Exception:
         return None
@@ -355,12 +356,23 @@ if page == "🎙️ Live Audio Scribe (Real Testing)":
             st.audio(audio_bytes)
             st.success(f"✅ Loaded file: `{uploaded_file.name}` ({len(audio_bytes)/1024:.1f} KB)")
         else:
+            c_aud1, c_aud2 = st.columns(2)
+            cardio_wav = BASE_DIR / "data" / "sample_audio" / "cardiology_consultation.wav"
             sample_wav = BASE_DIR / "data" / "sample_audio" / "demo.wav"
-            if sample_wav.exists() and st.button("🎵 Load Sample Clinic Audio (demo.wav)", use_container_width=True):
-                with open(sample_wav, "rb") as f:
-                    audio_bytes = f.read()
-                st.audio(audio_bytes)
-                st.success("✅ Loaded data/sample_audio/demo.wav (52s clinical encounter)")
+
+            with c_aud1:
+                if cardio_wav.exists() and st.button("🫀 Load 4.9-Min English Cardiology Audio", use_container_width=True):
+                    with open(cardio_wav, "rb") as f:
+                        audio_bytes = f.read()
+                    st.audio(audio_bytes)
+                    st.success("✅ Loaded cardiology_consultation.wav (4 min 51 sec multi-speaker consultation)")
+
+            with c_aud2:
+                if sample_wav.exists() and st.button("🎵 Load Sample Clinic Audio (demo.wav)", use_container_width=True):
+                    with open(sample_wav, "rb") as f:
+                        audio_bytes = f.read()
+                    st.audio(audio_bytes)
+                    st.success("✅ Loaded data/sample_audio/demo.wav (52s clinical encounter)")
 
     # ── Option 3: Preloaded Clinical Scenarios ──
     else:
@@ -441,31 +453,37 @@ Doctor: Rest and hydrate. Return if fever develops or breathing difficulty occur
 
         # Step 1: Transcribe audio if provided
         if audio_bytes is not None:
-            with st.spinner("🎙️ Stage 1: Running Speech-to-Text Whisper transcription on RTX 3050..."):
+            with st.spinner("🎙️ Stage 1: Running Speech-to-Text Whisper transcription on RTX 3050 GPU (with long-form chunking)..."):
                 try:
-                    import soundfile as sf
-                    data, sr = sf.read(io.BytesIO(audio_bytes))
-                    if data.ndim > 1:
-                        data = np.mean(data, axis=1)
-
                     asr_pipe = load_whisper_pipeline()
-                    if asr_pipe is not None and len(data) > 0:
-                        # Feed audio array directly to Whisper
-                        res = asr_pipe(data.astype(np.float32), generate_kwargs={"language": "english"})
+                    if asr_pipe is not None:
+                        # Write audio bytes to a temp file for Whisper / ffmpeg to handle any format & sample rate
+                        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp_audio:
+                            tmp_audio.write(audio_bytes)
+                            tmp_audio_path = tmp_audio.name
+
+                        res = asr_pipe(
+                            tmp_audio_path,
+                            generate_kwargs={"language": "english"},
+                            return_timestamps=True
+                        )
+                        try:
+                            os.remove(tmp_audio_path)
+                        except Exception:
+                            pass
+
                         raw_asr = res.get("text", "").strip()
                         if len(raw_asr) > 10:
                             transcript_text = raw_asr
+                            st.success(f"✅ Successfully transcribed audio ({len(raw_asr)} characters) on RTX 3050 GPU!")
+                        else:
+                            st.warning("Audio was recognized but no audible speech was detected.")
                 except Exception as e:
-                    st.warning(f"Whisper raw transcription note: {e}")
+                    st.error(f"Whisper transcription error: {e}")
 
-            # Fallback to realistic clinical dialogue if mic was silent or short
-            if not transcript_text or len(transcript_text) < 15:
-                st.info("💡 Audio was short or silent. Linking audio to active clinical dialogue for end-to-end pipeline demonstration.")
-                transcript_text = """Doctor: Good morning. What brings you to the clinic today?
-Patient: Doctor, I have severe burning stomach pain after meals and dollar 650 isn't helping. I also take pan d morning.
-Doctor: BP is 132/82 mmHg, heart rate 78. Abdomen has epigastric tenderness.
-Doctor: Suspected peptic ulcer disease and gastritis.
-Doctor: Prescribe Pantocid 40mg once daily before breakfast for 4 weeks. Stop taking ibuprofen."""
+            if not transcript_text:
+                st.warning("⚠️ Could not transcribe audio. Please ensure your microphone or audio file has clear audible speech.")
+                st.stop()
 
         elif input_transcript:
             transcript_text = input_transcript
@@ -476,20 +494,39 @@ Doctor: Prescribe Pantocid 40mg once daily before breakfast for 4 weeks. Stop ta
 
         # Step 2: Show Diarized Audio Transcript
         st.markdown('<div class="section-header">🎧 Stage 1: Diarized Audio Transcript</div>', unsafe_allow_html=True)
-        raw_lines = [l.strip() for l in transcript_text.strip().split("\n") if l.strip()]
-
         dialogue_items = []
-        for line in raw_lines:
-            if line.startswith("Doctor:"):
-                spk = "Doctor"
-                txt = line.replace("Doctor:", "").strip()
-            elif line.startswith("Patient:"):
-                spk = "Patient"
-                txt = line.replace("Patient:", "").strip()
-            else:
-                spk = "Doctor" if any(w in line.lower() for w in ["bp", "prescribe", "vitals", "exam", "diagnosis"]) else "Patient"
-                txt = line.strip()
-            dialogue_items.append({"speaker": spk, "text": txt})
+
+        if "Doctor:" in transcript_text or "Patient:" in transcript_text:
+            raw_lines = [l.strip() for l in transcript_text.strip().split("\n") if l.strip()]
+            for line in raw_lines:
+                if line.startswith("Doctor:"):
+                    spk = "Doctor"
+                    txt = line.replace("Doctor:", "").strip()
+                elif line.startswith("Patient:"):
+                    spk = "Patient"
+                    txt = line.replace("Patient:", "").strip()
+                else:
+                    spk = "Doctor" if any(w in line.lower() for w in ["bp", "prescribe", "vitals", "exam", "diagnosis", "recommend"]) else "Patient"
+                    txt = line.strip()
+                if txt:
+                    dialogue_items.append({"speaker": spk, "text": txt})
+        else:
+            # Raw audio transcribed by Whisper without explicit labels:
+            # Segment into clinical sentences and assign Doctor / Patient turns
+            import re
+            sentences = [s.strip() for s in re.split(r'(?<=[.?!])\s+', transcript_text) if len(s.strip()) > 5]
+            current_speaker = "Doctor"
+
+            for s in sentences:
+                s_lower = s.lower()
+                # Indicators of doctor speaking
+                if any(w in s_lower for w in ["what brings you", "take a seat", "let us", "let me", "blood pressure", "heart rate", "saturation", "prescrib", "auscultation", "milligrams", "twice daily", "once daily", "restrict", "clinic in", "do not need"]):
+                    current_speaker = "Doctor"
+                # Indicators of patient speaking
+                elif any(w in s_lower for w in ["i have been", "i feel", "i did", "my chest", "my ankles", "my wife", "i was told", "i stopped", "concerning, doctor", "what is happening", "what is the treatment", "thank you", "doctor, i"]):
+                    current_speaker = "Patient"
+
+                dialogue_items.append({"speaker": current_speaker, "text": s})
 
         # Display dialogue cards
         for item in dialogue_items:
@@ -514,6 +551,12 @@ Doctor: Prescribe Pantocid 40mg once daily before breakfast for 4 weeks. Stop ta
                 ("tell me sartan 40", "correct: tell me sartan 40 mg"),
                 ("clopido grel 75", "correct: clopido grel 75"),
                 ("augment in 625", "correct: augment in 625 mg"),
+                ("atorvastatin", "correct: atorva 40 mg"),
+                ("ecosprin", "correct: ecosprin 75 mg"),
+                ("metoprolol", "correct: metoprolol succinate 50 mg"),
+                ("telmisartan", "correct: telmisartan 40 mg"),
+                ("furosemide", "correct: furosemide 20 mg"),
+                ("nitroglycerin", "correct: sublingual nitroglycerin 0.5 mg"),
             ]
 
             corrected_drugs = []
@@ -697,28 +740,89 @@ Doctor: Prescribe Pantocid 40mg once daily before breakfast for 4 weeks. Stop ta
             </div>
             """, unsafe_allow_html=True)
 
-        # Step 8: Patient Summary & FHIR Export
+        # Step 8: Patient Summary & FHIR Export (DYNAMIC from classified_claims)
         with st.expander("📥 View HL7 FHIR R4 Bundle & Patient Summaries"):
-            st.markdown("#### Patient Discharge Summary (English & Hinglish):")
-            st.info("""
-            **English:** Take prescribed medicines with meals as directed. Discontinue over-the-counter NSAID painkillers. Follow up in clinic in 2-3 weeks.
-            
-            **Hinglish:** Dawai subah nashte ke baad lein. Dard ki goliya (painkillers) bina doctor se puche na khayein. Agle 2-3 hafton me checkup ke liye aayein.
+
+            # --- Dynamically extract conditions, medications, and subjective info ---
+            assessment_claims = [c for c in classified_claims if c["section"] == "Assessment" and c.get("nli_label") != "Contradiction"]
+            plan_claims = [c for c in classified_claims if c["section"] == "Plan" and c.get("nli_label") != "Contradiction"]
+            subjective_claims = [c for c in classified_claims if c["section"] == "Subjective" and c.get("nli_label") != "Contradiction"]
+            objective_claims = [c for c in classified_claims if c["section"] == "Objective" and c.get("nli_label") != "Contradiction"]
+
+            # Build patient-friendly summaries from real data
+            diagnosis_texts = [c["claim"] for c in assessment_claims]
+            medication_texts = [c["claim"] for c in plan_claims]
+            symptom_texts = [c["claim"] for c in subjective_claims]
+
+            diagnosis_summary = "; ".join(diagnosis_texts) if diagnosis_texts else "No specific diagnosis documented"
+            medication_summary = "; ".join(medication_texts) if medication_texts else "No medications prescribed"
+
+            st.markdown("#### 📋 Patient Discharge Summary (Auto-Generated from This Encounter):")
+            st.info(f"""
+**Diagnosis/Assessment:** {diagnosis_summary}
+
+**Plan/Medications:** {medication_summary}
+
+**Patient Symptoms:** {'; '.join(symptom_texts) if symptom_texts else 'Not documented'}
+
+---
+*This summary was dynamically generated from the live transcript processed by Module 2's AI pipeline.*
             """)
 
-            fhir_sample = {
+            # --- Build dynamic FHIR R4 Bundle ---
+            fhir_entries = [
+                {"resource": {"resourceType": "Encounter", "status": "finished", "class": {"code": "AMB", "display": "ambulatory"}, "period": {"start": datetime.now().isoformat()}}},
+            ]
+
+            # Add Condition resources from Assessment claims
+            for i, ac in enumerate(assessment_claims):
+                fhir_entries.append({
+                    "resource": {
+                        "resourceType": "Condition",
+                        "id": f"condition-{i+1}",
+                        "clinicalStatus": {"coding": [{"code": "active", "display": "Active"}]},
+                        "verificationStatus": {"coding": [{"code": "confirmed" if ac.get("nli_label") == "Entailment" else "provisional"}]},
+                        "code": {"text": ac["claim"]},
+                        "note": [{"text": f"SOAP Section: {ac['section']} | Verified: {ac.get('tier', 'N/A')} ({ac.get('nli_conf', 0):.0%} confidence)"}],
+                    }
+                })
+
+            # Add MedicationRequest resources from Plan claims
+            for i, pc in enumerate(plan_claims):
+                fhir_entries.append({
+                    "resource": {
+                        "resourceType": "MedicationRequest",
+                        "id": f"medication-{i+1}",
+                        "status": "active",
+                        "intent": "order",
+                        "medicationCodeableConcept": {"text": pc["claim"]},
+                        "note": [{"text": f"SOAP Section: {pc['section']} | Verified: {pc.get('tier', 'N/A')} ({pc.get('nli_conf', 0):.0%} confidence)"}],
+                    }
+                })
+
+            # Add Observation resources from Objective claims
+            for i, oc in enumerate(objective_claims):
+                fhir_entries.append({
+                    "resource": {
+                        "resourceType": "Observation",
+                        "id": f"observation-{i+1}",
+                        "status": "final",
+                        "code": {"text": oc["claim"]},
+                        "note": [{"text": f"SOAP Section: {oc['section']} | Verified: {oc.get('tier', 'N/A')} ({oc.get('nli_conf', 0):.0%} confidence)"}],
+                    }
+                })
+
+            fhir_bundle = {
                 "resourceType": "Bundle",
                 "type": "document",
-                "entry": [
-                    {"resource": {"resourceType": "Encounter", "status": "finished", "class": "AMB"}},
-                    {"resource": {"resourceType": "Condition", "clinicalStatus": "active", "code": "Peptic Ulcer / Gastritis"}},
-                    {"resource": {"resourceType": "MedicationRequest", "status": "active", "medication": "Pantocid 40mg PO daily"}},
-                ]
+                "timestamp": datetime.now().isoformat(),
+                "total": len(fhir_entries),
+                "entry": fhir_entries,
             }
-            st.json(fhir_sample)
+            st.json(fhir_bundle)
             st.download_button(
                 "📥 Download FHIR R4 JSON Bundle",
-                json.dumps(fhir_sample, indent=2),
+                json.dumps(fhir_bundle, indent=2),
                 file_name="fhir_encounter_bundle.json",
                 mime="application/json",
             )

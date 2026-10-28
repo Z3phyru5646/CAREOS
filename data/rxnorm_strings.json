@@ -1,0 +1,1031 @@
+{
+  "atorvastatin": {
+    "cui": "C0286651",
+    "brand": [
+      "Lipitor",
+      "Atorva",
+      "Storvas"
+    ],
+    "class": "Statin (HMG-CoA Reductase Inhibitor)",
+    "generic": "Atorvastatin Calcium"
+  },
+  "rosuvastatin": {
+    "cui": "C0954293",
+    "brand": [
+      "Crestor",
+      "Rosuvas",
+      "Rozavel"
+    ],
+    "class": "Statin (HMG-CoA Reductase Inhibitor)",
+    "generic": "Rosuvastatin Calcium"
+  },
+  "telmisartan": {
+    "cui": "C0719875",
+    "brand": [
+      "Micardis",
+      "Telma",
+      "Telmikem"
+    ],
+    "class": "Angiotensin II Receptor Blocker (ARB)",
+    "generic": "Telmisartan"
+  },
+  "losartan": {
+    "cui": "C0126174",
+    "brand": [
+      "Cozaar",
+      "Losacar",
+      "Repace"
+    ],
+    "class": "Angiotensin II Receptor Blocker (ARB)",
+    "generic": "Losartan Potassium"
+  },
+  "amlodipine": {
+    "cui": "C0051696",
+    "brand": [
+      "Norvasc",
+      "Amlong",
+      "Stamlo"
+    ],
+    "class": "Calcium Channel Blocker (CCB)",
+    "generic": "Amlodipine Besylate"
+  },
+  "metoprolol": {
+    "cui": "C0025859",
+    "brand": [
+      "Lopressor",
+      "Toprol XL",
+      "Betaloc",
+      "Metolar"
+    ],
+    "class": "Beta-1 Adrenergic Blocker",
+    "generic": "Metoprolol Succinate / Tartrate"
+  },
+  "clopidogrel": {
+    "cui": "C0070166",
+    "brand": [
+      "Plavix",
+      "Clopilet",
+      "Deplatt"
+    ],
+    "class": "P2Y12 Antiplatelet Agent",
+    "generic": "Clopidogrel Bisulfate"
+  },
+  "aspirin": {
+    "cui": "C0004057",
+    "brand": [
+      "Ecosprin",
+      "Disprin",
+      "Bayer Aspirin"
+    ],
+    "class": "Antiplatelet / NSAID",
+    "generic": "Acetylsalicylic Acid"
+  },
+  "ramipril": {
+    "cui": "C0073280",
+    "brand": [
+      "Altace",
+      "Cardace",
+      "Ramihart"
+    ],
+    "class": "ACE Inhibitor",
+    "generic": "Ramipril"
+  },
+  "enalapril": {
+    "cui": "C0014068",
+    "brand": [
+      "Vasotec",
+      "Envas",
+      "Nuril"
+    ],
+    "class": "ACE Inhibitor",
+    "generic": "Enalapril Maleate"
+  },
+  "furosemide": {
+    "cui": "C0016860",
+    "brand": [
+      "Lasix",
+      "Frusenex"
+    ],
+    "class": "Loop Diuretic",
+    "generic": "Furosemide"
+  },
+  "torsemide": {
+    "cui": "C0076634",
+    "brand": [
+      "Demadex",
+      "Dytor",
+      "Torsinex"
+    ],
+    "class": "Loop Diuretic",
+    "generic": "Torsemide"
+  },
+  "spironolactone": {
+    "cui": "C0037996",
+    "brand": [
+      "Aldactone",
+      "Aldostix"
+    ],
+    "class": "Potassium-Sparing Diuretic / Aldosterone Antagonist",
+    "generic": "Spironolactone"
+  },
+  "hydrochlorothiazide": {
+    "cui": "C0019918",
+    "brand": [
+      "Microzide",
+      "Aquazide"
+    ],
+    "class": "Thiazide Diuretic",
+    "generic": "Hydrochlorothiazide"
+  },
+  "chlorthalidone": {
+    "cui": "C0008405",
+    "brand": [
+      "Hygroton",
+      "Thalizide"
+    ],
+    "class": "Thiazide-like Diuretic",
+    "generic": "Chlorthalidone"
+  },
+  "nebivolol": {
+    "cui": "C0084742",
+    "brand": [
+      "Bystolic",
+      "Nebicard",
+      "Nodon"
+    ],
+    "class": "Beta-1 Blocker with Nitric Oxide Vasodilation",
+    "generic": "Nebivolol Hydrochloride"
+  },
+  "bisoprolol": {
+    "cui": "C0053835",
+    "brand": [
+      "Zebeta",
+      "Concor",
+      "Bisoheart"
+    ],
+    "class": "Selective Beta-1 Blocker",
+    "generic": "Bisoprolol Fumarate"
+  },
+  "nitroglycerin": {
+    "cui": "C0017887",
+    "brand": [
+      "Nitrostat",
+      "Sorbitrate",
+      "Angispan"
+    ],
+    "class": "Vasodilator / Nitrate",
+    "generic": "Glyceryl Trinitrate / Nitroglycerin"
+  },
+  "digoxin": {
+    "cui": "C0012265",
+    "brand": [
+      "Lanoxin",
+      "Digoxin"
+    ],
+    "class": "Cardiac Glycoside (Inotropic)",
+    "generic": "Digoxin"
+  },
+  "diltiazem": {
+    "cui": "C0012373",
+    "brand": [
+      "Cardizem",
+      "Dilzem"
+    ],
+    "class": "Non-Dihydropyridine CCB",
+    "generic": "Diltiazem Hydrochloride"
+  },
+  "metformin": {
+    "cui": "C0025598",
+    "brand": [
+      "Glucophage",
+      "Glycomet",
+      "Obimet"
+    ],
+    "class": "Biguanide Antidiabetic",
+    "generic": "Metformin Hydrochloride"
+  },
+  "glimepiride": {
+    "cui": "C0382877",
+    "brand": [
+      "Amaryl",
+      "Glimisave",
+      "Zoryl"
+    ],
+    "class": "Second-Generation Sulfonylurea",
+    "generic": "Glimepiride"
+  },
+  "gliclazide": {
+    "cui": "C0017585",
+    "brand": [
+      "Diamicron",
+      "Reclide",
+      "Glycinorm"
+    ],
+    "class": "Sulfonylurea",
+    "generic": "Gliclazide"
+  },
+  "dapagliflozin": {
+    "cui": "C2719266",
+    "brand": [
+      "Farxiga",
+      "Forxiga",
+      "Oxra"
+    ],
+    "class": "SGLT2 Inhibitor",
+    "generic": "Dapagliflozin"
+  },
+  "empagliflozin": {
+    "cui": "C3831823",
+    "brand": [
+      "Jardiance",
+      "Gibtulio"
+    ],
+    "class": "SGLT2 Inhibitor",
+    "generic": "Empagliflozin"
+  },
+  "sitagliptin": {
+    "cui": "C1705556",
+    "brand": [
+      "Januvia",
+      "Istavel",
+      "Janumet"
+    ],
+    "class": "DPP-4 Inhibitor",
+    "generic": "Sitagliptin Phosphate"
+  },
+  "vildagliptin": {
+    "cui": "C1705886",
+    "brand": [
+      "Galvus",
+      "Zomelis",
+      "Jalra"
+    ],
+    "class": "DPP-4 Inhibitor",
+    "generic": "Vildagliptin"
+  },
+  "pioglitazone": {
+    "cui": "C0719873",
+    "brand": [
+      "Actos",
+      "Pioz",
+      "Pioglit"
+    ],
+    "class": "Thiazolidinedione (TZD)",
+    "generic": "Pioglitazone Hydrochloride"
+  },
+  "insulin glargine": {
+    "cui": "C0913867",
+    "brand": [
+      "Lantus",
+      "Basalog",
+      "Toujeo"
+    ],
+    "class": "Long-Acting Basal Insulin Analogue",
+    "generic": "Insulin Glargine"
+  },
+  "insulin lispro": {
+    "cui": "C0907097",
+    "brand": [
+      "Humalog",
+      "Eispro"
+    ],
+    "class": "Rapid-Acting Mealtime Insulin",
+    "generic": "Insulin Lispro"
+  },
+  "levothyroxine": {
+    "cui": "C0040188",
+    "brand": [
+      "Synthroid",
+      "Thyronorm",
+      "Eltroxin"
+    ],
+    "class": "Thyroid Hormone Replacement",
+    "generic": "Levothyroxine Sodium"
+  },
+  "carbimazole": {
+    "cui": "C0007077",
+    "brand": [
+      "Neo-Mercazole",
+      "Thyrozole"
+    ],
+    "class": "Antithyroid Agent",
+    "generic": "Carbimazole"
+  },
+  "pantoprazole": {
+    "cui": "C0081876",
+    "brand": [
+      "Protonix",
+      "Pantocid",
+      "Pan 40",
+      "Pan-D"
+    ],
+    "class": "Proton Pump Inhibitor (PPI)",
+    "generic": "Pantoprazole Sodium"
+  },
+  "omeprazole": {
+    "cui": "C0028978",
+    "brand": [
+      "Prilosec",
+      "Omez",
+      "Omee"
+    ],
+    "class": "Proton Pump Inhibitor (PPI)",
+    "generic": "Omeprazole"
+  },
+  "rabeprazole": {
+    "cui": "C0084743",
+    "brand": [
+      "Aciphex",
+      "Rablet",
+      "Razo",
+      "Rabeprazole-L"
+    ],
+    "class": "Proton Pump Inhibitor (PPI)",
+    "generic": "Rabeprazole Sodium"
+  },
+  "esomeprazole": {
+    "cui": "C0939400",
+    "brand": [
+      "Nexium",
+      "Nexpro",
+      "Esomac"
+    ],
+    "class": "Proton Pump Inhibitor (PPI)",
+    "generic": "Esomeprazole Magnesium"
+  },
+  "ondansetron": {
+    "cui": "C0070084",
+    "brand": [
+      "Zofran",
+      "Emset",
+      "Ondem",
+      "Vomikind"
+    ],
+    "class": "5-HT3 Receptor Antagonist (Antiemetic)",
+    "generic": "Ondansetron Hydrochloride"
+  },
+  "domperidone": {
+    "cui": "C0013008",
+    "brand": [
+      "Motilium",
+      "Domstal",
+      "Vomiplus"
+    ],
+    "class": "Dopamine D2 Receptor Antagonist (Prokinetic)",
+    "generic": "Domperidone"
+  },
+  "metoclopramide": {
+    "cui": "C0025852",
+    "brand": [
+      "Reglan",
+      "Perinorm",
+      "Maxolon"
+    ],
+    "class": "Prokinetic / Antiemetic",
+    "generic": "Metoclopramide Hydrochloride"
+  },
+  "sucralfate": {
+    "cui": "C0038612",
+    "brand": [
+      "Carafate",
+      "Sucrafil",
+      "Pegafate"
+    ],
+    "class": "Mucosal Protectant",
+    "generic": "Sucralfate"
+  },
+  "lactulose": {
+    "cui": "C0022967",
+    "brand": [
+      "Duphalac",
+      "Looz",
+      "Cremaffin Plus"
+    ],
+    "class": "Osmotic Laxative",
+    "generic": "Lactulose Solution"
+  },
+  "loperamide": {
+    "cui": "C0024003",
+    "brand": [
+      "Imodium",
+      "Lopamide",
+      "Eldoper"
+    ],
+    "class": "Antidiarrheal (Opioid Receptor Agonist)",
+    "generic": "Loperamide Hydrochloride"
+  },
+  "amoxicillin": {
+    "cui": "C0002645",
+    "brand": [
+      "Amoxil",
+      "Novamox",
+      "Moxikind"
+    ],
+    "class": "Aminopenicillin Antibiotic",
+    "generic": "Amoxicillin Trihydrate"
+  },
+  "amoxicillin-clavulanate": {
+    "cui": "C0051877",
+    "brand": [
+      "Augmentin",
+      "Moxikind-CV",
+      "Clavam"
+    ],
+    "class": "Beta-Lactamase Inhibitor Combination",
+    "generic": "Amoxicillin + Potassium Clavulanate"
+  },
+  "azithromycin": {
+    "cui": "C0052796",
+    "brand": [
+      "Zithromax",
+      "Azithral",
+      "Azee"
+    ],
+    "class": "Macrolide Antibiotic",
+    "generic": "Azithromycin Dihydrate"
+  },
+  "cefixime": {
+    "cui": "C0054884",
+    "brand": [
+      "Suprax",
+      "Taxim-O",
+      "Zifi",
+      "Cefolac"
+    ],
+    "class": "Third-Generation Cephalosporin (Oral)",
+    "generic": "Cefixime Trihydrate"
+  },
+  "ceftriaxone": {
+    "cui": "C0007787",
+    "brand": [
+      "Rocephin",
+      "Monocef",
+      "Oframax"
+    ],
+    "class": "Third-Generation Cephalosporin (Injectable)",
+    "generic": "Ceftriaxone Sodium"
+  },
+  "ciprofloxacin": {
+    "cui": "C0008809",
+    "brand": [
+      "Cipro",
+      "Ciplox",
+      "Cifran"
+    ],
+    "class": "Fluoroquinolone Antibiotic",
+    "generic": "Ciprofloxacin Hydrochloride"
+  },
+  "levofloxacin": {
+    "cui": "C0248744",
+    "brand": [
+      "Levaquin",
+      "Levomac",
+      "Loxof"
+    ],
+    "class": "Fluoroquinolone Antibiotic",
+    "generic": "Levofloxacin Hemihydrate"
+  },
+  "ofloxacin": {
+    "cui": "C0028942",
+    "brand": [
+      "Floxin",
+      "Oflox",
+      "Zenflox"
+    ],
+    "class": "Fluoroquinolone Antibiotic",
+    "generic": "Ofloxacin"
+  },
+  "doxycycline": {
+    "cui": "C0013090",
+    "brand": [
+      "Vibramycin",
+      "Doxypal",
+      "Doxt-SL"
+    ],
+    "class": "Tetracycline Antibiotic",
+    "generic": "Doxycycline Hyclate"
+  },
+  "metronidazole": {
+    "cui": "C0025902",
+    "brand": [
+      "Flagyl",
+      "Metrogyl",
+      "Aristogyl"
+    ],
+    "class": "Nitroimidazole Antibacterial / Antiprotozoal",
+    "generic": "Metronidazole"
+  },
+  "linezolid": {
+    "cui": "C0939237",
+    "brand": [
+      "Zyvox",
+      "Lizomac",
+      "Linospan"
+    ],
+    "class": "Oxazolidinone Antibiotic (MRSA)",
+    "generic": "Linezolid"
+  },
+  "meropenem": {
+    "cui": "C0084744",
+    "brand": [
+      "Merrem",
+      "Meronem",
+      "Merozan"
+    ],
+    "class": "Carbapenem Antibiotic",
+    "generic": "Meropenem Trihydrate"
+  },
+  "amikacin": {
+    "cui": "C0002499",
+    "brand": [
+      "Amikin",
+      "Mikacin"
+    ],
+    "class": "Aminoglycoside Antibiotic",
+    "generic": "Amikacin Sulfate"
+  },
+  "clindamycin": {
+    "cui": "C0008985",
+    "brand": [
+      "Cleocin",
+      "Dalacin C",
+      "Clindac A"
+    ],
+    "class": "Lincosamide Antibiotic",
+    "generic": "Clindamycin Hydrochloride / Phosphate"
+  },
+  "piperacillin-tazobactam": {
+    "cui": "C0699797",
+    "brand": [
+      "Zosyn",
+      "Tazomac",
+      "Pipzo"
+    ],
+    "class": "Extended-Spectrum Penicillin + Beta-Lactamase Inhibitor",
+    "generic": "Piperacillin + Tazobactam Sodium"
+  },
+  "fluconazole": {
+    "cui": "C0016259",
+    "brand": [
+      "Diflucan",
+      "Forcan",
+      "Syscan"
+    ],
+    "class": "Triazole Antifungal",
+    "generic": "Fluconazole"
+  },
+  "albendazole": {
+    "cui": "C0001928",
+    "brand": [
+      "Albenza",
+      "Zentel",
+      "Bandocid"
+    ],
+    "class": "Broad-Spectrum Anthelmintic",
+    "generic": "Albendazole"
+  },
+  "paracetamol": {
+    "cui": "C0000970",
+    "brand": [
+      "Tylenol",
+      "Dolo 650",
+      "Calpol",
+      "Crocin"
+    ],
+    "class": "Analgesic & Antipyretic",
+    "generic": "Acetaminophen / Paracetamol"
+  },
+  "ibuprofen": {
+    "cui": "C0020740",
+    "brand": [
+      "Advil",
+      "Motrin",
+      "Brufen",
+      "Combiflam"
+    ],
+    "class": "Nonsteroidal Anti-inflammatory Drug (NSAID)",
+    "generic": "Ibuprofen"
+  },
+  "aceclofenac": {
+    "cui": "C0719874",
+    "brand": [
+      "Zerodol",
+      "Zerodol-SP",
+      "Hifenac"
+    ],
+    "class": "Phenylacetic Acid NSAID",
+    "generic": "Aceclofenac"
+  },
+  "diclofenac": {
+    "cui": "C0012114",
+    "brand": [
+      "Voltaren",
+      "Voveran",
+      "Dynapar"
+    ],
+    "class": "NSAID",
+    "generic": "Diclofenac Sodium / Potassium"
+  },
+  "tramadol": {
+    "cui": "C0040610",
+    "brand": [
+      "Ultram",
+      "Tramazac",
+      "Ultracet"
+    ],
+    "class": "Synthetic Opioid Analgesic",
+    "generic": "Tramadol Hydrochloride"
+  },
+  "mefenamic acid": {
+    "cui": "C0025140",
+    "brand": [
+      "Ponstel",
+      "Meftal",
+      "Meftal-Spas"
+    ],
+    "class": "Fenamate NSAID / Antispasmodic",
+    "generic": "Mefenamic Acid"
+  },
+  "serratiopeptidase": {
+    "cui": "C0130985",
+    "brand": [
+      "Danzen",
+      "Bidanzen",
+      "Serrafast"
+    ],
+    "class": "Proteolytic Anti-inflammatory Enzyme",
+    "generic": "Serratiopeptidase"
+  },
+  "naproxen": {
+    "cui": "C0027396",
+    "brand": [
+      "Aleve",
+      "Naprosyn",
+      "Xenobid"
+    ],
+    "class": "Propionic Acid NSAID",
+    "generic": "Naproxen Sodium"
+  },
+  "etoricoxib": {
+    "cui": "C0939225",
+    "brand": [
+      "Arcoxia",
+      "Nucoxia",
+      "Etoshine"
+    ],
+    "class": "Selective COX-2 Inhibitor",
+    "generic": "Etoricoxib"
+  },
+  "thiocolchicoside": {
+    "cui": "C0076249",
+    "brand": [
+      "Muscoril",
+      "Myoril",
+      "Thiospas"
+    ],
+    "class": "GABA-A Muscle Relaxant",
+    "generic": "Thiocolchicoside"
+  },
+  "baclofen": {
+    "cui": "C0004603",
+    "brand": [
+      "Lioresal",
+      "Baclof",
+      "Liofen"
+    ],
+    "class": "GABA-B Agonist Muscle Relaxant",
+    "generic": "Baclofen"
+  },
+  "montelukast": {
+    "cui": "C0382878",
+    "brand": [
+      "Singulair",
+      "Montair",
+      "Montair-LC",
+      "Telekast"
+    ],
+    "class": "Leukotriene Receptor Antagonist (LTRA)",
+    "generic": "Montelukast Sodium"
+  },
+  "levocetirizine": {
+    "cui": "C0939235",
+    "brand": [
+      "Xyzal",
+      "Levocet",
+      "Vozet",
+      "L-Hist"
+    ],
+    "class": "Third-Generation Antihistamine",
+    "generic": "Levocetirizine Dihydrochloride"
+  },
+  "cetirizine": {
+    "cui": "C0055106",
+    "brand": [
+      "Zyrtec",
+      "Cetzine",
+      "Alerid",
+      "Okacet"
+    ],
+    "class": "Second-Generation Antihistamine",
+    "generic": "Cetirizine Hydrochloride"
+  },
+  "fexofenadine": {
+    "cui": "C0294711",
+    "brand": [
+      "Allegra",
+      "Fexova",
+      "Fexy"
+    ],
+    "class": "Second-Generation Non-Sedating Antihistamine",
+    "generic": "Fexofenadine Hydrochloride"
+  },
+  "budesonide": {
+    "cui": "C0006378",
+    "brand": [
+      "Pulmicort",
+      "Budecort",
+      "Budez"
+    ],
+    "class": "Inhaled Corticosteroid (ICS)",
+    "generic": "Budesonide"
+  },
+  "formoterol": {
+    "cui": "C0060935",
+    "brand": [
+      "Foradil",
+      "Foracort",
+      "Formonide"
+    ],
+    "class": "Long-Acting Beta-2 Agonist (LABA)",
+    "generic": "Formoterol Fumarate"
+  },
+  "salbutamol": {
+    "cui": "C0002011",
+    "brand": [
+      "Ventolin",
+      "Asthalin",
+      "Proventil"
+    ],
+    "class": "Short-Acting Beta-2 Agonist (SABA)",
+    "generic": "Salbutamol / Albuterol Sulfate"
+  },
+  "ipratropium": {
+    "cui": "C0022067",
+    "brand": [
+      "Atrovent",
+      "Duolin",
+      "Ipranide"
+    ],
+    "class": "Anticholinergic Bronchodilator",
+    "generic": "Ipratropium Bromide"
+  },
+  "fluticasone": {
+    "cui": "C0060855",
+    "brand": [
+      "Flonase",
+      "Flomist",
+      "Flovent"
+    ],
+    "class": "Corticosteroid Nasal Spray / Inhaler",
+    "generic": "Fluticasone Propionate / Furoate"
+  },
+  "acetylcysteine": {
+    "cui": "C0001044",
+    "brand": [
+      "Mucomyst",
+      "Mucinac",
+      "Nacfil"
+    ],
+    "class": "Mucolytic Agent & Paracetamol Antidote",
+    "generic": "N-Acetylcysteine"
+  },
+  "gabapentin": {
+    "cui": "C0060926",
+    "brand": [
+      "Neurontin",
+      "Gabapin",
+      "Gaba"
+    ],
+    "class": "Gabapentinoid (GABA Analogue)",
+    "generic": "Gabapentin"
+  },
+  "pregabalin": {
+    "cui": "C0700361",
+    "brand": [
+      "Lyrica",
+      "Pregeb",
+      "Pregalin"
+    ],
+    "class": "Alpha-2-Delta Calcium Channel Ligand",
+    "generic": "Pregabalin"
+  },
+  "clonazepam": {
+    "cui": "C0009028",
+    "brand": [
+      "Klonopin",
+      "Rivotril",
+      "Zapiz",
+      "Clona"
+    ],
+    "class": "Benzodiazepine Anticonvulsant",
+    "generic": "Clonazepam"
+  },
+  "alprazolam": {
+    "cui": "C0002341",
+    "brand": [
+      "Xanax",
+      "Alprax",
+      "Restyl",
+      "Trika"
+    ],
+    "class": "Short-Acting Benzodiazepine",
+    "generic": "Alprazolam"
+  },
+  "escitalopram": {
+    "cui": "C0939234",
+    "brand": [
+      "Lexapro",
+      "Nexito",
+      "Cipralex"
+    ],
+    "class": "Selective Serotonin Reuptake Inhibitor (SSRI)",
+    "generic": "Escitalopram Oxalate"
+  },
+  "sertraline": {
+    "cui": "C0074558",
+    "brand": [
+      "Zoloft",
+      "Daxid",
+      "Sertima"
+    ],
+    "class": "SSRI Antidepressant",
+    "generic": "Sertraline Hydrochloride"
+  },
+  "fluoxetine": {
+    "cui": "C0016365",
+    "brand": [
+      "Prozac",
+      "Flunil",
+      "Prodep"
+    ],
+    "class": "SSRI Antidepressant",
+    "generic": "Fluoxetine Hydrochloride"
+  },
+  "amitriptyline": {
+    "cui": "C0002622",
+    "brand": [
+      "Elavil",
+      "Tryptomer",
+      "Sarotex"
+    ],
+    "class": "Tricyclic Antidepressant (TCA) / Neuropathic Pain",
+    "generic": "Amitriptyline Hydrochloride"
+  },
+  "zolpidem": {
+    "cui": "C0078572",
+    "brand": [
+      "Ambien",
+      "Inzofresh",
+      "Zolfresh"
+    ],
+    "class": "Non-Benzodiazepine Hypnotic (Z-Drug)",
+    "generic": "Zolpidem Tartrate"
+  },
+  "sodium valproate": {
+    "cui": "C0042313",
+    "brand": [
+      "Depakote",
+      "Encorate",
+      "Epilim"
+    ],
+    "class": "Anticonvulsant & Mood Stabilizer",
+    "generic": "Sodium Valproate / Divalproex"
+  },
+  "levetiracetam": {
+    "cui": "C0719876",
+    "brand": [
+      "Keppra",
+      "Levera",
+      "Epilive"
+    ],
+    "class": "SV2A Ligand Anticonvulsant",
+    "generic": "Levetiracetam"
+  },
+  "carbamazepine": {
+    "cui": "C0006949",
+    "brand": [
+      "Tegretol",
+      "Mazetol",
+      "Tegrital"
+    ],
+    "class": "Sodium Channel Blocker Anticonvulsant",
+    "generic": "Carbamazepine"
+  },
+  "phenytoin": {
+    "cui": "C0031507",
+    "brand": [
+      "Dilantin",
+      "Eptoin"
+    ],
+    "class": "Hydantoin Anticonvulsant",
+    "generic": "Phenytoin Sodium"
+  },
+  "tamsulosin": {
+    "cui": "C0248742",
+    "brand": [
+      "Flomax",
+      "Urimax",
+      "Veltam"
+    ],
+    "class": "Alpha-1A Adrenergic Antagonist (BPH)",
+    "generic": "Tamsulosin Hydrochloride"
+  },
+  "silodosin": {
+    "cui": "C2719265",
+    "brand": [
+      "Rapaflo",
+      "Silodal",
+      "Silofast"
+    ],
+    "class": "Selective Alpha-1A Antagonist (BPH)",
+    "generic": "Silodosin"
+  },
+  "finasteride": {
+    "cui": "C0084741",
+    "brand": [
+      "Proscar",
+      "Propecia",
+      "Finast"
+    ],
+    "class": "5-Alpha Reductase Inhibitor",
+    "generic": "Finasteride"
+  },
+  "allopurinol": {
+    "cui": "C0002144",
+    "brand": [
+      "Zyloprim",
+      "Zyloric"
+    ],
+    "class": "Xanthine Oxidase Inhibitor (Gout)",
+    "generic": "Allopurinol"
+  },
+  "febuxostat": {
+    "cui": "C0939226",
+    "brand": [
+      "Uloric",
+      "Feburic",
+      "Febugood"
+    ],
+    "class": "Non-Purine Xanthine Oxidase Inhibitor",
+    "generic": "Febuxostat"
+  },
+  "ferrous ascorbate": {
+    "cui": "C1275990",
+    "brand": [
+      "Orofer-XT",
+      "Livogen-Z",
+      "Ferium-XT"
+    ],
+    "class": "Iron Supplement / Hematinic",
+    "generic": "Ferrous Ascorbate + Folic Acid"
+  },
+  "calcium-cholecalciferol": {
+    "cui": "C0700085",
+    "brand": [
+      "Shelcal 500",
+      "Calcirol",
+      "Gemcal"
+    ],
+    "class": "Bone Mineral & Vitamin Supplement",
+    "generic": "Calcium Carbonate + Vitamin D3"
+  },
+  "methylcobalamin": {
+    "cui": "C0025851",
+    "brand": [
+      "Neurobion Forte",
+      "Meconerv",
+      "Nurokind"
+    ],
+    "class": "Active Vitamin B12 Analogue",
+    "generic": "Methylcobalamin (Mecobalamin)"
+  },
+  "folic acid": {
+    "cui": "C0016410",
+    "brand": [
+      "Folvite",
+      "Fol 5"
+    ],
+    "class": "Water-Soluble Vitamin B9",
+    "generic": "Folic Acid"
+  },
+  "multivitamin-zinc": {
+    "cui": "C0004481",
+    "brand": [
+      "Becosules Z",
+      "Supradyn",
+      "Zincovit"
+    ],
+    "class": "Therapeutic Multivitamin with Zinc",
+    "generic": "B-Complex + Vitamin C + Zinc"
+  }
+}
