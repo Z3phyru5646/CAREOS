@@ -192,6 +192,11 @@ class GenomicsEngine:
         self.training_metrics: dict[str, Any] = {}
         self._is_trained = False
 
+    @property
+    def is_trained(self) -> bool:
+        """Return True if the engine has been trained."""
+        return self._is_trained
+
         logger.info(
             "GenomicsEngine initialized | XGBoost=%s | VAE=%s | SHAP=%s | Optuna=%s",
             self.config.use_xgboost, self.config.enable_vae,

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARE'OS — Module 2: Ambient AI Scribe & 2nd-Pass Verifier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="dark-theme">
+  <!-- Top Navigation Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-badge">
+        <span class="brand-care">CARE'OS</span>
+        <span class="module-tag">MODULE 2</span>
+      </div>
+      <div class="system-status">
+        <span class="pulse-dot"></span>
+        <span class="status-text">Ambient Scribe & 2nd-Pass Verifier Active</span>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="patient-pill">
+        <span class="lbl">PATIENT:</span>
+        <span class="val" id="patientIdDisplay">PT-9042 (Cardio-Metabolic)</span>
+      </div>
+      <div class="lang-toggle">
+        <label class="switch-label">Indian Clinic Mode (Hinglish):</label>
+        <label class="toggle-switch">
+          <input type="checkbox" id="hinglishToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button class="btn btn-secondary" id="btnLoadDemo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Load Demo Encounter
+      </button>
+      <button class="btn btn-primary" id="btnProcessEncounter">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        Process Audio
+      </button>
+      <button class="btn btn-accent" id="btnSignOffEHR">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Sign & Push to EHR
+      </button>
+    </div>
+  </header>
+
+  <!-- Metric Badges Strip -->
+  <section class="metrics-strip">
+    <div class="metric-card">
+      <div class="metric-label">Total Atomic Claims</div>
+      <div class="metric-value" id="valTotalClaims">--</div>
+    </div>
+    <div class="metric-card green-card">
+      <div class="metric-label">Direct / Upgrades (Tiers 1-2)</div>
+      <div class="metric-value" id="valSupportedCount">--</div>
+    </div>
+    <div class="metric-card amber-card">
+      <div class="metric-label">Clinical Inferences (Tier 3)</div>
+      <div class="metric-value" id="valInferredCount">--</div>
+    </div>
+    <div class="metric-card red-card">
+      <div class="metric-label">Unsupported / Safety (Tiers 4-5)</div>
+      <div class="metric-value" id="valContradictionCount">--</div>
+    </div>
+    <div class="metric-card comparison-card">
+      <div class="metric-label">Hallucination Reduction</div>
+      <div class="metric-split">
+        <span class="lit-rate" id="valLiteralRate">35.2% Literal</span>
+        <span class="arrow">➔</span>
+        <span class="inf-rate" id="valInferenceRate">9.1% Inf-Aware</span>
+      </div>
+    </div>
+    <div class="metric-card cpic-card">
+      <div class="metric-label">CPIC Pharmacogenomic Alerts</div>
+      <div class="metric-value highlight-alert" id="valCpicAlerts">--</div>
+    </div>
+  </section>
+
+  <!-- Main Split-Screen Workspace -->
+  <main class="workspace-grid">
+    <!-- Left Panel: Diarized Audio Transcript & Provenance Source -->
+    <section class="panel panel-left">
+      <div class="panel-header">
+        <div class="title-with-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          <h2>Diarized Clinical Transcript & Word-Level Alignment</h2>
+        </div>
+        <div class="transcript-controls">
+          <span class="badge badge-speaker">WhisperX + pyannote</span>
+        </div>
+      </div>
+
+      <!-- Audio Player Toolbar -->
+      <div class="audio-player-bar">
+        <button class="play-btn" id="audioPlayBtn">▶</button>
+        <div class="audio-waveform-container">
+          <div class="waveform-progress" id="waveformProgress"></div>
+          <div class="waveform-cursor" id="waveformCursor"></div>
+        </div>
+        <div class="audio-time" id="audioTimeDisplay">00:00 / 00:52</div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="transcript-search-bar">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="transcriptSearch" placeholder="Search transcript for medications, symptoms, or lab findings...">
+      </div>
+
+      <!-- Transcript Utterances Container -->
+      <div class="transcript-list" id="transcriptContainer">
+        <!-- Rendered dynamically -->
+        <div class="placeholder-state">Loading clinical encounter...</div>
+      </div>
+    </section>
+
+    <!-- Right Panel: Linked Evidence SOAP Note with 5-Tier Verification Badges -->
+    <section class="panel panel-right">
+      <div class="panel-header">
+        <div class="title-with-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <h2>Constrained SOAP Note with Dual-Tier Verification Audit</h2>
+        </div>
+        <div class="soap-actions">
+          <button class="btn btn-xs" id="btnExportFHIR">FHIR R4</button>
+          <button class="btn btn-xs" id="btnExportPatient">Patient AVS</button>
+          <button class="btn btn-xs" id="btnExportEM">E/M Audit</button>
+        </div>
+      </div>
+
+      <!-- SOAP Note Interactive Sections -->
+      <div class="soap-container" id="soapContainer">
+        <div class="soap-section" data-section="S">
+          <div class="soap-section-header">
+            <h3>SUBJECTIVE</h3>
+            <span class="sub-badge">MedGemma 1.5 + Med7</span>
+          </div>
+          <div class="soap-section-body" id="soapSubjective"></div>
+        </div>
+
+        <div class="soap-section" data-section="O">
+          <div class="soap-section-header">
+            <h3>OBJECTIVE</h3>
+            <span class="sub-badge">Vitals & Physical Exam</span>
+          </div>
+          <div class="soap-section-body" id="soapObjective"></div>
+        </div>
+
+        <div class="soap-section" data-section="A">
+          <div class="soap-section-header">
+            <h3>ASSESSMENT</h3>
+            <span class="sub-badge">Differential & Reasoning</span>
+          </div>
+          <div class="soap-section-body" id="soapAssessment"></div>
+        </div>
+
+        <div class="soap-section" data-section="P">
+          <div class="soap-section-header">
+            <h3>PLAN</h3>
+            <span class="sub-badge">Posology & Pharmacotherapy</span>
+          </div>
+          <div class="soap-section-body" id="soapPlan"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Side Drawer: Clinical Co-Pilot & Inter-Module Bus -->
+    <aside class="sidebar-copilot">
+      <!-- Co-Pilot Card -->
+      <div class="copilot-box">
+        <div class="copilot-header">
+          <div class="title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <h3>Clinical Co-Pilot Whisperer</h3>
+          </div>
+          <span class="live-pill">REAL-TIME</span>
+        </div>
+        
+        <div class="copilot-section">
+          <h4>Working Differential Hypotheses (Top-N)</h4>
+          <ul class="differential-list" id="copilotHypotheses">
+            <li>Awaiting encounter audio...</li>
+          </ul>
+        </div>
+
+        <div class="copilot-section">
+          <h4>Missing Red-Flag Inquiries (Anti-Overreliance)</h4>
+          <ul class="redflag-list" id="copilotRedFlags">
+            <li>Awaiting encounter dialogue...</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CPIC Level A Alert Box -->
+      <div class="cpic-box" id="cpicContainer">
+        <div class="cpic-header">
+          <span class="dna-icon">🧬</span>
+          <h3>Module 3 Pharmacogenomics</h3>
+        </div>
+        <div class="cpic-content" id="cpicAlertsList">
+          <p class="placeholder-text">Scanning Plan medications against CPIC Level A Watchlist (30+ gene-drug pairs)...</p>
+        </div>
+      </div>
+
+      <!-- Module 1 Queue Pacing Box -->
+      <div class="telemetry-box">
+        <div class="telemetry-header">
+          <span class="clock-icon">⏱️</span>
+          <h3>Module 1 Queue Telemetry</h3>
+        </div>
+        <div class="telemetry-content" id="telemetryData">
+          <div class="telemetry-row"><span>Elapsed:</span> <strong id="telElapsed">0:52s</strong></div>
+          <div class="telemetry-row"><span>SOAP Phase:</span> <strong id="telPhase">Assessment & Plan</strong></div>
+          <div class="telemetry-row"><span>UMLS Concepts:</span> <strong id="telConcepts">12 active</strong></div>
+          <div class="telemetry-row"><span>Queue Impact:</span> <span class="badge-success">On Schedule</span></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal for FHIR & Patient Summary -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalTitle">Export Artifact</h3>
+        <button class="modal-close" id="modalCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
