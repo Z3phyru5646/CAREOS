@@ -59,7 +59,7 @@ class TriggerPayload(BaseModel):
     patient_id: str = Field(..., description="Unique patient identifier from Module 1")
     diagnosis_codes: list[str] = Field(..., min_length=1, description="ICD-10 codes extracted from SOAP note")
     medication_names: list[str] = Field(..., min_length=1, description="Medication names from SOAP note")
-    prescribing_physician: str = Field(..., description="Physician ID for audit trail")
+    prescribing_physician: str = Field(default="CAREOS-CLINICIAN", description="Physician ID for audit trail")
     consultation_id: str = Field(default_factory=lambda: str(uuid.uuid4()), description="Unique consultation session ID")
     timestamp: datetime.datetime = Field(default_factory=datetime.datetime.now)
 

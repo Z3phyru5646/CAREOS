@@ -28,3 +28,6 @@ Desktop.ini
 
 # Logs
 *.log
+
+# Uploaded Audio Files
+data/uploads/

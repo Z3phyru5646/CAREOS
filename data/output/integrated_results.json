@@ -1,7 +1,7 @@
 {
-  "encounter_id": "8f843ad5-923",
+  "encounter_id": "67ad0d84-c0a",
   "patient_id": "CAREOS-DEMO-001",
-  "processing_time_sec": 12.8,
+  "processing_time_sec": 12.05,
   "transcript": {
     "audio_file": "C:\\Users\\Major X\\Downloads\\Module 3\\data\\sample_audio\\demo.wav",
     "duration_seconds": 52.0,
@@ -1290,7 +1290,7 @@
     ],
     "language": "en",
     "hinglish_mode": false,
-    "created_at": "2026-10-28T17:13:03.235072"
+    "created_at": "2026-10-28T17:17:35.936719"
   },
   "corrections": [
     {
@@ -1305,8 +1305,8 @@
   ],
   "fact_sheet": {
     "patient_id": "CAREOS-DEMO-001",
-    "encounter_id": "8f843ad5-923",
-    "encounter_date": "2026-10-28T17:13:03.239820",
+    "encounter_id": "67ad0d84-c0a",
+    "encounter_date": "2026-10-28T17:17:35.945157",
     "symptoms": [
       {
         "text": "pain after eating",
@@ -1586,11 +1586,11 @@
     "chief_complaint_utterance_id": null
   },
   "soap_note": {
-    "encounter_id": "8f843ad5-923",
+    "encounter_id": "67ad0d84-c0a",
     "patient_id": "CAREOS-DEMO-001",
     "subjective": [
       {
-        "claim_id": "c_96d98c85",
+        "claim_id": "c_ec164df6",
         "soap_section": "S",
         "claim_text": "Patient presents with a 2-week history of postprandial epigastric pain described as a burning sensation.",
         "source_utterance_ids": [
@@ -1605,7 +1605,7 @@
         "original_lay_text": "terrible pain after I eat... burning feeling in my upper stomach"
       },
       {
-        "claim_id": "c_3a9907e8",
+        "claim_id": "c_9b571e76",
         "soap_section": "S",
         "claim_text": "Pain causes nocturnal awakening.",
         "source_utterance_ids": [
@@ -1619,7 +1619,7 @@
         "original_lay_text": "Sometimes it wakes me up at night"
       },
       {
-        "claim_id": "c_006f0c3c",
+        "claim_id": "c_37d39516",
         "soap_section": "S",
         "claim_text": "Patient reports intermittent nausea without emesis.",
         "source_utterance_ids": [
@@ -1633,7 +1633,7 @@
         "original_lay_text": "No vomiting, but I do feel nauseous sometimes"
       },
       {
-        "claim_id": "c_e4642d1c",
+        "claim_id": "c_209fe5a2",
         "soap_section": "S",
         "claim_text": "Patient denies hematochezia.",
         "source_utterance_ids": [
@@ -1647,7 +1647,7 @@
         "original_lay_text": "No blood that I've noticed"
       },
       {
-        "claim_id": "c_d87252fb",
+        "claim_id": "c_61b20e65",
         "soap_section": "S",
         "claim_text": "Patient has been taking ibuprofen daily for approximately 6 months for chronic back pain.",
         "source_utterance_ids": [
@@ -1662,7 +1662,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_f7881fec",
+        "claim_id": "c_1184e108",
         "soap_section": "S",
         "claim_text": "Current medications include lisinopril 10 mg daily for hypertension.",
         "source_utterance_ids": [
@@ -1676,7 +1676,7 @@
         "original_lay_text": "I take Zestril for my blood pressure, 10 milligrams daily"
       },
       {
-        "claim_id": "c_91b0c8b9",
+        "claim_id": "c_842971e9",
         "soap_section": "S",
         "claim_text": "Patient was previously taking omeprazole 20 mg but discontinued approximately 1 month ago.",
         "source_utterance_ids": [
@@ -1690,7 +1690,7 @@
         "original_lay_text": "omeprazole 20 milligrams but I ran out last month"
       },
       {
-        "claim_id": "c_cba9956f",
+        "claim_id": "c_83a72caa",
         "soap_section": "S",
         "claim_text": "No known drug allergies (NKDA).",
         "source_utterance_ids": [
@@ -1702,7 +1702,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_4546c292",
+        "claim_id": "c_fe13d355",
         "soap_section": "S",
         "claim_text": "Social history: Non-smoker. Reports moderate alcohol use (2 drinks on weekends).",
         "source_utterance_ids": [
@@ -1716,7 +1716,7 @@
     ],
     "objective_exam": [
       {
-        "claim_id": "c_c0d50c16",
+        "claim_id": "c_e25518d5",
         "soap_section": "O",
         "claim_text": "Blood pressure 134/82 mmHg.",
         "source_utterance_ids": [
@@ -1730,7 +1730,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_e2f4145e",
+        "claim_id": "c_9f49b90e",
         "soap_section": "O",
         "claim_text": "Heart rate 78 bpm, regular rhythm.",
         "source_utterance_ids": [
@@ -1744,7 +1744,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_13d5b7d4",
+        "claim_id": "c_86570b6c",
         "soap_section": "O",
         "claim_text": "Abdomen soft with epigastric tenderness on palpation.",
         "source_utterance_ids": [
@@ -1758,7 +1758,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_81f43c81",
+        "claim_id": "c_4b9e4dee",
         "soap_section": "O",
         "claim_text": "No rebound tenderness. No guarding.",
         "source_utterance_ids": [
@@ -1773,7 +1773,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_2d3c3f67",
+        "claim_id": "c_514de442",
         "soap_section": "O",
         "claim_text": "Bowel sounds normoactive.",
         "source_utterance_ids": [
@@ -1785,7 +1785,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_a62bf9c4",
+        "claim_id": "c_f0b26de5",
         "soap_section": "O",
         "claim_text": "No palpable abdominal masses.",
         "source_utterance_ids": [
@@ -1800,7 +1800,7 @@
     "objective_results": [],
     "assessment_plan": [
       {
-        "claim_id": "c_e7da8614",
+        "claim_id": "c_93b65e1a",
         "soap_section": "A",
         "claim_text": "Suspected peptic ulcer disease (PUD) / gastroesophageal reflux disease (GERD), likely NSAID-induced given 6-month daily ibuprofen use.",
         "source_utterance_ids": [
@@ -1815,7 +1815,7 @@
         "original_lay_text": "concerned about peptic ulcer disease or possibly GERD"
       },
       {
-        "claim_id": "c_ab2ead56",
+        "claim_id": "c_aa191013",
         "soap_section": "P",
         "claim_text": "Resume omeprazole 20 mg PO daily.",
         "source_utterance_ids": [
@@ -1829,7 +1829,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_e0dbaae8",
+        "claim_id": "c_0f065447",
         "soap_section": "P",
         "claim_text": "Discontinue ibuprofen. Counsel on NSAID gastropathy risk.",
         "source_utterance_ids": [
@@ -1843,7 +1843,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_a4ec6e78",
+        "claim_id": "c_e227bad1",
         "soap_section": "P",
         "claim_text": "Order H. pylori stool antigen test.",
         "source_utterance_ids": [
@@ -1857,7 +1857,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_43b98064",
+        "claim_id": "c_87eb29c2",
         "soap_section": "P",
         "claim_text": "Follow-up in 4 weeks to reassess symptoms.",
         "source_utterance_ids": [
@@ -1869,7 +1869,7 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_3826a1e2",
+        "claim_id": "c_801ae17e",
         "soap_section": "P",
         "claim_text": "Patient instructed to seek emergency care if pain worsens or hematochezia develops.",
         "source_utterance_ids": [
@@ -1883,9 +1883,9 @@
         "original_lay_text": null
       },
       {
-        "claim_id": "c_1271b8e9",
+        "claim_id": "c_c865bad9",
         "soap_section": "P",
-        "claim_text": "[PGx Decision Support] ⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 59.8%) | Suggested dose: 44.14 mg/day (90% CI: 4.73-83.55) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
+        "claim_text": "[PGx Decision Support] ⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 55.6%) | Suggested dose: 43.9 mg/day (90% CI: 0.0-94.0) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
         "source_utterance_ids": [],
         "audio_start_sec": null,
         "audio_end_sec": null,
@@ -1893,15 +1893,15 @@
         "original_lay_text": null
       }
     ],
-    "pharmacogenomic_appendix": "════════════════════════════════════════════════════════════════════════\n  PHARMACOGENOMIC DECISION SUPPORT — FOR CLINICIAN REVIEW ONLY\n════════════════════════════════════════════════════════════════════════\n\n  Alert ID:    d2f937a3-2b44-464a-8bbe-fd9b18990fe4\n  Severity:    INFORMATIONAL\n  Patient:     CAREOS-DEMO-001\n  Generated:   2026-10-28T17:13:15.091251\n\n  ── Genomic Findings ─────────────────────────────────────────────\n    Gene:     CYP2C19\n    Variant:  rs12248560 (copies: 0)\n\n    Gene:     CYP2C19\n    Variant:  rs4244285 (copies: 1)\n\n    Gene:     CYP2C19\n    Variant:  rs4986893 (copies: 0)\n\n  Metabolizer Phenotype: intermediate_metabolizer\n  Risk Level:            low\n\n  ── Predicted Drug Response ───────────────────────────────────────\n    Category:   responder\n    Confidence: 59.8%\n      P(adverse_event_risk): 0.178\n      P(non_responder): 0.224\n      P(responder): 0.598\n\n  ── Dose Estimate ────────────────────────────────────────────────\n    Predicted:  44.14 mg/day\n    90% CI:     [4.73, 83.55] mg/day\n\n  ── CPIC Guidance ────────────────────────────────────────────────\n    Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.\n    Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n    Source: https://cpicpgx.org/guidelines/guideline-for-proton-pump-inhibitors-and-cyp2c19/\n\n  ── Suggested Clinical Actions ───────────────────────────────────\n    1. Review CYP2C19 pharmacogenomic implications for current therapy\n    2. Verify metabolizer phenotype (intermediate_metabolizer) with confirmatory testing if not previously confirmed\n    3. Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n\n  ⚕️  ⚕️ DECISION SUPPORT ONLY — This pharmacogenomic alert is a suggestion for clinician review. It is NOT a diagnosis, prescription, or clinical order. The treating physician must independently verify all findings and make care decisions based on the complete clinical picture.\n════════════════════════════════════════════════════════════════════════",
+    "pharmacogenomic_appendix": "════════════════════════════════════════════════════════════════════════\n  PHARMACOGENOMIC DECISION SUPPORT — FOR CLINICIAN REVIEW ONLY\n════════════════════════════════════════════════════════════════════════\n\n  Alert ID:    0d69b265-77c7-4c05-965c-64fa68aa9c29\n  Severity:    INFORMATIONAL\n  Patient:     CAREOS-DEMO-001\n  Generated:   2026-10-28T17:17:47.196839\n\n  ── Genomic Findings ─────────────────────────────────────────────\n    Gene:     CYP2C19\n    Variant:  rs12248560 (copies: 0)\n\n    Gene:     CYP2C19\n    Variant:  rs4244285 (copies: 1)\n\n    Gene:     CYP2C19\n    Variant:  rs4986893 (copies: 0)\n\n  Metabolizer Phenotype: intermediate_metabolizer\n  Risk Level:            low\n\n  ── Predicted Drug Response ───────────────────────────────────────\n    Category:   responder\n    Confidence: 55.6%\n      P(adverse_event_risk): 0.211\n      P(non_responder): 0.233\n      P(responder): 0.556\n\n  ── Dose Estimate ────────────────────────────────────────────────\n    Predicted:  43.90 mg/day\n    90% CI:     [0.00, 94.00] mg/day\n\n  ── CPIC Guidance ────────────────────────────────────────────────\n    Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.\n    Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n    Source: https://cpicpgx.org/guidelines/guideline-for-proton-pump-inhibitors-and-cyp2c19/\n\n  ── Suggested Clinical Actions ───────────────────────────────────\n    1. Review CYP2C19 pharmacogenomic implications for current therapy\n    2. Verify metabolizer phenotype (intermediate_metabolizer) with confirmatory testing if not previously confirmed\n    3. Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n\n  ⚕️  ⚕️ DECISION SUPPORT ONLY — This pharmacogenomic alert is a suggestion for clinician review. It is NOT a diagnosis, prescription, or clinical order. The treating physician must independently verify all findings and make care decisions based on the complete clinical picture.\n════════════════════════════════════════════════════════════════════════",
     "pharmacogenomic_alerts": [
       {
-        "alert_id": "d2f937a3-2b44-464a-8bbe-fd9b18990fe4",
+        "alert_id": "0d69b265-77c7-4c05-965c-64fa68aa9c29",
         "alert_type": "pharmacogenomic_alert",
         "severity": "informational",
-        "timestamp": "2026-10-28T17:13:15.091251",
+        "timestamp": "2026-10-28T17:17:47.196839",
         "patient_id": "CAREOS-DEMO-001",
-        "consultation_id": "8f843ad5-923",
+        "consultation_id": "67ad0d84-c0a",
         "matched_diagnosis_codes": [
           "K21.0"
         ],
@@ -1939,18 +1939,18 @@
         "drug_response_prediction": {
           "predicted_category": "responder",
           "probabilities": {
-            "adverse_event_risk": 0.1781,
-            "non_responder": 0.2236,
-            "responder": 0.5983
+            "adverse_event_risk": 0.2106,
+            "non_responder": 0.2332,
+            "responder": 0.5561
           },
-          "confidence": 0.5983,
+          "confidence": 0.5561,
           "calibrated": false
         },
         "dose_estimate": {
-          "predicted_dose": 44.14,
+          "predicted_dose": 43.9,
           "unit": "mg/day",
-          "confidence_interval_lower": 4.73,
-          "confidence_interval_upper": 83.55,
+          "confidence_interval_lower": 0.0,
+          "confidence_interval_upper": 94.0,
           "confidence_level": 0.9,
           "status": "model_estimate_requires_clinician_review"
         },
@@ -1967,71 +1967,71 @@
         "explainability": {
           "top_features": [
             {
-              "feature_name": "expr_NAT2",
-              "shap_value": 0.0301,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "expr_GENE_026",
-              "shap_value": 0.0249,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "latent_snp_1",
-              "shap_value": 0.0214,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "clin_bilirubin",
-              "shap_value": 0.0214,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "expr_GENE_000",
-              "shap_value": 0.0212,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "expr_GENE_006",
-              "shap_value": 0.0211,
-              "direction": "decreases_risk",
+              "feature_name": "latent_snp_5",
+              "shap_value": 0.0195,
+              "direction": "increases_risk",
               "magnitude": "high"
             },
             {
               "feature_name": "expr_GENE_003",
-              "shap_value": 0.0208,
+              "shap_value": 0.0169,
               "direction": "decreases_risk",
               "magnitude": "high"
             },
             {
-              "feature_name": "expr_GENE_017",
-              "shap_value": 0.02,
+              "feature_name": "clin_alt",
+              "shap_value": 0.0169,
+              "direction": "increases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "expr_GENE_026",
+              "shap_value": 0.0159,
               "direction": "decreases_risk",
               "magnitude": "high"
             },
             {
-              "feature_name": "expr_CYP1A2",
-              "shap_value": 0.02,
+              "feature_name": "latent_snp_10",
+              "shap_value": 0.0158,
+              "direction": "increases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "expr_ABCB1",
+              "shap_value": 0.0156,
               "direction": "decreases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "expr_GENE_020",
+              "shap_value": 0.0152,
+              "direction": "decreases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "expr_SLCO1B1",
+              "shap_value": 0.0152,
+              "direction": "increases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "clin_age",
+              "shap_value": 0.0151,
+              "direction": "increases_risk",
               "magnitude": "moderate"
             },
             {
-              "feature_name": "expr_GENE_024",
-              "shap_value": 0.0196,
+              "feature_name": "expr_CYP1A2",
+              "shap_value": 0.015,
               "direction": "decreases_risk",
               "magnitude": "moderate"
             }
           ],
           "base_value": 0.5,
-          "prediction_value": 0.5983,
-          "explanation_text": "Key factors influencing this prediction (Tree Attribution): expr_NAT2 (weight: 0.030, high); expr_GENE_026 (weight: 0.025, high); latent_snp_1 (weight: 0.021, high); clin_bilirubin (weight: 0.021, high); expr_GENE_000 (weight: 0.021, high). This explanation is model-derived and should be interpreted in clinical context."
+          "prediction_value": 0.5561,
+          "explanation_text": "Key factors influencing this prediction (Tree Attribution): latent_snp_5 (weight: 0.019, high); expr_GENE_003 (weight: 0.017, high); clin_alt (weight: 0.017, high); expr_GENE_026 (weight: 0.016, high); latent_snp_10 (weight: 0.016, high). This explanation is model-derived and should be interpreted in clinical context."
         },
-        "soap_note_suggestion": "⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 59.8%) | Suggested dose: 44.14 mg/day (90% CI: 4.73-83.55) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
+        "soap_note_suggestion": "⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 55.6%) | Suggested dose: 43.9 mg/day (90% CI: 0.0-94.0) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
         "clinical_action_items": [
           "Review CYP2C19 pharmacogenomic implications for current therapy",
           "Verify metabolizer phenotype (intermediate_metabolizer) with confirmatory testing if not previously confirmed",
@@ -2043,20 +2043,20 @@
         "gene": "CYP2C19",
         "phenotype": "intermediate_metabolizer",
         "predicted_response": "responder",
-        "suggested_starting_dose": "44.14 mg/day [4.73, 83.55] 90% CI",
+        "suggested_starting_dose": "43.9 mg/day [0.0, 94.0] 90% CI",
         "recommendation": "Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.",
         "monitoring_advice": "Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use."
       }
     ],
     "generated_by": "MedGemma-27B-Simulated",
     "generation_temperature": 0.1,
-    "created_at": "2026-10-28T17:13:03.240349"
+    "created_at": "2026-10-28T17:17:35.945157"
   },
   "verification": {
-    "encounter_id": "8f843ad5-923",
+    "encounter_id": "67ad0d84-c0a",
     "claim_results": [
       {
-        "claim_id": "c_96d98c85",
+        "claim_id": "c_ec164df6",
         "claim_text": "Patient presents with a 2-week history of postprandial epigastric pain described as a burning sensation.",
         "soap_section": "S",
         "minicheck_score": 0.1,
@@ -2076,7 +2076,7 @@
         "audio_end_sec": 12.5
       },
       {
-        "claim_id": "c_3a9907e8",
+        "claim_id": "c_9b571e76",
         "claim_text": "Pain causes nocturnal awakening.",
         "soap_section": "S",
         "minicheck_score": 0.2692307692307692,
@@ -2098,7 +2098,7 @@
         "audio_end_sec": 12.5
       },
       {
-        "claim_id": "c_006f0c3c",
+        "claim_id": "c_37d39516",
         "claim_text": "Patient reports intermittent nausea without emesis.",
         "soap_section": "S",
         "minicheck_score": 0.1,
@@ -2118,7 +2118,7 @@
         "audio_end_sec": 20.2
       },
       {
-        "claim_id": "c_e4642d1c",
+        "claim_id": "c_209fe5a2",
         "claim_text": "Patient denies hematochezia.",
         "soap_section": "S",
         "minicheck_score": 0.26865671641791045,
@@ -2138,7 +2138,7 @@
         "audio_end_sec": 20.2
       },
       {
-        "claim_id": "c_d87252fb",
+        "claim_id": "c_61b20e65",
         "claim_text": "Patient has been taking ibuprofen daily for approximately 6 months for chronic back pain.",
         "soap_section": "S",
         "minicheck_score": 0.1,
@@ -2158,7 +2158,7 @@
         "audio_end_sec": 22.15
       },
       {
-        "claim_id": "c_f7881fec",
+        "claim_id": "c_1184e108",
         "claim_text": "Current medications include lisinopril 10 mg daily for hypertension.",
         "soap_section": "S",
         "minicheck_score": 0.41379310344827586,
@@ -2178,7 +2178,7 @@
         "audio_end_sec": 29.3
       },
       {
-        "claim_id": "c_91b0c8b9",
+        "claim_id": "c_842971e9",
         "claim_text": "Patient was previously taking omeprazole 20 mg but discontinued approximately 1 month ago.",
         "soap_section": "S",
         "minicheck_score": 0.35802469135802467,
@@ -2198,7 +2198,7 @@
         "audio_end_sec": 31.9
       },
       {
-        "claim_id": "c_cba9956f",
+        "claim_id": "c_83a72caa",
         "claim_text": "No known drug allergies (NKDA).",
         "soap_section": "S",
         "minicheck_score": 0.4050632911392405,
@@ -2218,7 +2218,7 @@
         "audio_end_sec": 32.0
       },
       {
-        "claim_id": "c_4546c292",
+        "claim_id": "c_fe13d355",
         "claim_text": "Social history: Non-smoker. Reports moderate alcohol use (2 drinks on weekends).",
         "soap_section": "S",
         "minicheck_score": 0.1,
@@ -2238,7 +2238,7 @@
         "audio_end_sec": 32.0
       },
       {
-        "claim_id": "c_c0d50c16",
+        "claim_id": "c_e25518d5",
         "claim_text": "Blood pressure 134/82 mmHg.",
         "soap_section": "O",
         "minicheck_score": 0.21212121212121213,
@@ -2258,7 +2258,7 @@
         "audio_end_sec": 35.3
       },
       {
-        "claim_id": "c_e2f4145e",
+        "claim_id": "c_9f49b90e",
         "claim_text": "Heart rate 78 bpm, regular rhythm.",
         "soap_section": "O",
         "minicheck_score": 0.2830188679245283,
@@ -2278,7 +2278,7 @@
         "audio_end_sec": 36.5
       },
       {
-        "claim_id": "c_13d5b7d4",
+        "claim_id": "c_86570b6c",
         "claim_text": "Abdomen soft with epigastric tenderness on palpation.",
         "soap_section": "O",
         "minicheck_score": 0.26605504587155965,
@@ -2298,7 +2298,7 @@
         "audio_end_sec": 39.4
       },
       {
-        "claim_id": "c_81f43c81",
+        "claim_id": "c_4b9e4dee",
         "claim_text": "No rebound tenderness. No guarding.",
         "soap_section": "O",
         "minicheck_score": 0.2891566265060241,
@@ -2318,7 +2318,7 @@
         "audio_end_sec": 39.9
       },
       {
-        "claim_id": "c_2d3c3f67",
+        "claim_id": "c_514de442",
         "claim_text": "Bowel sounds normoactive.",
         "soap_section": "O",
         "minicheck_score": 0.273972602739726,
@@ -2338,7 +2338,7 @@
         "audio_end_sec": 40.0
       },
       {
-        "claim_id": "c_a62bf9c4",
+        "claim_id": "c_f0b26de5",
         "claim_text": "No palpable abdominal masses.",
         "soap_section": "O",
         "minicheck_score": 0.2597402597402597,
@@ -2358,7 +2358,7 @@
         "audio_end_sec": 40.0
       },
       {
-        "claim_id": "c_e7da8614",
+        "claim_id": "c_93b65e1a",
         "claim_text": "Suspected peptic ulcer disease (PUD) / gastroesophageal reflux disease (GERD), likely NSAID-induced given 6-month daily ibuprofen use.",
         "soap_section": "A",
         "minicheck_score": 0.24749163879598662,
@@ -2378,7 +2378,7 @@
         "audio_end_sec": 48.55
       },
       {
-        "claim_id": "c_ab2ead56",
+        "claim_id": "c_aa191013",
         "claim_text": "Resume omeprazole 20 mg PO daily.",
         "soap_section": "P",
         "minicheck_score": 0.3055555555555556,
@@ -2398,7 +2398,7 @@
         "audio_end_sec": 50.3
       },
       {
-        "claim_id": "c_e0dbaae8",
+        "claim_id": "c_0f065447",
         "claim_text": "Discontinue ibuprofen. Counsel on NSAID gastropathy risk.",
         "soap_section": "P",
         "minicheck_score": 0.31007751937984496,
@@ -2420,7 +2420,7 @@
         "audio_end_sec": 50.9
       },
       {
-        "claim_id": "c_a4ec6e78",
+        "claim_id": "c_e227bad1",
         "claim_text": "Order H. pylori stool antigen test.",
         "soap_section": "P",
         "minicheck_score": 0.35135135135135137,
@@ -2440,7 +2440,7 @@
         "audio_end_sec": 51.45
       },
       {
-        "claim_id": "c_43b98064",
+        "claim_id": "c_87eb29c2",
         "claim_text": "Follow-up in 4 weeks to reassess symptoms.",
         "soap_section": "P",
         "minicheck_score": 0.2962962962962963,
@@ -2460,7 +2460,7 @@
         "audio_end_sec": 52.0
       },
       {
-        "claim_id": "c_3826a1e2",
+        "claim_id": "c_801ae17e",
         "claim_text": "Patient instructed to seek emergency care if pain worsens or hematochezia develops.",
         "soap_section": "P",
         "minicheck_score": 0.2903225806451613,
@@ -2480,21 +2480,21 @@
         "audio_end_sec": 52.0
       },
       {
-        "claim_id": "c_1271b8e9",
-        "claim_text": "[PGx Decision Support] ⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 59.8%) | Suggested dose: 44.14 mg/day (90% CI: 4.73-83.55) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
+        "claim_id": "c_c865bad9",
+        "claim_text": "[PGx Decision Support] ⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 55.6%) | Suggested dose: 43.9 mg/day (90% CI: 0.0-94.0) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
         "soap_section": "P",
-        "minicheck_score": 0.16863406408094436,
+        "minicheck_score": 0.1694915254237288,
         "minicheck_label": 0,
         "mednli_label": "neutral",
         "mednli_confidence": 0.4,
-        "bidirectional_entailment": 0.16863406408094436,
+        "bidirectional_entailment": 0.1694915254237288,
         "verification_tier": "tier_4_unsupported",
         "verdict": "hallucinated_unsupported",
         "remediation": "auto_trim",
         "supporting_evidence": [],
         "matched_transcript_utterance_ids": [],
         "ontology_matches": [],
-        "slow_path_reasoning": "**Claim:** [PGx Decision Support] ⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 59.8%) | Suggested dose: 44.14 mg/day (90% CI: 4.73-83.55) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.\n**Facts scanned:** 18 entities across all SOAP sections\n**No supporting evidence found. Marking as unsupported.**",
+        "slow_path_reasoning": "**Claim:** [PGx Decision Support] ⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 55.6%) | Suggested dose: 43.9 mg/day (90% CI: 0.0-94.0) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.\n**Facts scanned:** 18 entities across all SOAP sections\n**No supporting evidence found. Marking as unsupported.**",
         "polarity_flip_detected": false,
         "audio_start_sec": null,
         "audio_end_sec": null
@@ -2510,13 +2510,13 @@
     "tier5_count": 4,
     "literal_hallucination_rate": 72.72727272727273,
     "inference_aware_hallucination_rate": 54.54545454545454,
-    "created_at": "2026-10-28T17:13:15.091768"
+    "created_at": "2026-10-28T17:17:47.197842"
   },
   "fhir_bundle": {
     "resourceType": "Bundle",
-    "id": "a438dbec-6933-4f19-a713-d61a5f0a1444",
+    "id": "16b98e88-5eb9-413e-82bc-124d8dc24b7f",
     "type": "document",
-    "timestamp": "2026-10-28T17:13:15.135533",
+    "timestamp": "2026-10-28T17:17:47.234234",
     "meta": {
       "profile": [
         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
@@ -2533,7 +2533,7 @@
       {
         "resource": {
           "resourceType": "Encounter",
-          "id": "8f843ad5-923",
+          "id": "67ad0d84-c0a",
           "status": "finished",
           "class": {
             "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
@@ -2544,15 +2544,15 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "period": {
-            "start": "2026-10-28T17:13:03.239820",
-            "end": "2026-10-28T17:13:15.135533"
+            "start": "2026-10-28T17:17:35.945157",
+            "end": "2026-10-28T17:17:47.234234"
           }
         }
       },
       {
         "resource": {
           "resourceType": "Observation",
-          "id": "98c84b79",
+          "id": "ce143d93",
           "status": "final",
           "category": [
             {
@@ -2579,14 +2579,14 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           }
         }
       },
       {
         "resource": {
           "resourceType": "Observation",
-          "id": "c2ccfb75",
+          "id": "8c51f8e6",
           "status": "final",
           "category": [
             {
@@ -2613,14 +2613,14 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           }
         }
       },
       {
         "resource": {
           "resourceType": "Condition",
-          "id": "d2623f68",
+          "id": "36908b18",
           "clinicalStatus": {
             "coding": [
               {
@@ -2643,14 +2643,14 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           }
         }
       },
       {
         "resource": {
           "resourceType": "Condition",
-          "id": "fbd7d0e2",
+          "id": "76151d59",
           "clinicalStatus": {
             "coding": [
               {
@@ -2673,14 +2673,14 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           }
         }
       },
       {
         "resource": {
           "resourceType": "Condition",
-          "id": "d641ede6",
+          "id": "cfb08548",
           "clinicalStatus": {
             "coding": [
               {
@@ -2703,14 +2703,14 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           }
         }
       },
       {
         "resource": {
           "resourceType": "Condition",
-          "id": "62a32f77",
+          "id": "ea98dabd",
           "clinicalStatus": {
             "coding": [
               {
@@ -2733,14 +2733,14 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           }
         }
       },
       {
         "resource": {
           "resourceType": "Condition",
-          "id": "a0cf6c70",
+          "id": "6ec7ddb7",
           "clinicalStatus": {
             "coding": [
               {
@@ -2763,14 +2763,14 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           }
         }
       },
       {
         "resource": {
           "resourceType": "Condition",
-          "id": "285f036b",
+          "id": "698b3bc6",
           "clinicalStatus": {
             "coding": [
               {
@@ -2793,14 +2793,14 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           }
         }
       },
       {
         "resource": {
           "resourceType": "MedicationRequest",
-          "id": "284738d4",
+          "id": "ba5d93ed",
           "status": "active",
           "intent": "order",
           "medicationCodeableConcept": {
@@ -2817,7 +2817,7 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           },
           "dosageInstruction": [
             {
@@ -2834,7 +2834,7 @@
       {
         "resource": {
           "resourceType": "MedicationRequest",
-          "id": "f5e13656",
+          "id": "4c3f3fed",
           "status": "active",
           "intent": "order",
           "medicationCodeableConcept": {
@@ -2851,7 +2851,7 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           },
           "dosageInstruction": [
             {
@@ -2875,7 +2875,7 @@
       {
         "resource": {
           "resourceType": "MedicationRequest",
-          "id": "fbf0def0",
+          "id": "ac1b44a2",
           "status": "active",
           "intent": "order",
           "medicationCodeableConcept": {
@@ -2892,7 +2892,7 @@
             "reference": "Patient/CAREOS-DEMO-001"
           },
           "encounter": {
-            "reference": "Encounter/8f843ad5-923"
+            "reference": "Encounter/67ad0d84-c0a"
           },
           "dosageInstruction": [
             {
@@ -2916,7 +2916,7 @@
       {
         "resource": {
           "resourceType": "DetectedIssue",
-          "id": "04f21490",
+          "id": "951832e4",
           "status": "preliminary",
           "code": {
             "coding": [
@@ -2932,13 +2932,13 @@
           "patient": {
             "reference": "Patient/CAREOS-DEMO-001"
           },
-          "identifiedDateTime": "2026-10-28T17:13:15.135533",
+          "identifiedDateTime": "2026-10-28T17:17:47.234234",
           "detail": "Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.",
           "evidence": [
             {
               "detail": [
                 {
-                  "display": "Gene: CYP2C19 | Diplotype:  | Phenotype: intermediate_metabolizer | Predicted Response: responder | Conformal Dose: 44.14 mg/day [4.73, 83.55] 90% CI"
+                  "display": "Gene: CYP2C19 | Diplotype:  | Phenotype: intermediate_metabolizer | Predicted Response: responder | Conformal Dose: 43.9 mg/day [0.0, 94.0] 90% CI"
                 }
               ]
             }
@@ -2964,7 +2964,7 @@
     "suggested_em_level": "99215 (High complexity)"
   },
   "patient_summary_en": {
-    "encounter_id": "8f843ad5-923",
+    "encounter_id": "67ad0d84-c0a",
     "patient_id": "CAREOS-DEMO-001",
     "language": "en",
     "assessment_summary": "Based on your symptoms (stomach pain after eating, burning sensation, and night-time discomfort) along with your regular use of ibuprofen, your doctor suspects you may have a stomach ulcer or acid reflux (GERD). These conditions are treatable with the right medication and lifestyle changes.",
@@ -2981,7 +2981,7 @@
       "• Blood in your stool (dark or tarry stools)",
       "• Vomiting blood or material that looks like coffee grounds",
       "• Feeling faint, dizzy, or extremely weak",
-      "⚠️ Genetic Alert for omeprazole: Your genetic test shows a intermediate_metabolizer profile (CYP2C19). Your doctor may adjust the dose to 44.14 mg/day [4.73, 83.55] 90% CI. Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use."
+      "⚠️ Genetic Alert for omeprazole: Your genetic test shows a intermediate_metabolizer profile (CYP2C19). Your doctor may adjust the dose to 43.9 mg/day [0.0, 94.0] 90% CI. Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use."
     ],
     "follow_up_instructions": "Follow-up visit in 4 weeks.",
     "teach_back_questions": [
@@ -2991,10 +2991,10 @@
       "When should you come back to see the doctor?",
       "What warning signs should make you go to the ER?"
     ],
-    "created_at": "2026-10-28T17:13:15.136042"
+    "created_at": "2026-10-28T17:17:47.234234"
   },
   "patient_summary_hi": {
-    "encounter_id": "8f843ad5-923",
+    "encounter_id": "67ad0d84-c0a",
     "patient_id": "CAREOS-DEMO-001",
     "language": "hinglish",
     "assessment_summary": "Aapke symptoms ke basis par (khana khane ke baad pet mein dard, jalan ka ehsaas, aur raat ko taklif) aur aapke regular ibuprofen use ke saath, aapke doctor ko lagta hai ki aapko stomach ulcer ya acid reflux (GERD) ho sakta hai. Ye conditions sahi dawai aur lifestyle changes se theek ho sakti hain.",
@@ -3011,7 +3011,7 @@
       "• Stool mein blood (kala ya tar jaisa stool)",
       "• Khoon ki ulti ya coffee grounds jaisa material",
       "• Behoshi, chakkar, ya bahut zyada kamzori",
-      "⚠️ omeprazole ke liye Genetic Alert: Aapke genetic test mein intermediate_metabolizer profile (CYP2C19) dikhaya hai. Doctor dose adjust kar sakte hain — 44.14 mg/day [4.73, 83.55] 90% CI. Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use."
+      "⚠️ omeprazole ke liye Genetic Alert: Aapke genetic test mein intermediate_metabolizer profile (CYP2C19) dikhaya hai. Doctor dose adjust kar sakte hain — 43.9 mg/day [0.0, 94.0] 90% CI. Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use."
     ],
     "follow_up_instructions": "Follow-up visit in 4 weeks.",
     "teach_back_questions": [
@@ -3021,10 +3021,10 @@
       "Doctor se milne kab aana hai?",
       "Kaun si warning signs hone par ER jaana chahiye?"
     ],
-    "created_at": "2026-10-28T17:13:15.136042"
+    "created_at": "2026-10-28T17:17:47.234234"
   },
   "copilot": {
-    "timestamp": "2026-10-28T17:13:03.235072",
+    "timestamp": "2026-10-28T17:17:35.937717",
     "current_soap_phase": "objective",
     "hypotheses": [
       {
@@ -3109,7 +3109,7 @@
     {
       "trigger": {
         "patient_id": "CAREOS-DEMO-001",
-        "encounter_id": "8f843ad5-923",
+        "encounter_id": "67ad0d84-c0a",
         "rxnorm_cui": "C0028978",
         "drug_name": "omeprazole",
         "prescribed_dose": "20 mg daily",
@@ -3117,7 +3117,7 @@
           "CYP2C19"
         ],
         "therapeutic_class": "Proton Pump Inhibitor",
-        "timestamp": "2026-10-28T17:13:08.979487"
+        "timestamp": "2026-10-28T17:17:41.289310"
       },
       "alert": {
         "patient_id": "CAREOS-DEMO-001",
@@ -3139,12 +3139,12 @@
       },
       "module3_active": true,
       "pgx_alert": {
-        "alert_id": "d2f937a3-2b44-464a-8bbe-fd9b18990fe4",
+        "alert_id": "0d69b265-77c7-4c05-965c-64fa68aa9c29",
         "alert_type": "pharmacogenomic_alert",
         "severity": "informational",
-        "timestamp": "2026-10-28T17:13:15.091251",
+        "timestamp": "2026-10-28T17:17:47.196839",
         "patient_id": "CAREOS-DEMO-001",
-        "consultation_id": "8f843ad5-923",
+        "consultation_id": "67ad0d84-c0a",
         "matched_diagnosis_codes": [
           "K21.0"
         ],
@@ -3182,18 +3182,18 @@
         "drug_response_prediction": {
           "predicted_category": "responder",
           "probabilities": {
-            "adverse_event_risk": 0.1781,
-            "non_responder": 0.2236,
-            "responder": 0.5983
+            "adverse_event_risk": 0.2106,
+            "non_responder": 0.2332,
+            "responder": 0.5561
           },
-          "confidence": 0.5983,
+          "confidence": 0.5561,
           "calibrated": false
         },
         "dose_estimate": {
-          "predicted_dose": 44.14,
+          "predicted_dose": 43.9,
           "unit": "mg/day",
-          "confidence_interval_lower": 4.73,
-          "confidence_interval_upper": 83.55,
+          "confidence_interval_lower": 0.0,
+          "confidence_interval_upper": 94.0,
           "confidence_level": 0.9,
           "status": "model_estimate_requires_clinician_review"
         },
@@ -3210,71 +3210,71 @@
         "explainability": {
           "top_features": [
             {
-              "feature_name": "expr_NAT2",
-              "shap_value": 0.0301,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "expr_GENE_026",
-              "shap_value": 0.0249,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "latent_snp_1",
-              "shap_value": 0.0214,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "clin_bilirubin",
-              "shap_value": 0.0214,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "expr_GENE_000",
-              "shap_value": 0.0212,
-              "direction": "decreases_risk",
-              "magnitude": "high"
-            },
-            {
-              "feature_name": "expr_GENE_006",
-              "shap_value": 0.0211,
-              "direction": "decreases_risk",
+              "feature_name": "latent_snp_5",
+              "shap_value": 0.0195,
+              "direction": "increases_risk",
               "magnitude": "high"
             },
             {
               "feature_name": "expr_GENE_003",
-              "shap_value": 0.0208,
+              "shap_value": 0.0169,
               "direction": "decreases_risk",
               "magnitude": "high"
             },
             {
-              "feature_name": "expr_GENE_017",
-              "shap_value": 0.02,
+              "feature_name": "clin_alt",
+              "shap_value": 0.0169,
+              "direction": "increases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "expr_GENE_026",
+              "shap_value": 0.0159,
               "direction": "decreases_risk",
               "magnitude": "high"
             },
             {
-              "feature_name": "expr_CYP1A2",
-              "shap_value": 0.02,
+              "feature_name": "latent_snp_10",
+              "shap_value": 0.0158,
+              "direction": "increases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "expr_ABCB1",
+              "shap_value": 0.0156,
               "direction": "decreases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "expr_GENE_020",
+              "shap_value": 0.0152,
+              "direction": "decreases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "expr_SLCO1B1",
+              "shap_value": 0.0152,
+              "direction": "increases_risk",
+              "magnitude": "high"
+            },
+            {
+              "feature_name": "clin_age",
+              "shap_value": 0.0151,
+              "direction": "increases_risk",
               "magnitude": "moderate"
             },
             {
-              "feature_name": "expr_GENE_024",
-              "shap_value": 0.0196,
+              "feature_name": "expr_CYP1A2",
+              "shap_value": 0.015,
               "direction": "decreases_risk",
               "magnitude": "moderate"
             }
           ],
           "base_value": 0.5,
-          "prediction_value": 0.5983,
-          "explanation_text": "Key factors influencing this prediction (Tree Attribution): expr_NAT2 (weight: 0.030, high); expr_GENE_026 (weight: 0.025, high); latent_snp_1 (weight: 0.021, high); clin_bilirubin (weight: 0.021, high); expr_GENE_000 (weight: 0.021, high). This explanation is model-derived and should be interpreted in clinical context."
+          "prediction_value": 0.5561,
+          "explanation_text": "Key factors influencing this prediction (Tree Attribution): latent_snp_5 (weight: 0.019, high); expr_GENE_003 (weight: 0.017, high); clin_alt (weight: 0.017, high); expr_GENE_026 (weight: 0.016, high); latent_snp_10 (weight: 0.016, high). This explanation is model-derived and should be interpreted in clinical context."
         },
-        "soap_note_suggestion": "⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 59.8%) | Suggested dose: 44.14 mg/day (90% CI: 4.73-83.55) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
+        "soap_note_suggestion": "⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 55.6%) | Suggested dose: 43.9 mg/day (90% CI: 0.0-94.0) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
         "clinical_action_items": [
           "Review CYP2C19 pharmacogenomic implications for current therapy",
           "Verify metabolizer phenotype (intermediate_metabolizer) with confirmatory testing if not previously confirmed",
@@ -3286,32 +3286,32 @@
         "gene": "CYP2C19",
         "phenotype": "intermediate_metabolizer",
         "predicted_response": "responder",
-        "suggested_starting_dose": "44.14 mg/day [4.73, 83.55] 90% CI",
+        "suggested_starting_dose": "43.9 mg/day [0.0, 94.0] 90% CI",
         "recommendation": "Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.",
         "monitoring_advice": "Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use."
       },
-      "soap_suggestion": "⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 59.8%) | Suggested dose: 44.14 mg/day (90% CI: 4.73-83.55) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
-      "soap_appendix": "════════════════════════════════════════════════════════════════════════\n  PHARMACOGENOMIC DECISION SUPPORT — FOR CLINICIAN REVIEW ONLY\n════════════════════════════════════════════════════════════════════════\n\n  Alert ID:    d2f937a3-2b44-464a-8bbe-fd9b18990fe4\n  Severity:    INFORMATIONAL\n  Patient:     CAREOS-DEMO-001\n  Generated:   2026-10-28T17:13:15.091251\n\n  ── Genomic Findings ─────────────────────────────────────────────\n    Gene:     CYP2C19\n    Variant:  rs12248560 (copies: 0)\n\n    Gene:     CYP2C19\n    Variant:  rs4244285 (copies: 1)\n\n    Gene:     CYP2C19\n    Variant:  rs4986893 (copies: 0)\n\n  Metabolizer Phenotype: intermediate_metabolizer\n  Risk Level:            low\n\n  ── Predicted Drug Response ───────────────────────────────────────\n    Category:   responder\n    Confidence: 59.8%\n      P(adverse_event_risk): 0.178\n      P(non_responder): 0.224\n      P(responder): 0.598\n\n  ── Dose Estimate ────────────────────────────────────────────────\n    Predicted:  44.14 mg/day\n    90% CI:     [4.73, 83.55] mg/day\n\n  ── CPIC Guidance ────────────────────────────────────────────────\n    Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.\n    Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n    Source: https://cpicpgx.org/guidelines/guideline-for-proton-pump-inhibitors-and-cyp2c19/\n\n  ── Suggested Clinical Actions ───────────────────────────────────\n    1. Review CYP2C19 pharmacogenomic implications for current therapy\n    2. Verify metabolizer phenotype (intermediate_metabolizer) with confirmatory testing if not previously confirmed\n    3. Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n\n  ⚕️  ⚕️ DECISION SUPPORT ONLY — This pharmacogenomic alert is a suggestion for clinician review. It is NOT a diagnosis, prescription, or clinical order. The treating physician must independently verify all findings and make care decisions based on the complete clinical picture.\n════════════════════════════════════════════════════════════════════════"
+      "soap_suggestion": "⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 55.6%) | Suggested dose: 43.9 mg/day (90% CI: 0.0-94.0) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
+      "soap_appendix": "════════════════════════════════════════════════════════════════════════\n  PHARMACOGENOMIC DECISION SUPPORT — FOR CLINICIAN REVIEW ONLY\n════════════════════════════════════════════════════════════════════════\n\n  Alert ID:    0d69b265-77c7-4c05-965c-64fa68aa9c29\n  Severity:    INFORMATIONAL\n  Patient:     CAREOS-DEMO-001\n  Generated:   2026-10-28T17:17:47.196839\n\n  ── Genomic Findings ─────────────────────────────────────────────\n    Gene:     CYP2C19\n    Variant:  rs12248560 (copies: 0)\n\n    Gene:     CYP2C19\n    Variant:  rs4244285 (copies: 1)\n\n    Gene:     CYP2C19\n    Variant:  rs4986893 (copies: 0)\n\n  Metabolizer Phenotype: intermediate_metabolizer\n  Risk Level:            low\n\n  ── Predicted Drug Response ───────────────────────────────────────\n    Category:   responder\n    Confidence: 55.6%\n      P(adverse_event_risk): 0.211\n      P(non_responder): 0.233\n      P(responder): 0.556\n\n  ── Dose Estimate ────────────────────────────────────────────────\n    Predicted:  43.90 mg/day\n    90% CI:     [0.00, 94.00] mg/day\n\n  ── CPIC Guidance ────────────────────────────────────────────────\n    Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.\n    Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n    Source: https://cpicpgx.org/guidelines/guideline-for-proton-pump-inhibitors-and-cyp2c19/\n\n  ── Suggested Clinical Actions ───────────────────────────────────\n    1. Review CYP2C19 pharmacogenomic implications for current therapy\n    2. Verify metabolizer phenotype (intermediate_metabolizer) with confirmatory testing if not previously confirmed\n    3. Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n\n  ⚕️  ⚕️ DECISION SUPPORT ONLY — This pharmacogenomic alert is a suggestion for clinician review. It is NOT a diagnosis, prescription, or clinical order. The treating physician must independently verify all findings and make care decisions based on the complete clinical picture.\n════════════════════════════════════════════════════════════════════════"
     }
   ],
   "telemetry": {
-    "encounter_id": "8f843ad5-923",
+    "encounter_id": "67ad0d84-c0a",
     "patient_id": "CAREOS-DEMO-001",
     "elapsed_duration_sec": 52.0,
     "current_soap_phase": "assessment_plan",
     "active_concept_count": 9,
     "speaker_overlap_ratio": 0.0,
     "estimated_remaining_sec": null,
-    "timestamp": "2026-10-28T17:13:15.091768"
+    "timestamp": "2026-10-28T17:17:47.196839"
   },
   "pharmacogenomic_alerts": [
     {
-      "alert_id": "d2f937a3-2b44-464a-8bbe-fd9b18990fe4",
+      "alert_id": "0d69b265-77c7-4c05-965c-64fa68aa9c29",
       "alert_type": "pharmacogenomic_alert",
       "severity": "informational",
-      "timestamp": "2026-10-28T17:13:15.091251",
+      "timestamp": "2026-10-28T17:17:47.196839",
       "patient_id": "CAREOS-DEMO-001",
-      "consultation_id": "8f843ad5-923",
+      "consultation_id": "67ad0d84-c0a",
       "matched_diagnosis_codes": [
         "K21.0"
       ],
@@ -3349,18 +3349,18 @@
       "drug_response_prediction": {
         "predicted_category": "responder",
         "probabilities": {
-          "adverse_event_risk": 0.1781,
-          "non_responder": 0.2236,
-          "responder": 0.5983
+          "adverse_event_risk": 0.2106,
+          "non_responder": 0.2332,
+          "responder": 0.5561
         },
-        "confidence": 0.5983,
+        "confidence": 0.5561,
         "calibrated": false
       },
       "dose_estimate": {
-        "predicted_dose": 44.14,
+        "predicted_dose": 43.9,
         "unit": "mg/day",
-        "confidence_interval_lower": 4.73,
-        "confidence_interval_upper": 83.55,
+        "confidence_interval_lower": 0.0,
+        "confidence_interval_upper": 94.0,
         "confidence_level": 0.9,
         "status": "model_estimate_requires_clinician_review"
       },
@@ -3377,71 +3377,71 @@
       "explainability": {
         "top_features": [
           {
-            "feature_name": "expr_NAT2",
-            "shap_value": 0.0301,
-            "direction": "decreases_risk",
-            "magnitude": "high"
-          },
-          {
-            "feature_name": "expr_GENE_026",
-            "shap_value": 0.0249,
-            "direction": "decreases_risk",
-            "magnitude": "high"
-          },
-          {
-            "feature_name": "latent_snp_1",
-            "shap_value": 0.0214,
-            "direction": "decreases_risk",
-            "magnitude": "high"
-          },
-          {
-            "feature_name": "clin_bilirubin",
-            "shap_value": 0.0214,
-            "direction": "decreases_risk",
-            "magnitude": "high"
-          },
-          {
-            "feature_name": "expr_GENE_000",
-            "shap_value": 0.0212,
-            "direction": "decreases_risk",
-            "magnitude": "high"
-          },
-          {
-            "feature_name": "expr_GENE_006",
-            "shap_value": 0.0211,
-            "direction": "decreases_risk",
+            "feature_name": "latent_snp_5",
+            "shap_value": 0.0195,
+            "direction": "increases_risk",
             "magnitude": "high"
           },
           {
             "feature_name": "expr_GENE_003",
-            "shap_value": 0.0208,
+            "shap_value": 0.0169,
             "direction": "decreases_risk",
             "magnitude": "high"
           },
           {
-            "feature_name": "expr_GENE_017",
-            "shap_value": 0.02,
+            "feature_name": "clin_alt",
+            "shap_value": 0.0169,
+            "direction": "increases_risk",
+            "magnitude": "high"
+          },
+          {
+            "feature_name": "expr_GENE_026",
+            "shap_value": 0.0159,
             "direction": "decreases_risk",
             "magnitude": "high"
           },
           {
-            "feature_name": "expr_CYP1A2",
-            "shap_value": 0.02,
+            "feature_name": "latent_snp_10",
+            "shap_value": 0.0158,
+            "direction": "increases_risk",
+            "magnitude": "high"
+          },
+          {
+            "feature_name": "expr_ABCB1",
+            "shap_value": 0.0156,
             "direction": "decreases_risk",
+            "magnitude": "high"
+          },
+          {
+            "feature_name": "expr_GENE_020",
+            "shap_value": 0.0152,
+            "direction": "decreases_risk",
+            "magnitude": "high"
+          },
+          {
+            "feature_name": "expr_SLCO1B1",
+            "shap_value": 0.0152,
+            "direction": "increases_risk",
+            "magnitude": "high"
+          },
+          {
+            "feature_name": "clin_age",
+            "shap_value": 0.0151,
+            "direction": "increases_risk",
             "magnitude": "moderate"
           },
           {
-            "feature_name": "expr_GENE_024",
-            "shap_value": 0.0196,
+            "feature_name": "expr_CYP1A2",
+            "shap_value": 0.015,
             "direction": "decreases_risk",
             "magnitude": "moderate"
           }
         ],
         "base_value": 0.5,
-        "prediction_value": 0.5983,
-        "explanation_text": "Key factors influencing this prediction (Tree Attribution): expr_NAT2 (weight: 0.030, high); expr_GENE_026 (weight: 0.025, high); latent_snp_1 (weight: 0.021, high); clin_bilirubin (weight: 0.021, high); expr_GENE_000 (weight: 0.021, high). This explanation is model-derived and should be interpreted in clinical context."
+        "prediction_value": 0.5561,
+        "explanation_text": "Key factors influencing this prediction (Tree Attribution): latent_snp_5 (weight: 0.019, high); expr_GENE_003 (weight: 0.017, high); clin_alt (weight: 0.017, high); expr_GENE_026 (weight: 0.016, high); latent_snp_10 (weight: 0.016, high). This explanation is model-derived and should be interpreted in clinical context."
       },
-      "soap_note_suggestion": "⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 59.8%) | Suggested dose: 44.14 mg/day (90% CI: 4.73-83.55) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
+      "soap_note_suggestion": "⚕️ PHARMACOGENOMIC ALERT [INFORMATIONAL] | Gene: CYP2C19 | Metabolizer: intermediate_metabolizer | Predicted response: responder (confidence: 55.6%) | Suggested dose: 43.9 mg/day (90% CI: 0.0-94.0) | CPIC: Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression. | This is a decision-support suggestion only — NOT an automatic prescription.",
       "clinical_action_items": [
         "Review CYP2C19 pharmacogenomic implications for current therapy",
         "Verify metabolizer phenotype (intermediate_metabolizer) with confirmatory testing if not previously confirmed",
@@ -3453,10 +3453,10 @@
       "gene": "CYP2C19",
       "phenotype": "intermediate_metabolizer",
       "predicted_response": "responder",
-      "suggested_starting_dose": "44.14 mg/day [4.73, 83.55] 90% CI",
+      "suggested_starting_dose": "43.9 mg/day [0.0, 94.0] 90% CI",
       "recommendation": "Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.",
       "monitoring_advice": "Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use."
     }
   ],
-  "pharmacogenomic_appendix": "════════════════════════════════════════════════════════════════════════\n  PHARMACOGENOMIC DECISION SUPPORT — FOR CLINICIAN REVIEW ONLY\n════════════════════════════════════════════════════════════════════════\n\n  Alert ID:    d2f937a3-2b44-464a-8bbe-fd9b18990fe4\n  Severity:    INFORMATIONAL\n  Patient:     CAREOS-DEMO-001\n  Generated:   2026-10-28T17:13:15.091251\n\n  ── Genomic Findings ─────────────────────────────────────────────\n    Gene:     CYP2C19\n    Variant:  rs12248560 (copies: 0)\n\n    Gene:     CYP2C19\n    Variant:  rs4244285 (copies: 1)\n\n    Gene:     CYP2C19\n    Variant:  rs4986893 (copies: 0)\n\n  Metabolizer Phenotype: intermediate_metabolizer\n  Risk Level:            low\n\n  ── Predicted Drug Response ───────────────────────────────────────\n    Category:   responder\n    Confidence: 59.8%\n      P(adverse_event_risk): 0.178\n      P(non_responder): 0.224\n      P(responder): 0.598\n\n  ── Dose Estimate ────────────────────────────────────────────────\n    Predicted:  44.14 mg/day\n    90% CI:     [4.73, 83.55] mg/day\n\n  ── CPIC Guidance ────────────────────────────────────────────────\n    Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.\n    Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n    Source: https://cpicpgx.org/guidelines/guideline-for-proton-pump-inhibitors-and-cyp2c19/\n\n  ── Suggested Clinical Actions ───────────────────────────────────\n    1. Review CYP2C19 pharmacogenomic implications for current therapy\n    2. Verify metabolizer phenotype (intermediate_metabolizer) with confirmatory testing if not previously confirmed\n    3. Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n\n  ⚕️  ⚕️ DECISION SUPPORT ONLY — This pharmacogenomic alert is a suggestion for clinician review. It is NOT a diagnosis, prescription, or clinical order. The treating physician must independently verify all findings and make care decisions based on the complete clinical picture.\n════════════════════════════════════════════════════════════════════════"
+  "pharmacogenomic_appendix": "════════════════════════════════════════════════════════════════════════\n  PHARMACOGENOMIC DECISION SUPPORT — FOR CLINICIAN REVIEW ONLY\n════════════════════════════════════════════════════════════════════════\n\n  Alert ID:    0d69b265-77c7-4c05-965c-64fa68aa9c29\n  Severity:    INFORMATIONAL\n  Patient:     CAREOS-DEMO-001\n  Generated:   2026-10-28T17:17:47.196839\n\n  ── Genomic Findings ─────────────────────────────────────────────\n    Gene:     CYP2C19\n    Variant:  rs12248560 (copies: 0)\n\n    Gene:     CYP2C19\n    Variant:  rs4244285 (copies: 1)\n\n    Gene:     CYP2C19\n    Variant:  rs4986893 (copies: 0)\n\n  Metabolizer Phenotype: intermediate_metabolizer\n  Risk Level:            low\n\n  ── Predicted Drug Response ───────────────────────────────────────\n    Category:   responder\n    Confidence: 55.6%\n      P(adverse_event_risk): 0.211\n      P(non_responder): 0.233\n      P(responder): 0.556\n\n  ── Dose Estimate ────────────────────────────────────────────────\n    Predicted:  43.90 mg/day\n    90% CI:     [0.00, 94.00] mg/day\n\n  ── CPIC Guidance ────────────────────────────────────────────────\n    Standard dosing likely adequate. May have slightly increased PPI exposure — generally beneficial for acid suppression.\n    Monitoring: Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n    Source: https://cpicpgx.org/guidelines/guideline-for-proton-pump-inhibitors-and-cyp2c19/\n\n  ── Suggested Clinical Actions ───────────────────────────────────\n    1. Review CYP2C19 pharmacogenomic implications for current therapy\n    2. Verify metabolizer phenotype (intermediate_metabolizer) with confirmatory testing if not previously confirmed\n    3. Standard monitoring. Assess for PPI-related side effects (headache, diarrhea) if prolonged use.\n\n  ⚕️  ⚕️ DECISION SUPPORT ONLY — This pharmacogenomic alert is a suggestion for clinician review. It is NOT a diagnosis, prescription, or clinical order. The treating physician must independently verify all findings and make care decisions based on the complete clinical picture.\n════════════════════════════════════════════════════════════════════════"
 }

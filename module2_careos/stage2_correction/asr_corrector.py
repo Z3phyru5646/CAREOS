@@ -72,6 +72,11 @@ RXNORM_COMMON_DRUGS = {
     "gentamicin": {"cui": "C0017511", "brand": ["Garamycin"], "class": "Aminoglycoside"},
     "tobramycin": {"cui": "C0040249", "brand": ["Tobi"], "class": "Aminoglycoside"},
     "amikacin": {"cui": "C0002499", "brand": ["Amikin"], "class": "Aminoglycoside"},
+    "aspirin": {"cui": "C0004057", "brand": ["Ecosprin", "Disprin", "Bayer"], "class": "Antiplatelet"},
+    "ticagrelor": {"cui": "C1999775", "brand": ["Brilinta", "Brilique"], "class": "Antiplatelet"},
+    "prasugrel": {"cui": "C1620287", "brand": ["Effient"], "class": "Antiplatelet"},
+    "levothyroxine": {"cui": "C0023602", "brand": ["Synthroid", "Eltroxin"], "class": "Thyroid Hormone"},
+    "tacrolimus": {"cui": "C0085187", "brand": ["Prograf"], "class": "Immunosuppressant"},
 }
 
 # Known ASR sound-alike substitution pairs (Critical Risk)
@@ -84,11 +89,11 @@ SOUND_ALIKE_PAIRS = {
     "ofatumumab": "ocrelizumab",
 }
 
-# Common phonetic misspellings
+# Common phonetic misspellings — includes Whisper tiny ASR outputs for accented speech
 PHONETIC_CORRECTIONS = {
+    # ── Original corrections ──────────────────────────────────────────────
     "omeprizole": "omeprazole",
     "omeprizol": "omeprazole",
-    "metforman": "metformin",
     "metforman": "metformin",
     "simethacone": "simethicone",
     "morphin sulfate": "morphine sulfate",
@@ -98,6 +103,85 @@ PHONETIC_CORRECTIONS = {
     "bactarvy": "biktarvy",
     "a dalimumab": "adalimumab",
     "adali mumab": "adalimumab",
+    # ── Whisper tiny phonetic ASR variants (Indian / accented speech) ─────
+    # Clopidogrel
+    "cloppedogril": "clopidogrel",
+    "clopadogral": "clopidogrel",
+    "clopedogrel": "clopidogrel",
+    "clopadogrel": "clopidogrel",
+    "clopidagrel": "clopidogrel",
+    "klopidogrel": "clopidogrel",
+    "clopidigrel": "clopidogrel",
+    "clopadogril": "clopidogrel",
+    "cloppidogrel": "clopidogrel",
+    "clopidogral": "clopidogrel",
+    # Omeprazole / PPIs
+    "ompresol": "omeprazole",
+    "omprazole": "omeprazole",
+    "omepresol": "omeprazole",
+    "omeprisol": "omeprazole",
+    "omeprasal": "omeprazole",
+    "pantoprasal": "pantoprazole",
+    "pantoprazol": "pantoprazole",
+    "pantopresol": "pantoprazole",
+    "pantoprisal": "pantoprazole",
+    "lansoprazol": "lansoprazole",
+    "lansoprasal": "lansoprazole",
+    # Atorvastatin / Statins
+    "adorvastatin": "atorvastatin",
+    "atorvistatin": "atorvastatin",
+    "atrovastatin": "atorvastatin",
+    "atorvastatine": "atorvastatin",
+    "atorvastaten": "atorvastatin",
+    "simvistatin": "simvastatin",
+    "simvastatine": "simvastatin",
+    "rosuvistatin": "rosuvastatin",
+    # Aspirin / Ecosprin (Indian brand)
+    "ecosprin": "aspirin",
+    "ecosprint": "aspirin",
+    "ecospin": "aspirin",
+    "asprinn": "aspirin",
+    # Ticagrelor
+    "tick a griller": "ticagrelor",
+    "tickagrelor": "ticagrelor",
+    "ticagrilor": "ticagrelor",
+    "tickagriller": "ticagrelor",
+    "ticagralor": "ticagrelor",
+    "ticagralar": "ticagrelor",
+    # Metformin
+    "metforman": "metformin",
+    "metformine": "metformin",
+    "metformen": "metformin",
+    # Warfarin
+    "warfarine": "warfarin",
+    "worfarin": "warfarin",
+    "warferin": "warfarin",
+    # Lisinopril
+    "lisinoprel": "lisinopril",
+    "lisinnopril": "lisinopril",
+    "lysinopril": "lisinopril",
+    # Amlodipine
+    "amlodipene": "amlodipine",
+    "amlodepine": "amlodipine",
+    "amlodipin": "amlodipine",
+    # Losartan
+    "losarten": "losartan",
+    "losarton": "losartan",
+    # Metoprolol
+    "metaprolol": "metoprolol",
+    "metoprelol": "metoprolol",
+    # Gabapentin
+    "gabapenten": "gabapentin",
+    "gabapantin": "gabapentin",
+    # Carbamazepine / Phenytoin
+    "carbamezipine": "carbamazepine",
+    "carbamazapine": "carbamazepine",
+    "phenitoyn": "phenytoin",
+    "phenitoin": "phenytoin",
+    # Codeine / Tramadol
+    "codien": "codeine",
+    "tramadoll": "tramadol",
+    "tramedol": "tramadol",
 }
 
 
@@ -179,8 +263,8 @@ class MedicalASRCorrector:
     def __init__(self, config: dict = None):
         self.config = config or {}
         self.ngram_matcher = CharacterNGramMatcher()
-        self.misspelling_threshold = self.config.get("misspelling_threshold", 0.75)
-        self.phonetic_threshold = self.config.get("phonetic_similarity_threshold", 0.80)
+        self.misspelling_threshold = self.config.get("misspelling_threshold", 0.45)
+        self.phonetic_threshold = self.config.get("phonetic_similarity_threshold", 0.50)
     
     def correct_drug_name(
         self, 
@@ -277,7 +361,7 @@ class MedicalASRCorrector:
         """
         Run correction over entire transcript, finding and fixing drug mentions.
         """
-        from ..models.schemas import CorrectedTranscript, DiarizedUtterance
+        from ..models.schemas import CorrectedTranscript, DiarizedUtterance, DrugCorrectionResult
         import copy
         
         corrections = []
@@ -297,14 +381,40 @@ class MedicalASRCorrector:
             re.IGNORECASE
         )
         
+        # Build sorted multi-word phonetic patterns (longest first for greedy match)
+        multi_word_phonetic = {k: v for k, v in PHONETIC_CORRECTIONS.items() if " " in k}
+        multi_word_sorted = sorted(multi_word_phonetic.keys(), key=len, reverse=True)
+        
         for utt in transcript.utterances:
             corrected_text = utt.text
             
-            # Find potential drug mentions
-            words_to_check = re.findall(r'\b\w+\b', utt.text)
+            # Pre-pass: multi-word phonetic corrections (e.g. "tick a griller" → "ticagrelor")
+            for mw_phrase in multi_word_sorted:
+                if mw_phrase.lower() in corrected_text.lower():
+                    corrected_drug = multi_word_phonetic[mw_phrase]
+                    pattern = re.compile(re.escape(mw_phrase), re.IGNORECASE)
+                    corrected_text = pattern.sub(corrected_drug, corrected_text)
+                    rxnorm_info = RXNORM_COMMON_DRUGS.get(corrected_drug, {})
+                    corrections.append(DrugCorrectionResult(
+                        original_text=mw_phrase,
+                        corrected_text=corrected_drug,
+                        rxnorm_cui=rxnorm_info.get("cui"),
+                        rxnorm_name=corrected_drug,
+                        correction_type="phonetic",
+                        confidence=0.95,
+                        formulary_match=True,
+                    ))
+                    drug_names_corrected += 1
+                    logger.info(
+                        f"Multi-word drug correction: '{mw_phrase}' → '{corrected_drug}' "
+                        f"(type=phonetic, confidence=0.95)"
+                    )
+            
+            # Single-word drug correction pass
+            words_to_check = re.findall(r'\b\w+\b', corrected_text)
             for word in words_to_check:
                 if len(word) >= 4:  # Skip short words
-                    result = self.correct_drug_name(word, utt.text)
+                    result = self.correct_drug_name(word, corrected_text)
                     if result.correction_type not in ("none", "unknown"):
                         corrections.append(result)
                         corrected_text = corrected_text.replace(

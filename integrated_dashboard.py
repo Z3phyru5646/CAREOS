@@ -297,17 +297,24 @@ def render_scribe_tab(config: dict):
 
     col1, col2 = st.columns([2, 1])
     with col1:
-        uploaded_audio = st.file_uploader("Upload Clinical Audio", type=["wav", "mp3", "m4a"])
+        uploaded_audio = st.file_uploader("Upload Clinical Audio", type=["wav", "mp3", "m4a", "ogg"])
     with col2:
-        use_demo = st.checkbox("Use Demo Encounter", value=True)
+        use_demo = st.checkbox("Use Demo Baseline Audio", value=(uploaded_audio is None))
+
+    if uploaded_audio and not use_demo:
+        st.audio(uploaded_audio)
+        st.caption(f"📁 Selected audio: **{uploaded_audio.name}** ({uploaded_audio.size / 1024:.1f} KB)")
+    elif use_demo:
+        st.info("ℹ️ Using baseline demo consultation audio (`demo.wav`).")
 
     if st.button("🚀 Run Complete Pipeline", use_container_width=True):
         # Determine audio path
-        if uploaded_audio:
-            audio_path = Path(__file__).parent / "data" / "uploads" / uploaded_audio.name
+        if uploaded_audio and not use_demo:
+            timestamp_id = int(time.time())
+            audio_path = Path(__file__).parent / "data" / "uploads" / f"{timestamp_id}_{uploaded_audio.name}"
             audio_path.parent.mkdir(parents=True, exist_ok=True)
             with open(audio_path, "wb") as f:
-                f.write(uploaded_audio.read())
+                f.write(uploaded_audio.getbuffer())
         else:
             audio_path = Path(__file__).parent / "data" / "sample_audio" / "demo.wav"
 
@@ -370,6 +377,38 @@ def render_scribe_tab(config: dict):
                        f"{verif.get('inference_aware_hallucination_rate', 0):.1f}%")
         with m4:
             st.metric("CPIC Triggers", len(results.get("cpic_triggers", [])))
+
+        # ─── Diarized Transcript ─────────────────────────
+        transcript = results.get("transcript", {})
+        utterances = transcript.get("utterances", [])
+        if utterances:
+            with st.expander(f"🎙️ Diarized Transcript ({len(utterances)} utterances, {transcript.get('duration_seconds', 0):.1f}s)", expanded=False):
+                for u in utterances:
+                    speaker = u.get("speaker_role") or u.get("speaker_id", "Speaker")
+                    text = u.get("text", "")
+                    st.markdown(f"**[{speaker}]**: {text}")
+
+        # ─── Extracted Fact Sheet ────────────────────────
+        fact_sheet = results.get("fact_sheet", {})
+        if fact_sheet:
+            with st.expander("🩺 Extracted Clinical Fact Sheet (Pre-SOAP Grounding)", expanded=False):
+                fc1, fc2, fc3 = st.columns(3)
+                with fc1:
+                    st.markdown(f"**Chief Complaint:** {fact_sheet.get('chief_complaint', 'N/A')}")
+                    meds = fact_sheet.get("medications", [])
+                    st.markdown(f"**Medications ({len(meds)}):**")
+                    for m in meds:
+                        st.markdown(f"- 💊 {m.get('drug_name', '')} {m.get('strength', '')} ({m.get('frequency', '')})")
+                with fc2:
+                    syms = fact_sheet.get("symptoms", [])
+                    st.markdown(f"**Symptoms ({len(syms)}):**")
+                    for s in syms:
+                        st.markdown(f"- 🩺 {s.get('text', '')}")
+                with fc3:
+                    negs = fact_sheet.get("pertinent_negatives", [])
+                    st.markdown(f"**Pertinent Negatives ({len(negs)}):**")
+                    for n in negs:
+                        st.markdown(f"- ❌ {n.get('text', '')}")
 
         # ─── SOAP Note ───────────────────────────────────
         st.markdown(f"### 📋 Verified SOAP Note")
@@ -474,6 +513,7 @@ def render_genomics_tab(config: dict):
             patient_id=config["patient_id"],
             diagnosis_codes=diagnosis_codes,
             medication_names=medication_names,
+            prescribing_physician="CAREOS-CLINICIAN",
         )
         clinical = ClinicalFeatures(
             age=config["age"], sex=config["sex"], weight_kg=config["weight"],
