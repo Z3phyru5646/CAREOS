@@ -446,9 +446,12 @@ class InterModuleBus:
         soap_phase: str,
         concept_count: int,
         overlap_ratio: float = 0.0,
+        room_id: int = 0,
+        api_base_url: str = "http://localhost:8000",
     ) -> dict:
         """
         Emit encounter telemetry to Module 1 (Queue Predictor).
+        Dispatches live SOAP stage update via HTTP to Module 1 API if reachable.
         """
         from ..models.schemas import EncounterTelemetry
         
@@ -467,6 +470,26 @@ class InterModuleBus:
             f"📡 Telemetry → Module 1: phase={soap_phase}, "
             f"elapsed={elapsed_sec:.0f}s, concepts={concept_count}"
         )
+
+        # ─── Live HTTP Telemetry Stream: Module 2 → Module 1 ───
+        try:
+            import requests
+            stage_fractions = {"S": 0.18, "O": 0.48, "A": 0.70, "P": 0.90}
+            clean_phase = soap_phase[0].upper() if soap_phase else "S"
+            if clean_phase in stage_fractions:
+                payload = {
+                    "room_id": room_id,
+                    "soap_stage": clean_phase,
+                    "stage_midpoint_fraction": stage_fractions[clean_phase],
+                }
+                requests.post(
+                    f"{api_base_url}/api/v1/queue/soap-telemetry",
+                    json=payload,
+                    timeout=0.6,
+                )
+                logger.info(f"✅ Telemetry delivered to Module 1 API ({api_base_url}): {clean_phase} (room {room_id})")
+        except Exception as e:
+            logger.debug(f"Module 1 API not reached (offline/standalone): {e}")
         
         return telemetry.model_dump()
     
