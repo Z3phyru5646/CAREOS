@@ -1,126 +1,114 @@
-# CAREOS Module 1: Dynamic Outpatient Queue & Wait-Time Predictor
+<div align="center">
 
-## 🏥 Overview
+# 🏥 CARE'OS — Clinical AI Real-time Evaluation & Operations System
+### Complete Three-Module Clinical Architecture
 
-**CAREOS** (Clinical AI Real-time Evaluation & Operations System) Module 1 is a production-grade Dynamic Outpatient Queue & Wait-Time Predictor that uses advanced machine learning and simulation techniques to accurately predict patient waiting times in outpatient departments.
+*Dynamic Queueing • Ambient Clinical AI Scribe • Precision Pharmacogenomics*
 
-### Key Features
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
+[![XGBoost](https://img.shields.io/badge/XGBoost-2.0+-brightgreen.svg)](https://xgboost.readthedocs.io/)
+[![LightGBM](https://img.shields.io/badge/LightGBM-4.0+-green.svg)](https://lightgbm.readthedocs.io/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-teal.svg)](https://fastapi.tiangolo.com/)
+[![CPIC](https://img.shields.io/badge/CPIC-Level%20A-purple.svg)](https://cpicpgx.org/)
+[![FHIR R4](https://img.shields.io/badge/HL7-FHIR%20R4-firebrick.svg)](https://hl7.org/fhir/R4/)
 
-- **Calibrated SimPy Digital Twin**: Non-stationary, multi-class priority queueing network (M_t/G_i/c) calibrated to real clinical datasets (Hangu, PriMock57, Brazil No-Show)
-- **Two-Stage ML Pipeline**: 
-  - Stage 1: XGBoost consultation duration predictor
-  - Stage 2: LightGBM wait-time predictor with Asymmetric Quad-Quad Loss (α=0.8)
-- **Conformalized Quantile Regression (CQR) + Adaptive Conformal Inference (ACI)**: 90% calibrated prediction intervals that adapt online to clinic surges
-- **TreeSHAP Patient Explanations**: Transparent, patient-friendly wait-time breakdowns
-- **JSEW Doctor Routing**: Join-the-Shortest-Expected-Workload for intelligent multi-doctor assignment
-- **SOAP Telemetry Integration**: Cross-module feedback from Module 2 (Ambient Scribe) to track consultation progress in real-time
-- **LSTM Sequence Encoder**: Captures sequential congestion patterns
-- **Virtual Queue Time-to-Leave Pacer**: Notifies remote patients when to head to the clinic
+</div>
 
-## 📁 Project Structure
+---
+
+> **⚕️ CLINICAL USE BOUNDARY**: CARE'OS is clinical decision support software designed for clinician review only. It is **NEVER** an automatic prescription system, diagnostic tool, or autonomous agent. All predictions, pharmacogenomic alerts, and draft notes are suggestions requiring independent clinician sign-off.
+
+---
+
+## 🏛️ End-to-End System Architecture
+
+CARE'OS unifies three interconnected clinical modules through an event-driven telemetry and inter-module bus:
 
 ```
-CAREOS-Module-1/
-├── configs/
-│   └── clinic_config.py          # Empirical parameters (Hangu/PriMock57/Brazil)
-├── src/
-│   ├── simulation/
-│   │   └── clinic_simpy_twin.py  # Calibrated SimPy Digital Twin
-│   ├── features/
-│   │   └── queue_feature_engine.py # 16-group, 28-variable feature engineering
-│   ├── models/
-│   │   └── train_pipeline.py     # Two-Stage ML + CQR/ACI + LSTM
-│   ├── api/
-│   │   └── main.py               # FastAPI event-driven backend
-│   └── dashboard/
-│       └── streamlit_app.py      # Three-persona Streamlit UI
-├── data/                          # Generated simulation data
-├── models/                        # Trained model artifacts
-├── notebooks/                     # Analysis notebooks
-├── requirements.txt
-├── run_pipeline.py               # End-to-end pipeline runner
-└── README.md
+                            CLINICAL AUDIO / ENCOUNTER
+                                        │
+                                        ▼
+    ┌────────────────────────────────────────────────────────────────────────┐
+    │                 MODULE 2: AMBIENT CLINICAL AI SCRIBE                   │
+    │  • Audio Ingestion & Diarization (WhisperX / pyannote)                 │
+    │  • Medical ASR Post-Correction (Phonetic + RxNorm grounding)           │
+    │  • Clinical NLP & SOAP Extractor (Med7 / Posology)                     │
+    │  • Dual-Pass Hallucination Verifier (MedNLI / DeBERTa-v3)              │
+    └───────────────────────┬────────────────────────┬───────────────────────┘
+                            │                        │
+       Live Consultation    │                        │ Prescribed Medications
+       SOAP Stage Telemetry │                        │ & Patient Clinical Data
+       (S ➔ O ➔ A ➔ P)      ▼                        ▼ (CPIC Level 1A Triggers)
+    ┌───────────────────────────────────┐    ┌──────────────────────────────────┐
+    │    MODULE 1: QUEUE & WAIT-TIME    │    │      MODULE 3: HELIX GENOMICS    │
+    │             PREDICTOR             │    │         RECOMMENDATION ENGINE    │
+    │  • Calibrated SimPy Digital Twin  │    │  • 200+ SNP PyTorch Attention    │
+    │  • Two-Stage ML (XGBoost/LightGBM)│    │    Variational Autoencoder (VAE) │
+    │  • 90% CQR + Online ACI Intervals │    │  • Multi-Modal Cross-Attention   │
+    │  • JSEW Workload-Aware Routing    │    │    Fusion (Genomics + Labs)      │
+    │  • TreeSHAP Patient Explanations  │    │  • Conformal Dose CI Regression  │
+    │  • Time-to-Leave Virtual Pacer    │    │  • HL7 FHIR R4 DetectedIssues    │
+    └───────────────────────────────────┘    └──────────────────────────────────┘
 ```
+
+---
+
+## 📦 System Modules Overview
+
+### 1. Module 1: Dynamic Outpatient Queue & Wait-Time Predictor
+* **Directory**: `src/` (API in `src/api/`, UI in `src/dashboard/`, ML in `src/features/` & `src/models/`, Simulation in `src/simulation/`)
+* **Core ML**: Two-Stage Workload Decomposition (XGBoost consultation duration $\hat{S}_j$ $\rightarrow$ LightGBM wait time with Asymmetric Quad-Quad Loss $\alpha=0.80$).
+* **Uncertainty Quantification**: Conformalized Quantile Regression (CQR) + Adaptive Conformal Inference (ACI) guaranteeing 90% coverage during sudden walk-in surges.
+* **Triage Routing**: Join-the-Shortest-Expected-Workload (JSEW) multi-doctor dynamic balancing.
+* **Telemetry**: Ingests live S-O-A-P stage transitions from Module 2 to refine ongoing consult times.
+
+### 2. Module 2: Ambient AI Scribe & 2nd-Pass Verifier
+* **Directory**: `module2_careos/`
+* **Core NLP**: Diarized audio transcription $\rightarrow$ ASR post-correction grounded in RxNorm $\rightarrow$ Med7 Posology entity extraction $\rightarrow$ Structured SOAP note synthesis.
+* **Safety Verification**: 2nd-pass MedNLI and DeBERTa-v3 natural language inference to flag and eliminate medical hallucinations.
+* **Inter-Module Bus**: Emits live consultation telemetry to Module 1 and triggers Module 3 upon detecting CPIC Level A medications.
+
+### 3. Module 3: Helix Genomics-Informed Treatment Recommendation Engine
+* **Directory**: `careos_genomics/`
+* **Deep Learning**: 16-dimensional Latent Self-Attention Variational Autoencoder (VAE) compressing 200+ single nucleotide polymorphisms (SNPs).
+* **Multi-Modal Fusion**: Cross-attends genomic latent embeddings against clinical laboratory values (Age, Weight, CrCl, ALT, AST, INR).
+* **Precision Guidance**: Predicts drug response categories (Responder, Intermediate, Adverse Risk) and optimal starting doses with 90% conformal safety intervals.
+
+---
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
-
+### 1. Installation
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Run Complete Pipeline (Simulation → Training → Evaluation)
-
+### 2. Run Module 1 (Queue Predictor API & UI)
 ```bash
-python run_pipeline.py
-```
+# Terminal 1: Start FastAPI backend
+python -m uvicorn src.api.main:app --host 127.0.0.1 --port 8000 --reload
 
-This will:
-- Run 100 clinic sessions simulating ~6,000+ patient journeys
-- Compute 28 queue-mining features across 16 feature groups
-- Train Stage-1 Duration Predictor (XGBoost)
-- Train Stage-2 Wait-Time Predictor (LightGBM + Asymmetric Loss + CQR + ACI)
-- Train LSTM Sequence Encoder
-- Output evaluation metrics
-
-### 3. Start the API Server
-
-```bash
-uvicorn src.api.main:app --reload
-```
-
-API docs available at: http://localhost:8000/docs
-
-### 4. Launch the Dashboard
-
-```bash
+# Terminal 2: Start Streamlit Dashboard
 streamlit run src/dashboard/streamlit_app.py
 ```
 
-## 📊 Evaluation Results
+### 3. Run Integrated Module 2 + Module 3 Pipeline
+```bash
+# Run end-to-end CLI workflow
+python run_integrated_careos.py
 
-| Metric | Rolling Avg Baseline | Basic GBDT (6 features) | **CAREOS Module 1** |
-|--------|---------------------|------------------------|---------------------|
-| MAE | 18.05 min | 8.39 min | **5.92 min** |
-| RMSE | 27.04 min | 13.69 min | **10.72 min** |
-| PICP (90% target) | 70.7% | 77.9% | **90.3%** |
-| SUR > 5min | 63.8% | 35.2% | **21.1%** |
+# Launch unified clinical workstation
+streamlit run integrated_dashboard.py
+```
 
-## 🔬 Six Novel Contributions
+### 4. Run Test Suites
+```bash
+python -m unittest discover tests -v
+```
 
-1. **Two-Stage Workload Decomposition**: Predicts individual consultation durations → sums expected workload ahead
-2. **Cross-Module SOAP Telemetry**: Live consultation progress from Module 2 (Ambient Scribe)
-3. **CQR + ACI Intervals**: Distribution-free, online-adaptive 90% prediction intervals
-4. **Asymmetric Quad-Quad Loss + DAES**: Penalizes underestimation 4× more than overestimation
-5. **TreeSHAP Patient Explanations**: Transparent wait-time breakdowns with Virtual Queue Pacer
-6. **JSEW Prescriptive Routing**: Workload-aware doctor assignment (51.3% wait reduction vs. Round-Robin)
+---
 
-## 🏗️ Technical Architecture
-
-### Empirical Data Grounding
-- **Hangu Dataset**: 6,637 outpatient consultations with Log-Normal calibration
-- **PriMock57**: 57 primary care consultations (12 complaint categories)
-- **MIMIC-IV-ED**: 5-level ESI acuity triage
-- **Brazil No-Shows**: 110,527 appointments with lead-time dependent no-show rates
-
-### Queue-Mining Features (28 Variables, 16 Groups)
-1. Temporal & Diurnal Cyclical (sin/cos time, day_of_week, arrival_rate)
-2. Queue-Length & Q-Lasso Fluid Estimators
-3. Delay-History & Elapsed State (rolling waits, HOL elapsed, conditional remaining time)
-4. Two-Stage Workload & Clinical (pred_own_duration, expected_queued_workload, physician PACT/PNP)
-
-### API Endpoints
-- `POST /api/v1/queue/check-in` — Patient check-in with JSEW routing
-- `POST /api/v1/queue/start-consultation` — Doctor calls patient, ACI update
-- `POST /api/v1/queue/soap-telemetry` — Module 2 → Module 1 SOAP webhook
-- `POST /api/v1/queue/emergency-preempt` — Emergency insertion
-- `POST /api/v1/queue/end-consultation` — Consultation complete, update PACT
-
-## 👥 Team
-
-CAREOS - Bennett University CSET343 Project
-
-## 📄 License
-
-Academic use only — Bennett University
+## 👥 Authors & Academic Affiliation
+CARE'OS Clinical AI Real-Time Evaluation & Operations System — Bennett University CSET343 Project.
+Academic and clinical research prototype.

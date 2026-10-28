@@ -1,28 +1,32 @@
-# CAREOS Module 1: Dynamic Outpatient Queue & Wait-Time Predictor
-# Core Dependencies
+# ═══════════════════════════════════════════════════════════════════════════
+# CARE'OS — Clinical AI Real-time Evaluation & Operations System
+# Unified Dependencies (Module 1 + Module 2 + Module 3)
+# ═══════════════════════════════════════════════════════════════════════════
 
-# Simulation
-simpy==4.1.1
+# Core Scientific Computing
 numpy>=1.24.0
 pandas>=2.0.0
 scipy>=1.10.0
 
-# Machine Learning
+# Simulation (Module 1)
+simpy==4.1.1
+
+# Machine Learning & Explainability
 scikit-learn>=1.3.0
 xgboost>=2.0.0
 lightgbm>=4.1.0
 shap>=0.43.0
+optuna>=3.0
 
-# Deep Learning (LSTM)
+# Deep Learning (LSTM, VAE, NLP)
 torch>=2.0.0
+transformers>=4.30.0
 
-# Time Series
+# Time Series & Conformal
 prophet>=1.1.5
-
-# Probabilistic / Conformal
 mapie>=0.8.0
 
-# API
+# API & Backend
 fastapi>=0.104.0
 uvicorn>=0.24.0
 pydantic>=2.0.0
@@ -32,12 +36,13 @@ sqlalchemy>=2.0.0
 psycopg2-binary>=2.9.0
 alembic>=1.12.0
 
-# Dashboard
+# Dashboard & Visualization
 streamlit>=1.28.0
 plotly>=5.17.0
 
-# Utilities
+# Utilities & Config
 joblib>=1.3.0
 tqdm>=4.66.0
 python-dateutil>=2.8.0
 requests>=2.31.0
+pyyaml>=6.0

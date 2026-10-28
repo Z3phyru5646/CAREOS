@@ -1,0 +1,143 @@
+# =============================================================================
+# CARE'OS Module 2 — Master Pipeline Configuration
+# =============================================================================
+
+project:
+  name: "CARE'OS Module 2 — Ambient AI Scribe"
+  version: "1.0.0"
+  course: "CSET343 — AI In Healthcare"
+
+# ─── Stage 1: Audio Ingestion & Diarization ─────────────────────────────────
+stage1_audio:
+  # Audio pre-processing
+  target_sample_rate: 16000
+  target_channels: 1  # mono
+  normalize_peak_db: -1.0
+  
+  # DSP EQ Filtering
+  dsp:
+    highpass_hz: 80
+    lowpass_hz: 8000
+    eq_attenuate_band_hz: [300, 400]
+    eq_attenuate_db: -3.0
+    consonant_boost_hz: 4000
+    consonant_boost_db: 2.0
+  
+  # WhisperX ASR
+  whisperx:
+    model_size: "large-v3"
+    compute_type: "float16"  # or int8 for CPU
+    device: "cuda"  # or "cpu"
+    batch_size: 16
+    language: "en"  # "hi" for Hindi, null for auto-detect
+    condition_on_prev_text: false
+    word_timestamps: true
+    # Hinglish mode
+    hinglish_mode: false
+    hinglish_model: "Trelis/whisper-hinglish-preview"
+  
+  # pyannote Speaker Diarization
+  diarization:
+    model: "pyannote/speaker-diarization-community-1"
+    min_speakers: 2
+    max_speakers: 4
+    hf_auth_token: "${HF_AUTH_TOKEN}"
+    # Speaker Role Identification
+    sri:
+      context_window_size: 5
+      roles: ["Doctor", "Patient", "Medical Assistant", "Other"]
+
+# ─── Stage 2: Medical ASR Post-Correction ────────────────────────────────────
+stage2_correction:
+  # RxNorm formulary
+  rxnorm_db_path: "data/rxnorm_strings.json"
+  rxnorm_ngram_k: 5
+  
+  # Drug correction
+  drug_correction:
+    misspelling_threshold: 0.75
+    phonetic_similarity_threshold: 0.80
+    llm_validation_temperature: 0.3
+    
+  # Medical vocabulary prompt
+  formulary_terms_path: "data/clinical_vocabulary.json"
+
+# ─── Stage 3: Clinical NLP & SOAP Generation ─────────────────────────────────
+stage3_clinical_nlp:
+  # spaCy pipeline components
+  spacy:
+    med7_model: "en_core_med7_lg"
+    sci_model: "en_core_sci_scibert"
+    bc5cdr_model: "en_ner_bc5cdr_md"
+    negex:
+      termset: "en_clinical_sensitive"
+      chunk_prefix: ["no"]
+    abbreviation_detector:
+      make_serializable: true
+    entity_linker:
+      linker_name: "umls"
+      resolve_abbreviations: true
+      
+  # SOAP Generation LLM
+  soap_llm:
+    model_name: "google/medgemma-27b-text-it"
+    quantization: "4bit"  # 4bit AWQ/GPTQ
+    device_map: "auto"
+    temperature: 0.1
+    max_new_tokens: 2048
+    # Sections to generate
+    sections: ["subjective", "objective_exam", "objective_results", "assessment_plan"]
+
+# ─── Stage 4: 2nd-Pass Verifier ─────────────────────────────────────────────
+stage4_verifier:
+  # Fast-Path NLI
+  fast_path:
+    minicheck_model: "lytang/MiniCheck-DeBERTa-v3-Large"
+    mednli_model: "shidey/deberta-v3-mednli-scifact-open-sentence-nli"
+    embedding_model: "abhinand/MedEmbed-large-v0.1"
+    minicheck_confidence_threshold: 0.85
+    batch_size: 32
+    
+  # Slow-Path Ontology-RAG Judge
+  slow_path:
+    judge_model: "google/medgemma-27b-text-it"
+    ontology_sources: ["snomed_ct", "icd10", "rxnorm"]
+    cot_temperature: 0.2
+    max_reasoning_tokens: 1024
+    
+  # MEDEC Error Detection
+  medec:
+    error_categories: ["diagnosis", "management", "treatment", "pharmacotherapy", "causal_organism"]
+    do_not_use_abbreviations_path: "data/jc_do_not_use.json"
+
+# ─── Stage 5: Export ─────────────────────────────────────────────────────────
+stage5_export:
+  fhir:
+    version: "R4"
+    profile: "us-core"
+  patient_summary:
+    languages: ["en", "hi", "hinglish"]
+    reading_level: "6th_grade"
+
+# ─── Clinical Co-Pilot ───────────────────────────────────────────────────────
+copilot:
+  enabled: true
+  update_interval_seconds: 30
+  top_n_hypotheses: 5
+  red_flag_questions: 5
+  similarity_threshold_reuse: 0.965
+  similarity_threshold_dedup: 0.86
+
+# ─── Inter-Module Bus ─────────────────────────────────────────────────────────
+inter_module_bus:
+  module1_endpoint: "http://localhost:8001/api/v1"
+  module3_endpoint: "http://localhost:8003/api/v1"
+  cpic_watchlist_path: "data/cpic_level_a_watchlist.json"
+  telemetry_interval_seconds: 15
+
+# ─── Web UI ───────────────────────────────────────────────────────────────────
+web_ui:
+  host: "0.0.0.0"
+  port: 8002
+  debug: true
+  cors_origins: ["*"]

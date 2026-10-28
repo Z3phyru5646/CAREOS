@@ -1,39 +1,39 @@
-# Virtual Environment
-venv/
-env/
+# Python Virtual Environment
 .venv/
+venv/
+ENV/
+env/
 
-# Python
+# Python Bytecode & Cache
 __pycache__/
 *.py[cod]
 *$py.class
+*.whl
 *.so
 *.egg-info/
 dist/
 build/
 .eggs/
 
-# IDE
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & Editor files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS
-.DS_Store
+# OS files
 Thumbs.db
+Desktop.ini
 desktop.ini
+.DS_Store
 
-# Logs
+# Logs & Jupyter
 *.log
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Logs
-*.log
-
-# Jupyter
 .ipynb_checkpoints/
 
 # Streamlit
