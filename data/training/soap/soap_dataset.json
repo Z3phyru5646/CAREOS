@@ -1,1562 +1,3602 @@
 [
   {
-    "text": "Advise repeat blood tests for serum ALT and AST in one month and dietary modification.",
-    "label": "Plan"
+    "text": "She had one child died from complications of ulcerative colitis.",
+    "label": "Subjective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of abdominal guarding upon inspection.",
-    "label": "Objective"
+    "text": "The patient will be admitted to the hospital and will follow Dr.",
+    "label": "Plan"
   },
   {
-    "text": "Laboratory evaluation confirms elevated serum ALT and AST at within borderline limits.",
+    "text": "He has no bruises noted.,Neurological: Cranial nerves II through XII are intact.",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past one month.",
-    "label": "Subjective"
-  },
-  {
-    "text": "Laboratory hematology results indicate WBC 14,200/mcL with 82% neutrophils and mild bandemia.",
-    "label": "Objective"
+    "text": "We had discussed with her in the past beginning to see an internist at the senior center.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of acute gastroenteritis.",
+    "text": "All pressure points were carefully padded, and sequential compression devices were placed on the legs.",
     "label": "Assessment"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "Local application of bacitracin ointment.,4.",
+    "label": "Plan"
   },
   {
-    "text": "Laboratory evaluation confirms elevated troponin-I at elevated above reference range.",
+    "text": "LYMPH: Cervical lymph nodes.",
     "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in 2 weeks and dietary modification.",
-    "label": "Plan"
+    "text": "I fired transversely across the stomach with a 45 blue load stapler.",
+    "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of abdominal guarding upon inspection.",
+    "text": "She was doing well with good p.o.s, good airway, good voice, and desiring to be discharged home.",
     "label": "Objective"
   },
   {
-    "text": "Primary diagnostic impression: acute bacterial rhinosinusitis over viral upper respiratory infection.",
+    "text": "Polymyositis on immunosuppressive therapy (methotrexate and prednisone).",
     "label": "Assessment"
   },
   {
-    "text": "Start patient on Pantoprazole 40 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "She also has had a parathyroidectomy but still has had some borderline elevated calcium.",
+    "label": "Subjective"
   },
   {
-    "text": "Provisional assessment: Acute acute gastroenteritis with secondary complications.",
-    "label": "Assessment"
+    "text": "No organomegaly appreciated.",
+    "label": "Objective"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
+    "text": "When I asked him to tell me further details about this, he states that one of them had to wear crutches due to severe leg deformans and then the other had leg deformities in only one leg.",
     "label": "Subjective"
   },
   {
-    "text": "BP documented at 146/92 mmHg, pulse 84 bpm regular, respiratory rate 18/min, SpO2 97% on room air.",
+    "text": "Maximum linear extent in apex of tumor was 6 mm.",
     "label": "Objective"
   },
   {
-    "text": "Primary diagnosis: Acute exacerbation of chronic obstructive pulmonary disease (AECOPD).",
+    "text": "A Veress needle was introduced into the abdomen.",
     "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past 3 days.",
-    "label": "Subjective"
+    "text": "I then placed a 5-mm port just anterior to the midaxillary line and just subcostal on the right side.",
+    "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute acute gastroenteritis with secondary complications.",
+    "text": "He does have a very mild evidence of impingement.",
     "label": "Assessment"
   },
   {
-    "text": "Advise repeat blood tests for D-dimer in 2 weeks and dietary modification.",
+    "text": "She was instructed to follow up with Dr.",
     "label": "Plan"
   },
   {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": ",Vital Signs: Weight: 202.8 pounds.",
+    "label": "Objective"
   },
   {
-    "text": "Refer to Cardiology for outpatient nuclear stress testing and evaluation of exertional angina.",
-    "label": "Plan"
+    "text": "He has been taking these regularly.",
+    "label": "Subjective"
   },
   {
-    "text": "Start patient on Pantoprazole 20 mg once daily with regular monitoring.",
+    "text": ",The patient will undergo a bilateral pelvic lymphadenectomy and radical retropubic prostatectomy.",
     "label": "Plan"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past 48 hours.",
-    "label": "Subjective"
+    "text": "Seminal vesicles are not palpable.,MUSCULOSKELETAL: The upper and lower extremities are symmetric bilaterally.,NEUROLOGIC: There are no gross focal neurologic abnormalities.,",
+    "label": "Objective"
   },
   {
-    "text": "Start patient on Azithromycin 50 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "I lifted it up and stapled across it with another white load stapler.",
+    "label": "Assessment"
   },
   {
-    "text": "Furosemide 40 mg PO daily for 5 days; monitor potassium and renal function in one week.",
-    "label": "Plan"
+    "text": "I could pass the scope easily through the anastomosis.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 48 hours.",
-    "label": "Subjective"
+    "text": ",To PACU in stable condition.,INDICATIONS AND FINDINGS: , This is a 48-year-old male with a history of a large left-sided spermatocele with significant discomfort.",
+    "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for D-dimer in 2 weeks and dietary modification.",
+    "text": "Z, her oncologist, regarding the positive lymph nodes.",
     "label": "Plan"
   },
   {
-    "text": "Start patient on Metoprolol 20 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "There are no areas that are suspicious for tumor.",
+    "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute urinary tract infection with secondary complications.",
-    "label": "Assessment"
+    "text": "He signed a true informed consent.",
+    "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute urinary tract infection with secondary complications.",
+    "text": "SCD stockings were placed on both legs.",
     "label": "Assessment"
   },
   {
-    "text": "Start patient on Metoprolol 500 mg once daily with regular monitoring.",
+    "text": "She is being discharged to home.",
     "label": "Plan"
   },
   {
-    "text": "Start patient on Atorvastatin 50 mg once daily with regular monitoring.",
+    "text": "A large spermatocele was noted.",
     "label": "Plan"
   },
   {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
+    "text": "CODE STATUS: DNR, healthcare proxy, durable power of attorney.",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past 2 weeks.",
+    "text": "She does have a history of Charcot-Marie tooth disease and desires surgical treatment at this time.",
     "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past one month.",
-    "label": "Subjective"
+    "text": "We discussed erectile dysfunction.",
+    "label": "Plan"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
+    "text": "I placed a liver retractor, identified, and dissected the angle of His.",
     "label": "Assessment"
   },
   {
-    "text": "Chronic kidney disease Stage 3a, secondary to long-standing hypertensive nephrosclerosis.",
-    "label": "Assessment"
+    "text": "She also has osteoporosis.",
+    "label": "Subjective"
+  },
+  {
+    "text": "His post-op PSA is 0.1 mg/ml.",
+    "label": "Objective"
   },
   {
-    "text": "Chest X-ray demonstrates right lower lobe consolidation consistent with acute pneumonia.",
+    "text": ",GENERAL: The patient is well developed and well nourished.,HEENT: Head is normocephalic.",
     "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
+    "text": "Right arm symptoms, resolved.",
     "label": "Assessment"
   },
   {
-    "text": "Advise repeat blood tests for troponin-I in 2 weeks and dietary modification.",
+    "text": "The patient also received labs including a urinalysis and urine culture, BMP, CBC, CRP, blood culture.",
     "label": "Plan"
   },
   {
-    "text": "Reports onset of palpitations and tremors accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "Stable disposition to home with her mother.",
+    "label": "Plan"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past 2 weeks.",
+    "text": "No wheezes, rales, or rhonchi.,ABDOMEN: Soft, nontender, nondistended, and positive bowel sounds throughout.,GENITOURINARY: The patient's external genitalia is markedly abnormal.",
+    "label": "Objective"
+  },
+  {
+    "text": "Actually the night before, he fell off his wheelchair and had lacerations on the face.",
     "label": "Subjective"
+  },
+  {
+    "text": "Left lobe, small focus of adenocarcinoma, Gleason's 3 + 3 in approximately 5% of the tissue.,Radical prostatectomy: Negative lymph nodes.",
+    "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of bronchial asthma exacerbation.",
+    "text": "The pathology report is pending at the time of dictation.",
     "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 48 hours.",
+    "text": "We did do a C-spine and right shoulder x-ray and those just mainly showed some degenerative changes and possibly some rotator cuff injury with the humeral head quite high up in the glenoid in the right shoulder, but this does not seem to cause her any problems.",
     "label": "Subjective"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "A, regarding any insulin pump adjustments, which were necessary and she was also instructed to follow up with Dr.",
+    "label": "Plan"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": ",GENERAL APPEARANCE: An alert male in no distress.,HEENT: Grossly normal.,NECK: Supple.,LUNGS: Clear.,HEART: Normal sinus rhythm.",
+    "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute acute gastroenteritis with secondary complications.",
+    "text": "The cut edges were fulgurated.",
     "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute acute gastroenteritis with secondary complications.",
+    "text": "There was no bleeding seen through the scope.",
     "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past 48 hours.",
-    "label": "Subjective"
+    "text": "Blood group was A, Rh positive, Hemoglobin 13, Hematocrit 32.1, Prothrombin time 12.6 seconds, PTT 37.1.",
+    "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for serum ALT and AST in one month and dietary modification.",
-    "label": "Plan"
+    "text": "Short-term memory loss, probable situational.",
+    "label": "Assessment"
   },
   {
-    "text": "Laboratory evaluation confirms elevated D-dimer at elevated above reference range.",
-    "label": "Objective"
+    "text": "He was placed in lithotomy position and prepped and draped in the usual fashion.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 3 days.",
-    "label": "Subjective"
+    "text": "Etiology of this is unknown.",
+    "label": "Assessment"
   },
   {
-    "text": "Complete blood count shows WBC 14,200/mcL with 82% neutrophils and mild bandemia.",
-    "label": "Objective"
+    "text": "She came to the hospital on the first.",
+    "label": "Subjective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of bilateral crepitations upon inspection.",
+    "text": "NECK: Supple and symmetric.",
     "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
-    "label": "Assessment"
-  },
-  {
-    "text": "Complains of sharp substernal chest discomfort radiating to left shoulder on exertion.",
-    "label": "Subjective"
+    "text": "Erectile dysfunction.",
+    "label": "Plan"
   },
   {
-    "text": "Differential diagnosis includes gastroesophageal reflux disease versus biliary colic versus non-cardiac chest pain.",
+    "text": "A Foley catheter was placed for bladder decompression.",
     "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
+    "text": "Blood group was A, Rh positive, Hemoglobin 13, Hematocrit 32.1, Prothrombin time 12.6 seconds, PTT 37.1.",
     "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
+    "text": "Disseminated CMV infection with possible CMV pneumonitis.",
     "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past 3 days.",
-    "label": "Subjective"
+    "text": "Marcaine was then injected through umbilicus.",
+    "label": "Assessment"
   },
   {
-    "text": "Advise repeat blood tests for troponin-I in 3 days and dietary modification.",
+    "text": "X to discuss option of InterStim, and will be accompanied by her power of attorney.",
     "label": "Plan"
-  },
-  {
-    "text": "Reports onset of palpitations and tremors accompanied by mild dizziness.",
-    "label": "Subjective"
   },
   {
-    "text": "Start patient on Metoprolol 500 mg once daily with regular monitoring.",
+    "text": "He has _________ surviving prostate cancer by Dr.",
     "label": "Plan"
-  },
-  {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
-    "label": "Objective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of abdominal guarding upon inspection.",
+    "text": "BREASTS: The breasts show no masses or tenderness.",
     "label": "Objective"
-  },
-  {
-    "text": "Patient states left knee pain that worsens with prolonged standing and kneeling.",
-    "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past 2 weeks.",
-    "label": "Subjective"
+    "text": "She is planned for surgical intervention.,",
+    "label": "Plan"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
+    "text": ", The patient is status post lap band adjustments, doing well, has a total of 7 mL within her band, tolerated water postprocedure.",
     "label": "Assessment"
   },
   {
-    "text": "Family history is significant for maternal early onset myocardial infarction at age 48.",
-    "label": "Subjective"
+    "text": "We will schedule this later today emergently.",
+    "label": "Plan"
   },
   {
-    "text": "Prior medical background includes essential hypertension, type 2 diabetes, and asthma.",
+    "text": "The patient has a history of depression.",
     "label": "Subjective"
   },
   {
-    "text": "Clinical presumption of acute medial meniscal tear of the right knee secondary to mechanical twisting injury.",
-    "label": "Assessment"
+    "text": "X in ABC Office in 1 to 2 weeks.",
+    "label": "Plan"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past one month.",
-    "label": "Subjective"
+    "text": "His white count was normal at 7.2.",
+    "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in one month and dietary modification.",
-    "label": "Plan"
+    "text": "The patient tolerated the procedure very well.",
+    "label": "Assessment"
   },
   {
-    "text": "Subjective notes indicate stomach burns intensely about thirty minutes after having spicy food.",
+    "text": "He has two living brothers.",
     "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent persistent dry cough for the past 48 hours.",
+    "text": "He has had no dizziness, lightheadedness, no near or true syncope, nothing supportive of CVA, TIA, nor peripheral vascular claudication.",
     "label": "Subjective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of bronchial asthma exacerbation.",
+    "text": "Diabetes type II uncontrolled.",
     "label": "Assessment"
-  },
-  {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past 2 weeks.",
-    "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past one month.",
+    "text": "His 38 y/o sister has attempted suicide twice.",
     "label": "Subjective"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
-    "label": "Assessment"
+    "text": "LYMPH: No neck, axillary or groin adenopathy was noted.",
+    "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
-    "label": "Assessment"
+    "text": "Y if her condition changes regarding her colon cancer.",
+    "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for D-dimer in 48 hours and dietary modification.",
-    "label": "Plan"
+    "text": "The penis shaft has two lacerations on both sides, one of them is bleeding.",
+    "label": "Objective"
   },
   {
-    "text": "Assessment 1: Acute exacerbation of chronic obstructive pulmonary disease (AECOPD).",
-    "label": "Assessment"
+    "text": "Has diabetes in his brother and sister.",
+    "label": "Subjective"
   },
   {
-    "text": "Advise repeat blood tests for troponin-I in 2 weeks and dietary modification.",
-    "label": "Plan"
+    "text": "Basically, she is just back on her previous blood pressure regimen.",
+    "label": "Subjective"
   },
   {
-    "text": "Start patient on Pantoprazole 40 mg once daily with regular monitoring.",
+    "text": "Risks and complications discussed with the patient.",
     "label": "Plan"
   },
   {
-    "text": "Essential hypertension, stage 2, currently suboptimally controlled on monotherapy.",
+    "text": "He underwent an IVP, which demonstrated enlarged prostate and normal upper tracts.",
     "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
-    "label": "Assessment"
+    "text": "So, the patient is being prepared for discharge at this point.",
+    "label": "Objective"
   },
   {
-    "text": "Temperature 38.6 C (101.5 F), oral; patient appears mildly flushed and toxic.",
+    "text": "GENERAL: The patient is awake and alert, in no apparent distress, appropriate, pleasant and cooperative.",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 48 hours.",
-    "label": "Subjective"
+    "text": "No pathology to digits or nails.",
+    "label": "Objective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
+    "text": "Eye exam, pupils equal round and reactive to light.",
     "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of bronchial asthma exacerbation.",
+    "text": "I think this is still his allergic rhinitis rather than a sinus infection.",
     "label": "Assessment"
   },
   {
-    "text": "Advise repeat blood tests for D-dimer in one month and dietary modification.",
+    "text": "Permanent pacemaker placement after temporary internal pacemaker.",
     "label": "Plan"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
+    "text": "Blackman; it looked like it was Depo-Medrol 80 mg.",
     "label": "Subjective"
-  },
-  {
-    "text": "Laboratory evaluation confirms elevated C-reactive protein at 2.1 ng/mL.",
-    "label": "Objective"
-  },
-  {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
-    "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
-    "label": "Assessment"
+    "text": "The patient was seen in the urgent care and examined.",
+    "label": "Plan"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of bronchial asthma exacerbation.",
+    "text": "It was clipped proximally and distally, and then the ends were cauterized after excising the segment.",
     "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
+    "text": ",VITAL SIGNS: Weight is 14.9 kg.,GENERAL: The patient was sleepy but easily arousable.,HEAD AND NECK: Grossly normal.",
     "label": "Objective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
-    "label": "Objective"
+    "text": "Following completion of resection down to the base, the bladder was _______ free of tumor specimen.",
+    "label": "Assessment"
   },
   {
-    "text": "Laboratory evaluation confirms elevated serum ALT and AST at elevated above reference range.",
-    "label": "Objective"
+    "text": "Again no bleeding was noted.,The wound was closed with 4-0 Vicryl times two.",
+    "label": "Assessment"
   },
   {
-    "text": "I feel short of breath when climbing one flight of stairs or walking fast.",
-    "label": "Subjective"
+    "text": "The risks, benefits, and alternatives of this have been discussed.",
+    "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for serum ALT and AST in 48 hours and dietary modification.",
+    "text": "The patient verbalized understanding the plan of followup and is discharged in satisfactory condition from the ER.,",
     "label": "Plan"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
+    "text": "His brothers had prostate cancer.",
     "label": "Subjective"
+  },
+  {
+    "text": "He was discharged from the surgical center in good condition with Tylenol with Codeine for pain.",
+    "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
+    "text": "Currently, indwelling Foley catheter in place.",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 3 days.",
-    "label": "Subjective"
+    "text": "Last pneumonia vaccine was given on 1996.",
+    "label": "Plan"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
-    "label": "Assessment"
+    "text": "X-rays shows no open fracture or bony abnormality.",
+    "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for serum ALT and AST in 3 days and dietary modification.",
-    "label": "Plan"
+    "text": "There was some induration around the penis; however, there were no signs of active infection.",
+    "label": "Objective"
   },
   {
-    "text": "Reports onset of palpitations and tremors accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "There are no open lesions at this point.",
+    "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 3 days.",
-    "label": "Subjective"
+    "text": "After securing hemostasis with a cautery, the ends were allowed to drop back into the incision, which was also cauterized.,Attention was now turned to the left side.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient reports left knee pain that worsens with prolonged standing and kneeling.",
-    "label": "Subjective"
+    "text": "He is encouraged to continue with his present measures.",
+    "label": "Plan"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of bronchial asthma exacerbation.",
+    "text": "Methotrexate may produce an erosive stomatitis and enteritis after such a use.",
     "label": "Assessment"
   },
   {
-    "text": "Start patient on Metoprolol 50 mg once daily with regular monitoring.",
+    "text": "The patient has declined use of chair check and bed check.",
     "label": "Plan"
   },
   {
-    "text": "Lungs on exam show diffuse expiratory wheezes bilaterally with prolonged expiratory phase.",
+    "text": "The patient's CBC results from before were reviewed.",
     "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute urinary tract infection with secondary complications.",
+    "text": "Report of vomiting and abdominal pain after eating raw carrots and celery.",
     "label": "Assessment"
   },
   {
-    "text": "Patient admits to missing insulin doses occasionally over weekends.",
+    "text": "Listed as Invega and Risperdal.",
     "label": "Subjective"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in 2 weeks and dietary modification.",
-    "label": "Plan"
-  },
-  {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "Funduscopic exam reveals middle size disc with sharp margins.",
+    "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for serum ALT and AST in 3 days and dietary modification.",
+    "text": "She will try Zyrtec instead of Allegra again.",
     "label": "Plan"
   },
   {
-    "text": "Start patient on Atorvastatin 50 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "Consent was obtained.",
+    "label": "Assessment"
   },
   {
-    "text": "Laboratory evaluation confirms elevated serum ALT and AST at 2.1 ng/mL.",
+    "text": "The one on the right side is bleeding much more than the other one.",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past one month.",
-    "label": "Subjective"
+    "text": "No murmur or gallop.,ABDOMEN: Soft.",
+    "label": "Objective"
   },
   {
-    "text": "Patient denies any fevers, chills, night sweats, or recent weight changes.",
-    "label": "Subjective"
+    "text": "Barker that he has a urologist closer to his home and he lives approximately 3 hours away;",
+    "label": "Plan"
   },
   {
-    "text": "Start patient on Atorvastatin 20 mg once daily with regular monitoring.",
+    "text": "The vas deferens was palpated and dissected free with Metzenbaum scissors.",
     "label": "Plan"
   },
   {
-    "text": "Start patient on Atorvastatin 50 mg once daily with regular monitoring.",
+    "text": ", The patient has a possibly torsion detorsion versus other acute testicular problem.",
     "label": "Plan"
   },
   {
-    "text": "Neurological: Cranial nerves II-XII intact, power 5/5 in all four extremities, gait steady.",
+    "text": "Positive bowel sounds.,EXTREMITIES: Pulses strong bilaterally.",
     "label": "Objective"
   },
   {
-    "text": "Physical therapy referral for right knee strengthening exercises and quadriceps reconditioning.",
-    "label": "Plan"
+    "text": "The patient was taken to the operating room and placed supine on the operating room table.",
+    "label": "Assessment"
+  },
+  {
+    "text": "It was clipped proximally and distally twice.",
+    "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of bilateral crepitations upon inspection.",
+    "text": "Cerebellar tension is normal.,",
     "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute urinary tract infection with secondary complications.",
+    "text": "Renal insufficiency, may be dehydration, or diabetic nephropathy.",
     "label": "Assessment"
   },
   {
-    "text": "Reports onset of palpitations and tremors accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "However, she may need home O2 for a short period of time.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent persistent dry cough for the past one month.",
+    "text": "X, his primary care physician, Dr.",
     "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent persistent dry cough for the past one month.",
+    "text": "and also Mylanta at night.",
     "label": "Subjective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated C-reactive protein at 2.1 ng/mL.",
-    "label": "Objective"
+    "text": "She continued to do well and was felt to be stable for discharge following the procedure.",
+    "label": "Plan"
   },
   {
-    "text": "Laboratory evaluation confirms elevated troponin-I at elevated above reference range.",
-    "label": "Objective"
+    "text": "The patient was treated with epinephrine 1:1000, 0.3 mL subcutaneously along with 50 mg of Benadryl intramuscularly.",
+    "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for troponin-I in one month and dietary modification.",
+    "text": "Otherwise, it is a fairly healthy-appearing tissue at the present time and she knows the reasons that he cannot be discharged once the hospitalist service believes that it is appropriate to do so.",
     "label": "Plan"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 2 weeks.",
+    "text": "The patient was initially evaluated at UIHC at 7 years of age.",
     "label": "Subjective"
+  },
+  {
+    "text": "Ears: Tympanic membranes are clear.",
+    "label": "Objective"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
+    "text": "The patient's wife is not able to give a history.",
     "label": "Subjective"
   },
   {
-    "text": "Start patient on Atorvastatin 20 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "Options are discussed.,We discussed other options of pelvic floor rehabilitation, InterStim by Dr.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent persistent dry cough for the past 3 days.",
+    "text": "Suspicious calcifications upper outer quadrant, left breast.",
     "label": "Subjective"
   },
   {
-    "text": "Hemoglobin A1c is 8.9%, indicating inadequate glycemic control.",
-    "label": "Objective"
+    "text": "Her sugars slowly did come down to normal down to between 115 and 134.",
+    "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in 2 weeks and dietary modification.",
+    "text": "This will be monitored.,5.",
     "label": "Plan"
+  },
+  {
+    "text": ",GENERAL: An awake and alert 85-year-old gentleman who is afebrile.,VITAL SIGNS: BP of 162/60 and pulse oximetry of 98% on room air.,HEENT: Pink conjunctivae.",
+    "label": "Objective"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
+    "text": "The other is apparently healthy.",
     "label": "Subjective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
+    "text": "Well nourished, well developed in no distress.",
     "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
+    "text": "Multiple extensive subcutaneous abscesses, right thigh.",
     "label": "Assessment"
   },
   {
-    "text": "Laboratory evaluation confirms elevated serum ALT and AST at 14.5 mg/L.",
-    "label": "Objective"
+    "text": "She has some vague 'stomach problems', although apparently it is improved when she stopped Aleve and she does not have any more aches or pains off Aleve.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He understands the probability that there may be residual cancer although the location is unknown.",
+    "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute acute gastroenteritis with secondary complications.",
+    "text": "Chest x-ray calcified old granulomatous disease, otherwise normal.",
     "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of abdominal guarding upon inspection.",
+    "text": "The only significant finding in the ultrasound of the area is that it shows this to be related to bone.",
     "label": "Objective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated serum ALT and AST at elevated above reference range.",
-    "label": "Objective"
+    "text": "She has not required phlebotomies for several months.",
+    "label": "Subjective"
   },
   {
-    "text": "Increase Metformin to 1000 mg twice daily; add Empagliflozin 10 mg once daily in morning.",
+    "text": "If increased purulent discharge, the patient was asked to call us sooner, otherwise follow up as scheduled.",
     "label": "Plan"
   },
   {
-    "text": "Physical examination demonstrates clear signs of bilateral crepitations upon inspection.",
-    "label": "Objective"
+    "text": "The patient was awakened and was returned to Recovery in satisfactory condition.",
+    "label": "Assessment"
   },
   {
-    "text": "Laboratory evaluation confirms elevated troponin-I at 14.5 mg/L.",
+    "text": "ABDOMEN: Right lower quadrant incision site scar well healed.",
     "label": "Objective"
   },
   {
-    "text": "Patient remarks feeling dizzy and lightheaded whenever I stand up quickly.",
-    "label": "Subjective"
+    "text": "No guarantees or warrantees were given.",
+    "label": "Plan"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "There were some indications of chronic cholecystitis, a little bit of edema, mild edema and adhesions of omentum around the gallbladder.",
+    "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute urinary tract infection with secondary complications.",
-    "label": "Assessment"
+    "text": "I have also gone over with her the Fairfield County Bariatrics consent form for banding and all the risks.",
+    "label": "Plan"
   },
   {
-    "text": "Start patient on Metoprolol 50 mg once daily with regular monitoring.",
+    "text": "Metzenbaum scissors were used to dissect the tissue around the left spermatocele.",
     "label": "Plan"
   },
   {
-    "text": "Start patient on Metoprolol 50 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "The patient comes for a routine followup appointment.",
+    "label": "Subjective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated serum ALT and AST at 14.5 mg/L.",
+    "text": "There are no discernible masses.",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past 3 days.",
-    "label": "Subjective"
+    "text": "There is no bleeding from the meatus or discharge and no other injuries were seen by inspection.,LABORATORY DATA:, White count 11.1, hemoglobin 14.5, hematocrit 43.5, and platelets 303,000.",
+    "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for D-dimer in 3 days and dietary modification.",
-    "label": "Plan"
+    "text": "He is fairly certain that they had polio.",
+    "label": "Subjective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of bronchial asthma exacerbation.",
+    "text": "Also sustained a fall secondary to instability and not using her walker or calling for assistance.",
     "label": "Assessment"
   },
   {
-    "text": "Provide smoking cessation counseling and offer nicotine replacement patch 21mg/day.",
-    "label": "Plan"
+    "text": "He does think though better than Claritin.",
+    "label": "Subjective"
+  },
+  {
+    "text": "She coincidentally began listing to the right when walking.",
+    "label": "Subjective"
   },
   {
-    "text": "Provisional assessment: Acute urinary tract infection with secondary complications.",
+    "text": ",POSTOPERATIVE DIAGNOSIS: , Morbid obesity.",
     "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent persistent dry cough for the past 2 weeks.",
+    "text": "He is not sure the Allegra is working for him anymore.",
     "label": "Subjective"
   },
   {
-    "text": "Review patient in outpatient clinic in 2 weeks for blood pressure re-evaluation and lab review.",
+    "text": "The patient is able to stand and walk through the emergency department without difficulty.",
     "label": "Plan"
   },
   {
-    "text": "Reports nausea and two episodes of non-bloody vomiting since yesterday morning.",
-    "label": "Subjective"
+    "text": "Wounds were cleaned and steri-stripped and dressing of ABD pads and ***** was then applied.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
+    "text": "She has had no diarrhea today, however.",
     "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
+    "text": "His urine was also grossly red, although no blood clots or gross blood was noted.",
     "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
-    "label": "Assessment"
+    "text": "Also was given morphine a total of 8 mg while in the Emergency Department.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient was taking no over the counter or alternative medicines.",
+    "label": "Subjective"
   },
   {
-    "text": "Start patient on Atorvastatin 40 mg once daily with regular monitoring.",
+    "text": "A general anesthesia was induced by the Department of Anesthesia.,The patient was prepped and draped in the normal sterile fashion for a scrotal approach.",
     "label": "Plan"
+  },
+  {
+    "text": "Acute renal failure, resolved.",
+    "label": "Assessment"
   },
   {
-    "text": "Blood pressure 146/92 mmHg, pulse 84 bpm regular, respiratory rate 18/min, SpO2 97% on room air.",
+    "text": "There was some mild change in echotexture on the left on the initial study, which had apparently resolved on the second, but may be due to the technical aspects of the study.,",
     "label": "Objective"
   },
   {
-    "text": "I have been feeling dizzy and lightheaded whenever I stand up quickly.",
+    "text": "She has noticed approximately three to four weeks ago.",
     "label": "Subjective"
   },
   {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "CO2 insufflation was done to a maximum pressure of 15 mmHg.",
+    "label": "Assessment"
+  },
+  {
+    "text": "He will need to go to Dr.",
+    "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute acute gastroenteritis with secondary complications.",
+    "text": "She was given general anesthesia with endotracheal intubation.",
     "label": "Assessment"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
+    "text": "After this had been completed, 3 and 4-mm cannulas were used to suction 650 cc from each side, approximately 50 cc in the inner thigh and 600 on each lateral thigh.",
     "label": "Assessment"
   },
   {
-    "text": "Start patient on Metoprolol 50 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "Placement of pacemaker and hysterectomy.",
+    "label": "Subjective"
   },
   {
-    "text": "Advise repeat blood tests for serum ALT and AST in 48 hours and dietary modification.",
+    "text": "A prescription was written as well.",
     "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
-    "label": "Assessment"
+    "text": "The vas was palpated in the scrotum.",
+    "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for D-dimer in 3 days and dietary modification.",
-    "label": "Plan"
+    "text": "The patient smokes 1-1/2 packs of cigarettes a day and does not have a history of regular exercise routine.",
+    "label": "Subjective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
+    "text": "Mouth: No oral mucosal lesions are seen.,Neck: Without adenopathy or thyromegaly.,Chest: Lungs are resonant to percussion.",
     "label": "Objective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
-    "label": "Objective"
+    "text": "Disseminated intravascular coagulation.",
+    "label": "Assessment"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "Chest pain in a 37-year-old gentleman with negative cardiac workup, questionably right coronary spasm.",
+    "label": "Assessment"
   },
   {
-    "text": "Pharynx is erythematous with bilateral tonsillar hypertrophy and whitish exudates.",
-    "label": "Objective"
+    "text": "Upper respiratory illness with apnea, possible pertussis.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
+    "text": "Hypoglycemia due to not eating her meals on a regular basis.",
     "label": "Assessment"
   },
   {
-    "text": "Start patient on Pantoprazole 40 mg once daily with regular monitoring.",
+    "text": "She tolerated without difficulty.",
     "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for troponin-I in 3 days and dietary modification.",
-    "label": "Plan"
+    "text": "Fifth disease with sinusitis.",
+    "label": "Assessment"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "X evaluate her before she leaves to make sure I do not have any problem with her going home.",
+    "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for troponin-I in 3 days and dietary modification.",
+    "text": "Testosterone level and comprehensive metabolic profile will be obtained.,4.",
     "label": "Plan"
   },
   {
-    "text": "Physical examination demonstrates clear signs of bilateral crepitations upon inspection.",
-    "label": "Objective"
+    "text": "Continue water exercise five days a week.",
+    "label": "Plan"
   },
   {
-    "text": "Start patient on Azithromycin 500 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "This 19-year-old Caucasian female presents to ABCD General Hospital.",
+    "label": "Subjective"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
+    "text": "A small incision was made in the right hemiscrotum.",
     "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of bilateral crepitations upon inspection.",
-    "label": "Objective"
+    "text": "She will follow up next week, request Dr.",
+    "label": "Plan"
   },
   {
-    "text": "Laboratory evaluation confirms elevated D-dimer at 14.5 mg/L.",
-    "label": "Objective"
+    "text": "She apparently had an appointment scheduled and it was missed.",
+    "label": "Assessment"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
+    "text": "She does have a history of febrile seizures and what parents reported an abdominal migraine, but on further questioning, it appears to be more of a food intolerance issue.",
     "label": "Subjective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated D-dimer at 2.1 ng/mL.",
+    "text": "Prostate gland showing moderately differentiated infiltrating adenocarcinoma, Gleason 3 + 2 extending to the apex involving both lobes of the prostate, mainly right.",
     "label": "Objective"
   },
   {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
+    "text": "The patient is an 85-year-old male who was brought in by EMS with a complaint of a decreased level of consciousness.",
     "label": "Subjective"
   },
   {
-    "text": "Patient counselled on low-sodium DASH diet (less than 2g sodium/day) and daily morning weight logging.",
-    "label": "Plan"
+    "text": "We will rule out angina equivalent.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
-    "label": "Assessment"
+    "text": "He wants to proceed with workup and evaluation for laparoscopic Roux-en-Y gastric bypass.",
+    "label": "Plan"
   },
   {
-    "text": "Start patient on Atorvastatin 50 mg once daily with regular monitoring.",
+    "text": ", The patient's wife and I have discussed his treatment options, which include primarily radiation and surgery.",
     "label": "Plan"
   },
   {
-    "text": "Laboratory evaluation confirms elevated C-reactive protein at 14.5 mg/L.",
+    "text": ",VITAL SIGNS: The patient is afebrile.",
     "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for troponin-I in 48 hours and dietary modification.",
+    "text": ", The patient will discontinue Ditropan.",
     "label": "Plan"
   },
   {
-    "text": "Streptococcal pharyngitis confirmed by positive rapid antigen testing.",
+    "text": "The identical procedure was performed on the contralateral side.",
     "label": "Assessment"
-  },
-  {
-    "text": "Advise repeat blood tests for serum ALT and AST in 2 weeks and dietary modification.",
-    "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for troponin-I in 48 hours and dietary modification.",
-    "label": "Plan"
+    "text": "Full range of motion without pain.",
+    "label": "Objective"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
+    "text": "She thinks, she also has an element of office hypertension.",
     "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 2 weeks.",
+    "text": "lives with biologic father and mother.",
     "label": "Subjective"
-  },
-  {
-    "text": "Provisional assessment: Acute urinary tract infection with secondary complications.",
-    "label": "Assessment"
   },
   {
-    "text": "Advise repeat blood tests for serum ALT and AST in 3 days and dietary modification.",
+    "text": "Once the spermatocele was identified, as stated above, significant size was noted encompassing the entire left epididymis.",
     "label": "Plan"
-  },
-  {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
-    "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of acute gastroenteritis.",
+    "text": "Then, 4-0 chromic was used to close the scrotal skin on the right hemiscrotum.",
     "label": "Assessment"
   },
   {
-    "text": "Patient endorses generalized fatigue, low energy, and poor appetite over 3 weeks.",
+    "text": "Also, hypertension, hyperlipidemia, as well as diabetes.",
     "label": "Subjective"
   },
   {
-    "text": "Start patient on Pantoprazole 40 mg once daily with regular monitoring.",
+    "text": "She has taken the preoperative quiz for banding.",
     "label": "Plan"
   },
   {
-    "text": "Physical examination demonstrates clear signs of bilateral crepitations upon inspection.",
+    "text": "LUNGS: Clear to auscultation bilaterally.",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past 2 weeks.",
-    "label": "Subjective"
-  },
-  {
-    "text": "Heart: Regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops heard.",
+    "text": "Chest: Symmetrical rise and fall.",
     "label": "Objective"
   },
   {
-    "text": "Chest auscultation reveals diffuse expiratory wheezes bilaterally with prolonged expiratory phase.",
-    "label": "Objective"
+    "text": "Rule out ascites, with no GI issues other than lower extremity edema.,",
+    "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute acute gastroenteritis with secondary complications.",
+    "text": "Negative EKG and cardiac enzyme profile.",
     "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
+    "text": "Sponge, needle, and instruments counts were correct.",
     "label": "Assessment"
   },
   {
-    "text": "Reports difficulty sleeping due to persistent nocturnal dry coughing spells.",
-    "label": "Subjective"
+    "text": "The patient was sent to Recovery in stable condition.",
+    "label": "Plan"
   },
   {
-    "text": "Patient states severe throbbing headache on the right side for the past 48 hours.",
-    "label": "Subjective"
+    "text": "Epididymides are nontender.,RECTAL: The prostate is +1 to 2/4.",
+    "label": "Objective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated troponin-I at elevated above reference range.",
+    "text": "Positive dorsalis pedis pulses.,",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past 2 weeks.",
+    "text": "She also thinks since she has been on the Lexapro, she has somewhat of a tremor of her basically whole body at least upper body including the torso and arms and had all of the daughters who I not noticed to speak of and it is certainly difficult to tell her today that she has much tremor.",
     "label": "Subjective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated C-reactive protein at 14.5 mg/L.",
+    "text": "He will need an upper endoscopy by either Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": ", On exam, her temperature is 98, pulse 76, weight 197.7 pounds, blood pressure 102/72, BMI is 38.5, she has lost 3.8 pounds since her last visit.",
     "label": "Objective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
+    "text": "No tenderness or effusion.",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past 2 weeks.",
+    "text": "Her father died of an MI at 65, mother died of a stroke at 70.",
     "label": "Subjective"
   },
   {
-    "text": "States she has had productive cough with yellowish-green phlegm for nearly a week.",
+    "text": "The patient is an 83-year-old female with a history of polycythemia vera.",
     "label": "Subjective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
+    "text": "The risks and benefits of the procedure have been explained to the patient.,PROCEDURE IN DETAIL: ,The patient was taken to the operating room and placed supine on the operating room table.",
     "label": "Assessment"
   },
   {
-    "text": "Request formal specialist consultation with Cardiology for outpatient nuclear stress testing and evaluation of exertional angina.",
+    "text": "A #4-0 chromic suture was used in simple fashion to reapproximate the skin incision.",
     "label": "Plan"
-  },
-  {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
-    "label": "Subjective"
   },
   {
-    "text": "Start patient on Metoprolol 500 mg once daily with regular monitoring.",
+    "text": "The patient has no significant bony deformities or abnormalities.",
     "label": "Plan"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past 3 days.",
-    "label": "Subjective"
+    "text": "The patient is seen and evaluated by myself.",
+    "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
-    "label": "Assessment"
+    "text": "EKG shows sinus tachycardia, no acute ST changes.",
+    "label": "Objective"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
+    "text": "She comes in to clinic today for followup.",
     "label": "Subjective"
   },
   {
-    "text": "Congestive heart failure exacerbation NYHA Class III triggered by dietary sodium non-compliance.",
+    "text": "Several multiple areas of hypergranulation tissue on the left posterior leg associated with a sense of trauma to his right posterior leg.",
     "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of bilateral crepitations upon inspection.",
-    "label": "Objective"
+    "text": "The bladder was inspected confirming previous cystoscopic findings of a 2.5- to 3-cm left lateral wall bladder tumor away from the ureteral orifice.",
+    "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
-    "label": "Objective"
+    "text": "Another option will be to use loratadine.",
+    "label": "Plan"
   },
   {
-    "text": "Community-acquired pneumonia, CURB-65 score 1, suitable for outpatient therapeutic management.",
+    "text": "History of tubal ligation.",
     "label": "Assessment"
   },
   {
-    "text": "Administer Albuterol 2.5mg / Ipratropium 0.5mg nebulization in clinic now; repeat if needed in 20 minutes.",
-    "label": "Plan"
+    "text": "There is a large pedunculated mass dangling from the glans of the penis at approximately the urethral meatus.",
+    "label": "Objective"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
+    "text": "When the Adult Protective Services actually went to the patient's house, he was found to be having decreased consciousness for a whole day by his wife.",
     "label": "Subjective"
   },
   {
-    "text": "Start patient on Pantoprazole 40 mg once daily with regular monitoring.",
+    "text": ", Patient began external beam radiation therapy to the pelvis.",
     "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in 2 weeks and dietary modification.",
-    "label": "Plan"
+    "text": "She has had no recent radiological procedures.",
+    "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
+    "text": "The skin was approximated with 2-0 Vicryl subcutaneous and then 4-0 Monocryl subcuticular stitches, dressed with Steri-Strips and 4 x 4's.",
     "label": "Assessment"
   },
   {
-    "text": "Differentials considered: gastroesophageal reflux disease versus biliary colic versus non-cardiac chest pain.",
-    "label": "Assessment"
+    "text": "on the morning of the July 31, 2008.",
+    "label": "Subjective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated troponin-I at elevated above reference range.",
-    "label": "Objective"
+    "text": "He and his wife have 2 adopted children.",
+    "label": "Subjective"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
+    "text": "As per his wife, she states that the patient was given an entire mg of Xanax rather than 0.125 mg of Xanax, and that is why he has had decreased mental status since then.",
     "label": "Subjective"
+  },
+  {
+    "text": "Acute on chronic COPD exacerbation.",
+    "label": "Assessment"
   },
   {
-    "text": "Right knee shows mild joint effusion, medial joint line tenderness, no ligamentous laxity.",
+    "text": "BUN and creatinine within normal limits.",
     "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute urinary tract infection with secondary complications.",
-    "label": "Assessment"
+    "text": "Sclerae are anicteric.,NECK: There is no adenopathy.,PULMONARY: Respirations are unlabored.,HEART: Regular rhythm.,ABDOMEN: Liver, spleen, kidney, and bladder are not palpable.",
+    "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute acute gastroenteritis with secondary complications.",
-    "label": "Assessment"
+    "text": "No masses.,GENITALIA: Normal penis.",
+    "label": "Objective"
   },
   {
-    "text": "Iron deficiency anemia, microcytic hypochromic picture, etiology under workup.",
-    "label": "Assessment"
+    "text": "Her skin is kind of peeling a little bit, but it has been like that for about a week and a half now.",
+    "label": "Subjective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
-    "label": "Assessment"
+    "text": "She was given a lab sheet to have a CBC with diff as well as a CMP to be drawn prior to her appointment with Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "IV fluid for hydration and volume resuscitation at this time.,7.",
+    "label": "Plan"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of acute gastroenteritis.",
+    "text": ",INDICATIONS FOR PROCEDURE: , This is a 50-year-old male who has been overweight for many years and has tried multiple different weight loss diets and programs.",
     "label": "Assessment"
   },
   {
-    "text": "Patient affirms generalized fatigue, low energy, and poor appetite over 3 weeks.",
+    "text": "He has had mid and low back pain intermittently.",
     "label": "Subjective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
-    "label": "Objective"
+    "text": "He denied any smoking history.",
+    "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past 3 days.",
+    "text": "He has had several cases of this in the past and he says that is usually takes quite awhile for him to get over it; he said that the last time he was here he got a steroid injection by Dr.",
     "label": "Subjective"
   },
   {
-    "text": "Start patient on Pantoprazole 500 mg once daily with regular monitoring.",
+    "text": ", Discussed significance of this in detail with the patient.",
     "label": "Plan"
   },
   {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
-    "label": "Objective"
+    "text": "A segment about 3 cm in length was dissected out.",
+    "label": "Assessment"
   },
   {
-    "text": "Patient reports severe throbbing headache on the right side for the past 48 hours.",
+    "text": "Prescribed medications were Salmeterol inhaler, prn; and Fluticasone nasal inhaler.",
     "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent persistent dry cough for the past one month.",
+    "text": "However, no purulent discharge was seen on compression of the glans.",
+    "label": "Objective"
+  },
+  {
+    "text": "completely unremarkable FHx.",
     "label": "Subjective"
+  },
+  {
+    "text": ",PROCEDURE: ,I was able to access her port.",
+    "label": "Objective"
+  },
+  {
+    "text": "She has tried many different diets, but is unsuccessful.",
+    "label": "Assessment"
   },
   {
-    "text": "Uptitrate dosage of Metformin to 1000 mg twice daily; add Empagliflozin 10 mg once daily in morning.",
+    "text": "Clinically improved, however, requiring acute care.",
     "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
+    "text": "I went above and passed an EGD scope into the mouth down to the esophagus and into the gastric pouch.",
     "label": "Assessment"
+  },
+  {
+    "text": "She apparently did not feel well with the higher dose, so she just went back to her previous dose of 1 mg daily.",
+    "label": "Subjective"
   },
   {
-    "text": "Start patient on Azithromycin 40 mg once daily with regular monitoring.",
+    "text": "Additionally, a TSH level will be obtained.,3.",
     "label": "Plan"
   },
   {
-    "text": "Laboratory evaluation confirms elevated serum ALT and AST at 2.1 ng/mL.",
+    "text": "Postoperative course was uncomplicated.",
     "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for serum ALT and AST in 48 hours and dietary modification.",
-    "label": "Plan"
+    "text": "He used to drink alcohol rarely but stopped entirely with the onset of his symptoms.",
+    "label": "Subjective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
-    "label": "Assessment"
+    "text": "Chest x-ray calcified old granulomatous disease, otherwise normal.",
+    "label": "Objective"
   },
   {
-    "text": "Omeprazole 40 mg orally once daily before breakfast for 4 weeks for acid suppression.",
-    "label": "Plan"
+    "text": "Testes are normal.,LABORATORY DATA: , The patient's white counts are 20,000.",
+    "label": "Objective"
   },
   {
-    "text": "Past medical history notable for essential hypertension, type 2 diabetes, and asthma.",
+    "text": "Actually, the main reasons we are seeing her back so soon which are elevated blood pressure and her right arm symptoms are basically resolved.",
     "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past one month.",
-    "label": "Subjective"
+    "text": "We are going to proceed for laparoscopic gastric banding.",
+    "label": "Plan"
   },
   {
-    "text": "Reports onset of palpitations and tremors accompanied by mild dizziness.",
+    "text": "He denied any h/o drug abuse.",
     "label": "Subjective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated troponin-I at within borderline limits.",
-    "label": "Objective"
+    "text": "X in approximately five to seven days.",
+    "label": "Plan"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
-    "label": "Objective"
+    "text": "He is being discharged in satisfactory condition with a good urinary stream, minimal hematuria, and on Bactrim DS one a day for ten days with a standard postprostatic surgery instruction sheet.",
+    "label": "Assessment"
   },
   {
-    "text": "Urine dipstick positive for 2+ protein, negative for nitrites and leukocyte esterase.",
+    "text": "Left mid region prostate: moderately differentiated adenocarcinoma, Gleason's 3 + 2 = 5/10.",
     "label": "Objective"
   },
   {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "Anemia of unknown etiology.",
+    "label": "Assessment"
   },
   {
-    "text": "Start patient on Pantoprazole 500 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "Today, he admits that his pain is much better.",
+    "label": "Subjective"
   },
   {
-    "text": "Streptococcal pharyngitis corroborated by positive rapid antigen testing.",
-    "label": "Assessment"
+    "text": "The spell became more frequent and prolonged, and by the time of initial evaluation were occurring 2-3 times per day and lasting 2-3 minutes in duration.",
+    "label": "Subjective"
   },
   {
-    "text": "Return to emergency department immediately if experiencing chest pressure, dyspnea at rest, or syncope.",
-    "label": "Plan"
+    "text": "All questions answered.,",
+    "label": "Assessment"
   },
   {
-    "text": "Fasting blood sugar 198 mg/dL, serum creatinine 1.3 mg/dL, eGFR 58 mL/min/1.73m2.",
+    "text": "He spontaneously voided without the Foley 110 mL.,",
     "label": "Objective"
   },
   {
-    "text": "Urinary tract infection, uncomplicated, likely Escherichia coli.",
+    "text": "General anesthesia was administered with endotracheal intubation.",
     "label": "Assessment"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
-    "label": "Assessment"
+    "text": "Otherwise we will continue to follow her urinalysis over the next year or so.",
+    "label": "Plan"
   },
   {
-    "text": "Start patient on Metoprolol 40 mg once daily with regular monitoring.",
+    "text": "Mother history of CHF and emphysema that died at the age of 74.",
     "label": "Plan"
+  },
+  {
+    "text": "The patient also may have an enteritis that at this point may have become more quiescent as she notes that she did have some diarrhea about the time her mouth problem developed.",
+    "label": "Assessment"
   },
   {
-    "text": "Cardiovascular exam: Normal heart sounds, normal S1 and S2, no murmurs, rubs, or gallops heard.",
+    "text": "GENERAL: Alert and in no apparent distress, calm, cooperative, and communicative.",
     "label": "Objective"
   },
   {
-    "text": "Reports onset of palpitations and tremors accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "PENIS: Normal male genitalia.",
+    "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in one month and dietary modification.",
-    "label": "Plan"
+    "text": "None Past Psychological History: None",
+    "label": "Subjective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
+    "text": "On the left side, just anterior to the midaxillary line and just subcostal, I placed a 5-mm port.",
     "label": "Assessment"
+  },
+  {
+    "text": "No focal neuro deficits noted.",
+    "label": "Objective"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
+    "text": "Sometimes he has to throw the stacks a little bit as well.",
     "label": "Subjective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated D-dimer at 2.1 ng/mL.",
+    "text": "X who is covering for ENT and noted that she had airway compromise and a rather large fishbone noted and that was removed.",
     "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
+    "text": "Ejection fraction estimated around 60%.,",
     "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
+    "text": "Vitals are stable.,GENERAL: The patient is a thin gentleman,GENITOURINARY: Suprapubic area was distended and bladder was palpated very easily.",
     "label": "Objective"
   },
   {
-    "text": "Start patient on Metoprolol 20 mg once daily with regular monitoring.",
+    "text": "He passed his fill and pull study and was thought to self-catheterize in the event that he does incur urinary retention again.",
     "label": "Plan"
   },
   {
-    "text": "Start patient on Pantoprazole 500 mg once daily with regular monitoring.",
+    "text": "Based on the recent culture, we will place him on Keflex nighttime prophylaxis, for the next three months or so.",
     "label": "Plan"
   },
   {
-    "text": "12-lead Electrocardiogram demonstrates normal sinus rhythm with 1.5mm ST elevations in leads V1-V3.",
+    "text": "MSK: No crepitation, defect, tenderness, masses or swellings.",
     "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of acute gastroenteritis.",
+    "text": "Strength and tone equal bilaterally, stable.",
+    "label": "Objective"
+  },
+  {
+    "text": "Generalized weakness and deconditioning secondary to the above.",
     "label": "Assessment"
+  },
+  {
+    "text": "The patient was given IV Norflex 60 mg, Zofran 4 mg, and morphine sulfate 4 mg and with that has significant improvement in her discomfort.",
+    "label": "Plan"
   },
   {
-    "text": "Start patient on Metoprolol 40 mg once daily with regular monitoring.",
+    "text": "Vincent's Hospital consent form for Lap-Banding.",
     "label": "Plan"
   },
   {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
+    "text": "She has had dentures for many, many years and just recently I guess in the last few months, although she was somewhat vague on this, she has had some sores in her mouth.",
     "label": "Subjective"
   },
   {
-    "text": "Start patient on Metoprolol 500 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": ", The patient is a 56-year-old female who presents to the bariatric surgery service with a body mass index of 41 with obesity related comorbidities.",
+    "label": "Assessment"
   },
   {
-    "text": "Start patient on Pantoprazole 40 mg once daily with regular monitoring.",
+    "text": "She will be following up with Dr.",
     "label": "Plan"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
+    "text": "He complained of ulnar-sided right hand pain and was seen in the emergency room.",
     "label": "Subjective"
+  },
+  {
+    "text": "The proximal glans appeared pink.",
+    "label": "Objective"
+  },
+  {
+    "text": ",Trace bilateral hydroceles, which are nonspecific, otherwise unremarkable examination.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Then, 4-0 chromic was used to close the scrotal skin.",
+    "label": "Assessment"
   },
   {
-    "text": "Advise repeat blood tests for troponin-I in 2 weeks and dietary modification.",
+    "text": "Silk ties used to ligate both cut ends of the vas deferens and placed back into the scrotum.",
     "label": "Plan"
   },
   {
-    "text": "Skin examination reveals erythematous maculopapular rash across trunk sparing palms and soles.",
+    "text": "Neck exam nonpalpable thyroid, midline trachea, no cervical lymphadenopathy, no carotid bruit.",
     "label": "Objective"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past one month.",
+    "text": "On her right great toe, she has got some redness and erythema.",
     "label": "Subjective"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
-    "label": "Assessment"
+    "text": "Testicle was placed back in the scrotum in appropriate anatomic position.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient is an 89-year-old lady.",
+    "label": "Subjective"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
+    "text": "The vas was identified, skin was incised, and no scalpel instruments were used to dissect out the vas.",
     "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 2 weeks.",
+    "text": "Reportedly, he had some joints in his hand pushed back and placed by somebody in emergency room.",
     "label": "Subjective"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
+    "text": "His father died of heart disease in his 40s.",
     "label": "Subjective"
   },
   {
-    "text": "ECG reveals normal sinus rhythm with 1.5mm ST elevations in leads V1-V3.",
-    "label": "Objective"
+    "text": "The procedure itself was started by grasping the right vas deferens in the scrotum, and bringing it up to the level of the skin.",
+    "label": "Assessment"
   },
   {
-    "text": "Start patient on Metoprolol 20 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": ", Difficulty voiding.,HISTORY:, This 67-year old Hispanic male patient was admitted because of enlarged prostate and symptoms of bladder neck obstruction.",
+    "label": "Assessment"
   },
   {
-    "text": "Advise repeat blood tests for D-dimer in 48 hours and dietary modification.",
-    "label": "Plan"
+    "text": "She has had some difficulty expressing herself, but seems to comprehend speech as above.",
+    "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 2 weeks.",
+    "text": "He complained of increased symptoms with more and more difficulty with coordination.",
     "label": "Subjective"
   },
   {
-    "text": "Start patient on Metoprolol 50 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "Babinski is negative and sensation is intact.",
+    "label": "Objective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of bilateral crepitations upon inspection.",
-    "label": "Objective"
+    "text": "He took a 10-day course of Cipro believing that he had a UTI.",
+    "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past 2 weeks.",
+    "text": "Her daughter says that they do check it periodically and it is similar to today's reading.",
     "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past one month.",
+    "text": "She has also had a hysterectomy, salpingoophorectomy, appendectomy, tonsillectomy, two carpal tunnel releases.",
     "label": "Subjective"
   },
   {
-    "text": "Start patient on Metoprolol 20 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "Community acquired pneumonia both resolving.",
+    "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
+    "text": "Extremities move times four.",
     "label": "Objective"
   },
   {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
+    "text": "The patient apparently lives with his wife and was found to have a decreased status since the last one day.",
     "label": "Subjective"
   },
   {
-    "text": "Clinical impression favors acute bacterial rhinosinusitis over viral upper respiratory infection.",
-    "label": "Assessment"
+    "text": "Also, since she is on Mavik plus verapamil, she could switch over to the combined drug Tarka.",
+    "label": "Subjective"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
+    "text": "He said that it worked fairly well, although it seemed to still take awhile to get rid of it.",
     "label": "Subjective"
   },
   {
-    "text": "Patient notes experiencing intermittent sharp lower back pain for the past one month.",
-    "label": "Subjective"
+    "text": ",Persistent frequency and urgency, in a patient with a history of neurogenic bladder and history of stroke.",
+    "label": "Assessment"
+  },
+  {
+    "text": "There is a small tear of the skin where the mass attaches to the glans near the urethral meatus.",
+    "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of bronchial asthma exacerbation.",
+    "text": ", Allergic rhinitis.,",
     "label": "Assessment"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past 48 hours.",
-    "label": "Subjective"
+    "text": "No lesions appreciated on the penis.",
+    "label": "Objective"
   },
   {
-    "text": "Warning signs advised; attend ER if experiencing chest pressure, dyspnea at rest, or syncope.",
-    "label": "Plan"
+    "text": "Genitalia was shaved and then prepped with Betadine scrub and paint solution and were draped sterilely.",
+    "label": "Assessment"
   },
   {
-    "text": "Start patient on Atorvastatin 500 mg once daily with regular monitoring.",
+    "text": "Metzenbaum scissors as well as electrocautery was used to dissect free the spermatocele from its testicular attachments and spermatocelectomy and left epididymectomy was completed with electrocautery.",
     "label": "Plan"
   },
   {
-    "text": "Patient notes experiencing intermittent fatigue and night sweats for the past 2 weeks.",
+    "text": "The patient was evaluated 1st thing in the morning and did not take his pain medications, so objective findings may reflect that.",
     "label": "Subjective"
+  },
+  {
+    "text": "Bleeding is currently stanch, and there is no sign of secondary infection at this time.",
+    "label": "Objective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of abdominal guarding upon inspection.",
+    "text": "Attention was then turned to the more proximal aspect of the cord.",
+    "label": "Plan"
+  },
+  {
+    "text": "His physical examination was normal for a man of his age.",
     "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
+    "text": "Clinical sinusitis and secondary cough.",
     "label": "Assessment"
   },
   {
-    "text": "Schedule 2D echocardiogram and bilateral lower extremity venous Doppler ultrasound within one week.",
+    "text": ", We are going to put her on two weeks of Optifast at around 900 calories.",
     "label": "Plan"
   },
   {
-    "text": "Start patient on Pantoprazole 20 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "As far as cancer two cousins had breast cancer.",
+    "label": "Subjective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated D-dimer at elevated above reference range.",
+    "text": ",Vital Signs: Are all reviewed on triage.,General: He is alert.",
     "label": "Objective"
   },
   {
-    "text": "Laboratory evaluation confirms elevated serum ALT and AST at 2.1 ng/mL.",
+    "text": "Only clear drainage was seen.",
     "label": "Objective"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
+    "text": "Significant for asthma and acne.",
     "label": "Subjective"
   },
   {
-    "text": "Bilateral 2+ pitting edema noted extending up to mid-calf bilaterally.",
-    "label": "Objective"
+    "text": "As far as heart disease there is none in the family.",
+    "label": "Subjective"
   },
   {
-    "text": "1. Uncontrolled Type 2 Diabetes Mellitus with secondary diabetic peripheral neuropathy.",
+    "text": "A small incision was made.",
     "label": "Assessment"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": ", BUN 19 and creatinine 1.1.",
+    "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in 48 hours and dietary modification.",
+    "text": ", The patient had a recent circumcision with a fairly prominent suprapubic fat pad but also has a penile and suprapubic cellulitis.",
     "label": "Plan"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
+    "text": "X to discuss InterStim, which was briefly reviewed here today and brochure for this is provided today.",
     "label": "Assessment"
   },
   {
-    "text": "Start patient on Metoprolol 50 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "The patient has now begun to have comorbidities related to the obesity.",
+    "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
-    "label": "Assessment"
+    "text": "Tumor overall involved less than 5% of the tissue.",
+    "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of bronchial asthma exacerbation.",
+    "text": "A few centimeters below and medial to that, I placed a 15-mm port.",
     "label": "Assessment"
   },
   {
-    "text": "Start patient on Atorvastatin 500 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "Oral cavity is clear.,NECK: Supple.",
+    "label": "Objective"
   },
   {
-    "text": "Suspected acute medial meniscal tear of the right knee secondary to mechanical twisting injury.",
+    "text": "We are going to reschedule that today given her overall state of well-being and the fact that she has no evidence of GFR that is greater than 60%.",
     "label": "Assessment"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of acute gastroenteritis.",
-    "label": "Assessment"
+    "text": "Cranial nerves II-XII are intact.",
+    "label": "Objective"
   },
   {
-    "text": "Presents with chief complaint of sharp substernal chest discomfort radiating to left shoulder on exertion.",
+    "text": "The patient has not been getting Sinemet and his other home medications in the last 2 days.",
     "label": "Subjective"
   },
   {
-    "text": "Start patient on Atorvastatin 500 mg once daily with regular monitoring.",
-    "label": "Plan"
+    "text": "She takes one glass of wine per day.",
+    "label": "Subjective"
   },
   {
-    "text": "Start patient on Pantoprazole 20 mg once daily with regular monitoring.",
+    "text": "He did not have a PSA drawn today as he had a catheter in place, therefore his PSA could be falsely elevated.",
     "label": "Plan"
+  },
+  {
+    "text": "I passed that in the end of my Roux limb and had the spike come out antimesenteric.",
+    "label": "Assessment"
+  },
+  {
+    "text": "She only got up to the full dose 10 mg pill about a week ago and apparently some days does not need to take it.",
+    "label": "Assessment"
+  },
+  {
+    "text": "ABC next available as an outpatient.",
+    "label": "Assessment"
   },
   {
-    "text": "Abdomen is soft, non-tender to light palpation, positive Murphy's sign on deep right upper quadrant palpation.",
+    "text": "There was no thyroid enlargement, and no tenderness, or masses were felt.",
     "label": "Objective"
   },
   {
-    "text": "Reports onset of palpitations and tremors accompanied by mild dizziness.",
+    "text": "No history of substance abuse.",
     "label": "Subjective"
   },
   {
-    "text": "Reports onset of persistent dry cough accompanied by mild dizziness.",
+    "text": "She denied symptoms of Lhermitte's or Uhthoff's phenomena.",
     "label": "Subjective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
+    "text": "No oral or nasal discharge.,NECK: Without masses.,CHEST: Without masses.,LUNGS: Clear.,CARDIAC: Without murmurs or gallops.,ABDOMEN: Soft.",
     "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for serum ALT and AST in one month and dietary modification.",
-    "label": "Plan"
+    "text": "The patient is interested in gastric bypass surgery.",
+    "label": "Assessment"
   },
   {
-    "text": "Order routine fasting lipid panel, comprehensive metabolic panel, and urine microalbumin ratio.",
+    "text": "The parents understand and wished to proceed.",
     "label": "Plan"
+  },
+  {
+    "text": "The physical examination on 1/29 was within normal limits except for the digital rectal exam which revealed an asymmetric prostate gland with nodularity, R>L.",
+    "label": "Objective"
+  },
+  {
+    "text": "His scrotum did not have any swelling at the present time.",
+    "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
+    "text": "Normal extraocular muscles.",
+    "label": "Objective"
+  },
+  {
+    "text": "Nausea and abdominal pain of uncertain etiology.",
     "label": "Assessment"
   },
   {
-    "text": "Reports onset of fatigue and night sweats accompanied by mild dizziness.",
-    "label": "Subjective"
+    "text": "The vas deferens was grasped with a vas clamp.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The free ends were cauterized and tied with 2-0 silk sutures in such a fashion that the ends double back on themselves.",
+    "label": "Assessment"
   },
   {
-    "text": "Physical examination demonstrates clear signs of mild throat erythema upon inspection.",
+    "text": "This is personally reviewed by me.",
     "label": "Objective"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in 48 hours and dietary modification.",
-    "label": "Plan"
+    "text": "The capsule and seminal vesicles were free.,DISCHARGE NOTE:, Patient has made good post-op recovery other than mild urgency incontinence.",
+    "label": "Objective"
   },
   {
-    "text": "Start patient on Metoprolol 20 mg once daily with regular monitoring.",
+    "text": "X's recommendation.,2.",
     "label": "Plan"
+  },
+  {
+    "text": "Urine pregnancy test was negative.",
+    "label": "Objective"
+  },
+  {
+    "text": "BONE: No misalignment, asymmetry, defect, tenderness or effusion.",
+    "label": "Objective"
   },
   {
-    "text": "Initiate Amoxicillin-Clavulanate 875/125 mg orally twice daily with meals for 7 days.",
+    "text": "Regular with regular consistency with thin liquids and ground meat.",
     "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
-    "label": "Assessment"
+    "text": "p.r.n., pain, #30 for pain.",
+    "label": "Plan"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of urinary tract infection.",
+    "text": ",LABORATORY DATA:, BUN 19 and creatinine 1.1.",
     "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute acute gastroenteritis with secondary complications.",
+    "text": "Infected foreign body, right naris.",
     "label": "Assessment"
   },
   {
-    "text": "Diagnostic workup ordered: fasting lipid panel, comprehensive metabolic panel, and urine microalbumin ratio.",
-    "label": "Plan"
+    "text": "He had been well until 7 months prior to evaluation when he started having spells which were described as \"dizzy spells\" lasting from several seconds to one minute in duration.",
+    "label": "Subjective"
   },
   {
-    "text": "Doctor, my stomach burns intensely about thirty minutes after having spicy food.",
+    "text": "She is voiding daytime every 1 hour in the morning especially after taking Lasix, which tapers off in the afternoon, nocturia time 0.",
     "label": "Subjective"
   },
   {
-    "text": "Physical examination demonstrates clear signs of peripheral edema upon inspection.",
+    "text": "Lung exam clear breath sounds throughout without rhonchi or wheezes however diminished.",
     "label": "Objective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of acute gastroenteritis.",
+    "text": "Born at 36 weeks' gestation by C-section delivery at 8 pounds 3 ounces.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I then put the patient in reverse Trendelenburg.",
     "label": "Assessment"
   },
   {
-    "text": "Laboratory evaluation confirms elevated C-reactive protein at 2.1 ng/mL.",
+    "text": "MSK: Normal gait and station.",
     "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
-    "label": "Assessment"
+    "text": "If not she would require tracheostomy.",
+    "label": "Objective"
   },
   {
-    "text": "Start patient on Metoprolol 20 mg once daily with regular monitoring.",
+    "text": "Prophylactic antibiotics to prevent infection.,4.",
     "label": "Plan"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of bronchial asthma exacerbation.",
-    "label": "Assessment"
+    "text": "She does not smoke and does not drink and has never done either.",
+    "label": "Subjective"
+  },
+  {
+    "text": "A #15 blade was used to make a transverse incision on the left hemiscrotum.",
+    "label": "Plan"
   },
   {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
+    "text": "MGM and two MA's also died of Huntington Disease.",
     "label": "Subjective"
+  },
+  {
+    "text": ",ANESTHESIA: , General with endotracheal intubation.",
+    "label": "Assessment"
   },
   {
-    "text": "Start patient on Atorvastatin 20 mg once daily with regular monitoring.",
+    "text": "Her blood sugar postprocedure was noted to be 233.",
     "label": "Plan"
+  },
+  {
+    "text": "Both testes were descended without hydroceles.,EXTREMITIES: He has full range of motion of all 4 extremities.,SKIN: Warm, pink, and dry.,NEUROLOGIC: Grossly intact.,BACK: Normal.,",
+    "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
+    "text": "The tissue itself, however, was quite dull and is soft or readily retractable at this time.",
+    "label": "Objective"
+  },
+  {
+    "text": "I placed another 5-mm port in the midclavicular line just subcostal on the right side, a few centimeters below and medial to that, I placed a 12-mm VersaStep port.",
     "label": "Assessment"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in 3 days and dietary modification.",
-    "label": "Plan"
+    "text": "Abdominal exam positive bowel sounds, soft, nontender, obese, nondistended abdomen.",
+    "label": "Objective"
+  },
+  {
+    "text": "He has 5/5 strength throughout.",
+    "label": "Objective"
   },
   {
-    "text": "Current medications include amlodipine 5mg daily and atorvastatin 20mg at bedtime.",
+    "text": "In addition, in the 3 months prior to evaluation, the right upper extremity would become tonic and flexed during the episodes, and he began to experience post ictal fatigue.",
     "label": "Subjective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of stage 1 hypertension.",
-    "label": "Assessment"
+    "text": "B, her gastroenterologist, regarding any issues with her J-tube.",
+    "label": "Plan"
   },
   {
-    "text": "Reports onset of sharp lower back pain accompanied by mild dizziness.",
+    "text": "She denies any pain but does state that there is some itching.",
     "label": "Subjective"
+  },
+  {
+    "text": "The patient was instructed to see Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "For now there is no good evidence that early management affects the ultimate prognosis.",
+    "label": "Plan"
   },
   {
-    "text": "Advise repeat blood tests for C-reactive protein in 3 days and dietary modification.",
+    "text": "She underwent the procedure.",
     "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
+    "text": "After securing hemostasis with the cautery, the ends were allowed to drop back into the incision, which was also cauterized.,Bacitracin ointment was applied as well as dry sterile dressing.",
     "label": "Assessment"
+  },
+  {
+    "text": "LYMPH: There was no appreciated node that I could feel in the groin or neck area.",
+    "label": "Objective"
+  },
+  {
+    "text": "Liver and spleen not enlarged.",
+    "label": "Objective"
+  },
+  {
+    "text": "There is a marble that can be felt and it is freely mobile underneath the skin of the dorsum of the penis.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient had a UA done in the ED which showed few bacteria, white blood cells 6 to 12, and a few epithelial cells which were negative.",
+    "label": "Objective"
   },
   {
-    "text": "Prescribe Amoxicillin-Clavulanate 875/125 mg orally twice daily with meals for 7 days.",
+    "text": "Testicles are fair consistency.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient states she has had worsening bunion deformity for as long as she could not remember.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Will proceed with our usual work up with an upper GI series as well as consultations with the dietician and the psychologist preoperatively.",
     "label": "Plan"
+  },
+  {
+    "text": "The patient appears to be an excellent candidate and would benefit greatly in the management of her comorbidities.,",
+    "label": "Assessment"
   },
   {
-    "text": "Patient states that his vision becomes slightly blurry in the late afternoons.",
+    "text": "She is not an alcohol or tobacco user.",
     "label": "Subjective"
   },
   {
-    "text": "Allergic to penicillin; developed hives and facial pruritus in childhood.",
+    "text": "Good stream, emptying well.",
     "label": "Subjective"
+  },
+  {
+    "text": "Testicles descended bilaterally.,RECTAL: Examination benign.,EXTREMITIES: No edema.,",
+    "label": "Objective"
   },
   {
-    "text": "Start patient on Metoprolol 40 mg once daily with regular monitoring.",
+    "text": "Last flu vaccine was given on 1999.",
     "label": "Plan"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past one month.",
-    "label": "Subjective"
+    "text": "The patient's CT scans of the abdomen appeared normal.",
+    "label": "Plan"
   },
   {
-    "text": "Migraine headache with aura, episodic pattern with increasing frequency.",
-    "label": "Assessment"
+    "text": "He fell at some point near the onset of the symptoms, but believes that his symptoms had occurred first.",
+    "label": "Subjective"
   },
   {
-    "text": "Patient presents with clinical presentation characteristic of acute gastroenteritis.",
+    "text": "Severe nausea and vomiting likely secondary gastroenteritis, resolved.",
     "label": "Assessment"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
+    "text": "Physical examination revealed normal heart and lungs.",
     "label": "Assessment"
   },
   {
-    "text": "Discontinue Ibuprofen immediately given elevated serum creatinine and gastrointestinal upset.",
+    "text": "She was noted to be a difficult intubation for the procedure.",
     "label": "Plan"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
+    "text": "HTN, father with SLE, uncle with Addison's Disease.",
+    "label": "Subjective"
+  },
+  {
+    "text": "This has not improved on VESIcare as well as Enablex.",
     "label": "Assessment"
   },
   {
-    "text": "Abdominal examination reveals, non-tender to light palpation, positive Murphy's sign on deep right upper quadrant palpation.",
+    "text": "No edema.,GENITAL: Testicles appear normal.",
     "label": "Objective"
   },
   {
-    "text": "Provisional assessment: Acute stage 1 hypertension with secondary complications.",
+    "text": "I then divided the mesentery all the way down to the base of the mesentery with a LigaSure device.",
     "label": "Assessment"
   },
   {
-    "text": "Reports onset of palpitations and tremors accompanied by mild dizziness.",
+    "text": "He apparently had pneumonia 10 days prior to the onset of the symptoms.",
     "label": "Subjective"
+  },
+  {
+    "text": "I then closed the skin of all incisions with running Monocryl.",
+    "label": "Assessment"
   },
   {
-    "text": "Start patient on Pantoprazole 500 mg once daily with regular monitoring.",
+    "text": "X to do a pelvic exam, and in the meantime, she will obtain a CT of the abdomen and pelvis to further evaluate the cause of the abdominal distention.",
     "label": "Plan"
   },
   {
-    "text": "Patient notes experiencing intermittent palpitations and tremors for the past 2 weeks.",
+    "text": "Diabetes type II, poorly controlled, high cholesterol.",
     "label": "Subjective"
   },
   {
-    "text": "I noticed swelling in both of my ankles starting around three days ago.",
-    "label": "Subjective"
+    "text": "He was awakened and transferred to the recovery room in stable condition.",
+    "label": "Assessment"
   },
   {
-    "text": "Follow up in outpatient clinic in 2 weeks for blood pressure re-evaluation and lab review.",
-    "label": "Plan"
+    "text": "Cranial nerves are intact without localizing signs.",
+    "label": "Objective"
+  },
+  {
+    "text": "On retraction of the foreskin, pale-looking glans tip with areas of yellow-white tissue.",
+    "label": "Objective"
+  },
+  {
+    "text": "Electrocautery was used to confirm excellent hemostasis.",
+    "label": "Plan"
+  },
+  {
+    "text": "He was formerly employed as an electronic technician for the US postal service.",
+    "label": "Subjective"
+  },
+  {
+    "text": "After about 15-20 minutes he states that itching started to feel better.",
+    "label": "Plan"
+  },
+  {
+    "text": "The abdomen was then prepped and draped in standard sterile surgical fashion.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Left base, right apex, and right mid-region and right base: negative for carcinoma.,TREATMENT:, The patient opted for low dose rate interstitial prostatic im",
+    "label": "Objective"
+  },
+  {
+    "text": "No palpable nodules such as appendix testis and no swelling was noted and he had mild epididymal swelling only.",
+    "label": "Objective"
+  },
+  {
+    "text": "She will come back in two weeks for another adjustment as needed.,",
+    "label": "Assessment"
+  },
+  {
+    "text": "No allergies present, so she stopped her Allegra, but she is still real congested and does a lot of snorting.",
+    "label": "Subjective"
+  },
+  {
+    "text": "His only complaints were nocturia times two and a gradual \"slowing down\" feeling.",
+    "label": "Objective"
+  },
+  {
+    "text": "Massive open wound, right thigh, status post right excision of multiple subcutaneous abscesses, right thigh.",
+    "label": "Assessment"
+  },
+  {
+    "text": ",GENERAL: This is an African-American male who appears his stated age of 29 years.",
+    "label": "Objective"
+  },
+  {
+    "text": "She has had 2 children; however, only one is living.",
+    "label": "Subjective"
+  },
+  {
+    "text": "This is a 22-year-old female, who presented to the office complaining of condylomas she had noted in her anal region.",
+    "label": "Subjective"
+  },
+  {
+    "text": "They do not notice a lot of snoring at night though, but she seems to be always like that.",
+    "label": "Subjective"
+  },
+  {
+    "text": "She has lived in Arizona for 4 years.",
+    "label": "Subjective"
+  },
+  {
+    "text": "No JVD.,LUNGS: Clear to auscultation bilaterally.,HEART: Normal S1 and S2.",
+    "label": "Objective"
+  },
+  {
+    "text": "No evidence of infection in his perineal area.,EXTREMITIES: Right AKA.,NEUROLOGIC: Awake, alert, and oriented.",
+    "label": "Objective"
+  },
+  {
+    "text": "There was no air leak seen.",
+    "label": "Assessment"
+  },
+  {
+    "text": "No organomegaly or mass.,Extremities: No calf tenderness, erythema or warmth.",
+    "label": "Objective"
+  },
+  {
+    "text": "He denies, however, any bowel or bladder problems.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Has boyfriend and is sexually active.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient appears to have condylomatous changes along the glans of the penis and on the shaft of the penis as well.",
+    "label": "Objective"
+  },
+  {
+    "text": "Discharge hemoglobin 11.4, and hematocrit 33.3.",
+    "label": "Objective"
+  },
+  {
+    "text": "Multiple problems including left leg swelling.",
+    "label": "Assessment"
+  },
+  {
+    "text": "It was more of a red fluid.",
+    "label": "Objective"
+  },
+  {
+    "text": "pylori testing, thyroid function tests, LFTs, glycosylated hemoglobin, and fasting blood sugar.",
+    "label": "Plan"
+  },
+  {
+    "text": "Heart is regular rhythm and rate.",
+    "label": "Objective"
+  },
+  {
+    "text": "Two ends were hemostated with hemostats and divided with Metzenbaum scissors.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient lives in a private home with children and her father.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient was in stable condition and good condition on exam at the time and was discharged home on Zithromax to be followed up in the office within a week.",
+    "label": "Plan"
+  },
+  {
+    "text": "There was only minimal discomfort with palpation at the left inguinal area, but no masses were noted.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient is to followup with Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "Good air exchange.,ABDOMEN: Soft, nontender, nondistended.,EXTREMITIES: Full range of movement.",
+    "label": "Objective"
+  },
+  {
+    "text": "Z for his cardiovascular issues.",
+    "label": "Subjective"
+  },
+  {
+    "text": "She states that she is able to manage the stairs, however, is very slow with her movement.",
+    "label": "Subjective"
+  },
+  {
+    "text": "This is a return visit for this patient who has refractory hypertension.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient has had a C-section and also an appendectomy.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Conjunctivae are not pale.",
+    "label": "Objective"
+  },
+  {
+    "text": "Otherwise on palpation, no other deformity noticed.",
+    "label": "Objective"
+  },
+  {
+    "text": "Hypertension, better reading today.",
+    "label": "Assessment"
+  },
+  {
+    "text": "In 3rd grade (mainstream) and maintaining good marks in schools.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Son has type I diabetes and is struggling with that at the moment.",
+    "label": "Subjective"
+  },
+  {
+    "text": "In the meantime, Sanctura prescription is provided, and voiding diaries are provided.",
+    "label": "Plan"
+  },
+  {
+    "text": "Using the resectoscope loop, the tumor was then resected down to its base in a stepwise fashion.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Accordingly, he is comfortable with careful monitoring, and I have asked him to return here in 3 months with an updated PSA.",
+    "label": "Plan"
+  },
+  {
+    "text": "XYZ's clinic and his staples will be removed at that time.",
+    "label": "Plan"
+  },
+  {
+    "text": "She has noted no blood in her stools and has had no episodes of nausea or vomiting.",
+    "label": "Assessment"
+  },
+  {
+    "text": "No right upper quadrant tenderness.",
+    "label": "Objective"
+  },
+  {
+    "text": "She has a brother, healthy.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He has a buried appearance of the penis after recent circumcision with a normal appearing glans.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient denies high blood pressure, diabetes, heart disease, lung disease, thyroid, kidney, or bladder dysfunctions.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Nasal mucosa was erythematous and swollen.",
+    "label": "Objective"
+  },
+  {
+    "text": "Asthma with his last admission in 07/2007.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Cystoscopy in the office demonstrated a 2.5- to 3-cm left lateral wall bladder tumor.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Visual fields were full to direct confrontation.",
+    "label": "Objective"
+  },
+  {
+    "text": "Blood-borne pathogen exposure secondary to contaminated needlestick.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Hyperglycemia, cholelithiasis, obstructive sleep apnea, diabetes mellitus, hypertension, and cholecystitis.",
+    "label": "Assessment"
+  },
+  {
+    "text": "She actually turns 90 later this month, seen today for a short-term followup.",
+    "label": "Subjective"
+  },
+  {
+    "text": ", Following a detailed discussion with the patient, she elected to proceed with continued Flomax and will wean off the Urecholine to two times daily.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient is a 25-year-old right-handed Caucasian female who presented to the emergency department with sudden onset of headache occurring at approximately 11 a.m.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Extremities: He has 1+ pitting edema.,",
+    "label": "Objective"
+  },
+  {
+    "text": "This patient also received as previously noted, 1 albuterol treatment, which did not help his respiratory status.",
+    "label": "Plan"
+  },
+  {
+    "text": ",HEENT: Examination unremarkable.,Breasts: Examination deferred.,Chest: Clear to auscultation.,Cardiac: Regular rate and rhythm.,Abdomen: Soft and nontender.",
+    "label": "Objective"
+  },
+  {
+    "text": ", He is alert and oriented x 3.",
+    "label": "Objective"
+  },
+  {
+    "text": "RESPIRATORY: Good respiratory effort.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient also has family status complete and desired infertility.",
+    "label": "Plan"
+  },
+  {
+    "text": "Through these small incisions, a cannula was used to infiltrate lactated Ringers with 1000 cc was infiltrated initially into the abdomen.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Additional stools for occult blood will be rechecked.",
+    "label": "Plan"
+  },
+  {
+    "text": "CARDIOVASCULAR: Regular rate and rhythm with a 3/6 systolic murmur.",
+    "label": "Objective"
+  },
+  {
+    "text": "He states that this began approximately one week ago when he was lifting stacks of cardboard.",
+    "label": "Subjective"
+  },
+  {
+    "text": "At this time, her photophobia and nausea make migraine highly likely.",
+    "label": "Plan"
+  },
+  {
+    "text": "The skin was infiltrated with 2% Xylocaine and punctured with a sharp hemostat to identify the vas beneath.",
+    "label": "Assessment"
+  },
+  {
+    "text": "She has a history of hypertension, osteoarthritis, osteoporosis, hypothyroidism, allergic rhinitis and kidney stones.",
+    "label": "Subjective"
+  },
+  {
+    "text": "His mother died of complications from heart disease.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Samples of Nasonex two sprays in each nostril given for three weeks.",
+    "label": "Plan"
+  },
+  {
+    "text": "Glucose 106, creatinine 0.8, sodium 141, potassium 4, and calcium 9.7.",
+    "label": "Objective"
+  },
+  {
+    "text": "In the ER, the patient received a lumbar puncture with CSF fluid sent off for culture and cell count.",
+    "label": "Plan"
+  },
+  {
+    "text": "VITAL SIGNS: Temperature 98, blood pressure 129/72, pulse 96, and weight 175.4 pounds.",
+    "label": "Objective"
+  },
+  {
+    "text": ", The patient was discharged to Post Anesthesia Care Unit and subsequently to genitourinary floor to begin his recovery.",
+    "label": "Plan"
+  },
+  {
+    "text": "She does not think she has any acid reflux symptoms or heartburn.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He will be seen in about one week's time in Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "I believe, she has just a contusion and abrasion to her abdomen from the seatbelt and likely from the airbag as well.",
+    "label": "Plan"
+  },
+  {
+    "text": "She has been to our Bariatric Surgery Seminar, received some handouts, and signed the consent.",
+    "label": "Assessment"
+  },
+  {
+    "text": "This is an 11-year-old female who comes in for two different things.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Temperature: 96.8 degrees.,General Appearance: He is a middle-aged man who is not in any acute distress.,HEENT: Eyes: Pupils are equally regular, round and reactive to light.",
+    "label": "Objective"
+  },
+  {
+    "text": "Heart disease in the patient's mother and father, and father also has diabetes.",
+    "label": "Subjective"
+  },
+  {
+    "text": ",On examination temperature is 97.7, pulse 84, blood pressure 126/80, respiratory rate was 20.",
+    "label": "Objective"
+  },
+  {
+    "text": ",Vitals: Weight was 130 pounds and blood pressure 124/78.,HEENT: Her throat was mildly erythematous without exudate.",
+    "label": "Objective"
+  },
+  {
+    "text": "I also suggested that he reestablish contact with Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "He reports no clear-cut chest discomfort or difficulty with angina.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He began seeing a chiropractor approximately five days ago and had adjustments of the neck and lumbar spine, although he clearly had symptoms prior to this.",
+    "label": "Subjective"
+  },
+  {
+    "text": "CBC will be rechecked.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient lives with his wife and daughter in an apartment.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Y for the indication of CLL and Dr.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I aspirated 6 mL, I did add 1 mL, so she has got approximately 7 mL in her band, she did tolerate water postprocedure.,",
+    "label": "Objective"
+  },
+  {
+    "text": "Once in the Emergency Department, the patient underwent a very thorough evaluation and examination.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient was intubated and it was felt that she should be observed to see if the airway would improve upon which she could be extubated.",
+    "label": "Objective"
+  },
+  {
+    "text": "She has also signed the St.",
+    "label": "Plan"
+  },
+  {
+    "text": "A total of 1000 cc was infiltrated in both lateral thighs only about 50 cc in the medial thighs.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Extraocular motions intact.",
+    "label": "Objective"
+  },
+  {
+    "text": "He is well nourished, well developed, in no acute distress.",
+    "label": "Objective"
+  },
+  {
+    "text": "He will have PSA level drawn either just before his visit for followup.",
+    "label": "Plan"
+  },
+  {
+    "text": "In addition, he was instructed to contact us, if he would have fevers greater than 101.4, chills, nausea or vomitting, continuing diarrhea, redness, drainage, or warmth around his incision site.",
+    "label": "Plan"
+  },
+  {
+    "text": "Tandoc.,Extremities: Without edema.,Neurologic: Reflexes are +2 and symmetric throughout.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient did request a pain shot and the patient was given Dilaudid of 4 mg IM without any adverse reaction.",
+    "label": "Plan"
+  },
+  {
+    "text": "We will need another sleep study.",
+    "label": "Plan"
+  },
+  {
+    "text": "Low back pain, chronic with obesity.",
+    "label": "Assessment"
+  },
+  {
+    "text": ", Following a detailed discussion with the patient, we elected to proceed with intermittent self-catheterization, changing catheter weekly, and technique has been discussed as above.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient says she stays active by walking at the mall.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient has had a history of chronic urinary tract infections and her drainage is similar to past episodes when she has had such infection.",
+    "label": "Subjective"
+  },
+  {
+    "text": "This surgery is going to be planned for October 6.",
+    "label": "Plan"
+  },
+  {
+    "text": "She was given the migraine cocktail.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient's assistant brings in her food diary sheets.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I then placed a bowel clamp across the bowel.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Streptococcal pneumonia with sepsis.",
+    "label": "Assessment"
+  },
+  {
+    "text": ",Please see the hospital chart.,LABORATORY DATA: , Please see the hospital chart.,HOSPITAL COURSE: , The patient was taken to the operating room by Dr.",
+    "label": "Objective"
+  },
+  {
+    "text": "Right knee surgery, cosmetic surgery, and carotid sinus surgery.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I have reviewed her entire chart in detail.",
+    "label": "Plan"
+  },
+  {
+    "text": "She was started back on a sliding scale insulin.",
+    "label": "Plan"
+  },
+  {
+    "text": "His weight is 197 with height 5 feet 4 inches.",
+    "label": "Objective"
+  },
+  {
+    "text": "Normal LV systolic function.,2.",
+    "label": "Assessment"
+  },
+  {
+    "text": "She was seen by the allergist.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Capable of from of joint above and below bone.",
+    "label": "Objective"
+  },
+  {
+    "text": "Med rec sheet completed (on no meds).",
+    "label": "Plan"
+  },
+  {
+    "text": "A 12-mm VersaStep port was placed through the umbilicus.",
+    "label": "Assessment"
+  },
+  {
+    "text": "He had no questions at the conclusion of our last conversation.",
+    "label": "Plan"
+  },
+  {
+    "text": "He is a 24-year-old male who said that he had gotten into some poison ivy this weekend while he was fishing.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Blood pressure is better even though she is not currently on the higher dose Mavik likely recommended.",
+    "label": "Subjective"
+  },
+  {
+    "text": ", In preparation for surgery will obtain the usual baseline laboratory values including baseline vitamin levels.",
+    "label": "Plan"
+  },
+  {
+    "text": "There is no incontinence and he does not feel that he is having any difficulty voiding.",
+    "label": "Subjective"
+  },
+  {
+    "text": "CBC with a white blood cell count of 11.5, hemoglobin of 9.5, and INR of 1.13.,",
+    "label": "Objective"
+  },
+  {
+    "text": "No discomfort on presentation is noted.",
+    "label": "Objective"
+  },
+  {
+    "text": "He tolerated it well.",
+    "label": "Assessment"
+  },
+  {
+    "text": "We were unable to contact Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "Right-sided facial droop and right-sided weakness.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He does have some history of some episodes of high blood pressure, and his weight is up about 14 pounds from the last year.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Aspirin should be continued with Nexium 40 mg once daily in order to prevent any future occurrence of upper GI bleed.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient tolerated the procedure very well and was sent to the recovery room in good condition.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The rash has started to fade a little bit and feeling a lot more comfortable.",
+    "label": "Plan"
+  },
+  {
+    "text": "ABC was admitted to the hospital.",
+    "label": "Plan"
+  },
+  {
+    "text": "The rest of her past medical history remained the same.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Complex open wound right lower extremity complicated by a methicillin-resistant staphylococcus aureus cellulitis.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The vas was grasped and brought up to the level of the skin.",
+    "label": "Assessment"
+  },
+  {
+    "text": "PUD, ?stroke and memory difficulty in the past 1-2 years.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The pathology report is pending at the time of dictation.",
+    "label": "Objective"
+  },
+  {
+    "text": "He tolerated the procedure well.",
+    "label": "Assessment"
+  },
+  {
+    "text": "I put some additional 2-0 Vicryl sutures in the anastomosis for further security.",
+    "label": "Assessment"
+  },
+  {
+    "text": "She will continue on her usual medications except for discontinuing the Prozac.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient underwent incision and drainage in the emergency department.",
+    "label": "Subjective"
+  },
+  {
+    "text": "She was alert and oriented in no apparent distress.",
+    "label": "Objective"
+  },
+  {
+    "text": "The vas deferens was isolated.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient is a civil engineer, who currently works from home.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I understand that it can cause gastrointestinal upset, but given the choice between the two, I would think the methotrexate is the most likely etiology for the stomatitis.",
+    "label": "Assessment"
+  },
+  {
+    "text": "A 3 and 4-mm cannulas were then used to carry out the liposuction of the abdomen removing a total of 1100 cc of aspirate, which was mostly fat, little fluid, and blood.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Abdomen was negative for abnormal findings.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Neuro exam deep tendon reflexes 1+ in the lower extremities.",
+    "label": "Objective"
+  },
+  {
+    "text": "Symptomatic thyroid goiter.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Finally, the patient received 1 dose of ampicillin and cefotaxime respectively each.",
+    "label": "Plan"
+  },
+  {
+    "text": ", This 71-year-old man went to his primary care physician for a routine physical.",
+    "label": "Objective"
+  },
+  {
+    "text": "Since her last visit she has been followed by Dr.",
+    "label": "Subjective"
+  },
+  {
+    "text": "however, he desires to continue follow up with the urology clinic at MCG and has been set up for followup in 6 weeks.",
+    "label": "Plan"
+  },
+  {
+    "text": "Homosexual, in monogamous relationship with an HIV infected partner for the past 3 years.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient does have a large pedunculated penile mass.",
+    "label": "Plan"
+  },
+  {
+    "text": "Scripts left in the chart for omeprazole and Lortab.",
+    "label": "Plan"
+  },
+  {
+    "text": "This patient is a 24-year-old African-American female who presented to the hospital with buttock pain.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Erosive stomatitis probably secondary to methotrexate even though the medication has been used for ten years without any problems.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Patient was extubated and taken to the recovery area in stable condition.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Postoperative course was uncomplicated.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Coronary artery bypass surgery and a prior angioplasty and prostate biopsies.",
+    "label": "Subjective"
+  },
+  {
+    "text": "CHEST: Lungs bilaterally clear to auscultation and percussion.",
+    "label": "Objective"
+  },
+  {
+    "text": "He has mild hypertension, which is likely due to stress and pain and also the leukocytosis probably can be explained by that.",
+    "label": "Plan"
+  },
+  {
+    "text": "No other symptoms associated.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I pulled the anvil into place, and I then opened up my 15-mm port site and passed my EEA stapler.",
+    "label": "Assessment"
+  },
+  {
+    "text": "She takes Tylenol p.r.n., which seems to be enough for her.",
+    "label": "Subjective"
+  },
+  {
+    "text": "A sterile dressing was applied.",
+    "label": "Assessment"
+  },
+  {
+    "text": "I copiously irrigated out that incision with about 2 L of saline.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Aftercare of multiple trauma from an motor vehicle accident.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Also inclusive of frequent pneumonia by report.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Sensation was grossly intact by touch.",
+    "label": "Objective"
+  },
+  {
+    "text": "He was also given a prescription for 6 months of Flomax and Proscar.",
+    "label": "Plan"
+  },
+  {
+    "text": "We discussed with Mr.",
+    "label": "Plan"
+  },
+  {
+    "text": "She claims no chronic illnesses.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Take medications regularly.",
+    "label": "Plan"
+  },
+  {
+    "text": "No tobacco, alcohol or IV drug use.",
+    "label": "Subjective"
+  },
+  {
+    "text": "We have discussed bleeding, infection, injury to the rectum, injury to vessels and nerves, deep vein thrombosis, pulmonary embolus, MI, stroke, and death.",
+    "label": "Plan"
+  },
+  {
+    "text": "She will stay with a friend for a couple of days.",
+    "label": "Plan"
+  },
+  {
+    "text": ",COURSE IN THE HOSPITAL:, The patient had a cysto and TUR of the prostate.",
+    "label": "Assessment"
+  },
+  {
+    "text": "A scalpel was used to excise the vas sheath and vas was freed from its attachments and grasped again with a hemostat.",
+    "label": "Plan"
+  },
+  {
+    "text": "NEUROLOGIC: Deep tendon reflexes were symmetrical at the patellar area.",
+    "label": "Objective"
+  },
+  {
+    "text": "This is a 58-year-old male who reports a six to eight-week history of balance problems with fatigue and weakness.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Pupils are equal, round, and reactive to light.",
+    "label": "Objective"
+  },
+  {
+    "text": "His basic metabolic panel with creatinine of 7.2 and potassium of 5, otherwise normal.",
+    "label": "Objective"
+  },
+  {
+    "text": "She denied any recent colds/flu-like illness or history of multiple sclerosis.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Patient and daughter also deny weight loss, fevers, chills, sweats, nausea, vomiting, abdominal pain.",
+    "label": "Subjective"
+  },
+  {
+    "text": "They do heal up, but then she will get another one.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Coffee-ground emesis secondary to severe gastritis, resolved and stable.",
+    "label": "Assessment"
+  },
+  {
+    "text": "They measure about 5 to 6 mm on the right side, about 3 or 4 mm on the left side.",
+    "label": "Objective"
+  },
+  {
+    "text": "This tap was reported as clear, then turning bloody in nature.",
+    "label": "Plan"
+  },
+  {
+    "text": "He has no hernias.,Genitourinary: There is a normal-appearing phallus, prominence of the right side of prostate.,Extremities: Examination unremarkable.,Neurologic: Examination nonfocal.,",
+    "label": "Objective"
+  },
+  {
+    "text": "His mucous membranes are moist.,Heart: Regular rate and rhythm, with no murmurs.,Lungs: Clear.,Abdomen: Soft, nontender, nondistended.",
+    "label": "Objective"
+  },
+  {
+    "text": "He understands and asks that I proceed ahead.",
+    "label": "Plan"
+  },
+  {
+    "text": "She continues to have urinary incontinence, especially while changing from sitting to standing position, as well as urge incontinence.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient comes to clinic unaccompanied.",
+    "label": "Subjective"
+  },
+  {
+    "text": "No murmurs or gallops.,ABDOMEN: Soft, nontender, and nondistended.",
+    "label": "Objective"
+  },
+  {
+    "text": ",DISCHARGE DIAGNOSIS: , Enlarged prostate with benign bladder neck obstruction.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Thyroid midline, non enlarged.",
+    "label": "Objective"
+  },
+  {
+    "text": "Refractory anemia that is transfusion dependent.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The abdomen was prepped and draped in standard, sterile, surgical fashion.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient has attended our bariatric seminar and met with our dietician and psychologist.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient retired one year PTA due to his disability.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient will need this mass excised and biopsied.",
+    "label": "Plan"
+  },
+  {
+    "text": "She started off with a little pimple on the buttock.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Z, but his telephone number was given to the patient and she was instructed to make a followup appointment.",
+    "label": "Plan"
+  },
+  {
+    "text": "Lungs: He has positive wheezing bilaterally.",
+    "label": "Objective"
+  },
+  {
+    "text": "VITAL SIGNS: Blood pressure is 125/75.",
+    "label": "Objective"
+  },
+  {
+    "text": "All pressure points were carefully padded.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient is a 93-year-old Caucasian female with a past medical history of chronic right hip pain, osteoporosis, hypertension, depression, and chronic atrial fibrillation admitted for evaluation and management of severe nausea and vomiting and urinary tract infection.",
+    "label": "Plan"
+  },
+  {
+    "text": ",VITAL SIGNS: On physical exam, weight is 15.9 kg.,GENERAL: The patient is a cooperative little boy.,HEENT: Normal head and neck exam.",
+    "label": "Objective"
+  },
+  {
+    "text": "He will maintain bariatric clear liquids at home, goal 64 ounces per day, maintain activity at home, but no heavy lifting or straining.",
+    "label": "Plan"
+  },
+  {
+    "text": "He states he felt a popping sensation on 06/30/04.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Can shower starting tomorrow, drain site care and wound care reviewed.",
+    "label": "Plan"
+  },
+  {
+    "text": "She had no progression of her symptoms until 7/7/93 when she notices her right hand was stiff and clumsy.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Then, 1% lidocaine was used for anesthesia.",
+    "label": "Assessment"
+  },
+  {
+    "text": "He has no upper extremity .",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient also perceived some swelling in her face.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He had no questions at the conclusion of the conversation and he does know that in his age group, though a nerve-sparing procedure will be performed, preserving any erectile function is highly unlikely.",
+    "label": "Plan"
+  },
+  {
+    "text": "X, as well as more invasive procedure.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Range of motion appeared to be normal for the upper and lower extremities.",
+    "label": "Objective"
+  },
+  {
+    "text": "After this had been completed, a #15 blade was used to make small stab wounds in the lateral hips, the pubic area, and upper edge of the umbilicus.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The vas was brought out of the incision carefully.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient was involved in a motor vehicle accident four to five years ago and at that time, the patient did not require any physical therapy nor did she report any complaints of increased back pain following that accident.",
+    "label": "Subjective"
+  },
+  {
+    "text": ", ,VITAL SIGNS: Temperature max at ER is 102, heart rate 153.,GENERAL: This patient is alert, arousable, big boy.,HEENT: Head: Normocephalic, atraumatic.",
+    "label": "Objective"
+  },
+  {
+    "text": "She is well appearing and we'll try Tylenol with codeine for her pain.",
+    "label": "Plan"
+  },
+  {
+    "text": "First set of cardiac enzyme profile negative.",
+    "label": "Objective"
+  },
+  {
+    "text": "Chest x-ray shows previous sternotomy with ICD implantation and aortic valve mechanical implant with left-sided opacification of the diaphragm worrisome for pleural effusion.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient is a 28-year-old right-hand dominant gentleman, who punched the wall 3 days prior to presentation.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Depression probably somewhat improved with Lexapro and she will just continue that.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Foley catheter was placed for bladder decompression.",
+    "label": "Assessment"
+  },
+  {
+    "text": "He had a mild decrease in H and H at 12.1 and 34.6.",
+    "label": "Objective"
+  },
+  {
+    "text": "On the next day, she was then taken to the operating room, where she underwent her laparoscopic cholecystectomy.",
+    "label": "Plan"
+  },
+  {
+    "text": "To remove the Foley catheter.,2.",
+    "label": "Plan"
+  },
+  {
+    "text": "I talked to the mother and told her that at this point the swelling that is present is a mixture of the resolving cellulitis from a suprapubic fat pad.",
+    "label": "Plan"
+  },
+  {
+    "text": ",COURSE IN THE HOSPITAL:, The patient had a cysto and TUR of the prostate.",
+    "label": "Objective"
+  },
+  {
+    "text": "She has a 2-year-old child.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He put her on an insulin drip.",
+    "label": "Plan"
+  },
+  {
+    "text": "We have reviewed with her any potential other issues and I have answered her questions.",
+    "label": "Plan"
+  },
+  {
+    "text": "His urine is clear.,LABORATORY DATA:, Reviewed.,",
+    "label": "Objective"
+  },
+  {
+    "text": "A jockstrap and sterile dressing were applied at the end of the case.",
+    "label": "Assessment"
+  },
+  {
+    "text": "I began by lifting up the omentum and identifying the transverse colon and lifting that up and thereby identifying my ligament of Treitz.",
+    "label": "Assessment"
+  },
+  {
+    "text": "I have recommended six weeks of Medifast for the patient to obtain a 10% preoperative weight loss.",
+    "label": "Plan"
+  },
+  {
+    "text": "Excisional lymph node biopsy (9/03).",
+    "label": "Subjective"
+  },
+  {
+    "text": "We closed the 15-mm port site with interrupted 0 Vicryl suture utilizing Carter-Thomason.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Jaw pain, sounds musculoskeletal.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient will be going home.",
+    "label": "Plan"
+  },
+  {
+    "text": "They occurred quite infrequently and he was able to resume activity immediately following the episodes.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He has had no numbness, tingling or other concerning symptoms.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I then closed the mesenteric defect with interrupted Surgidac sutures.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Since that time, he has had persistent shoulder pain with lifting activities.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I am not as familiar with the NSAID causing an erosive stomatitis.",
+    "label": "Assessment"
+  },
+  {
+    "text": "He has been using over-the-counter Benadryl as well as cortisone cream on the areas of the rash and having a little bit of improvement, but this last weekend he must have gotten into some more poison ivy because he has got another outbreak along his chest, legs, arms and back.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He was given prescriptions for doxycycline 100 mg b.i.d., for five days and Vicodin ES 1 p.o.",
+    "label": "Plan"
+  },
+  {
+    "text": "She has taken the quiz and done fairly well.",
+    "label": "Plan"
+  },
+  {
+    "text": "Normal penis with bilaterally descended testes that are normal in size, shape, and contour, and without evidence of hernia or hydrocele.",
+    "label": "Objective"
+  },
+  {
+    "text": "This 44y/o RHF awoke on 7/29/93 with left hemibody numbness without tingling, weakness, ataxia, visual or mental status change.",
+    "label": "Subjective"
+  },
+  {
+    "text": "EXTERNAL GENITALIA: Normal for age.",
+    "label": "Objective"
+  },
+  {
+    "text": "Y feels she could be discharged today and will have her return to see him in a week.",
+    "label": "Objective"
+  },
+  {
+    "text": "He stated that he was in excellent health and led an active life.",
+    "label": "Objective"
+  },
+  {
+    "text": "Family Medical History: Father age 79, history of cerebrovascular accident (stroke) and hypertension.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient stated that she quit smoking prior to her past childbirth and is currently not pregnant.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Otherwise healthy 2-year-old young lady.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Previous DRE showed the prostate of approximately 40 grams and no nodules.",
+    "label": "Objective"
+  },
+  {
+    "text": "Next, the vas deferens was skeletonized.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient is a 76-year-old white female who presents to the clinic today originally for hypertension and a med check.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I reapproximated the edges of the defect.",
+    "label": "Assessment"
+  },
+  {
+    "text": "I then made a hole at the base of the gastric pouch and had Anesthesia remove the bougie and place the OG tube connected to the anvil.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient states overall functionally he is improving where he is able to get out in the house and visit and do activities outside the house more.",
+    "label": "Subjective"
+  },
+  {
+    "text": "This pedunculated mass is approximately 1.5 x 2 cm in size and pedunculated by a stalk that is approximately 2 mm in diameter.",
+    "label": "Objective"
+  },
+  {
+    "text": "Daily applications of Acticoat, pressure relief, at least getting out of the chair for half of the time, at least eight hours out of the chair, and we will see her in one week.",
+    "label": "Plan"
+  },
+  {
+    "text": "Antibiotic for urinary tract infection.,5.",
+    "label": "Plan"
+  },
+  {
+    "text": ", As above, the patient will be scheduled to meet with Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "I discussed the pre and postsurgical care with the parents.",
+    "label": "Plan"
+  },
+  {
+    "text": "Follow up as previously scheduled in September for re-assessment.",
+    "label": "Plan"
+  },
+  {
+    "text": "She does have an AP standard low profile.",
+    "label": "Objective"
+  },
+  {
+    "text": ",To be followed in my office in one week and by Dr.",
+    "label": "Assessment"
+  },
+  {
+    "text": "He presents to the Care Center earlier today with approximately a one-week history of increased progressive shortness of breath, orthopnea over the course of the past few nights, mild increase in peripheral edema, and active wheezing with dyspnea presenting this morning.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Chronic atrial fibrillation, the patient has been restarted back on aspirin 81 mg at the time of discharge.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient states that she does have stairs to negotiate without the use of a railing.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Right shoulder pain, most likely secondary to muscular strain.",
+    "label": "Assessment"
+  },
+  {
+    "text": "After this is performed, we will submit him for insurance approval.",
+    "label": "Plan"
+  },
+  {
+    "text": "She has had no fever or chills, cough, congestion, nausea, vomiting, chest pain, chest pressure.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The left testicle was examined.",
+    "label": "Plan"
+  },
+  {
+    "text": "PSYCHIATRIC: Normal; Negative for anxiety, depression, or phobias.",
+    "label": "Subjective"
+  },
+  {
+    "text": ",GU: Normal.,LABORATORY DATA: ,The patient did on urinalysis have few red blood cells.",
+    "label": "Objective"
+  },
+  {
+    "text": "Scrotum was cleaned and bacitracin ointment, sterile dressing, fluffs, and supportive briefs applied.",
+    "label": "Plan"
+  },
+  {
+    "text": "He will call if any concerns.",
+    "label": "Plan"
+  },
+  {
+    "text": ", The patient opted for low dose rate interstitial prostatic implants of I-125.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient noted for improving retention of urine, postop vaginal reconstruction, very concerned of possible vaginal prolapse, especially while using the cream.,2.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Procedure itself with potential complications, risks, benefits, and alternatives of surgery including that the torsion could occur again, although it is less likely after the surgical fixation procedure.",
+    "label": "Plan"
+  },
+  {
+    "text": "He has been stable in this regard.,2.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient is given a dose of Tylenol here in the emergency department for treatment of her pain.",
+    "label": "Plan"
+  },
+  {
+    "text": "He fell from three to five feet and landed on his back.",
+    "label": "Subjective"
+  },
+  {
+    "text": ", Right ureteroscopy, ureteral lithotripsy.",
+    "label": "Plan"
+  },
+  {
+    "text": "For full details on the history of present illness, please see the previous history and physical.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient tolerated the procedure well without any complications.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Her CBC performed in the office today showed hemoglobin of 13.7, white count of 13.3, lymphocyte count of 7.6, and platelet count of 26,000.",
+    "label": "Objective"
+  },
+  {
+    "text": "I ran the small bowel down approximately 40 cm and divided the small bowel with a white load GIA stapler.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Hemoglobin at the time of discharge was stable and the patient to continue on Nexium 40 mg once daily.",
+    "label": "Assessment"
+  },
+  {
+    "text": "One day off school and follow up with her primary doctor.",
+    "label": "Plan"
+  },
+  {
+    "text": "It is thought that this patient should proceed directly with a referral to Urology for excision and biopsy of this mass.,",
+    "label": "Objective"
+  },
+  {
+    "text": "There are no peritoneal signs.,GENITALIA: The penis has no plaques.",
+    "label": "Objective"
+  },
+  {
+    "text": "This is the initial clinic visit for a 29-year-old man who is seen for new onset of right shoulder pain.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Then, 0.25% Marcaine without epinephrine was used to anesthetize the scrotal skin.",
+    "label": "Assessment"
+  },
+  {
+    "text": "It was performed as an outpatient on 8/10.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient was removed from the backboard within the first half hour of her emergency department stay.",
+    "label": "Plan"
+  },
+  {
+    "text": "He will be referred to the urologist who is on-call today.",
+    "label": "Plan"
+  },
+  {
+    "text": "An infraumbilical incision was formed and taken down to the fascia.",
+    "label": "Assessment"
+  },
+  {
+    "text": "As far as diabetes father and grandfather had type II diabetes.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He has had several falls recently.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Her right arm symptoms are basically resolved and she attributed that to her muscle problem back in the right shoulder blade.",
+    "label": "Subjective"
+  },
+  {
+    "text": "She has been predominantly a homemaker during her life, but has done some domestic cleaning work in the past.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Hypersensitivity to Coumadin.",
+    "label": "Assessment"
+  },
+  {
+    "text": "If the patient has any occurrence of upper GI bleed such as coffee-ground emesis or melena then aspirin should be discontinued.",
+    "label": "Assessment"
+  },
+  {
+    "text": "He denied any recent travel history.",
+    "label": "Subjective"
+  },
+  {
+    "text": "All questions answered.",
+    "label": "Plan"
+  },
+  {
+    "text": "Lumen was coagulated with electrocautery.",
+    "label": "Plan"
+  },
+  {
+    "text": "Bilateral testes descended.",
+    "label": "Objective"
+  },
+  {
+    "text": "I discussed the indications and the need for procedure with the patient in detail, and he has given consent to proceed.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Answers slowly with a speech impediment, but answers appropriately.,HEENT: Pupils equal, round, and reactive to light.",
+    "label": "Objective"
+  },
+  {
+    "text": "He has been given prophylactic antibiotics.,PROCEDURE NOTE: , Once satisfactory sedation have been obtained, the patient was placed in the supine position on the operating table.",
+    "label": "Assessment"
+  },
+  {
+    "text": "SKIN: Inspection within normal limits.",
+    "label": "Objective"
+  },
+  {
+    "text": "I then used two fires of the 60 blue load with SeamGuard to go up into my angle of His, thereby creating my gastric pouch.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Of note, it was explained to the patient that the appearance of this glans may improve or may get worsened but at this point, there is no indication to operate on him.",
+    "label": "Plan"
+  },
+  {
+    "text": "XYZ as he previously had a sleep study.",
+    "label": "Plan"
+  },
+  {
+    "text": "Chest x-ray revealed a diffuse pulmonary edema.",
+    "label": "Objective"
+  },
+  {
+    "text": "We will start Sanctura XR and we will follow up as scheduled.",
+    "label": "Plan"
+  },
+  {
+    "text": "CODE STATUS: Do not resuscitate, healthcare proxy, palliative care orders in place.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient actually was seen in the emergency room the night before for injuries of the face and for possible elderly abuse.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Upper respiratory infection.",
+    "label": "Assessment"
+  },
+  {
+    "text": ", Right distal ureteral calculus.,",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient currently has indwelling Foley catheter and glans slightly tender to touch.",
+    "label": "Objective"
+  },
+  {
+    "text": "Right hip pain, the patient to undergo physical therapy and rehabilitation at Mercy Manor.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Using the visual obturator, the resectoscope was then inserted per urethra into the bladder.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Grandmother died of cerebral aneurysm.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He is being discharged in satisfactory condition with a good urinary stream, minimal hematuria, and on Bactrim DS one a day for ten days with a standard postprostatic surgery instruction sheet.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient was instructed to contact us with any questions or concerns that may arise.",
+    "label": "Plan"
+  },
+  {
+    "text": ",PROCEDURE:, Laparoscopic Roux-en-Y gastric bypass, antecolic, antegastric with 25-mm EEA anastamosis, esophagogastroduodenoscopy.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Significant for moderate to severe aortic stenosis, urinary tract infection, hypertension, chronic kidney disease (although her creatinine is near normal).",
+    "label": "Subjective"
+  },
+  {
+    "text": "The motion that he describes is essentially picking up a stack of cardboard at his waist level, twisting to the right and delivering it at approximately waist level.",
+    "label": "Subjective"
+  },
+  {
+    "text": "All labs within normal limits with the exception of Sodium 133, Creatinine 0.2, TSH 0.004, Free T4 19.3 EKG showed sinus tachycardia with a rate of 122.",
+    "label": "Objective"
+  },
+  {
+    "text": "No sensory or motor deficit.,LABORATORY DATA: , I independently reviewed the lab work done on the patient.",
+    "label": "Objective"
+  },
+  {
+    "text": ",GENERAL: This is a well-developed, well-nourished male, in no acute distress.",
+    "label": "Objective"
+  },
+  {
+    "text": "Monitor H&H to determine if he needs any transfusion at this time.",
+    "label": "Plan"
+  },
+  {
+    "text": "Again, the extremities showed no obvious deformity.",
+    "label": "Objective"
+  },
+  {
+    "text": "They do think the Lexapro has helped to some extent.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He will re-appoint in the office in the next week, certainly call in the interim if any significant concerning complaints.",
+    "label": "Plan"
+  },
+  {
+    "text": "Foley in place and draining clear urine.,The patient underwent fill and pull study, in which his bladder tolerated 120 ml of sterile water passively filling his bladder.",
+    "label": "Objective"
+  },
+  {
+    "text": "She has no signs of bleeding.",
+    "label": "Plan"
+  },
+  {
+    "text": "She has had positive blood cultures.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Attention was then directed to the thighs both inner and outer.",
+    "label": "Assessment"
+  },
+  {
+    "text": "She has no abrasions or lacerations.",
+    "label": "Plan"
+  },
+  {
+    "text": "Call if there are questions or problems prior to that time.",
+    "label": "Assessment"
+  },
+  {
+    "text": "CHEST: The chest examination is unremarkable.",
+    "label": "Objective"
+  },
+  {
+    "text": "There is no inguinal adenopathy.,EXTREMITIES: No edema.,SKIN: Warm, dry, and intact.",
+    "label": "Objective"
+  },
+  {
+    "text": "This seems to be doing very well given her current blood pressure reading, at least much improved from what she had been previously.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient states he is doing well with his current home exercise program and feels like pool therapy is also helping as well.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient will follow up for cystoscopy, urine sent for cytology, continue hydration.",
+    "label": "Plan"
+  },
+  {
+    "text": "PT, OT, speech therapist to evaluate and treat at Siskin Rehab Hospital.",
+    "label": "Plan"
+  },
+  {
+    "text": "I divided the omentum all the way down to the colon in order to create a passageway for my small bowel to go antecolic.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Mother died age 60 of complications of Huntington Disease (dx at UIHC).",
+    "label": "Subjective"
+  },
+  {
+    "text": "Electrocautery was used to carry the incision down into the tunica vaginalis and the testicle was delivered into the field.",
+    "label": "Plan"
+  },
+  {
+    "text": "No bleeding was identified.,Through the same incision the left side was identified, transected, tied off, and dropped back into the wound.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Intractable nausea and vomiting.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient and the power of attorney would like him to proceed with meeting Dr.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Her pain is controlled with medication and she is feeling more comfortable and removed from the backboard.",
+    "label": "Plan"
+  },
+  {
+    "text": ", Our recommendation would be:,1.",
+    "label": "Plan"
+  },
+  {
+    "text": "CHEST: Normal AP diameter and normal contour without any kyphoscoliosis.",
+    "label": "Objective"
+  },
+  {
+    "text": "She is instructed to follow up with Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "Consistent with a sister of his has ovarian cancer and his father had liver cancer.",
+    "label": "Subjective"
+  },
+  {
+    "text": ", Patient is a 46-year-old white male seen for annual physical exam and had an incidental PSA elevation of 4.0.",
+    "label": "Objective"
+  },
+  {
+    "text": "No murmur, rub, or gallop is appreciated.,LUNGS: Clear to auscultation bilaterally.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient does feel like he is putting on more muscle girth as well.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Chest x-ray and chemical screening blood work were within normal limits.",
+    "label": "Objective"
+  },
+  {
+    "text": "Minimal bleeding was encountered and the scrotal skin was closed with 3-0 chromic.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Perhaps a very subtle tremor.",
+    "label": "Assessment"
+  },
+  {
+    "text": "X at his convenience.",
+    "label": "Plan"
+  },
+  {
+    "text": "We also discussed bleeding and blood transfusions, and the risks, benefits and alternatives thereof.",
+    "label": "Plan"
+  },
+  {
+    "text": "A 76-year-old who used to smoke a pack a day and quit in 1985.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient was offered a repair of those lacerations, to stop the bleeding as well as the removal of the marble and he is currently considering that and discussing that with Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "There is no history of allergies.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Cardiac exam regular rate and rhythm without murmur or bruit.",
+    "label": "Objective"
+  },
+  {
+    "text": ",This is a 66-year-old male with signs and symptoms of benign prostatic hypertrophy, who has had recurrent urinary retention since the kidney transplant in 12/07.",
+    "label": "Plan"
+  },
+  {
+    "text": "MSK: The head and neck by inspection showed no obvious deformity.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient had antibiotic ointment and a bandage applied to his foot.",
+    "label": "Plan"
+  },
+  {
+    "text": "However, her blood pressure seems to be better today.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He localizes the pain to the posterior and to a lesser extent the lateral aspect of the shoulder.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The patient is discharged home.",
+    "label": "Plan"
+  },
+  {
+    "text": "Significant for asthma, allergic rhinitis and cervical dysplasia.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Marcaine was injected into the umbilicus.",
+    "label": "Assessment"
+  },
+  {
+    "text": ", The patient is a 63-year-old executive who was seen by his physician for a company physical.",
+    "label": "Objective"
+  },
+  {
+    "text": "Discharge hemoglobin 11.4, and hematocrit 33.3.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The skin was reattached to the fascia with 2-0 Vicryls.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Lower extremity exam +1 edema noted.",
+    "label": "Objective"
+  },
+  {
+    "text": "Sponge, instrument, and needle counts were correct at the end of the case.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Denied drug/ETOH/Tobacco use.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Bilateral testicles are descended and normal without pain or mass bilaterally.",
+    "label": "Objective"
+  },
+  {
+    "text": "Currently, since that time he has been in the splint with minimal pain.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I then dissected on the lesser curve, approximately 2.5 cm below the gastroesophageal junction, and got into a lesser space.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Foreign body of the left fifth fingernail (wooden splinter).",
+    "label": "Assessment"
+  },
+  {
+    "text": "Continue Cipro for an additional two days for his UTI.",
+    "label": "Plan"
+  },
+  {
+    "text": "However, when we gave her samples of that she thought they were too big for her to swallow.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Attention was then turned to the right side.",
+    "label": "Plan"
+  },
+  {
+    "text": "Chest x-ray ordered by ER physician is unremarkable, but to me also.",
+    "label": "Objective"
+  },
+  {
+    "text": "Next, the attention was turned to the left hemiscrotum, and after the left hemiscrotum was anesthetized appropriately, a small incision was made in the left hemiscrotum.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Extraocular movements are intact without nystagmus.",
+    "label": "Objective"
+  },
+  {
+    "text": "Surgical margin was reported and involved at the apex.",
+    "label": "Objective"
+  },
+  {
+    "text": "No bowel issues, however, she also indicates that while using her vaginal cream, she has difficulty doing this as she feels protrusion in the vagina, and very concerned if she has a prolapse.",
+    "label": "Subjective"
+  },
+  {
+    "text": "No rash or lesion.,DIAGNOSTIC STUDIES: ,Non-emergency department courses.",
+    "label": "Objective"
+  },
+  {
+    "text": "The patient presents today for followup.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He has a scheduled followup appointment with his urologist and he should keep that appointment or followup sooner if there is any other problem arising.",
+    "label": "Plan"
+  },
+  {
+    "text": "No masses were appreciated.",
+    "label": "Objective"
+  },
+  {
+    "text": ", Include re-appointment in the office in the next week, call in the interim if any significant concerning complaints.",
+    "label": "Plan"
+  },
+  {
+    "text": "She was soaking it at home without any improvement.",
+    "label": "Subjective"
+  },
+  {
+    "text": "She is working approximately half time because of limitations imposed on her by her disability, need to attend frequent physical therapy, and also the needs of looking after her baby.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He is aware of incontinency, both total and partial.",
+    "label": "Plan"
+  },
+  {
+    "text": "Mucous membranes are moist.,NECK: Supple.,CHEST: Clear to auscultation bilaterally.",
+    "label": "Objective"
+  },
+  {
+    "text": "He does not need that.,6.",
+    "label": "Plan"
+  },
+  {
+    "text": "She was recovered in the Postoperative Care Unit and then returned to the floor.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient states pain still significant, primarily 1st seen in the morning.",
+    "label": "Subjective"
+  },
+  {
+    "text": "The dartos tissue was closed with running #3-0 Vicryl and the skin was closed in a horizontal interrupted mattress fashion with #4-0 chromic.",
+    "label": "Plan"
+  },
+  {
+    "text": "She has signed the preop and postop instructions, and understands them and we reviewed them.",
+    "label": "Plan"
+  },
+  {
+    "text": "She described the headache as worse in her life and it was also accompanied by blurry vision and scotoma.",
+    "label": "Subjective"
+  },
+  {
+    "text": "A small skin incision was made with a #15 blade and the vas was grasped with a small Allis clamp and brought into the surgical field.",
+    "label": "Plan"
+  },
+  {
+    "text": ",He is alert and oriented x 3.",
+    "label": "Objective"
+  },
+  {
+    "text": "A 2-inch segment was isolated, and 1-inch segment was removed.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient stated that she knew better and she should have called for assistance and she had been told repeatedly from her family members and staff to call for assistance if she needed to get out of bed.",
+    "label": "Assessment"
+  },
+  {
+    "text": "GENERAL: Well developed, well nourished, alert, in no acute distress.",
+    "label": "Objective"
+  },
+  {
+    "text": "The scrotum was normal, and there was no erythema, there was no tenderness.",
+    "label": "Objective"
+  },
+  {
+    "text": "This is being treated, but it is most likely Staph and pending sensitivities.",
+    "label": "Plan"
+  },
+  {
+    "text": "g sodium, low fat, low cholesterol diet.",
+    "label": "Plan"
+  },
+  {
+    "text": "X with a prior voiding diary, which is again discussed.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Y has already discussed the situation and the plan with her.",
+    "label": "Plan"
+  },
+  {
+    "text": "She is followed by a gynecologist in Bartow.",
+    "label": "Subjective"
+  },
+  {
+    "text": "All of this aspirate was mostly fat with little fluid and very little blood.",
+    "label": "Assessment"
+  },
+  {
+    "text": "His maternal uncles apparently had polio.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Meticulous hemostasis was maintained.",
+    "label": "Assessment"
+  },
+  {
+    "text": "Joint pain involving the left shoulder, probably impingement syndrome.",
+    "label": "Assessment"
+  },
+  {
+    "text": "No loss of muscle tone or strength.",
+    "label": "Objective"
+  },
+  {
+    "text": "She was admitted to the hospitalist service with elevated blood sugars.",
+    "label": "Subjective"
+  },
+  {
+    "text": "No dysuria, gross hematuria, fever, chills.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He is unaware of any other family members with neurological conditions.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Heart disease in both sides of the family.",
+    "label": "Subjective"
+  },
+  {
+    "text": "Oral mucosa is moist.,NECK: Supple.,CHEST: Clear to auscultation.,HEART: Regular S1 and S2.,ABDOMEN: Soft and nontender to palpation.,EXTREMITIES: Without edema.,He has a Foley catheter in place.",
+    "label": "Objective"
+  },
+  {
+    "text": "The free ends were cauterized and were tied with 2-0 silk sutures in such a fashion that the ends double back on themselves.",
+    "label": "Assessment"
+  },
+  {
+    "text": "The patient is originally from Maine.",
+    "label": "Subjective"
+  },
+  {
+    "text": "I distended gastric pouch with air.",
+    "label": "Assessment"
+  },
+  {
+    "text": "He will need to get a letter of approval from Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "She was also instructed to follow up with her endocrinologist, Dr.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient is an 88-year-old gentleman followed by Dr.",
+    "label": "Subjective"
+  },
+  {
+    "text": "She does not think she has prescription coverage so that might be cheaper.,2.",
+    "label": "Plan"
+  },
+  {
+    "text": "The patient lives in a board and care.",
+    "label": "Subjective"
+  },
+  {
+    "text": "No egophony or tactile fremitus.",
+    "label": "Objective"
+  },
+  {
+    "text": "RECTAL: Examination was deferred.",
+    "label": "Objective"
+  },
+  {
+    "text": "TMs were clear.,Neck: Supple without adenopathy.,Lungs: Clear.,",
+    "label": "Objective"
+  },
+  {
+    "text": "He will need to see a nutritionist and mental health worker.",
+    "label": "Plan"
+  },
+  {
+    "text": "One of them he does not speak too much with and does not know about his medical history.",
+    "label": "Subjective"
+  },
+  {
+    "text": "He took a course of amoxicillin for this.",
+    "label": "Subjective"
   },
   {
-    "text": "Provisional assessment: Acute bronchial asthma exacerbation with secondary complications.",
+    "text": "He will use other forms of birth control until he has confirmed azoospermia with two consecutive semen analyses in the month ahead.",
     "label": "Assessment"
   }
 ]
