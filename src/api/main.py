@@ -180,6 +180,7 @@ def predict_wait_time(entry: dict) -> dict:
             total_ahead += qp.get("pred_service_dur", 13.5)
 
     # Add remaining time for current in-room patient
+    remaining = 0.0
     if doc["current_patient"] is not None and doc["consultation_start"] is not None:
         elapsed = (datetime.now() - doc["consultation_start"]).total_seconds() / 60
         remaining = max(doc["rolling_pact"] - elapsed, 1.0)
@@ -201,7 +202,7 @@ def predict_wait_time(entry: dict) -> dict:
             "direction": "wait_increasing",
             "value": total_ahead,
         })
-    if doc["current_patient"] is not None:
+    if doc["current_patient"] is not None and remaining > 0:
         explanations.append({
             "text": f"+{remaining:.0f} min: doctor finishing current patient",
             "direction": "wait_increasing",
@@ -245,12 +246,30 @@ async def queue_status():
     waiting = clinic.get_waiting_patients()
     in_consult = [e for e in clinic.queue_entries.values() if e["status"] == "IN_CONSULTATION"]
 
+    # Serialize datetime objects for JSON response
+    def serialize_entry(e):
+        entry = dict(e)
+        for k, v in entry.items():
+            if isinstance(v, datetime):
+                entry[k] = v.isoformat()
+        return entry
+
+    def serialize_doctor(d):
+        doc = dict(d)
+        for k, v in doc.items():
+            if isinstance(v, datetime):
+                doc[k] = v.isoformat()
+        return doc
+
     return {
         "session_id": clinic.session_id,
-        "doctors": list(clinic.doctors.values()),
+        "doctors": [serialize_doctor(d) for d in clinic.doctors.values()],
         "waiting_count": len(waiting),
         "in_consultation_count": len(in_consult),
-        "waiting_patients": sorted(waiting, key=lambda x: x.get("check_in_time", datetime.now())),
+        "waiting_patients": sorted(
+            [serialize_entry(w) for w in waiting],
+            key=lambda x: x.get("check_in_time", ""),
+        ),
         "aci_alpha_t": clinic.aci_alpha_t,
     }
 

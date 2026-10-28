@@ -85,12 +85,14 @@ def compute_queue_features(df: pd.DataFrame) -> pd.DataFrame:
     ).clip(0, SIM_CONFIG["num_doctors"])
 
     # Q-Lasso fluid estimators
-    doc_mean_duration = df.groupby("doctor_id")["actual_service_duration"].transform("mean")
-    doc_mean_duration = doc_mean_duration.fillna(13.5)
+    # Compute mean duration per doctor from completed patients only (avoid NaN)
+    completed_means = df[df["actual_service_duration"].notna()].groupby("doctor_id")["actual_service_duration"].mean()
+    doc_mean_duration = df["doctor_id"].map(completed_means).fillna(13.5)
 
     df["fluid_estimator_1"] = df["queue_length"] / df["active_doctors"].clip(1) * doc_mean_duration
+    overall_mean_dur = doc_mean_duration.mean() if doc_mean_duration.mean() > 0 else 13.5
     df["fluid_estimator_2"] = df["queue_length"] / (
-        df["active_doctors"].clip(1) * doc_mean_duration / doc_mean_duration.mean()
+        df["active_doctors"].clip(1) * doc_mean_duration / overall_mean_dur
     ).clip(0.01)
 
     # Queue composition ratios
@@ -107,10 +109,10 @@ def compute_queue_features(df: pd.DataFrame) -> pd.DataFrame:
         lambda x: x.expanding().sum()
     ).fillna(0)
 
-    # Arrival rate in last 60 minutes (approximated)
+    # Arrival rate: expanding count divided by elapsed session time in hours
     df["arrival_rate_1h"] = df.groupby("session_id")["actual_arrival_time"].transform(
-        lambda x: x.expanding().count() / (x / 60 + 0.01).clip(0.01)
-    ).fillna(SIM_CONFIG["base_walk_in_lambda"])
+        lambda x: x.expanding().count() / ((x + 1.0) / 60.0).clip(lower=0.1)
+    ).fillna(SIM_CONFIG["base_walk_in_lambda"]).clip(upper=60.0)
 
     # ======== Group 3: Delay-History & Elapsed State ========
     # Rolling wait of last 5 and 10 patients

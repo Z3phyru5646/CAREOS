@@ -306,29 +306,35 @@ with tab1:
 
     # Demo patient data (works without API)
     if not st.session_state.demo_patients:
-        # Pre-populate demo queue
-        demo_data = [
-            {"name": "Arjun Singh", "wait_point": 34, "wait_lo": 28, "wait_hi": 42, "queue_pos": 4,
-             "doctor": "Dr. Verma", "explanations": [
-                 {"text": "+15 min: 3 patients ahead (2 first-time complex)", "direction": "wait_increasing"},
-                 {"text": "+11 min: Urgent case being seen in Room 1", "direction": "wait_increasing"},
-                 {"text": "+12 min: Current workload ahead of queue", "direction": "wait_increasing"},
-                 {"text": "-4 min: Dr. Verma consulting 15% faster today", "direction": "wait_decreasing"},
-             ]},
-            {"name": "Priya Mehta", "wait_point": 18, "wait_lo": 12, "wait_hi": 25, "queue_pos": 2,
-             "doctor": "Dr. Patel", "explanations": [
-                 {"text": "+8 min: 1 follow-up patient ahead", "direction": "wait_increasing"},
-                 {"text": "+14 min: Doctor finishing complex consultation", "direction": "wait_increasing"},
-                 {"text": "-4 min: Dr. Patel is 25% faster than average", "direction": "wait_decreasing"},
-             ]},
-            {"name": "Vikram Rao", "wait_point": 52, "wait_lo": 44, "wait_hi": 63, "queue_pos": 7,
-             "doctor": "Dr. Sharma", "explanations": [
-                 {"text": "+28 min: 6 patients ahead including 3 new visits", "direction": "wait_increasing"},
-                 {"text": "+18 min: Morning peak rush (9:00-9:30 AM)", "direction": "wait_increasing"},
-                 {"text": "+10 min: Dr. Sharma consults 20% slower", "direction": "wait_increasing"},
-                 {"text": "-4 min: 2 fast follow-up visits in queue", "direction": "wait_decreasing"},
-             ]},
-        ]
+        # Load from data/demo_patients.json if available
+        json_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "demo_patients.json")
+        if os.path.exists(json_path):
+            with open(json_path, "r", encoding="utf-8") as f:
+                demo_data = json.load(f)
+        else:
+            # Pre-populate demo queue fallback
+            demo_data = [
+                {"name": "Arjun Singh", "wait_point": 34, "wait_lo": 28, "wait_hi": 42, "queue_pos": 4,
+                 "doctor": "Dr. Verma", "explanations": [
+                     {"text": "+15 min: 3 patients ahead (2 first-time complex)", "direction": "wait_increasing"},
+                     {"text": "+11 min: Urgent case being seen in Room 1", "direction": "wait_increasing"},
+                     {"text": "+12 min: Current workload ahead of queue", "direction": "wait_increasing"},
+                     {"text": "-4 min: Dr. Verma consulting 15% faster today", "direction": "wait_decreasing"},
+                 ]},
+                {"name": "Priya Mehta", "wait_point": 18, "wait_lo": 12, "wait_hi": 25, "queue_pos": 2,
+                 "doctor": "Dr. Patel", "explanations": [
+                     {"text": "+8 min: 1 follow-up patient ahead", "direction": "wait_increasing"},
+                     {"text": "+14 min: Doctor finishing complex consultation", "direction": "wait_increasing"},
+                     {"text": "-4 min: Dr. Patel is 25% faster than average", "direction": "wait_decreasing"},
+                 ]},
+                {"name": "Vikram Rao", "wait_point": 52, "wait_lo": 44, "wait_hi": 63, "queue_pos": 7,
+                 "doctor": "Dr. Sharma", "explanations": [
+                     {"text": "+28 min: 6 patients ahead including 3 new visits", "direction": "wait_increasing"},
+                     {"text": "+18 min: Morning peak rush (9:00-9:30 AM)", "direction": "wait_increasing"},
+                     {"text": "+10 min: Dr. Sharma consults 20% slower", "direction": "wait_increasing"},
+                     {"text": "-4 min: 2 fast follow-up visits in queue", "direction": "wait_decreasing"},
+                 ]},
+            ]
         st.session_state.demo_patients = demo_data
 
     # Patient selector

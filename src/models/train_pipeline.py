@@ -59,7 +59,12 @@ class AsymmetricQuadQuadEval:
         self.alpha_asym = alpha_asym
 
     def __call__(self, y_true, y_pred):
-        residual = y_true - y_pred
+        # Handle both raw arrays and LightGBM Dataset objects
+        if hasattr(y_true, 'get_label'):
+            y_true = y_true.get_label()
+        if hasattr(y_pred, 'get_label'):
+            y_pred = y_pred.get_label()
+        residual = np.asarray(y_true) - np.asarray(y_pred)
         loss = np.where(
             residual > 0,
             2 * self.alpha_asym * residual ** 2,
@@ -247,7 +252,6 @@ class Stage2WaitTimePredictor:
         self.point_model.fit(
             X_train, y_train,
             eval_set=[(X_test, y_test)],
-            eval_metric=eval_fn,
         )
 
         # ---- 2. Quantile Regressors ----
@@ -604,7 +608,10 @@ def train_full_pipeline(data_path: str = None, models_dir: str = None):
     Train the complete two-stage ML pipeline.
     """
     if data_path is None:
-        data_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "simulated_clinic_data.parquet")
+        # Prefer featured data if it exists, fall back to raw simulation data
+        featured_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "featured_clinic_data.parquet")
+        raw_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "simulated_clinic_data.parquet")
+        data_path = featured_path if os.path.exists(featured_path) else raw_path
     if models_dir is None:
         models_dir = os.path.join(os.path.dirname(__file__), "..", "..", "models")
 
@@ -618,7 +625,7 @@ def train_full_pipeline(data_path: str = None, models_dir: str = None):
     print(f"Loaded {len(df)} records")
 
     # Compute features if not already present
-    if "total_expected_workload_ahead" not in df.columns:
+    if "expected_queued_workload" not in df.columns:
         print("\nComputing queue-mining features (16 groups, 28 variables)...")
         df = compute_queue_features(df)
 
