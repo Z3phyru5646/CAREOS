@@ -1,34 +1,57 @@
 # ═══════════════════════════════════════════════════════════════════════════
-# CARE'OS Module 3 — Genomics-Informed Treatment Recommendation Engine
-# Dependencies
+# CARE'OS — Clinical AI Real-time Evaluation & Operations System
+# Unified Dependencies (Module 1 + Module 2 + Module 3)
 # ═══════════════════════════════════════════════════════════════════════════
 
-# Core scientific computing
-numpy>=1.23
-pandas>=1.5
-scipy>=1.10
+# Core Scientific Computing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
 
-# Machine Learning
-scikit-learn>=1.2
-xgboost>=2.0
+# Simulation (Module 1)
+simpy>=4.1.0
 
-# Deep Learning (VAE)
-torch>=2.0
+# Machine Learning & Explainability
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+lightgbm>=4.1.0
+shap>=0.43.0
+optuna>=3.0.0
 
-# Hyperparameter Optimization
-optuna>=3.0
+# Deep Learning (LSTM, VAE, NLP)
+torch>=2.0.0
+transformers>=4.30.0
 
-# Explainability
-shap>=0.42
+# Time Series & Conformal
+prophet>=1.1.5
+mapie>=0.8.0
 
-# Data Validation
-pydantic>=2.0
+# API & Backend
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.0.0
 
-# Dashboard
-streamlit>=1.28
+# Database
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+alembic>=1.12.0
 
-# Visualization
-plotly>=5.15
+# Dashboard & Visualization
+streamlit>=1.28.0
+plotly>=5.17.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
 
-# Utilities
-tqdm>=4.65
+# Audio & Speech (Module 2)
+soundfile>=0.12.1
+openai-whisper>=20231117
+
+# Documentation & Reports
+python-docx>=1.1.0
+
+# Utilities & Config
+joblib>=1.3.0
+tqdm>=4.66.0
+python-dateutil>=2.8.0
+requests>=2.31.0
+pyyaml>=6.0

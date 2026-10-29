@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Arjun Singh",
+    "age": 35,
+    "gender": "M",
+    "complaint": "Gastroenteritis",
+    "esi_acuity": 3,
+    "visit_no": 2,
+    "doctor": "Dr. Verma",
+    "queue_pos": 4,
+    "wait_point": 34,
+    "wait_lo": 28,
+    "wait_hi": 42,
+    "explanations": [
+      {
+        "text": "+15 min: 3 patients ahead (2 first-time complex)",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "+11 min: Urgent case being seen in Room 1",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "+12 min: Current workload ahead of queue",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "-4 min: Dr. Verma consulting 15% faster today",
+        "direction": "wait_decreasing"
+      }
+    ]
+  },
+  {
+    "name": "Priya Mehta",
+    "age": 29,
+    "gender": "F",
+    "complaint": "Migraine",
+    "esi_acuity": 4,
+    "visit_no": 3,
+    "doctor": "Dr. Patel",
+    "queue_pos": 2,
+    "wait_point": 18,
+    "wait_lo": 12,
+    "wait_hi": 25,
+    "explanations": [
+      {
+        "text": "+8 min: 1 follow-up patient ahead",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "+14 min: Doctor finishing complex consultation",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "-4 min: Dr. Patel is 25% faster than average",
+        "direction": "wait_decreasing"
+      }
+    ]
+  },
+  {
+    "name": "Vikram Rao",
+    "age": 52,
+    "gender": "M",
+    "complaint": "Cardiovascular",
+    "esi_acuity": 3,
+    "visit_no": 1,
+    "doctor": "Dr. Sharma",
+    "queue_pos": 7,
+    "wait_point": 52,
+    "wait_lo": 44,
+    "wait_hi": 63,
+    "explanations": [
+      {
+        "text": "+28 min: 6 patients ahead including 3 new visits",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "+18 min: Morning peak rush (9:00-9:30 AM)",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "+10 min: Dr. Sharma consults 20% slower",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "-4 min: 2 fast follow-up visits in queue",
+        "direction": "wait_decreasing"
+      }
+    ]
+  },
+  {
+    "name": "Ananya Sen",
+    "age": 62,
+    "gender": "F",
+    "complaint": "Cardiovascular",
+    "esi_acuity": 3,
+    "visit_no": 1,
+    "doctor": "Dr. Verma",
+    "queue_pos": 3,
+    "wait_point": 26,
+    "wait_lo": 19,
+    "wait_hi": 34,
+    "explanations": [
+      {
+        "text": "+21 min: First-visit complex consultation",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "+9 min: 1 patient ahead in Room 2",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "-4 min: JSEW optimal workload routing",
+        "direction": "wait_decreasing"
+      }
+    ]
+  },
+  {
+    "name": "Rohan Gupta",
+    "age": 28,
+    "gender": "M",
+    "complaint": "Dermatitis",
+    "esi_acuity": 5,
+    "visit_no": 4,
+    "doctor": "Dr. Patel",
+    "queue_pos": 1,
+    "wait_point": 10,
+    "wait_lo": 6,
+    "wait_hi": 16,
+    "explanations": [
+      {
+        "text": "+7 min: Routine follow-up visit (Fast Track)",
+        "direction": "wait_increasing"
+      },
+      {
+        "text": "-3 min: Dr. Patel consults 25% faster",
+        "direction": "wait_decreasing"
+      }
+    ]
+  }
+]
+

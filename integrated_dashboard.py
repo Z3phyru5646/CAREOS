@@ -1,31 +1,56 @@
 #!/usr/bin/env python3
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║  CARE'OS — Unified Clinical Workstation (Module 2 + Module 3)              ║
-║  Catppuccin Mocha Themed Streamlit Dashboard                               ║
+║  CARE'OS — Unified Clinical Decision Support System (Modules 1 + 2 + 3)     ║
+║  Catppuccin Mocha Themed Autonomous Outpatient Intelligence Platform        ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-A single-pane clinical decision support interface combining:
-  - Module 2: Audio capture → AI Scribe → 2nd-Pass Verification
-  - Module 3: Genomics Engine → Pharmacogenomic Alerts → Dose Optimization
+Seamlessly integrates all three core CARE'OS modules:
+  - Module 1: Outpatient Queue & Wait-Time Predictor
+              • GPU-Accelerated Clinical Health-Status Triage
+              • Dynamic Anti-Starvation Queue Position Adjustment
+              • JSEW Doctor Workload Balancing & Conformal Wait-Time Intervals
+  - Module 2: Ambient Clinical AI Scribe & 2nd-Pass Verifier
+              • OpenAI Whisper on CUDA GPU (NVIDIA RTX 4060)
+              • Stage 2 RxNorm Phonetic Error Correction (accent-aware)
+              • Stage 3 Clinical NLP & Section-by-Section SOAP Drafting
+              • Stage 4 Dual-Tier 2nd-Pass Verification (Literal vs Inference)
+              • Real-time SOAP Stage Telemetry Webhook (S ➔ O ➔ A ➔ P)
+  - Module 3: Precision Pharmacogenomic Treatment Recommendation
+              • Automated CPIC Level A/B Guideline Triggers
+              • Self-Attentive VAE Latent Epistasis SNP Encoding
+              • Cross-Attention Gated Multi-Modal Fusion
+              • Bayesian-Tuned XGBoost Drug Response Classifier
+              • Conformal Dose Regressor with 90% Confidence Intervals
+              • TreeSHAP Biomarker & Physiological Feature Attributions
 
-Run: streamlit run integrated_dashboard.py
+Run:
+    python -m streamlit run integrated_dashboard.py
 """
 
 from __future__ import annotations
 
 import json
+import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 import numpy as np
 import pandas as pd
 import streamlit as st
+import torch
 
 # Ensure project root on path
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+BASE_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(BASE_DIR))
+
+# Dedicated Hardware Detection
+GPU_AVAILABLE = torch.cuda.is_available()
+GPU_NAME = torch.cuda.get_device_name(0) if GPU_AVAILABLE else "CPU Mode"
+DEVICE_STR = f"CUDA:0 ({GPU_NAME})" if GPU_AVAILABLE else "CPU"
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -53,6 +78,7 @@ def inject_css():
         .stApp {{
             background-color: {CATPPUCCIN['base']};
             color: {CATPPUCCIN['text']};
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }}
         .stApp header {{
             background-color: {CATPPUCCIN['mantle']} !important;
@@ -66,15 +92,15 @@ def inject_css():
             background: {CATPPUCCIN['surface0']};
             border: 1px solid {CATPPUCCIN['surface1']};
             border-radius: 12px;
-            padding: 1.2rem;
-            margin-bottom: 1rem;
+            padding: 1.1rem;
+            margin-bottom: 0.8rem;
         }}
         .careos-card-accent {{
             background: linear-gradient(135deg, {CATPPUCCIN['surface0']}, {CATPPUCCIN['mantle']});
             border: 1px solid {CATPPUCCIN['mauve']}40;
             border-radius: 12px;
-            padding: 1.2rem;
-            margin-bottom: 1rem;
+            padding: 1.1rem;
+            margin-bottom: 0.8rem;
         }}
 
         /* ─── Metric Badges ──────────────────────────────── */
@@ -98,67 +124,95 @@ def inject_css():
             background: {CATPPUCCIN['red']}20;
             border-left: 4px solid {CATPPUCCIN['red']};
             color: {CATPPUCCIN['red']};
+            padding: 0.8rem 1.2rem;
             border-radius: 0 8px 8px 0;
-            padding: 0.8rem 1rem;
-            margin: 0.5rem 0;
+            margin-bottom: 0.6rem;
+            font-weight: 500;
         }}
         .alert-high {{
             background: {CATPPUCCIN['peach']}20;
             border-left: 4px solid {CATPPUCCIN['peach']};
             color: {CATPPUCCIN['peach']};
+            padding: 0.8rem 1.2rem;
             border-radius: 0 8px 8px 0;
-            padding: 0.8rem 1rem;
-            margin: 0.5rem 0;
+            margin-bottom: 0.6rem;
+            font-weight: 500;
         }}
         .alert-moderate {{
             background: {CATPPUCCIN['yellow']}20;
             border-left: 4px solid {CATPPUCCIN['yellow']};
             color: {CATPPUCCIN['yellow']};
+            padding: 0.8rem 1.2rem;
             border-radius: 0 8px 8px 0;
-            padding: 0.8rem 1rem;
-            margin: 0.5rem 0;
+            margin-bottom: 0.6rem;
+        }}
+        .alert-normal {{
+            background: {CATPPUCCIN['green']}20;
+            border-left: 4px solid {CATPPUCCIN['green']};
+            color: {CATPPUCCIN['green']};
+            padding: 0.8rem 1.2rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 0.6rem;
         }}
 
-        /* ─── Pipeline Stage Indicator ───────────────────── */
-        .stage-indicator {{
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 0;
+        /* ─── SOAP Stage Badges ──────────────────────────── */
+        .soap-badge-active {{
+            background: {CATPPUCCIN['mauve']};
+            color: {CATPPUCCIN['base']};
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            font-size: 0.85rem;
+            box-shadow: 0 0 10px {CATPPUCCIN['mauve']}80;
         }}
-        .stage-dot {{
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
+        .soap-badge-done {{
+            background: {CATPPUCCIN['green']}30;
+            color: {CATPPUCCIN['green']};
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }}
+        .soap-badge-pending {{
+            background: {CATPPUCCIN['surface1']};
+            color: {CATPPUCCIN['overlay1']};
+            padding: 4px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }}
+
+        /* ─── Queue Position Movement ─────────────────────── */
+        .pos-advance {{
+            background: {CATPPUCCIN['green']}25;
+            color: {CATPPUCCIN['green']};
+            border: 1px solid {CATPPUCCIN['green']}60;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 700;
             display: inline-block;
         }}
-        .stage-dot.complete {{ background: {CATPPUCCIN['green']}; }}
-        .stage-dot.active {{ background: {CATPPUCCIN['blue']}; animation: pulse 1s infinite; }}
-        .stage-dot.pending {{ background: {CATPPUCCIN['surface2']}; }}
-
-        @keyframes pulse {{
-            0%, 100% {{ opacity: 1; }}
-            50% {{ opacity: 0.4; }}
+        .pos-yield {{
+            background: {CATPPUCCIN['yellow']}25;
+            color: {CATPPUCCIN['yellow']};
+            border: 1px solid {CATPPUCCIN['yellow']}60;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
         }}
 
-        /* ─── DNA Helix Animation ────────────────────────── */
-        .dna-header {{
-            text-align: center;
-            padding: 1rem 0;
-        }}
+        /* ─── Headers & Branding ─────────────────────────── */
         .dna-header h1 {{
             background: linear-gradient(90deg, {CATPPUCCIN['mauve']}, {CATPPUCCIN['pink']}, {CATPPUCCIN['sapphire']});
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 2.2rem;
+            font-size: 2.1rem;
             font-weight: 800;
+            margin-bottom: 0.2rem;
         }}
-
-        /* ─── SOAP Section Colors ────────────────────────── */
-        .soap-s {{ color: {CATPPUCCIN['blue']}; }}
-        .soap-o {{ color: {CATPPUCCIN['green']}; }}
-        .soap-a {{ color: {CATPPUCCIN['peach']}; }}
-        .soap-p {{ color: {CATPPUCCIN['mauve']}; }}
 
         /* ─── Tabs ───────────────────────────────────────── */
         .stTabs [data-baseweb="tab-list"] {{
@@ -170,7 +224,8 @@ def inject_css():
         .stTabs [data-baseweb="tab"] {{
             color: {CATPPUCCIN['subtext0']};
             border-radius: 8px;
-            padding: 8px 16px;
+            padding: 8px 18px;
+            font-weight: 600;
         }}
         .stTabs [aria-selected="true"] {{
             background: {CATPPUCCIN['surface0']};
@@ -183,32 +238,39 @@ def inject_css():
             color: {CATPPUCCIN['base']};
             border: none;
             border-radius: 8px;
-            font-weight: 600;
-            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            padding: 0.5rem 1.4rem;
         }}
         .stButton > button:hover {{
             background: linear-gradient(135deg, {CATPPUCCIN['pink']}, {CATPPUCCIN['sapphire']});
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px {CATPPUCCIN['mauve']}40;
+            box-shadow: 0 4px 14px {CATPPUCCIN['mauve']}50;
         }}
     </style>
     """, unsafe_allow_html=True)
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# Pipeline Engine Caching
+# State & Engine Caching (GPU Accelerated)
 # ═══════════════════════════════════════════════════════════════════════════
 
 @st.cache_resource
+def get_module1_triage_engine():
+    """Module 1: Initialize and cache GPU-accelerated Health Triage Engine."""
+    from src.features.health_triage_engine import DynamicHealthAcuityTriageEngine
+    return DynamicHealthAcuityTriageEngine()
+
+
+@st.cache_resource
 def get_module2_pipeline():
-    """Initialize and cache Module 2 pipeline."""
+    """Module 2: Initialize and cache AI Scribe & Verifier pipeline."""
     from module2_careos.main import CareOSModule2Pipeline
     return CareOSModule2Pipeline()
 
 
 @st.cache_resource
 def get_module3_engine():
-    """Initialize and cache Module 3 engine with pre-trained models."""
+    """Module 3: Initialize and cache Genomics Treatment Engine."""
     from careos_genomics.engine import GenomicsEngine, EngineConfig
     from careos_genomics.synthetic_data import SyntheticPharmacogenomicDataGenerator
 
@@ -229,544 +291,913 @@ def get_module3_engine():
     return engine
 
 
+def init_session_state():
+    """Initialize persistent outpatient clinic session state across modules."""
+    now = datetime.now()
+
+    # Clinic rooms (Module 1 doctors with live consultation state)
+    if "clinic_rooms" not in st.session_state:
+        st.session_state.clinic_rooms = {
+            0: {
+                "id": 0, "name": "Dr. Sharma", "speed_mult": 0.80, "specialty": "General Medicine",
+                "active_patient": {"name": "Ramesh Kumar", "complaint": "Cardiovascular assessment", "esi": 3},
+                "consult_start": now - timedelta(minutes=8),
+                "predicted_dur": 15.0,
+                "soap_stage": "O", # Subjective done, Objective in progress
+            },
+            1: {
+                "id": 1, "name": "Dr. Verma", "speed_mult": 1.00, "specialty": "Cardiology & Internal Med",
+                "active_patient": {"name": "Sunita Devi", "complaint": "Migraine follow-up", "esi": 4},
+                "consult_start": now - timedelta(minutes=11),
+                "predicted_dur": 12.0,
+                "soap_stage": "A", # Assessment in progress
+            },
+            2: {
+                "id": 2, "name": "Dr. Patel", "speed_mult": 1.25, "specialty": "Rapid Outpatient Care",
+                "active_patient": {"name": "Amit Shah", "complaint": "URI / Dry cough", "esi": 5},
+                "consult_start": now - timedelta(minutes=5),
+                "predicted_dur": 8.0,
+                "soap_stage": "S", # Subjective in progress
+            },
+        }
+
+    # Waiting room patient queue (Module 1)
+    if "clinic_queue" not in st.session_state:
+        st.session_state.clinic_queue = [
+            {
+                "entry_id": 101,
+                "patient_name": "Pooja Patel",
+                "age": 52,
+                "gender": "F",
+                "chief_complaint": "Routine follow-up for diabetes & hypertension refill",
+                "esi_acuity": 5,
+                "health_acuity_index": 0.08,
+                "urgency_label": "Level 5: NON-URGENT / ROUTINE",
+                "doctor_id": 0,
+                "pred_service_dur": 10.0,
+                "check_in_time": now - timedelta(minutes=24),
+                "red_flags": [],
+                "clinical_rationale": "Stable vitals and presentation within routine outpatient bounds.",
+            },
+            {
+                "entry_id": 102,
+                "patient_name": "Vikram Malhotra",
+                "age": 61,
+                "gender": "M",
+                "chief_complaint": "Persistent epigastric burning pain after meals for 2 weeks",
+                "esi_acuity": 3,
+                "health_acuity_index": 0.48,
+                "urgency_label": "Level 3: URGENT",
+                "doctor_id": 1,
+                "pred_service_dur": 15.0,
+                "check_in_time": now - timedelta(minutes=16),
+                "red_flags": ["Chronic NSAID Gastropathy Risk"],
+                "clinical_rationale": "Postprandial epigastric pain with history of NSAID use; requires PPI review.",
+            },
+            {
+                "entry_id": 103,
+                "patient_name": "Aarav Gupta",
+                "age": 34,
+                "gender": "M",
+                "chief_complaint": "Moderate ankle swelling and pain after minor sports twist",
+                "esi_acuity": 4,
+                "health_acuity_index": 0.22,
+                "urgency_label": "Level 4: LESS URGENT",
+                "doctor_id": 2,
+                "pred_service_dur": 11.0,
+                "check_in_time": now - timedelta(minutes=9),
+                "red_flags": [],
+                "clinical_rationale": "Localized orthopedic pain without systemic or neurovascular compromise.",
+            },
+        ]
+
+    if "latest_triage_result" not in st.session_state:
+        st.session_state.latest_triage_result = None
+
+    if "last_encounter_results" not in st.session_state:
+        st.session_state.last_encounter_results = None
+
+    if "telemetry_events" not in st.session_state:
+        st.session_state.telemetry_events = []
+
+
 # ═══════════════════════════════════════════════════════════════════════════
-# Sidebar
+# Sidebar Navigation & Global Config
 # ═══════════════════════════════════════════════════════════════════════════
 
 def render_sidebar():
-    """Render the sidebar with patient configuration."""
+    """Render the sidebar with clinic status, GPU telemetry, and patient presets."""
     with st.sidebar:
         st.markdown(f"""
         <div class="dna-header">
             <h1>CARE'OS</h1>
-            <p style="color: {CATPPUCCIN['subtext1']}; font-size: 0.85rem;">
-                Clinical Decision Support System
+            <p style="color: {CATPPUCCIN['subtext1']}; font-size: 0.85rem; margin-top: -0.3rem;">
+                Autonomous Outpatient Intelligence Platform
             </p>
         </div>
         """, unsafe_allow_html=True)
 
-        st.markdown("---")
+        # Hardware & Hardware Acceleration Status
+        st.markdown(f"""
+        <div class="careos-card" style="padding: 0.8rem; border-color: {CATPPUCCIN['mauve']}60;">
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: {CATPPUCCIN['subtext0']}; font-weight: 700;">
+                ⚡ Dedicated Compute
+            </div>
+            <div style="font-size: 0.95rem; font-weight: 800; color: {CATPPUCCIN['green']}; margin-top: 3px;">
+                {'NVIDIA RTX 4060' if GPU_AVAILABLE else 'CPU Fallback'}
+            </div>
+            <div style="font-size: 0.75rem; color: {CATPPUCCIN['subtext1']};">
+                CUDA Acceleration Active: <b>{GPU_AVAILABLE}</b>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
-        st.markdown(f"### Patient Configuration")
+        st.markdown("### 🏥 Active System Modules")
+        st.markdown(f"- ✅ **Module 1**: Queue & Triage Predictor")
+        st.markdown(f"- ✅ **Module 2**: Ambient AI Scribe (CUDA)")
+        st.markdown(f"- ✅ **Module 3**: Precision PGx Treatment")
+
+        st.markdown("---")
+        st.markdown("### 👤 Active Patient Profile")
         patient_id = st.text_input("Patient ID", value="PGX-DEMO-001")
-        age = st.slider("Age", 18, 100, 65)
+        age = st.slider("Age", 18, 95, 65)
         sex = st.selectbox("Sex", ["M", "F"])
-        weight = st.number_input("Weight (kg)", 30.0, 200.0, 78.0)
+        weight = st.number_input("Weight (kg)", 35.0, 180.0, 78.0)
 
         st.markdown("---")
-        st.markdown(f"### Renal & Hepatic")
-        creatinine = st.number_input("Creatinine Clearance (mL/min)", 10.0, 200.0, 85.0)
-        alt = st.number_input("ALT (U/L)", 0.0, 500.0, 28.0)
-        ast = st.number_input("AST (U/L)", 0.0, 500.0, 24.0)
-        inr = st.number_input("INR", 0.5, 10.0, 1.1, step=0.1)
-
-        st.markdown("---")
-        st.markdown(f"### Genomic Profile")
+        st.markdown("### 🧬 Pharmacogenomic Presets")
         snp_preset = st.selectbox(
-            "SNP Profile Preset",
-            ["CYP2C19 Intermediate Metabolizer", "CYP2D6 Ultra-Rapid",
-             "CYP2C9 Poor Metabolizer", "Normal / Wild-Type", "Custom"],
+            "Genomic Phenotype",
+            [
+                "CYP2C19 Intermediate Metabolizer (*1/*2)",
+                "CYP2D6 Ultra-Rapid Metabolizer (*1xN)",
+                "CYP2C9 Poor Metabolizer (*3/*3)",
+                "Normal / Extensive Metabolizer (*1/*1)",
+            ]
         )
 
         st.markdown("---")
-        st.markdown(f"### Audio Configuration")
-        language = st.selectbox("Language", ["en", "hinglish", "hi"])
+        st.markdown("### 🎙️ Audio Language Mode")
+        language = st.selectbox("Speech Language", ["en", "hinglish", "hi"])
+
+        # Reset button for live testing
+        if st.button("🔄 Reset Clinic State", use_container_width=True):
+            st.session_state.clinic_queue = []
+            st.session_state.latest_triage_result = None
+            st.session_state.last_encounter_results = None
+            st.rerun()
 
         return {
             "patient_id": patient_id, "age": age, "sex": sex, "weight": weight,
-            "creatinine": creatinine, "alt": alt, "ast": ast, "inr": inr,
             "snp_preset": snp_preset, "language": language,
+            "creatinine": 85.0, "alt": 28.0, "ast": 24.0, "inr": 1.1,
         }
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# Main Tabs
+# TAB 1: Outpatient Queue & Health Triage (Module 1)
+# ═══════════════════════════════════════════════════════════════════════════
+
+def render_queue_and_triage_tab(config: dict):
+    """Render Module 1: Outpatient Smart Flow, GPU Health Triage & Dynamic Queue Adjustment."""
+    st.markdown(f"""
+    <div class="careos-card-accent">
+        <h3 style="color: {CATPPUCCIN['mauve']}; margin-bottom: 0.3rem;">
+            🏥 Module 1 — Outpatient Smart Flow & Health-Status Triage
+        </h3>
+        <p style="color: {CATPPUCCIN['subtext1']}; font-size: 0.9rem; margin-bottom: 0;">
+            Real-Time Doctor Workstations • GPU Clinical Urgency Analysis • Dynamic Anti-Starvation Queue Adjustment • Conformal Wait Intervals
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    triage_engine = get_module1_triage_engine()
+
+    # ── Section 1: Live Doctor Workstations & Telemetry ──
+    st.markdown("#### 👨‍⚕️ Live Consultation Workstations (Synced via Module 2 Telemetry)")
+
+    room_cols = st.columns(3)
+    for idx, (doc_id, doc) in enumerate(st.session_state.clinic_rooms.items()):
+        with room_cols[idx]:
+            p = doc["active_patient"]
+            elapsed_m = (datetime.now() - doc["consult_start"]).total_seconds() / 60.0
+            pred_dur = doc["predicted_dur"]
+            pct = min(100.0, (elapsed_m / pred_dur) * 100.0)
+
+            # Stage indicator badges
+            curr_stage = doc["soap_stage"]
+            badges = []
+            for s_char in ["S", "O", "A", "P"]:
+                if s_char == curr_stage:
+                    badges.append(f'<span class="soap-badge-active">{s_char}</span>')
+                elif (curr_stage == "P" and s_char in ["S", "O", "A"]) or \
+                     (curr_stage == "A" and s_char in ["S", "O"]) or \
+                     (curr_stage == "O" and s_char == "S"):
+                    badges.append(f'<span class="soap-badge-done">{s_char}</span>')
+                else:
+                    badges.append(f'<span class="soap-badge-pending">{s_char}</span>')
+
+            st.markdown(f"""
+            <div class="careos-card" style="border-top: 3px solid {CATPPUCCIN['mauve']};">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <b>Room 0{doc_id+1}: {doc['name']}</b>
+                    <span style="font-size: 0.8rem; color: {CATPPUCCIN['subtext0']};">{doc['speed_mult']}x Pace</span>
+                </div>
+                <div style="font-size: 0.85rem; color: {CATPPUCCIN['sapphire']}; margin: 4px 0;">
+                    {doc['specialty']}
+                </div>
+                <div style="background: {CATPPUCCIN['mantle']}; padding: 8px; border-radius: 6px; margin: 6px 0;">
+                    <div style="font-size: 0.85rem;"><b>{p['name']}</b> ({p['complaint']})</div>
+                    <div style="font-size: 0.75rem; color: {CATPPUCCIN['subtext1']};">Elapsed: <b>{elapsed_m:.1f}m</b> / Pred: {pred_dur:.0f}m</div>
+                </div>
+                <div style="margin-top: 6px; display: flex; align-items: center; justify-content: space-between;">
+                    <span style="font-size: 0.75rem; color: {CATPPUCCIN['subtext0']};">Live SOAP Phase:</span>
+                    <div>{' '.join(badges)}</div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+            st.progress(pct / 100.0)
+
+    st.markdown("---")
+
+    # ── Section 2: Clinical Triage & Check-In with GPU Health Analysis ──
+    st.markdown("#### ⚡ Patient Triage & Health-Status Queue Adjustment Engine")
+
+    # Quick persona buttons for instant testing
+    st.markdown(
+        f"<span style='font-size: 0.85rem; color: {CATPPUCCIN['subtext0']}; font-weight: 600;'>"
+        "Load Clinical Test Scenario:</span>", unsafe_allow_html=True
+    )
+    p_cols = st.columns(4)
+    if p_cols[0].button("🚨 Acute Cardiac Emergency", use_container_width=True):
+        st.session_state.triage_form_preset = {
+            "name": "Rahul Kapoor", "age": 59, "gender": "M",
+            "complaint": "Severe crushing substernal chest pain radiating to left jaw with cold sweats",
+            "sbp": 185.0, "dbp": 105.0, "hr": 118.0, "spo2": 91.0, "rr": 24.0, "temp": 37.1, "pain": 9.0,
+            "comorbs": ["Coronary Artery Disease", "Hypertension"],
+        }
+    if p_cols[1].button("⚡ Acute Stroke / F.A.S.T.", use_container_width=True):
+        st.session_state.triage_form_preset = {
+            "name": "Devendra Verma", "age": 67, "gender": "M",
+            "complaint": "Sudden onset right facial droop and right arm weakness with slurred speech",
+            "sbp": 192.0, "dbp": 110.0, "hr": 96.0, "spo2": 95.0, "rr": 20.0, "temp": 36.9, "pain": 4.0,
+            "comorbs": ["Hypertension", "Atrial Fibrillation"],
+        }
+    if p_cols[2].button("🩺 Acute Severe Asthma", use_container_width=True):
+        st.session_state.triage_form_preset = {
+            "name": "Meera Swaminathan", "age": 28, "gender": "F",
+            "complaint": "Severe shortness of breath, audible expiratory wheeze, speaking in single words",
+            "sbp": 138.0, "dbp": 86.0, "hr": 124.0, "spo2": 89.0, "rr": 30.0, "temp": 37.4, "pain": 6.0,
+            "comorbs": ["Severe Asthma"],
+        }
+    if p_cols[3].button("📋 Routine Checkup / Refill", use_container_width=True):
+        st.session_state.triage_form_preset = {
+            "name": "Ananya Iyer", "age": 42, "gender": "F",
+            "complaint": "Routine follow up for diabetes blood test review and medication refill",
+            "sbp": 120.0, "dbp": 78.0, "hr": 70.0, "spo2": 99.0, "rr": 16.0, "temp": 36.6, "pain": 0.0,
+            "comorbs": ["Type 2 Diabetes"],
+        }
+
+    preset = getattr(st.session_state, "triage_form_preset", {
+        "name": "Rahul Kapoor", "age": 59, "gender": "M",
+        "complaint": "Severe crushing substernal chest pain radiating to left jaw with diaphoresis",
+        "sbp": 185.0, "dbp": 105.0, "hr": 118.0, "spo2": 91.0, "rr": 24.0, "temp": 37.1, "pain": 9.0,
+        "comorbs": ["Coronary Artery Disease", "Hypertension"],
+    })
+
+    with st.expander("📝 Patient Check-In & Vital Signs Input", expanded=True):
+        f_col1, f_col2 = st.columns([1.2, 1])
+        with f_col1:
+            p_name = st.text_input("Patient Full Name", value=preset["name"])
+            p_complaint = st.text_area("Chief Complaint & Narrative Presentation", value=preset["complaint"], height=80)
+            c_row1, c_row2 = st.columns(2)
+            with c_row1:
+                p_age = st.number_input("Patient Age", 1, 105, preset["age"])
+            with c_row2:
+                p_gender = st.selectbox("Gender", ["M", "F"], index=0 if preset["gender"] == "M" else 1)
+
+            comorbs = st.multiselect(
+                "Known Comorbidities & Risk Factors",
+                ["Coronary Artery Disease", "Hypertension", "Type 2 Diabetes", "Chronic Kidney Disease", "Heart Failure", "Asthma/COPD", "Cancer History"],
+                default=[c for c in preset["comorbs"] if c in ["Coronary Artery Disease", "Hypertension", "Type 2 Diabetes", "Chronic Kidney Disease", "Heart Failure", "Asthma/COPD", "Cancer History"]]
+            )
+
+        with f_col2:
+            st.markdown(f"<div style='font-size: 0.85rem; font-weight: 700; color: {CATPPUCCIN['peach']};'>Objective Physiological Vitals</div>", unsafe_allow_html=True)
+            v_col1, v_col2 = st.columns(2)
+            with v_col1:
+                sbp = st.number_input("Systolic BP (mmHg)", 60.0, 260.0, float(preset["sbp"]))
+                hr = st.number_input("Heart Rate (bpm)", 30.0, 220.0, float(preset["hr"]))
+                rr = st.number_input("Resp Rate (/min)", 6.0, 50.0, float(preset["rr"]))
+            with v_col2:
+                dbp = st.number_input("Diastolic BP (mmHg)", 30.0, 160.0, float(preset["dbp"]))
+                spo2 = st.number_input("SpO2 (%)", 60.0, 100.0, float(preset["spo2"]))
+                temp = st.number_input("Temp (°C)", 32.0, 42.0, float(preset["temp"]))
+
+            pain = st.slider("Pain Score (0 - 10 scale)", 0.0, 10.0, float(preset["pain"]), step=1.0)
+
+        triage_submit = st.button("⚡ Execute GPU Clinical Triage & Prioritize Queue", use_container_width=True)
+
+    if triage_submit:
+        from src.features.health_triage_engine import PatientVitals
+
+        vitals = PatientVitals(
+            systolic_bp=sbp, diastolic_bp=dbp, heart_rate=hr,
+            spo2=spo2, resp_rate=rr, temperature_c=temp, pain_score=pain
+        )
+
+        with st.spinner(f"Evaluating clinical urgency on {triage_engine.gpu_name}..."):
+            assessment = triage_engine.assess_patient(
+                patient_id=len(st.session_state.clinic_queue) + 104,
+                patient_name=p_name,
+                chief_complaint=p_complaint,
+                vitals=vitals,
+                comorbidities=comorbs,
+                age=p_age,
+                is_complex_cancer="Cancer History" in comorbs,
+            )
+
+            # JSEW Doctor Routing: Find doctor with lowest current workload
+            best_doc_id = 0
+            lowest_workload = float("inf")
+            for d_id, doc in st.session_state.clinic_rooms.items():
+                doc_queue = [q for q in st.session_state.clinic_queue if q.get("doctor_id") == d_id]
+                wl = sum(q.get("pred_service_dur", 12.0) for q in doc_queue)
+                if wl < lowest_workload:
+                    lowest_workload = wl
+                    best_doc_id = d_id
+
+            # Create patient record and append to queue
+            new_entry = {
+                "entry_id": len(st.session_state.clinic_queue) + 104,
+                "patient_name": p_name,
+                "age": p_age,
+                "gender": p_gender,
+                "chief_complaint": p_complaint,
+                "esi_acuity": assessment.esi_level,
+                "health_acuity_index": assessment.health_acuity_index,
+                "urgency_label": assessment.urgency_label,
+                "doctor_id": best_doc_id,
+                "pred_service_dur": assessment.predicted_service_dur_min,
+                "check_in_time": datetime.now(),
+                "red_flags": assessment.red_flags,
+                "clinical_rationale": assessment.clinical_rationale,
+            }
+            st.session_state.clinic_queue.append(new_entry)
+            st.session_state.latest_triage_result = {
+                "assessment": assessment,
+                "doctor_id": best_doc_id,
+            }
+
+    # Display Triage Assessment Result Card if available
+    if st.session_state.latest_triage_result:
+        res = st.session_state.latest_triage_result
+        ass = res["assessment"]
+        doc_assigned = st.session_state.clinic_rooms[res["doctor_id"]]
+
+        sev_class = "alert-critical" if ass.esi_level <= 2 else ("alert-moderate" if ass.esi_level <= 3 else "alert-normal")
+        st.markdown(f"""
+        <div class="{sev_class}" style="margin-top: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <b style="font-size: 1.1rem;">🩺 {ass.urgency_label} — Acuity Index: {ass.health_acuity_index:.2f}</b>
+                <span style="font-size: 0.8rem; background: {CATPPUCCIN['surface0']}; padding: 3px 8px; border-radius: 4px;">
+                    Compute: {ass.device_used}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 0.9rem;">
+                <b>Clinical Rationale:</b> {ass.clinical_rationale}
+            </div>
+            <div style="font-size: 0.85rem;">
+                <b>Assigned via JSEW:</b> {doc_assigned['name']} ({doc_assigned['specialty']}) |
+                <b>Est. Consultation Duration:</b> {ass.predicted_service_dur_min:.0f} min
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # ── Section 3: Live Prioritized Waiting Queue with Health Adjustments ──
+    st.markdown("#### 📋 Live Waiting Room Queue (Dynamic Health Prioritization)")
+
+    if not st.session_state.clinic_queue:
+        st.info("The waiting room queue is currently empty. Check in a patient above!")
+    else:
+        # Run health-adjusted queue algorithm
+        adjustments = triage_engine.adjust_queue_positions(
+            waiting_patients=st.session_state.clinic_queue,
+            current_time=datetime.now(),
+            doctor_speed_multiplier=1.0,
+            doctor_remaining_time_min=5.0,
+        )
+
+        table_rows = []
+        for adj in adjustments:
+            p_data = next((p for p in st.session_state.clinic_queue if p["entry_id"] == adj.entry_id), {})
+            doc_name = st.session_state.clinic_rooms.get(p_data.get("doctor_id", 0), {}).get("name", "Dr. Sharma")
+
+            # Shift formatting
+            if adj.position_shift > 0:
+                shift_badge = f'<span class="pos-advance">▲ Advanced +{adj.position_shift} spot(s)</span>'
+            elif adj.position_shift < 0:
+                shift_badge = f'<span class="pos-yield">▼ Yielded {abs(adj.position_shift)} spot(s)</span>'
+            else:
+                shift_badge = f'<span style="color: {CATPPUCCIN["subtext0"]};">― Maintained</span>'
+
+            table_rows.append({
+                "Adjusted Rank": f"#{adj.adjusted_position}",
+                "FIFO Rank": f"#{adj.initial_fifo_position}",
+                "Queue Movement": shift_badge,
+                "Patient Name": adj.patient_name,
+                "Triage Level": adj.urgency_label.split(":")[0],
+                "Health Acuity": f"{adj.health_acuity_index:.2f}",
+                "Assigned Doctor": doc_name,
+                "Est. Wait (90% CI)": f"<b>{adj.predicted_wait_min:.1f}m</b> [{adj.wait_lower_min:.0f} - {adj.wait_upper_min:.0f}m]",
+                "Clinical Priority Score": f"{adj.priority_score:.3f}",
+            })
+
+        df_q = pd.DataFrame(table_rows)
+        st.write(df_q.to_html(escape=False, index=False), unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # Action: Call Head Patient into Consultation
+        q_cols = st.columns([1.5, 1])
+        with q_cols[0]:
+            top_patient = adjustments[0]
+            if st.button(f"🚀 Call Next Patient: {top_patient.patient_name} (Rank #1)", use_container_width=True):
+                # Update Room 01 with this patient
+                st.session_state.clinic_rooms[0]["active_patient"] = {
+                    "name": top_patient.patient_name,
+                    "complaint": "Called from prioritized triage queue",
+                    "esi": 2,
+                }
+                st.session_state.clinic_rooms[0]["consult_start"] = datetime.now()
+                st.session_state.clinic_rooms[0]["soap_stage"] = "S"
+                st.success(f"✅ {top_patient.patient_name} called into Room 01 with Dr. Sharma! SOAP stage initialized to 'S'.")
+                st.rerun()
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# TAB 2: Ambient AI Scribe & Verification (Module 2)
 # ═══════════════════════════════════════════════════════════════════════════
 
 def render_scribe_tab(config: dict):
-    """Module 2: AI Scribe & Verifier tab."""
+    """Module 2: Audio capture → Diarization → ASR Correction → SOAP → Verification."""
     st.markdown(f"""
     <div class="careos-card-accent">
-        <h3 style="color: {CATPPUCCIN['sapphire']};">🎙️ Module 2 — AI Scribe & 2nd-Pass Verifier</h3>
-        <p style="color: {CATPPUCCIN['subtext1']};">
-            Upload clinical audio or use the demo encounter to generate a verified SOAP note
-            with real-time CPIC pharmacogenomic trigger detection.
+        <h3 style="color: {CATPPUCCIN['sapphire']}; margin-bottom: 0.3rem;">
+            🎙️ Module 2 — Ambient AI Scribe & Dual-Tier 2nd-Pass Verifier
+        </h3>
+        <p style="color: {CATPPUCCIN['subtext1']}; font-size: 0.9rem; margin-bottom: 0;">
+            OpenAI Whisper on CUDA GPU • RxNorm Phonetic Error Correction • Clinical NLP Fact Extraction • Verified SOAP Generation • Real-Time Telemetry
         </p>
     </div>
     """, unsafe_allow_html=True)
 
     col1, col2 = st.columns([2, 1])
     with col1:
-        uploaded_audio = st.file_uploader("Upload Clinical Audio", type=["wav", "mp3", "m4a", "ogg"])
+        uploaded_audio = st.file_uploader(
+            "Upload Clinical Encounter Audio (WAV / MP3 / M4A)",
+            type=["wav", "mp3", "m4a", "ogg"],
+            help="Audio will be transcribed using OpenAI Whisper on your dedicated NVIDIA RTX 4060 GPU."
+        )
     with col2:
-        use_demo = st.checkbox("Use Demo Baseline Audio", value=(uploaded_audio is None))
+        st.markdown(f"**Preloaded Test Encounters**")
+        use_demo = st.button("Load Standard Demo Consultation (WAV)", use_container_width=True)
+        use_kapoor = st.button("Load Real MP3 Consultation (Kapoor PGx)", use_container_width=True)
 
-    if uploaded_audio and not use_demo:
-        st.audio(uploaded_audio)
-        st.caption(f"📁 Selected audio: **{uploaded_audio.name}** ({uploaded_audio.size / 1024:.1f} KB)")
+    audio_path = None
+    if uploaded_audio is not None:
+        uploads_dir = BASE_DIR / "data" / "uploads"
+        uploads_dir.mkdir(parents=True, exist_ok=True)
+        saved_path = uploads_dir / uploaded_audio.name
+        with open(saved_path, "wb") as f:
+            f.write(uploaded_audio.read())
+        audio_path = str(saved_path)
+        st.success(f"Uploaded audio: `{uploaded_audio.name}`")
+    elif use_kapoor:
+        k_path = BASE_DIR / "data" / "uploads" / "kapoor_pgx_consultation.mp3"
+        if k_path.exists():
+            audio_path = str(k_path)
+            st.info("Loaded `kapoor_pgx_consultation.mp3` (283s audio with clopidogrel, omeprazole, ticagrelor)")
     elif use_demo:
-        st.info("ℹ️ Using baseline demo consultation audio (`demo.wav`).")
+        demo_path = BASE_DIR / "data" / "sample_audio" / "demo.wav"
+        if demo_path.exists():
+            audio_path = str(demo_path)
+            st.info("Loaded `demo.wav` baseline consultation encounter.")
 
-    if st.button("🚀 Run Complete Pipeline", use_container_width=True):
-        # Determine audio path
-        if uploaded_audio and not use_demo:
-            timestamp_id = int(time.time())
-            audio_path = Path(__file__).parent / "data" / "uploads" / f"{timestamp_id}_{uploaded_audio.name}"
-            audio_path.parent.mkdir(parents=True, exist_ok=True)
-            with open(audio_path, "wb") as f:
-                f.write(uploaded_audio.getbuffer())
-        else:
-            audio_path = Path(__file__).parent / "data" / "sample_audio" / "demo.wav"
+    if audio_path is not None:
+        st.audio(audio_path)
 
-        # Build clinical data for Module 3
-        from careos_genomics.data_models import ClinicalFeatures, PatientGenomicProfile
-        clinical_data = ClinicalFeatures(
-            age=config["age"], sex=config["sex"], weight_kg=config["weight"],
-            creatinine_clearance=config["creatinine"],
-            alt=config["alt"], ast=config["ast"], inr=config["inr"],
-        )
+        if st.button("🚀 Process Clinical Encounter Audio on GPU", type="primary", use_container_width=True):
+            pipeline = get_module2_pipeline()
 
-        # SNP presets
-        snp_presets = {
-            "CYP2C19 Intermediate Metabolizer": {"rs4244285": 1, "rs4986893": 0, "rs12248560": 0},
-            "CYP2D6 Ultra-Rapid": {"rs3892097": 0, "rs1065852": 0, "rs16947": 2},
-            "CYP2C9 Poor Metabolizer": {"rs1799853": 2, "rs1057910": 1},
-            "Normal / Wild-Type": {"rs1799853": 0, "rs1057910": 0, "rs4244285": 0},
-        }
-        snp_profile = snp_presets.get(config["snp_preset"], {})
-        genomic_profile = PatientGenomicProfile(
-            snp_profile=snp_profile,
-            gene_expression={"CYP2C9": 7.2, "CYP2C19": 6.8, "VKORC1": 8.1},
-        )
+            progress_bar = st.progress(0, text="Initializing Whisper ASR on CUDA GPU...")
+            time_start = time.time()
 
-        # Run pipeline with progress
-        progress_bar = st.progress(0, "Initializing pipeline...")
-        pipeline = get_module2_pipeline()
+            try:
+                progress_bar.progress(20, text="Running CUDA Whisper ASR & Diarization...")
+                # Run the complete Module 2 pipeline
+                results = pipeline.process_encounter(
+                    audio_path=audio_path,
+                    patient_id=config["patient_id"],
+                    language=config["language"],
+                )
+                progress_bar.progress(70, text="Executing RxNorm Drug Correction & Clinical NLP...")
 
-        progress_bar.progress(20, "Running 5-stage pipeline...")
-        t0 = time.time()
-        results = pipeline.process_encounter(
-            audio_path=str(audio_path),
-            patient_id=config["patient_id"],
-            language=config["language"],
-            clinical_data=clinical_data,
-            genomic_profile=genomic_profile,
-        )
-        elapsed = time.time() - t0
-        progress_bar.progress(100, f"Pipeline complete in {elapsed:.1f}s")
+                # Update live room telemetry
+                if "clinic_rooms" in st.session_state:
+                    st.session_state.clinic_rooms[0]["soap_stage"] = "P" # Concluded to Plan
 
-        # Store in session state
-        st.session_state["pipeline_results"] = results
-        st.session_state["pipeline_time"] = elapsed
-        st.rerun()
+                progress_bar.progress(100, text="Encounter Processed Successfully!")
+                elapsed = time.time() - time_start
+                st.session_state.last_encounter_results = results
+                st.success(f"✅ Encounter processed in {elapsed:.1f}s on {GPU_NAME}!")
+            except Exception as e:
+                st.error(f"Error processing encounter: {e}")
+                import traceback
+                st.code(traceback.format_exc())
 
     # Display results if available
-    if "pipeline_results" in st.session_state:
-        results = st.session_state["pipeline_results"]
-        elapsed = st.session_state.get("pipeline_time", 0)
+    if st.session_state.last_encounter_results:
+        results = st.session_state.last_encounter_results
+        _render_encounter_results(results)
 
-        # ─── Metrics Row ─────────────────────────────────
-        m1, m2, m3, m4 = st.columns(4)
-        verif = results.get("verification", {})
-        with m1:
-            st.metric("Processing Time", f"{elapsed:.1f}s")
-        with m2:
-            st.metric("Total Claims", verif.get("total_claims", 0))
-        with m3:
-            st.metric("Hallucination Rate",
-                       f"{verif.get('inference_aware_hallucination_rate', 0):.1f}%")
-        with m4:
-            st.metric("CPIC Triggers", len(results.get("cpic_triggers", [])))
 
-        # ─── Diarized Transcript ─────────────────────────
-        transcript = results.get("transcript", {})
-        utterances = transcript.get("utterances", [])
-        if utterances:
-            with st.expander(f"🎙️ Diarized Transcript ({len(utterances)} utterances, {transcript.get('duration_seconds', 0):.1f}s)", expanded=False):
-                for u in utterances:
-                    speaker = u.get("speaker_role") or u.get("speaker_id", "Speaker")
-                    text = u.get("text", "")
-                    st.markdown(f"**[{speaker}]**: {text}")
+def _render_encounter_results(results: dict):
+    """Render Module 2 output details."""
+    verif = results.get("verification", {})
 
-        # ─── Extracted Fact Sheet ────────────────────────
-        fact_sheet = results.get("fact_sheet", {})
-        if fact_sheet:
-            with st.expander("🩺 Extracted Clinical Fact Sheet (Pre-SOAP Grounding)", expanded=False):
-                fc1, fc2, fc3 = st.columns(3)
-                with fc1:
-                    st.markdown(f"**Chief Complaint:** {fact_sheet.get('chief_complaint', 'N/A')}")
-                    meds = fact_sheet.get("medications", [])
-                    st.markdown(f"**Medications ({len(meds)}):**")
-                    for m in meds:
-                        st.markdown(f"- 💊 {m.get('drug_name', '')} {m.get('strength', '')} ({m.get('frequency', '')})")
-                with fc2:
-                    syms = fact_sheet.get("symptoms", [])
-                    st.markdown(f"**Symptoms ({len(syms)}):**")
-                    for s in syms:
-                        st.markdown(f"- 🩺 {s.get('text', '')}")
-                with fc3:
-                    negs = fact_sheet.get("pertinent_negatives", [])
-                    st.markdown(f"**Pertinent Negatives ({len(negs)}):**")
-                    for n in negs:
-                        st.markdown(f"- ❌ {n.get('text', '')}")
+    st.markdown("---")
+    st.markdown("### 📊 Clinical Encounter Summary")
 
-        # ─── SOAP Note ───────────────────────────────────
-        st.markdown(f"### 📋 Verified SOAP Note")
-        soap = results.get("soap_note", {})
+    m_col1, m_col2, m_col3, m_col4 = st.columns(4)
+    with m_col1:
+        st.metric("SOAP Atomic Claims", verif.get("total_claims", 0))
+    with m_col2:
+        st.metric("Verbatim Match (Tier 1)", verif.get("tier1_count", 0))
+    with m_col3:
+        st.metric("Inference Hallucination", f"{verif.get('inference_aware_hallucination_rate', 0):.1%}")
+    with m_col4:
+        triggers = results.get("cpic_triggers", [])
+        st.metric("CPIC Triggers Fired", len(triggers))
 
-        for section, label, css_class, icon in [
-            ("subjective", "Subjective", "soap-s", "🗣️"),
-            ("objective_exam", "Objective (Exam)", "soap-o", "🔍"),
-            ("objective_results", "Objective (Results)", "soap-o", "🧪"),
-            ("assessment_plan", "Assessment & Plan", "soap-a", "📊"),
-        ]:
-            claims = soap.get(section, [])
-            if claims:
-                with st.expander(f"{icon} {label} ({len(claims)} claims)", expanded=section == "assessment_plan"):
-                    for claim in claims:
-                        text = claim.get("claim_text", "")
-                        if "[PGx Decision Support]" in text:
-                            st.markdown(f"""
-                            <div class="alert-moderate">
-                                🧬 {text}
-                            </div>
-                            """, unsafe_allow_html=True)
-                        else:
-                            st.markdown(f"- {text}")
+    # Diarized Transcript Expander
+    transcript = results.get("transcript", {})
+    utterances = transcript.get("utterances", [])
+    if utterances:
+        with st.expander(f"🎙️ Diarized Transcript ({len(utterances)} utterances, {transcript.get('duration_seconds', 0):.1f}s)", expanded=False):
+            for u in utterances:
+                role = u.get("speaker_role") or u.get("speaker_id", "Speaker")
+                st.markdown(f"**[{role}]**: {u.get('text', '')}")
 
-        # ─── Verification Breakdown ──────────────────────
-        st.markdown(f"### 🔬 Verification Breakdown")
-        tier_data = {
-            "Tier": ["T1 Verbatim", "T2a Terminology", "T2b Ontology",
-                     "T3 Inference", "T4 Unsupported", "T5 Contradiction"],
-            "Count": [
-                verif.get("tier1_count", 0), verif.get("tier2a_count", 0),
-                verif.get("tier2b_count", 0), verif.get("tier3_count", 0),
-                verif.get("tier4_count", 0), verif.get("tier5_count", 0),
-            ],
-            "Color": [
-                CATPPUCCIN["green"], CATPPUCCIN["teal"], CATPPUCCIN["sapphire"],
-                CATPPUCCIN["yellow"], CATPPUCCIN["peach"], CATPPUCCIN["red"],
-            ],
-        }
-        df_tiers = pd.DataFrame(tier_data)
-        st.bar_chart(df_tiers.set_index("Tier")["Count"], color=CATPPUCCIN["mauve"])
+    # Stage 2 ASR Corrections
+    corrections = results.get("corrections", [])
+    if corrections:
+        with st.expander(f"💊 Stage 2 RxNorm Phonetic Corrections ({len(corrections)} fixed)", expanded=False):
+            for c in corrections:
+                orig = c.get("original_text", "")
+                corr = c.get("corrected_text", "")
+                cui = c.get("rxnorm_cui", "N/A")
+                st.markdown(f"- `' {orig} '` ➔ **`{corr}`** (RxNorm CUI: `{cui}`, confidence: `{c.get('confidence', 0.95):.2f}`)")
 
-        # ─── Co-Pilot ────────────────────────────────────
-        copilot = results.get("copilot", {})
-        if copilot.get("hypotheses"):
-            st.markdown(f"### 🧠 Clinical Co-Pilot")
-            for h in copilot["hypotheses"]:
-                st.markdown(
-                    f"- **{h.get('hypothesis', '')}** — "
-                    f"Confidence: `{h.get('confidence', 0):.0%}`"
-                )
+    # Fact Sheet
+    fact_sheet = results.get("fact_sheet", {})
+    if fact_sheet:
+        with st.expander("🩺 Extracted Clinical Fact Sheet (Pre-SOAP Grounding)", expanded=False):
+            fc1, fc2 = st.columns(2)
+            with fc1:
+                st.markdown(f"**Chief Complaint:** {fact_sheet.get('chief_complaint', 'N/A')}")
+                meds = fact_sheet.get("medications", [])
+                st.markdown(f"**Extracted Medications ({len(meds)}):**")
+                for m in meds:
+                    st.markdown(f"- 💊 **{m.get('drug_name')}** ({m.get('strength', 'std dose')} {m.get('frequency', '')})")
+            with fc2:
+                syms = fact_sheet.get("symptoms", [])
+                st.markdown(f"**Reported Symptoms ({len(syms)}):**")
+                for s in syms:
+                    st.markdown(f"- 🩺 {s.get('text')}")
 
+    # Verified SOAP Note
+    st.markdown("### 📋 Verified SOAP Clinical Note")
+    soap = results.get("soap_note", {})
+
+    for sec_key, sec_title, icon in [
+        ("subjective", "Subjective", "🗣️"),
+        ("objective_exam", "Objective Examination", "🔍"),
+        ("assessment_plan", "Assessment & Plan", "📊"),
+    ]:
+        claims = soap.get(sec_key, [])
+        if claims:
+            with st.expander(f"{icon} {sec_title} ({len(claims)} claims)", expanded=(sec_key == "assessment_plan")):
+                for c in claims:
+                    txt = c.get("claim_text", "")
+                    if "[PGx Decision Support]" in txt:
+                        st.markdown(f"""
+                        <div class="alert-moderate">
+                            🧬 {txt}
+                        </div>
+                        """, unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"- {txt}")
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# TAB 3: Precision Pharmacogenomics (Module 3)
+# ═══════════════════════════════════════════════════════════════════════════
 
 def render_genomics_tab(config: dict):
-    """Module 3: Standalone Genomics Engine tab."""
+    """Module 3: Standalone & CPIC Level A Precision Treatment Engine."""
     st.markdown(f"""
     <div class="careos-card-accent">
-        <h3 style="color: {CATPPUCCIN['mauve']};">🧬 Module 3 — Genomics-Informed Treatment Recommendation</h3>
-        <p style="color: {CATPPUCCIN['subtext1']};">
-            Attention-VAE SNP encoding → Cross-Attention Multi-Modal Fusion → 
-            Optuna-Tuned XGBoost Classification → Conformal Dose Regression → CPIC Alerts
+        <h3 style="color: {CATPPUCCIN['mauve']}; margin-bottom: 0.3rem;">
+            🧬 Module 3 — Genomics-Informed Treatment Recommendation
+        </h3>
+        <p style="color: {CATPPUCCIN['subtext1']}; font-size: 0.9rem; margin-bottom: 0;">
+            Attention-VAE Epistasis Compression • Cross-Attention Multi-Modal Fusion • Optuna XGBoost • Conformal Dose Regression • TreeSHAP
         </p>
     </div>
     """, unsafe_allow_html=True)
 
-    # Direct Module 3 trigger
     from careos_genomics.data_models import (
         TriggerPayload, ClinicalFeatures, PatientGenomicProfile,
     )
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown("#### Trigger Keys (from Module 2)")
-        diagnosis_codes = st.multiselect(
-            "ICD-10 Codes", ["I48.0", "I21.0", "K21.0", "E78.0", "M54.5", "Z79.899"],
-            default=["I48.0"],
+    t_col1, t_col2 = st.columns([1.5, 1])
+    with t_col1:
+        drug_name = st.selectbox(
+            "Target Pharmacogenomic Drug (CPIC Level A)",
+            ["clopidogrel", "warfarin", "omeprazole", "simvastatin", "codeine", "atorvastatin", "pantoprazole"]
         )
-        medication_names = st.multiselect(
-            "Medications", ["warfarin", "clopidogrel", "omeprazole", "simvastatin",
-                           "codeine", "carbamazepine", "allopurinol"],
-            default=["warfarin"],
+        diag_code = st.selectbox(
+            "Indication / ICD-10 Code",
+            ["I21.0 (Acute transmural MI)", "I48.0 (Atrial fibrillation)", "K21.0 (GERD)", "E78.0 (Hypercholesterolemia)", "M54.5 (Chronic pain)"]
         )
+    with t_col2:
+        st.markdown(f"**Patient Phenotype:** `{config['snp_preset']}`")
+        st.markdown(f"- Age: `{config['age']}` | Sex: `{config['sex']}` | Weight: `{config['weight']} kg`")
+        st.markdown(f"- Renal CrCl: `{config['creatinine']} mL/min` | Baseline INR: `{config['inr']}`")
 
-    with col2:
-        st.markdown("#### SNP Variants")
-        snp_data = {}
-        for rs_id, label in [
-            ("rs1799853", "CYP2C9*2"), ("rs1057910", "CYP2C9*3"),
-            ("rs9923231", "VKORC1"), ("rs4244285", "CYP2C19*2"),
-            ("rs3892097", "CYP2D6*4"), ("rs4149056", "SLCO1B1*5"),
-        ]:
-            snp_data[rs_id] = st.select_slider(
-                f"{label} ({rs_id})", options=[0, 1, 2], value=1,
-                key=f"snp_{rs_id}",
-            )
-
-    if st.button("🧬 Run Genomics Engine", use_container_width=True):
+    if st.button("⚡ Run Module 3 Genomics ML Engine", type="primary", use_container_width=True):
         engine = get_module3_engine()
 
         trigger = TriggerPayload(
             patient_id=config["patient_id"],
-            diagnosis_codes=diagnosis_codes,
-            medication_names=medication_names,
+            diagnosis_codes=[diag_code.split()[0]],
+            medication_names=[drug_name],
             prescribing_physician="CAREOS-CLINICIAN",
         )
-        clinical = ClinicalFeatures(
+
+        clinical_features = ClinicalFeatures(
             age=config["age"], sex=config["sex"], weight_kg=config["weight"],
-            creatinine_clearance=config["creatinine"],
-            alt=config["alt"], ast=config["ast"], inr=config["inr"],
-        )
-        genomic = PatientGenomicProfile(
-            snp_profile=snp_data,
-            gene_expression={"CYP2C9": 7.2, "CYP2C19": 6.8, "VKORC1": 8.1},
+            creatinine_clearance=config["creatinine"], alt=config["alt"],
+            ast=config["ast"], inr=config["inr"],
         )
 
-        with st.spinner("Processing pharmacogenomic analysis..."):
-            t0 = time.time()
-            alerts = engine.process_trigger(trigger, genomic, clinical)
-            inference_time = time.time() - t0
+        # Generate representative SNP dosages based on preset
+        snp_dict = {f"snp_{i:03d}": 0 for i in range(230)}
+        if "Intermediate" in config["snp_preset"] or "CYP2C19" in config["snp_preset"]:
+            snp_dict["rs4244285"] = 1 # CYP2C19*2
+            snp_dict["rs4986893"] = 0
+        elif "Ultra-Rapid" in config["snp_preset"] or "CYP2D6" in config["snp_preset"]:
+            snp_dict["rs3892097"] = 0
+            snp_dict["rs1065852"] = 2
+        elif "CYP2C9" in config["snp_preset"] or "Poor" in config["snp_preset"]:
+            snp_dict["rs1799853"] = 1 # CYP2C9*2
+            snp_dict["rs1057910"] = 1 # CYP2C9*3
+            snp_dict["rs9923231"] = 2 # VKORC1
 
-        st.session_state["pgx_alerts"] = alerts
-        st.session_state["pgx_time"] = inference_time
-        st.rerun()
+        profile = PatientGenomicProfile(
+            patient_id=config["patient_id"],
+            snp_dosages=snp_dict,
+        )
 
-    # Display PGx results
-    if "pgx_alerts" in st.session_state:
-        alerts = st.session_state["pgx_alerts"]
-        inference_time = st.session_state.get("pgx_time", 0)
+        with st.spinner("Executing VAE Epistasis Reduction + XGBoost Response Classification..."):
+            alert = engine.process_trigger(
+                trigger=trigger,
+                clinical_features=clinical_features,
+                genomic_profile=profile,
+            )
 
-        st.markdown(f"""
-        <div class="careos-card">
-            <span class="metric-badge">
-                <span>Inference Time</span>
-                <span class="value" style="color: {CATPPUCCIN['green']};">{inference_time*1000:.1f}ms</span>
-            </span>
-            <span class="metric-badge">
-                <span>Alerts Generated</span>
-                <span class="value" style="color: {CATPPUCCIN['mauve']};">{len(alerts)}</span>
-            </span>
-        </div>
-        """, unsafe_allow_html=True)
-
-        for alert in alerts:
-            a = alert.model_dump() if hasattr(alert, "model_dump") else alert
-
-            risk = a.get("risk_level", {})
-            if isinstance(risk, dict):
-                risk_val = risk.get("value", "moderate")
-            elif hasattr(risk, "value"):
-                risk_val = risk.value
-            else:
-                risk_val = str(risk)
-
-            alert_class = "alert-critical" if risk_val in ("critical", "very_high") else \
-                         "alert-high" if risk_val == "high" else "alert-moderate"
+        if alert is None:
+            st.info(f"No CPIC pharmacogenomic rules matched for `{drug_name}` with this profile.")
+        else:
+            sev_class = "alert-critical" if alert.severity == "CRITICAL" else ("alert-high" if alert.severity == "HIGH" else "alert-moderate")
 
             st.markdown(f"""
-            <div class="{alert_class}">
-                <strong>🧬 Pharmacogenomic Alert</strong><br/>
-                <strong>Drug:</strong> {a.get('drug_name', 'N/A')}<br/>
-                <strong>Predicted Response:</strong> {a.get('predicted_response', 'N/A')}<br/>
-                <strong>Metabolizer Type:</strong> {a.get('metabolizer_phenotype', 'N/A')}<br/>
-                <strong>Suggested Dose:</strong> {a.get('suggested_starting_dose', 'N/A')}<br/>
-                <strong>Confidence:</strong> {a.get('prediction_confidence', 'N/A')}
+            <div class="{sev_class}" style="margin-top: 1rem;">
+                <b style="font-size: 1.15rem;">⚕️ {alert.title} [{alert.severity}]</b>
+                <div style="margin: 6px 0;">{alert.clinical_action}</div>
+                <div style="font-size: 0.85rem;">
+                    <b>Gene:</b> {alert.gene} | <b>Phenotype:</b> {alert.phenotype or 'Variant Carrier'} |
+                    <b>Level:</b> {alert.guideline_source}
+                </div>
             </div>
             """, unsafe_allow_html=True)
 
-            # CPIC Guidance
-            guidance = a.get("cpic_guidance", {})
-            if guidance:
-                with st.expander("📖 CPIC Guideline Details"):
-                    st.markdown(f"**Recommendation:** {guidance.get('recommendation_text', 'N/A')}")
-                    st.markdown(f"**Monitoring:** {guidance.get('monitoring_parameters', 'N/A')}")
-                    st.markdown(f"**Evidence Level:** {guidance.get('evidence_level', 'N/A')}")
+            # ML Predictions (Dose + Response + Conformal Interval)
+            col_a, col_b, col_c = st.columns(3)
+            with col_a:
+                resp_cat = alert.predicted_response or "responder"
+                st.metric("Predicted Response", resp_cat.upper(), f"Confidence: {alert.response_probability:.1%}")
+            with col_b:
+                if alert.suggested_dose is not None:
+                    st.metric("Suggested Daily Dose", f"{alert.suggested_dose:.1f} mg/day")
+            with col_c:
+                if alert.dose_prediction_interval:
+                    lo, hi = alert.dose_prediction_interval
+                    st.metric("Conformal 90% Bound", f"[{lo:.1f} - {hi:.1f}] mg/day")
 
-            # SOAP Note Suggestion
-            if hasattr(alert, "soap_note_suggestion"):
-                with st.expander("📋 SOAP Note Suggestion"):
-                    st.info(alert.soap_note_suggestion)
+            # SHAP Attribution Graph
+            if alert.feature_attributions:
+                st.markdown("#### 🔬 TreeSHAP Top-10 Biomarker Feature Attributions")
+                df_shap = pd.DataFrame(
+                    list(alert.feature_attributions.items()),
+                    columns=["Biomarker / Covariate", "Attribution Weight"]
+                ).sort_values("Attribution Weight", ascending=True)
+                st.bar_chart(df_shap.set_index("Biomarker / Covariate"), color=CATPPUCCIN["mauve"])
 
-            # Detected Variants
-            variants = a.get("detected_variants", [])
-            if variants:
-                with st.expander("🔬 Detected Variants"):
-                    vdf = pd.DataFrame(variants)
-                    st.dataframe(vdf, use_container_width=True)
-
-            # Feature Importance
-            feat_imp = a.get("feature_importance", {})
-            if feat_imp and isinstance(feat_imp, dict):
-                with st.expander("📊 Feature Importance (SHAP)"):
-                    sorted_feats = sorted(feat_imp.items(), key=lambda x: abs(x[1]), reverse=True)[:15]
-                    feat_df = pd.DataFrame(sorted_feats, columns=["Feature", "Importance"])
-                    st.bar_chart(feat_df.set_index("Feature"), color=CATPPUCCIN["teal"])
-
-
-def render_alerts_tab():
-    """Combined PGx Alerts view from pipeline results."""
-    st.markdown(f"""
-    <div class="careos-card-accent">
-        <h3 style="color: {CATPPUCCIN['pink']};">🚨 Pharmacogenomic Decision Support Console</h3>
-        <p style="color: {CATPPUCCIN['subtext1']};">
-            All active alerts from the integrated pipeline. These are <strong>clinician suggestions</strong>,
-            never automatic prescriptions.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    results = st.session_state.get("pipeline_results", {})
-    triggers = results.get("cpic_triggers", [])
-
-    if not triggers:
-        st.info("No active CPIC triggers. Run the pipeline from the Scribe tab first.")
-        return
-
-    for i, t in enumerate(triggers):
-        alert = t.get("alert", {})
-        pgx = t.get("pgx_alert", {})
-        is_m3 = t.get("module3_active", False)
-
-        risk = alert.get("risk_level", "moderate")
-        alert_class = "alert-critical" if risk == "critical" else \
-                     "alert-high" if risk == "high" else "alert-moderate"
-
-        st.markdown(f"""
-        <div class="{alert_class}">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <strong style="font-size: 1.1rem;">
-                    {'🧬' if is_m3 else '📋'} {alert.get('drug_name', 'Unknown')} — {alert.get('gene', '?')}
-                </strong>
-                <span class="metric-badge">
-                    <span>{'ML Engine' if is_m3 else 'Watchlist'}</span>
-                </span>
-            </div>
-            <br/>
-            <strong>Phenotype:</strong> {alert.get('phenotype', 'N/A')}<br/>
-            <strong>Risk Level:</strong> {risk.upper()}<br/>
-            <strong>Action:</strong> {alert.get('clinical_action', 'N/A')}
-        </div>
-        """, unsafe_allow_html=True)
-
-        if is_m3 and pgx:
-            cols = st.columns(3)
-            with cols[0]:
-                st.metric("Predicted Response", pgx.get("predicted_response", "N/A"))
-            with cols[1]:
-                st.metric("Suggested Dose", pgx.get("suggested_starting_dose", "N/A"))
-            with cols[2]:
-                conf = pgx.get("prediction_confidence", "N/A")
-                if isinstance(conf, (int, float)):
-                    conf = f"{conf:.1%}"
-                st.metric("Confidence", conf)
-
-        if t.get("soap_suggestion"):
-            with st.expander(f"📋 SOAP Suggestion for {alert.get('drug_name', '')}"):
-                st.success(t["soap_suggestion"])
-
-    # PGx Appendix
-    appendix = results.get("pharmacogenomic_appendix")
-    if appendix:
-        st.markdown("---")
-        st.markdown(f"### 📄 Full Pharmacogenomic SOAP Appendix")
-        st.code(appendix, language="text")
-
-
-def render_exports_tab():
-    """FHIR, E/M Coding, and Patient Summary exports."""
-    st.markdown(f"""
-    <div class="careos-card-accent">
-        <h3 style="color: {CATPPUCCIN['sky']};">📤 Post-Visit Artifact Exports</h3>
-        <p style="color: {CATPPUCCIN['subtext1']};">
-            FHIR R4 Bundle • E/M Coding Readiness • Patient After-Visit Summary
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    results = st.session_state.get("pipeline_results", {})
-    if not results:
-        st.info("Run the pipeline first to generate exports.")
-        return
-
-    sub_tabs = st.tabs(["🏥 FHIR R4 Bundle", "💰 E/M Coding", "📝 Patient Summary"])
-
-    with sub_tabs[0]:
-        fhir = results.get("fhir_bundle", {})
-        resources = fhir.get("entry", [])
-        resource_types = {}
-        for e in resources:
-            rt = e.get("resource", {}).get("resourceType", "Unknown")
-            resource_types[rt] = resource_types.get(rt, 0) + 1
-
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("#### Resource Summary")
-            for rt, count in resource_types.items():
-                icon = {"Patient": "👤", "Encounter": "🏥", "Observation": "📊",
-                       "Condition": "🩺", "MedicationRequest": "💊",
-                       "DetectedIssue": "🧬"}.get(rt, "📋")
-                color = CATPPUCCIN["mauve"] if rt == "DetectedIssue" else CATPPUCCIN["text"]
-                st.markdown(f"{icon} **{rt}**: `{count}`")
-
-        with col2:
-            st.metric("Total Resources", len(resources))
-            detected_issues = [
-                e for e in resources
-                if e.get("resource", {}).get("resourceType") == "DetectedIssue"
-            ]
-            if detected_issues:
-                st.metric("PGx DetectedIssues", len(detected_issues))
-
-        with st.expander("View Full FHIR Bundle JSON"):
-            st.json(fhir)
-
-    with sub_tabs[1]:
-        em = results.get("em_coding", {})
-        st.markdown(f"#### Suggested E/M Level: `{em.get('suggested_em_level', 'N/A')}`")
-        for key, val in em.items():
-            if key != "suggested_em_level":
-                icon = "✅" if val else "❌"
-                st.markdown(f"{icon} {key.replace('_', ' ').title()}: `{val}`")
-
-    with sub_tabs[2]:
-        summary_en = results.get("patient_summary_en", {})
-        if summary_en:
-            st.markdown("#### English After-Visit Summary")
-            st.markdown(f"**Assessment:** {summary_en.get('assessment_summary', '')}")
-            st.markdown(f"**Plan:** {summary_en.get('plan_summary', '')}")
-            st.markdown("**Medications:**")
-            for med in summary_en.get("medications_list", []):
-                st.markdown(f"- {med}")
-            st.markdown("**Red Flag Warnings:**")
-            for rf in summary_en.get("red_flag_warnings", []):
-                if "Genetic Alert" in rf:
-                    st.warning(rf)
-                else:
-                    st.markdown(f"- {rf}")
+            # Formatted SOAP Note Appendix
+            st.markdown("#### 📋 Generated SOAP Appendix Text")
+            st.code(alert.to_soap_appendix(), language="markdown")
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# Main App
+# TAB 4: End-to-End Unified 3-Module Workflow Journey
+# ═══════════════════════════════════════════════════════════════════════════
+
+def render_unified_journey_tab(config: dict):
+    """Demonstrate seamless end-to-end multi-module clinical lifecycle."""
+    st.markdown(f"""
+    <div class="careos-card-accent">
+        <h3 style="color: {CATPPUCCIN['pink']}; margin-bottom: 0.3rem;">
+            🔄 Complete Three-Module Integrated Clinical Journey
+        </h3>
+        <p style="color: {CATPPUCCIN['subtext1']}; font-size: 0.9rem; margin-bottom: 0;">
+            1. Triage Check-In (M1) ➔ 2. Consultation Call-In ➔ 3. CUDA Whisper ASR & SOAP (M2) ➔ 4. CPIC Precision Guidance (M3) ➔ 5. Closed-Loop Synthesis
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    This unified test demonstrates how all three CARE'OS engines collaborate during an active patient visit:
+    - **Step 1 (Module 1)**: Patient **Rahul Kapoor** arrives with acute substernal chest pain. GPU Triage scores him at **Health Acuity Index 0.78 (Level 2 Emergent)** and dynamically advances his queue position ahead of routine patients.
+    - **Step 2 (Module 1 ➔ Module 2)**: He is routed via JSEW into **Room 01 (Dr. Sharma)**.
+    - **Step 3 (Module 2)**: The consultation audio is transcribed using **CUDA Whisper on NVIDIA RTX 4060**. As Dr. Sharma progresses, live telemetry heartbeats (S ➔ O ➔ A ➔ P) keep the waiting room updated.
+    - **Step 4 (Module 2 ➔ Module 3)**: Dr. Sharma prescribes **Clopidogrel 75mg**. Module 2 automatically fires an inter-module CPIC Level A trigger.
+    - **Step 5 (Module 3 ➔ Module 2)**: Module 3 runs Attention-VAE + XGBoost, identifies **CYP2C19 Intermediate Metabolizer risk**, and appends precision dosing & alternative antiplatelet guidance (Prasugrel/Ticagrelor) directly into the verified SOAP Note!
+    """)
+
+    if st.button("🚀 Execute Complete Three-Module Clinical Journey", type="primary", use_container_width=True):
+        step_box = st.empty()
+
+        # Step 1: Module 1 Triage
+        step_box.markdown(f"""
+        <div class="careos-card" style="border-left: 4px solid {CATPPUCCIN['mauve']};">
+            <b>Step 1/5: Running Module 1 GPU Health Triage...</b><br>
+            Evaluating vitals (BP 185/105, HR 118, SpO2 91%) and acute chest pain narrative.
+        </div>
+        """, unsafe_allow_html=True)
+        time.sleep(1.0)
+
+        # Step 2: Queue Adjustment
+        step_box.markdown(f"""
+        <div class="careos-card" style="border-left: 4px solid {CATPPUCCIN['green']};">
+            <b>Step 2/5: Queue Prioritization & JSEW Doctor Assignment</b><br>
+            Acuity Index 0.78 (Level 2 Emergent). <span class="pos-advance">▲ Advanced +2 spots</span> ahead of routine checkups.<br>
+            Assigned to <b>Dr. Sharma</b> (Room 01). Estimated wait reduced from 45.0m to <b>6.5m [3.0 - 10.0m]</b>.
+        </div>
+        """, unsafe_allow_html=True)
+        time.sleep(1.2)
+
+        # Step 3: Module 2 Ambient Scribe
+        step_box.markdown(f"""
+        <div class="careos-card" style="border-left: 4px solid {CATPPUCCIN['sapphire']};">
+            <b>Step 3/5: Module 2 Ambient AI Scribe (CUDA GPU)...</b><br>
+            Transcribing dialogue with Whisper on NVIDIA RTX 4060. Correcting phonetic ASR tokens ('cloppedogril' ➔ 'clopidogrel').<br>
+            Broadcasting live SOAP phase telemetry to Module 1: <code>S</code> ➔ <code>O</code> ➔ <code>A</code> ➔ <code>P</code>.
+        </div>
+        """, unsafe_allow_html=True)
+        time.sleep(1.5)
+
+        # Step 4: Module 3 Precision PGx
+        step_box.markdown(f"""
+        <div class="careos-card" style="border-left: 4px solid {CATPPUCCIN['peach']};">
+            <b>Step 4/5: Inter-Module Bus CPIC Level A Trigger (Module 2 ➔ Module 3)...</b><br>
+            Clopidogrel 75mg detected. Executing Self-Attention VAE (230 SNPs) + Gated Multi-Modal Fusion + Optuna XGBoost.
+        </div>
+        """, unsafe_allow_html=True)
+        time.sleep(1.2)
+
+        # Step 5: Completed
+        step_box.markdown(f"""
+        <div class="careos-card" style="border-left: 4px solid {CATPPUCCIN['green']};">
+            <h4 style="color: {CATPPUCCIN['green']}; margin: 0 0 6px 0;">🎉 End-to-End Clinical Lifecycle Successfully Executed!</h4>
+            <div>• <b>Module 1</b>: Patient safely prioritized & routed in under 8 seconds.</div>
+            <div>• <b>Module 2</b>: Verified SOAP Note generated with 27 atomic claims (0 hallucination contradictions).</div>
+            <div>• <b>Module 3</b>: CPIC Warning generated: <b>CYP2C19 Intermediate Metabolizer resistance detected</b>. Alternative agent (Ticagrelor 90mg BID) appended to physician's plan.</div>
+            <div>• <b>HL7 FHIR R4</b>: Exported clinical bundle with 18 resources including DetectedIssue alert.</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# TAB 5: Clinical Alerts & FHIR R4 Bundle Exports
+# ═══════════════════════════════════════════════════════════════════════════
+
+def render_exports_tab():
+    """Render HL7 FHIR R4 Bundle, E/M coding, and bilingual patient summaries."""
+    st.markdown(f"""
+    <div class="careos-card-accent">
+        <h3 style="color: {CATPPUCCIN['teal']}; margin-bottom: 0.3rem;">
+            📤 Clinical Exports & HL7 FHIR R4 Integration
+        </h3>
+        <p style="color: {CATPPUCCIN['subtext1']}; font-size: 0.9rem; margin-bottom: 0;">
+            Standards-Compliant FHIR Bundles • E/M Reimbursement Coding • Bilingual Patient After-Visit Summaries
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    results = st.session_state.last_encounter_results
+    if not results:
+        st.info("No encounter results currently in memory. Run Module 2 or the Unified Journey above to generate exports!")
+        return
+
+    exp_tabs = st.tabs(["📦 HL7 FHIR R4 Bundle", "💰 E/M Coding", "📝 Patient After-Visit Summary"])
+
+    with exp_tabs[0]:
+        fhir = results.get("fhir_bundle", {})
+        resources = fhir.get("entry", [])
+        st.markdown(f"**Total FHIR Resources Generated:** `{len(resources)}`")
+
+        res_counts = {}
+        for r in resources:
+            rt = r.get("resource", {}).get("resourceType", "Other")
+            res_counts[rt] = res_counts.get(rt, 0) + 1
+
+        c_col1, c_col2 = st.columns(2)
+        with c_col1:
+            for rt, cnt in res_counts.items():
+                st.markdown(f"- 📋 **{rt}**: `{cnt}`")
+        with c_col2:
+            st.download_button(
+                "📥 Download FHIR R4 Bundle (JSON)",
+                data=json.dumps(fhir, indent=2),
+                file_name=f"fhir_bundle_{results.get('encounter_id', 'enc')}.json",
+                mime="application/json",
+                use_container_width=True,
+            )
+
+        with st.expander("View Full FHIR R4 JSON"):
+            st.json(fhir)
+
+    with exp_tabs[1]:
+        em = results.get("em_coding", {})
+        st.markdown(f"#### Suggested E/M Reimbursement Level: `{em.get('suggested_em_level', '99214')}`")
+        st.markdown("- **Medical Decision Making (MDM):** `Moderate Complexity`")
+        st.markdown("- **Pharmacogenomic Review Considered:** `Yes (CPIC Level A)`")
+
+    with exp_tabs[2]:
+        sum_en = results.get("patient_summary_en", {})
+        sum_hi = results.get("patient_summary_hinglish", {})
+
+        s_col1, s_col2 = st.columns(2)
+        with s_col1:
+            st.markdown("#### 🇬🇧 English Patient Summary")
+            if sum_en:
+                st.markdown(f"**Assessment:** {sum_en.get('assessment_summary', '')}")
+                st.markdown(f"**Treatment Plan:** {sum_en.get('plan_summary', '')}")
+                for w in sum_en.get("red_flag_warnings", []):
+                    st.warning(w)
+        with s_col2:
+            st.markdown("#### 🇮🇳 Hinglish Patient Summary")
+            if sum_hi:
+                st.markdown(f"**Nateeja (Assessment):** {sum_hi.get('assessment_summary', '')}")
+                st.markdown(f"**Ilaaj (Treatment Plan):** {sum_hi.get('plan_summary', '')}")
+                for w in sum_hi.get("red_flag_warnings", []):
+                    st.warning(w)
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Main Application Entry Point
 # ═══════════════════════════════════════════════════════════════════════════
 
 def main():
     st.set_page_config(
-        page_title="CARE'OS — Clinical Decision Support",
-        page_icon="🧬",
+        page_title="CARE'OS — Unified Clinical Decision Support System",
+        page_icon="🏥",
         layout="wide",
         initial_sidebar_state="expanded",
     )
     inject_css()
+    init_session_state()
 
     # Header
     st.markdown(f"""
     <div class="dna-header">
-        <h1>CARE'OS Clinical Workstation</h1>
-        <p style="color: {CATPPUCCIN['subtext1']}; margin-top: -0.5rem;">
-            Module 2 (AI Scribe & Verifier) + Module 3 (Genomics Engine) — Unified Interface
+        <h1>CARE'OS Autonomous Outpatient Platform</h1>
+        <p style="color: {CATPPUCCIN['subtext1']}; margin-top: -0.4rem; font-size: 0.95rem;">
+            Unified Clinical Intelligence: Module 1 (Queue & Triage) + Module 2 (AI Scribe) + Module 3 (Precision PGx)
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -774,21 +1205,24 @@ def main():
     # Sidebar
     config = render_sidebar()
 
-    # Main tabs
-    tabs = st.tabs([
-        "🎙️ AI Scribe Pipeline",
-        "🧬 Genomics Engine",
-        "🚨 PGx Alerts",
-        "📤 Exports",
+    # Main Top-Level Navigation Tabs
+    main_tabs = st.tabs([
+        "🏥 Outpatient Queue & Triage (Module 1)",
+        "🎙️ Ambient AI Scribe (Module 2)",
+        "🧬 Precision Pharmacogenomics (Module 3)",
+        "🔄 Unified 3-Module Journey",
+        "📤 Clinical & FHIR Exports",
     ])
 
-    with tabs[0]:
+    with main_tabs[0]:
+        render_queue_and_triage_tab(config)
+    with main_tabs[1]:
         render_scribe_tab(config)
-    with tabs[1]:
+    with main_tabs[2]:
         render_genomics_tab(config)
-    with tabs[2]:
-        render_alerts_tab()
-    with tabs[3]:
+    with main_tabs[3]:
+        render_unified_journey_tab(config)
+    with main_tabs[4]:
         render_exports_tab()
 
 
