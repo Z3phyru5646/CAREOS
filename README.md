@@ -1,249 +1,227 @@
 <div align="center">
 
-# 🧬 CARE'OS — Integrated Clinical Decision Support System
+# 🏥 CARE'OS — Clinical AI Real-time Evaluation & Operations System
+### Unified Three-Module Autonomous Outpatient Intelligence Platform
 
-### Module 2: Ambient AI Scribe & 2nd-Pass Verifier
-### Module 3: Genomics-Informed Treatment Recommendation Engine
-
-*Speech-to-Text • Clinical NLP • NLI Hallucination Verification • Deep Attention-VAE • Precision Pharmacogenomics*
+*Dynamic Outpatient Queue Management • Ambient Clinical AI Scribe • Precision Pharmacogenomics*
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![CUDA Accelerated](https://img.shields.io/badge/CUDA-12.0%20%7C%20RTX%204060-success.svg)](https://developer.nvidia.com/cuda-zone)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
 [![XGBoost](https://img.shields.io/badge/XGBoost-2.0+-brightgreen.svg)](https://xgboost.readthedocs.io/)
-[![CPIC](https://img.shields.io/badge/CPIC-Level%20A-purple.svg)](https://cpicpgx.org/)
-[![FHIR R4](https://img.shields.io/badge/HL7-FHIR%20R4-firebrick.svg)](https://hl7.org/fhir/R4/)
-[![Tests Passing](https://img.shields.io/badge/Tests-62%20Passed%20(100%25)-success.svg)](tests/)
+[![CPIC Level A](https://img.shields.io/badge/CPIC-Level%20A%20%26%20B-purple.svg)](https://cpicpgx.org/)
+[![HL7 FHIR R4](https://img.shields.io/badge/HL7-FHIR%20R4%20Compliant-firebrick.svg)](https://hl7.org/fhir/R4/)
+[![Tests Passing](https://img.shields.io/badge/Tests-69%20Passed%20(100%25)-success.svg)](tests/)
 
 </div>
 
 ---
 
-> **⚕️ CLINICAL USE BOUNDARY**: This software is clinical decision support for clinician review only. It is **NEVER** an automatic prescription system, diagnostic tool, or autonomous agent. All pharmacogenomic alerts and draft notes are suggestions requiring independent clinician sign-off.
+> **⚕️ CLINICAL DECISION SUPPORT BOUNDARY**: CARE'OS is designed strictly as assistive decision support for credentialed clinicians. It is **NEVER** an autonomous diagnostic tool or automatic prescription generator. All triage scores, queue adjustments, transcribed SOAP notes, and pharmacogenomic recommendations are non-blocking suggestions requiring independent clinical verification and physician sign-off.
 
 ---
 
-## 🏗️ Integrated System Architecture
+## 🌟 System Overview & Three-Module Architecture
 
-CARE'OS connects Module 2 (AI Scribe) and Module 3 (Genomics Engine) via a high-throughput, low-latency in-process event bus (`InterModuleBus`):
+CARE'OS unifies three interconnected, high-performance clinical intelligence engines into a single outpatient operations platform:
 
 ```
-                                  CLINICAL AUDIO (WAV / MP3)
-                                              │
-                                              ▼
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        MODULE 2: AMBIENT AI SCRIBE & VERIFIER                         │
-│                                                                                        │
-│  Stage 1: Audio Pipeline        Stage 2: Medical ASR Post-Correction                   │
-│  WhisperX + pyannote diarization ──► Phonetic + Levenshtein + RxNorm Grounding         │
-│                                              │                                         │
-│                                              ▼                                         │
-│                                 Stage 3: Clinical NLP & SOAP Note                     │
-│                                 Med7 Posology Extractor + Constrained Pydantic Schema  │
-│                                 (Chief Complaint, Diagnoses, Medications, Vitals)      │
+│               MODULE 1: OUTPATIENT QUEUE & HEALTH-STATUS TRIAGE PREDICTOR              │
+│  • Patient Arrival & Check-In (Vitals: SpO2, SBP/DBP, HR, RR, Temp, Pain 0-10)         │
+│  • GPU Clinical Health-Status Triage Engine (NEWS2/qSOFA + GPU Semantic Complaint NLP) │
+│  • Dynamic Starvation-Free Priority Queue Position Adjustment (HAI + Aging Factor)     │
+│  • Multi-Doctor Join-the-Shortest-Expected-Workload (JSEW) Dynamic Routing             │
+│  • Conformalized Quantile Regression (CQR) Wait-Time Predictions (90% Confidence CI)  │
 └──────────────────────────────────────────────┬─────────────────────────────────────────┘
                                                │
-                                               │ Trigger Keys (ICD-10 Codes + Drug Names)
+                                               │ 1. Patient Called to Consultation Room
                                                ▼
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                      INTER-MODULE BUS (CPIC Level A Event Bridge)                       │
-│  • Matches prescribed medications against CPIC Level 1A watchlist                     │
-│  • Intercepts clinical lab telemetry & patient genomic profile                         │
-│  • Fires real ML analysis to Module 3 in <10ms                                         │
+│                        MODULE 2: AMBIENT AI SCRIBE & VERIFIER                          │
+│  • Stage 1: Audio Preprocessing & Diarization + Whisper on CUDA (NVIDIA RTX 4060)      │
+│  • Stage 2: Medical ASR Post-Correction with RxNorm Phonetic Grounding                 │
+│  • Stage 3: Clinical NLP Posology Extraction & Constrained Section-by-Section SOAP     │
+│  • Stage 4: Dual-Tier 2nd-Pass Verification (Literal vs. Inference Hallucination)      │
+│  • Live SOAP Stage Telemetry Dispatcher: S ➔ O ➔ A ➔ P updates Module 1 in real time   │
 └──────────────────────────────────────────────┬─────────────────────────────────────────┘
                                                │
+                                               │ 2. Extracted Prescriptions (CPIC Level A Trigger)
                                                ▼
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                      MODULE 3: PHARMACOGENOMICS ML ENGINE                              │
-│                                                                                        │
-│  ┌─────────────────────────┐  ┌───────────────────────────┐  ┌──────────────────────┐  │
-│  │  High-Dimensional SNPs  │  │  Clinical Lab Features    │  │  Gene Expression     │  │
-│  │  (0, 1, or 2 alleles)   │  │  (Age, CrCl, ALT/AST, INR)│  │  (CYP2C9, CYP2C19...)│  │
-│  └────────────┬────────────┘  └─────────────┬─────────────┘  └──────────┬───────────┘  │
-│               │                             │                           │              │
-│      ┌────────▼────────┐                    │                           │              │
-│      │ PyTorch Attention│                    │                           │              │
-│      │ VAE (Latent z)  │                    │                           │              │
-│      └────────┬────────┘                    │                           │              │
-│               │                             │                           │              │
-│               └───────────────┬─────────────┴───────────────────────────┘              │
-│                               ▼                                                        │
-│                  Cross-Attention Multi-Modal Fusion                                    │
-│                               │                                                        │
-│                ┌──────────────┴──────────────┐                                         │
-│                ▼                             ▼                                         │
-│      Optuna-Tuned XGBoost         Gradient Boosting Regressor                          │
-│      (Responder / Adverse Risk)   (Optimal Dose + 90% Conformal CI)                    │
-│                │                             │                                         │
-│                └──────────────┬──────────────┘                                         │
-│                               ▼                                                        │
-│                 SHAP Explainer + CPIC Knowledge Base                                   │
+│                      MODULE 3: PRECISION PHARMACOGENOMICS ML ENGINE                    │
+│  • High-Dimensional SNP Genotypes (230+ Loci) ➔ PyTorch Self-Attention VAE (Latent z)  │
+│  • Gated Cross-Attention Multi-Modal Fusion (Genomics + Transcriptomics + Lab Vitals)  │
+│  • Bayesian-Tuned XGBoost Drug Response Classifier (Responder / Adverse Risk)          │
+│  • Gradient Boosting Starting Dose Regressor + 90% Conformal Prediction Intervals      │
+│  • TreeSHAP Top-10 Biomarker Feature Attributions & Curated 9-Panel CPIC Knowledge Base│
 └──────────────────────────────────────────────┬─────────────────────────────────────────┘
                                                │
+                                               │ 3. Closed-Loop Clinical Synthesis
                                                ▼
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                       ENRICHED CLINICAL ARTIFACTS & EXPORTS                            │
-│                                                                                        │
-│  1. Draft SOAP Note: Appends atomic claims `[PGx Decision Support]` to Plan            │
-│  2. PGx SOAP Appendix: Comprehensive variant, phenotype, confidence, and CI report     │
-│  3. Stage 4 Verifier: Dual-tier 2nd-pass MedNLI + DeBERTa-v3 verification              │
-│  4. FHIR R4 Bundle: Generates `DetectedIssue` resources for active PGx alerts          │
-│  5. Patient Summary: Bilingual (EN / Hinglish) personalized medication warnings        │
+│                       UNIFIED CLINICAL ARTIFACTS & EXPORTS                             │
+│  1. Enriched Verified SOAP Note: Injects `[PGx Decision Support]` directly into Plan   │
+│  2. Dynamic Waiting Room Sync: Live consultation progress recalculates queue wait times│
+│  3. HL7 FHIR R4 Bundle: Exports Patient, Encounter, Observation, & DetectedIssue alerts│
+│  4. E/M Reimbursement Coding: Computes suggested medical complexity level (e.g., 99214)│
+│  5. Bilingual Patient Summaries: English & Hinglish personalized after-visit summaries │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🚀 Quick Start & Execution
+## 🔬 Detailed Module Capabilities
 
-### 1. Installation
+### Module 1: Outpatient Queue & Health Triage Predictor
+* **Clinical Health-Status Triage Engine** (`src/features/health_triage_engine.py`):
+  * Runs on dedicated GPU (`cuda:0`, NVIDIA GeForce RTX 4060).
+  * Evaluates physiological derangements across blood pressure, heart rate, oxygen saturation ($SpO_2$), respiratory rate, temperature, and pain score.
+  * Evaluates narrative clinical presentations against emergency prototype manifolds (STEMI/ACS, Stroke, Severe Asthma, Sepsis, Hemorrhage) to compute a continuous **Health Acuity Index (HAI)** $\in [0.0, 1.0]$ and map ESI levels (1–5).
+* **Dynamic Anti-Starvation Queue Adjustment**:
+  * Prioritizes patients dynamically using:
+    $$\text{PriorityScore}_i(t) = 0.65 \cdot \text{HAI}_i + 0.35 \cdot \left(\frac{t - t_{\text{checkin}, i}}{T_{\text{max\_target}}(\text{ESI}_i)}\right)$$
+  * High-acuity patients advance forward in queue ($\uparrow +2$ or $+3$ spots), while linear aging prevents starvation of routine follow-up patients.
+* **JSEW Workload Balancing & Conformal Wait Times**:
+  * Balances patient loads across multi-doctor clinic rooms using Join-the-Shortest-Expected-Workload (JSEW).
+  * Computes distribution-free 90% prediction intervals $[t_{\text{lower}}, t_{\text{upper}}]$.
+
+### Module 2: Ambient AI Scribe & 2nd-Pass Verifier
+* **GPU-Accelerated Speech-to-Text**:
+  * Transcribes real consultation audio with OpenAI Whisper on CUDA with automatic float32 formatting and silence detection.
+* **Stage 2 RxNorm Phonetic Post-Correction**:
+  * Resolves accented/ASR misspellings into normalized RxNorm entities:
+    * `cloppedogril` / `clopadogral` $\rightarrow$ `clopidogrel` (RxCUI C0070166)
+    * `ompresol` / `pantoprasal` $\rightarrow$ `omeprazole` / `pantoprazole`
+    * `adorvastatin` $\rightarrow$ `atorvastatin`
+    * `ecosprin` $\rightarrow$ `aspirin`
+    * `tick a griller` $\rightarrow$ `ticagrelor`
+* **Stage 3 Clinical NLP & Section-by-Section SOAP**:
+  * Deterministically extracts symptoms, pertinent negatives, vitals, and medications.
+  * Generates schema-constrained atomic claims across Subjective, Objective, Assessment, and Plan.
+* **Stage 4 Dual-Tier 2nd-Pass Verification**:
+  * Evaluates atomic claims against transcript source utterances across 5 tiers (T1 Verbatim, T2 Terminology, T3 Inference, T4 Unsupported, T5 Contradiction).
+  * Distinguishes between literal and clinically acceptable inference-aware hallucination rates.
+* **Real-time SOAP Telemetry Webhook**:
+  * Emits live consultation phase heartbeats (`S` $\rightarrow$ `O` $\rightarrow$ `A` $\rightarrow$ `P`) directly to Module 1, ensuring accurate remaining time estimates for waiting room patients.
+
+### Module 3: Precision Pharmacogenomics ML Engine
+* **Self-Attentive Variational Autoencoder (VAE)**:
+  * Epistatic dimensionality reduction compressing 230+ discrete SNP alleles ($0, 1, 2$) into a smooth 16-dimensional latent manifold $z \sim \mathcal{N}(\mu, \sigma^2)$ using multi-head self-attention and cyclical KL annealing.
+* **Gated Cross-Attention Multi-Modal Fusion**:
+  * Dynamically weights latent genomics, transcriptomic gene expression, and tabular physiological indicators (CrCl, eGFR, AST, ALT, total bilirubin, baseline INR, age, weight).
+* **Bayesian-Optimized Drug Response Classification**:
+  * Optuna-tuned XGBoost classifier predicting multi-class patient outcomes (Responder, Non-Responder, Adverse Event Risk) with calibrated posterior probabilities.
+* **Conformal Dose Regression**:
+  * Gradient boosting continuous starting dose prediction bounded by non-parametric distribution-free 90% conformal prediction intervals.
+* **Curated 9-Panel CPIC Guideline Knowledge Base**:
+  * Warfarin (`CYP2C9`, `VKORC1`, `CYP4F2`)
+  * Clopidogrel (`CYP2C19`)
+  * Codeine / Tramadol (`CYP2D6`)
+  * Simvastatin (`SLCO1B1`, `ABCG2`)
+  * Fluoropyrimidines / 5-FU (`DPYD`)
+  * Azathioprine / 6-MP (`TPMT`, `NUDT15`)
+  * Tacrolimus (`CYP3A5`)
+  * SSRIs / Paroxetine (`CYP2D6`, `CYP2C19`)
+  * PPIs / Omeprazole (`CYP2C19`)
+
+---
+
+## 🚀 Quick Start & Launch Instructions
+
+### 1. Environment Setup
 
 ```bash
-# Clone the repository and checkout the integrated branch
+# Clone the repository
 git clone https://github.com/Z3phyru5646/CAREOS.git
 cd CAREOS
-git checkout Genomic-Treatment-Recommendation
 
-# Install dependencies (Python 3.10+ recommended)
-pip install torch xgboost optuna shap scikit-learn pydantic streamlit fastapi soundfile pyyaml
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-### 2. Run Integrated Pipeline Demo (CLI)
+### 2. Launch the Unified Catppuccin Workstation UI
 
-Run the full end-to-end clinical workflow from simulated audio through transcript, verifier, genomics engine, and FHIR export:
-
-```bash
-python run_integrated_careos.py
+```powershell
+python -m streamlit run integrated_dashboard.py
 ```
 
-Options:
-```bash
-python run_integrated_careos.py --audio path/to/consultation.wav   # Custom audio
-python run_integrated_careos.py --patient-id PT-10492              # Specific patient
-python run_integrated_careos.py --language hinglish                # Hinglish code-switching
-python run_integrated_careos.py --dashboard                        # Launch Streamlit GUI
-```
+The unified dashboard features 5 cohesive navigation tabs:
+1. **🏥 Outpatient Queue & Triage (Module 1)**: Live doctor workstations, patient check-in with vitals and quick presets (🚨 Acute Cardiac, ⚡ Stroke Alert, 🩺 Asthma, 📋 Routine), and the dynamic health-adjusted queue.
+2. **🎙️ Ambient AI Scribe (Module 2)**: Audio consultation upload with CUDA Whisper, phonetic drug corrections, and verified SOAP notes.
+3. **🧬 Precision Pharmacogenomics (Module 3)**: Standalone CPIC Level A trigger engine, VAE latent epistasis, and TreeSHAP attribution.
+4. **🔄 Unified 3-Module Journey**: One-click complete clinical lifecycle (Triage $\rightarrow$ Scribe $\rightarrow$ Telemetry $\rightarrow$ Genomic Alert $\rightarrow$ Final Care Package).
+5. **📤 Clinical & FHIR Exports**: HL7 FHIR R4 bundles, E/M coding, and bilingual English/Hinglish summaries.
 
-### 3. Launch Unified Catppuccin Clinical Workstation
+### 3. (Optional) Run the Module 1 FastAPI REST API
 
-Launch the unified Streamlit clinical workstation featuring the **Catppuccin Mocha** palette:
-
-```bash
-streamlit run integrated_dashboard.py
-```
-
-Access the UI at `http://localhost:8501`:
-- **Tab 1: 🎙️ AI Scribe Pipeline** — Real-time audio upload, diarization, SOAP note, and claim verification
-- **Tab 2: 🧬 Genomics Engine** — Standalone trigger console, SNP sliders, SHAP attribution plots, and dose CI
-- **Tab 3: 🚨 PGx Alerts** — Clinician decision-support console with severity badges and full SOAP appendices
-- **Tab 4: 📤 Exports** — HL7 FHIR R4 document bundle (`DetectedIssue`), E/M coding readiness, and After-Visit Summary
-
-### 4. Standalone Module 3 Engine Runner
-
-```bash
-python run_demo.py          # Full synthetic cohort demo
-python run_demo.py --fast   # Fast demo (fewer iterations)
+```powershell
+uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 ---
 
-## 🧪 Comprehensive Test Suite (62/62 Passing)
+## 🧪 Verification & Automated Test Suite
 
-The repository features 100% passing test coverage across all subsystems:
+Run all **69 unit and integration tests** verifying cross-module interoperability:
 
-```bash
+```powershell
 python -m unittest discover tests -v
 ```
 
-| Test Suite | File | Tests | Status |
-|------------|------|-------|--------|
-| **Module 3 Unit Tests** | `tests/test_careos_advanced.py` | 27 | ✅ 27 Passed |
-| **Module 3 Integration** | `tests/test_genomics_engine.py` | 3 | ✅ 3 Passed |
-| **Module 2 Unit Tests** | `tests/test_pipeline_unittest.py` | 5 | ✅ 5 Passed |
-| **Module 2 Verification** | `tests/test_pipeline.py` | 14 | ✅ 14 Passed |
-| **Integrated E2E Pipeline** | `tests/test_integrated_pipeline.py` | 13 | ✅ 13 Passed |
-| **TOTAL** | — | **62** | **✅ 100% PASSING** |
-
----
-
-## 🧬 Key Innovations
-
-### 1. Multi-Head Attention Variational Autoencoder (VAE)
-- Compresses 200+ single nucleotide polymorphisms (SNPs) into a 16-dimensional dense latent vector.
-- Self-attention blocks model epistatic non-linear gene interactions ($CYP2C9 \times VKORC1$).
-- Cyclical KL annealing prevents posterior collapse.
-
-### 2. Multi-Modal Cross-Attention Fusion
-- Cross-attends genomic latent representations against clinical lab markers ($Age, Weight, CrCl, ALT, AST, INR$).
-- Gated residual bypass prevents genomic feature dilution in patients with normal organ function.
-
-### 3. Conformal Prediction Dose Regression
-- Predicts optimal initial starting doses with distribution-free 90% confidence intervals ($[lower, upper]$).
-- Conformal guarantees provide safety bounds for critical anticoagulants (warfarin) and immunosuppressants.
-
-### 4. Dual-Pass Hallucination Verification
-- Tier 1: Lexical verbatim string matching.
-- Tier 2: Ontology grounding (RxNorm / UMLS / SNOMED CT).
-- Tier 3: DeBERTa-v3 NLI inference verification.
-- Distinguishes permissible clinical inferences from literal hallucinations.
-
-### 5. HL7 FHIR R4 Interoperability
-- Maps active PGx warnings into FHIR R4 `DetectedIssue` resources linked to the patient's `Encounter`.
-- Includes evidence detail with gene symbol, metabolizer phenotype, predicted response category, and conformal dose interval.
-
----
-
-## 🎨 Catppuccin Mocha UI Palette
-
-The unified interface is crafted in the soothing, high-contrast Catppuccin Mocha theme:
-
-| Role | Color | Hex Code | Purpose |
-|------|-------|----------|---------|
-| **Primary Accent** | Mauve | `#cba6f7` | Active triggers, ML badges, DNA header |
-| **Secondary Accent** | Sapphire | `#74c7ec` | Clinical scribe, audio timestamps |
-| **Success** | Green | `#a6e3a1` | Responder phenotype, Tier 1 verbatim claims |
-| **Warning** | Yellow / Peach | `#f9e2af` / `#fab387` | Moderate risk, Intermediate metabolizers |
-| **Critical Alert** | Red | `#f38ba8` | Contraindications, adverse risk, Poor metabolizers |
-| **Dark Base** | Base / Mantle | `#1e1e2e` / `#181825` | Ergonomic dark-mode workspace background |
-
----
-
-## 📦 Directory Structure
-
-```
-├── careos_genomics/               # Module 3 Core ML Package
-│   ├── autoencoder.py             # PyTorch Self-Attention VAE
-│   ├── fusion.py                  # Multi-Modal Cross-Attention Fusion
-│   ├── engine.py                  # GenomicsEngine Orchestrator
-│   ├── knowledge_base.py          # CPIC Level A Rules & Guidelines
-│   ├── data_models.py             # Pydantic Schemas & DTOs
-│   ├── synthetic_data.py          # Synthetic PGx Cohort Generator
-│   └── dashboard.py               # Standalone Module 3 Streamlit App
-├── module2_careos/                # Module 2 Scribe & Verifier Package
-│   ├── stage1_audio/              # Audio ingestion & diarization
-│   ├── stage2_correction/         # Medical ASR post-correction
-│   ├── stage3_clinical_nlp/       # Med7 clinical entity extraction & SOAP
-│   ├── stage4_verifier/           # Dual-tier 2nd-pass verification
-│   ├── stage5_export/             # FHIR R4, E/M coding, patient summary
-│   ├── inter_module_bus/          # Bidirectional CPIC & telemetry bus
-│   ├── copilot/                   # Clinical Co-Pilot Whisperer
-│   └── main.py                    # Module 2 Pipeline Orchestrator
-├── tests/                         # Full Unified Test Suite
-│   ├── test_careos_advanced.py    # Module 3 advanced tests
-│   ├── test_genomics_engine.py    # Module 3 integration tests
-│   ├── test_pipeline_unittest.py  # Module 2 unit tests
-│   ├── test_pipeline.py           # Module 2 integration tests
-│   └── test_integrated_pipeline.py# Integrated Module 2+3 E2E tests
-├── data/                          # Sample Audio & Clinical Datasets
-│   ├── sample_audio/demo.wav      # Sample clinical consultation
-│   └── output/                    # Pipeline JSON results
-├── integrated_dashboard.py        # Unified Streamlit Workstation
-├── run_integrated_careos.py       # Integrated Pipeline CLI Runner
-├── run_demo.py                    # Standalone Module 3 Demo Runner
-└── README.md                      # Complete System Documentation
+```text
+Ran 69 tests in 59.196s
+OK
+  [Module 1 OK] JSEW Doctor: 0 | Wait: 0.0m [0, 8.0]
+  [Module 2 -> Module 1 OK] Telemetry emitted successfully for Room 0 -> PLAN phase
+  [Module 2 -> Module 3 OK] CPIC Trigger fired for Clopidogrel -> Gene ['CYP2C19']
 ```
 
 ---
 
-## 📜 Clinical Disclaimer & Licensing
+## 📦 Repository Structure
 
-CARE'OS is an open-source clinical research prototype. Pharmacogenomic guidance is strictly based on published [CPIC Guidelines](https://cpicpgx.org/) and [PharmGKB](https://www.pharmgkb.org/). All clinical recommendations must be reviewed and verified by a licensed healthcare professional before prescribing.
+```text
+CAREOS/
+├── configs/
+│   └── clinic_config.py             # Clinic parameters, doctor pacing, and simulation configs
+├── careos_genomics/                 # MODULE 3: Precision Pharmacogenomics ML Engine
+│   ├── autoencoder.py               # Self-Attentive PyTorch VAE for SNP epistasis
+│   ├── dashboard.py                 # Standalone Catppuccin Streamlit dashboard for Module 3
+│   ├── data_models.py               # Pydantic data schemas & HL7 FHIR serializers
+│   ├── engine.py                    # Unified GenomicsEngine: VAE + Fusion + XGBoost + Conformal
+│   ├── fusion.py                    # Cross-attention gated multi-modal fusion network
+│   ├── knowledge_base.py            # CPIC Level A/B clinical practice rules
+│   └── synthetic_data.py            # Biological cohort generator (Hardy-Weinberg equilibrium)
+├── module2_careos/                  # MODULE 2: Ambient AI Scribe & 2nd-Pass Verifier
+│   ├── stage1_audio/                # Whisper on CUDA GPU & Pyannote diarization
+│   ├── stage2_correction/           # RxNorm phonetic drug name post-correction
+│   ├── stage3_clinical_nlp/         # Clinical NLP fact extraction & constrained SOAP drafting
+│   ├── stage4_verifier/             # Dual-tier 2nd-pass MedNLI verification engine
+│   ├── stage5_export/               # HL7 FHIR R4 bundle & bilingual patient summaries
+│   └── inter_module_bus/            # Low-latency in-process event bus & HTTP telemetry bridge
+├── src/                             # MODULE 1: Outpatient Queue & Wait-Time Predictor
+│   ├── api/main.py                  # FastAPI queue management & telemetry webhook server
+│   ├── features/
+│   │   ├── health_triage_engine.py  # GPU clinical health triage & dynamic queue position adjuster
+│   │   └── queue_feature_engine.py  # 16-group queue-mining feature engineering
+│   ├── models/train_pipeline.py     # Stage-1 duration & Stage-2 CQR wait-time regressors
+│   └── simulation/clinic_simpy_twin.py # Calibrated SimPy digital twin outpatient simulation
+├── tests/                           # 69 automated unit and integration tests
+│   ├── test_health_triage.py        # GPU triage & queue adjustment unit tests
+│   ├── test_three_modules_integration.py # End-to-end 3-module integration tests
+│   ├── test_pipeline.py             # Module 2 pipeline tests
+│   └── test_genomics_engine.py      # Module 3 ML engine tests
+├── integrated_dashboard.py          # Unified Catppuccin Mocha Streamlit Application (Modules 1+2+3)
+├── requirements.txt                 # Unified project dependencies
+└── README.md                        # Platform documentation
+```
+
+---
+
+## 📜 Compliance, Guidelines & Standards
+
+* **Clinical Guidelines**: CPIC Levels A & B, PharmGKB, Dutch Pharmacogenetics Working Group (DPWG).
+* **Interoperability**: HL7 FHIR Release 4 (JSON representation with `DetectedIssue` and `Observation` extensions).
+* **Regulatory Stance**: Clinical Decision Support Software per FDA Guidance Section 520(o)(1)(E) and EU MDR Annex VIII Rule 11 (assistive, non-autonomous, full clinician audit trail).
+* **Design System**: Catppuccin Mocha Palette with ergonomic dark-mode visual hierarchy.
