@@ -190,6 +190,11 @@ class CPICKnowledgeBase:
                 MetabolizerPhenotype.ULTRARAPID: "Standard monitoring. Watch for excessive bleeding.",
             },
             source_url="https://cpicpgx.org/guidelines/guideline-for-clopidogrel-and-cyp2c19/",
+            drug_interactions=[
+                {"drug": "omeprazole", "effect": "CYP2C19 inhibitor: Omeprazole significantly reduces clopidogrel active metabolite AUC by ~45%, increasing major adverse cardiac event / stent thrombosis risk. Use pantoprazole instead.", "severity": "high"},
+                {"drug": "esomeprazole", "effect": "CYP2C19 inhibitor: Reduces clopidogrel activation. Use pantoprazole if PPI therapy is indicated.", "severity": "high"},
+                {"drug": "fluconazole", "effect": "Potent CYP2C19 inhibition decreases clopidogrel antiplatelet effect.", "severity": "high"},
+            ],
         ))
 
         # ── CYP2D6 + Codeine ────────────────────────────────────────────
@@ -197,7 +202,7 @@ class CPICKnowledgeBase:
             rule_id="CPIC-CODEINE-CYP2D6",
             gene_name="CYP2D6",
             variant_ids=frozenset({"rs3892097", "rs5030655", "rs1065852", "rs16947"}),
-            drug_names=frozenset({"codeine", "codeine phosphate", "co-codamol", "tylenol 3"}),
+            drug_names=frozenset({"codeine", "codeine phosphate", "co-codamol", "tylenol 3", "tramadol", "ultram"}),
             diagnosis_codes=frozenset({
                 "R05", "R05.9",        # Cough
                 "M54.5",              # Low back pain
@@ -246,7 +251,7 @@ class CPICKnowledgeBase:
             rule_id="CPIC-SIMVASTATIN-SLCO1B1",
             gene_name="SLCO1B1",
             variant_ids=frozenset({"rs4149056"}),
-            drug_names=frozenset({"simvastatin", "zocor", "vytorin"}),
+            drug_names=frozenset({"simvastatin", "zocor", "vytorin", "atorvastatin", "lipitor", "rosuvastatin", "crestor"}),
             diagnosis_codes=frozenset({
                 "E78.0", "E78.00", "E78.01",  # Hypercholesterolemia
                 "E78.5",                        # Dyslipidemia
@@ -384,6 +389,10 @@ class CPICKnowledgeBase:
                 MetabolizerPhenotype.POOR: "Enhanced acid suppression expected. Monitor for PPI side effects with long-term use (hypomagnesemia, bone density, C. difficile risk). May tolerate lower doses.",
             },
             source_url="https://cpicpgx.org/guidelines/guideline-for-proton-pump-inhibitors-and-cyp2c19/",
+            drug_interactions=[
+                {"drug": "clopidogrel", "effect": "CYP2C19 competitive inhibition: Omeprazole significantly reduces antiplatelet activation of clopidogrel. Consider pantoprazole or rabeprazole.", "severity": "high"},
+                {"drug": "plavix", "effect": "CYP2C19 competitive inhibition: Omeprazole reduces Plavix antiplatelet efficacy.", "severity": "high"},
+            ],
         ))
 
         # ── TPMT/NUDT15 + Thiopurines ───────────────────────────────────

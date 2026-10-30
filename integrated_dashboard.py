@@ -380,6 +380,12 @@ def init_session_state():
     if "telemetry_events" not in st.session_state:
         st.session_state.telemetry_events = []
 
+    if "pgx_scenario" not in st.session_state:
+        st.session_state.pgx_scenario = None
+
+    if "m3_last_alerts" not in st.session_state:
+        st.session_state.m3_last_alerts = None
+
 
 # ═══════════════════════════════════════════════════════════════════════════
 # Sidebar Navigation & Global Config
@@ -445,6 +451,8 @@ def render_sidebar():
             st.session_state.clinic_queue = []
             st.session_state.latest_triage_result = None
             st.session_state.last_encounter_results = None
+            st.session_state.m3_last_alerts = None
+            st.session_state.pgx_scenario = None
             st.rerun()
 
         return {
@@ -923,103 +931,335 @@ def render_genomics_tab(config: dict):
         TriggerPayload, ClinicalFeatures, PatientGenomicProfile,
     )
 
-    t_col1, t_col2 = st.columns([1.5, 1])
-    with t_col1:
-        drug_name = st.selectbox(
-            "Target Pharmacogenomic Drug (CPIC Level A)",
-            ["clopidogrel", "warfarin", "omeprazole", "simvastatin", "codeine", "atorvastatin", "pantoprazole"]
-        )
-        diag_code = st.selectbox(
-            "Indication / ICD-10 Code",
-            ["I21.0 (Acute transmural MI)", "I48.0 (Atrial fibrillation)", "K21.0 (GERD)", "E78.0 (Hypercholesterolemia)", "M54.5 (Chronic pain)"]
-        )
-    with t_col2:
-        st.markdown(f"**Patient Phenotype:** `{config['snp_preset']}`")
-        st.markdown(f"- Age: `{config['age']}` | Sex: `{config['sex']}` | Weight: `{config['weight']} kg`")
-        st.markdown(f"- Renal CrCl: `{config['creatinine']} mL/min` | Baseline INR: `{config['inr']}`")
+    # ── Section 1: Preloaded Clinical Scenarios (from Module 1 & Module 2) ──
+    st.markdown("#### 🎯 Clinical Test Scenarios (from Module 1 & Module 2)")
+    st.caption("Select a scenario to test genomic decision support on the actual diseases and medications from the clinical encounter:")
 
-    if st.button("⚡ Run Module 3 Genomics ML Engine", type="primary", use_container_width=True):
+    sc_col1, sc_col2, sc_col3, sc_col4, sc_col5 = st.columns(5)
+    
+    if sc_col1.button("🩺 GERD / PUD\n(Omeprazole • M2)", use_container_width=True):
+        st.session_state.pgx_scenario = {
+            "patient_id": "PT-M2-GERD-01",
+            "drug_name": "omeprazole",
+            "diag_code": "K21.0 (Gastroesophageal reflux disease / PUD)",
+            "concurrent_meds": ["clopidogrel", "ibuprofen"],
+            "age": 45, "sex": "M", "weight": 78.0,
+            "creatinine": 85.0, "alt": 28.0, "ast": 24.0, "inr": 1.1,
+            "snp_preset": "CYP2C19 Intermediate Metabolizer (*1/*2)",
+        }
+        st.session_state.m3_last_alerts = None
+    if sc_col2.button("🚨 ACS / STEMI\n(Clopidogrel • M1)", use_container_width=True):
+        st.session_state.pgx_scenario = {
+            "patient_id": "PT-M1-KAPOOR",
+            "drug_name": "clopidogrel",
+            "diag_code": "I21.0 (Acute transmural MI / ACS)",
+            "concurrent_meds": ["omeprazole", "aspirin", "atorvastatin"],
+            "age": 59, "sex": "M", "weight": 82.0,
+            "creatinine": 78.0, "alt": 32.0, "ast": 29.0, "inr": 1.05,
+            "snp_preset": "CYP2C19 Intermediate Metabolizer (*1/*2)",
+        }
+        st.session_state.m3_last_alerts = None
+    if sc_col3.button("⚡ Stroke / AFib\n(Warfarin • M1)", use_container_width=True):
+        st.session_state.pgx_scenario = {
+            "patient_id": "PT-M1-VERMA",
+            "drug_name": "warfarin",
+            "diag_code": "I48.0 (Paroxysmal atrial fibrillation)",
+            "concurrent_meds": ["amiodarone", "metoprolol"],
+            "age": 67, "sex": "M", "weight": 74.0,
+            "creatinine": 65.0, "alt": 26.0, "ast": 22.0, "inr": 1.8,
+            "snp_preset": "CYP2C9 Poor Metabolizer (*3/*3)",
+        }
+        st.session_state.m3_last_alerts = None
+    if sc_col4.button("🩸 Hypercholesterol\n(Atorvastatin • M1/M2)", use_container_width=True):
+        st.session_state.pgx_scenario = {
+            "patient_id": "PT-M1-STATIN-01",
+            "drug_name": "atorvastatin",
+            "diag_code": "E78.0 (Pure hypercholesterolemia)",
+            "concurrent_meds": ["clopidogrel", "metoprolol"],
+            "age": 62, "sex": "M", "weight": 80.0,
+            "creatinine": 82.0, "alt": 35.0, "ast": 30.0, "inr": 1.1,
+            "snp_preset": "SLCO1B1 Decreased Function (*5 Carrier)",
+        }
+        st.session_state.m3_last_alerts = None
+    if sc_col5.button("💊 Acute Pain\n(Codeine • M1)", use_container_width=True):
+        st.session_state.pgx_scenario = {
+            "patient_id": "PT-M1-PAIN-01",
+            "drug_name": "codeine",
+            "diag_code": "M54.5 (Chronic pain / Acute trauma)",
+            "concurrent_meds": ["acetaminophen"],
+            "age": 34, "sex": "F", "weight": 60.0,
+            "creatinine": 95.0, "alt": 20.0, "ast": 18.0, "inr": 1.0,
+            "snp_preset": "CYP2D6 Ultra-Rapid Metabolizer (*1xN)",
+        }
+        st.session_state.m3_last_alerts = None
+
+    # Retrieve current active scenario or default to Omeprazole (Module 2 encounter)
+    active_sc = getattr(st.session_state, "pgx_scenario", None)
+    if active_sc is None:
+        active_sc = {
+            "patient_id": "PT-M2-GERD-01",
+            "drug_name": "omeprazole",
+            "diag_code": "K21.0 (Gastroesophageal reflux disease / PUD)",
+            "concurrent_meds": ["clopidogrel", "ibuprofen"],
+            "age": config.get("age", 45),
+            "sex": config.get("sex", "M"),
+            "weight": config.get("weight", 78.0),
+            "creatinine": config.get("creatinine", 85.0),
+            "alt": config.get("alt", 28.0),
+            "ast": config.get("ast", 24.0),
+            "inr": config.get("inr", 1.1),
+            "snp_preset": "CYP2C19 Intermediate Metabolizer (*1/*2)",
+        }
+        st.session_state.pgx_scenario = active_sc
+
+    with st.expander("⚙️ Pharmacogenomic Trigger & Patient Covariates", expanded=True):
+        f_col1, f_col2 = st.columns([1.4, 1])
+        with f_col1:
+            all_drugs = ["omeprazole", "clopidogrel", "warfarin", "atorvastatin", "simvastatin", "codeine", "pantoprazole", "tramadol"]
+            cur_drug = active_sc.get("drug_name", "omeprazole")
+            drug_idx = all_drugs.index(cur_drug) if cur_drug in all_drugs else 0
+            drug_name = st.selectbox(
+                "Target Pharmacogenomic Drug (CPIC Level A)",
+                all_drugs,
+                index=drug_idx,
+            )
+
+            all_indications = [
+                "K21.0 (Gastroesophageal reflux disease / PUD)",
+                "I21.0 (Acute transmural MI / ACS)",
+                "I48.0 (Paroxysmal atrial fibrillation)",
+                "E78.0 (Pure hypercholesterolemia)",
+                "M54.5 (Chronic pain / Acute trauma)",
+            ]
+            cur_diag = active_sc.get("diag_code", all_indications[0])
+            diag_idx = all_indications.index(cur_diag) if cur_diag in all_indications else 0
+            diag_code = st.selectbox(
+                "Indication / ICD-10 Code",
+                all_indications,
+                index=diag_idx,
+            )
+
+            all_concurrent = ["clopidogrel", "omeprazole", "aspirin", "atorvastatin", "amiodarone", "metoprolol", "ibuprofen", "fluconazole", "acetaminophen"]
+            valid_defaults = [m for m in active_sc.get("concurrent_meds", []) if m in all_concurrent]
+            concurrent_meds = st.multiselect(
+                "Concurrent Medications (Evaluates Drug-Drug-Gene Interactions)",
+                all_concurrent,
+                default=valid_defaults,
+            )
+
+        with f_col2:
+            patient_id = st.text_input("Patient ID", value=active_sc.get("patient_id", "PGX-DEMO-001"))
+            all_presets = [
+                "CYP2C19 Intermediate Metabolizer (*1/*2)",
+                "CYP2C19 Poor Metabolizer (*2/*2)",
+                "CYP2D6 Ultra-Rapid Metabolizer (*1xN)",
+                "CYP2C9 Poor Metabolizer (*3/*3)",
+                "SLCO1B1 Decreased Function (*5 Carrier)",
+                "Normal / Extensive Metabolizer (*1/*1)",
+            ]
+            cur_preset = active_sc.get("snp_preset", all_presets[0])
+            preset_idx = all_presets.index(cur_preset) if cur_preset in all_presets else 0
+            snp_preset = st.selectbox(
+                "Genomic Phenotype Preset",
+                all_presets,
+                index=preset_idx,
+            )
+
+            c_sub1, c_sub2, c_sub3 = st.columns(3)
+            with c_sub1:
+                p_age = st.number_input("Age", 18, 100, int(active_sc.get("age", 45)))
+            with c_sub2:
+                p_sex = st.selectbox("Sex", ["M", "F"], index=0 if active_sc.get("sex", "M") == "M" else 1)
+            with c_sub3:
+                p_weight = st.number_input("Weight (kg)", 35.0, 180.0, float(active_sc.get("weight", 78.0)))
+
+            c_sub4, c_sub5 = st.columns(2)
+            with c_sub4:
+                p_crcl = st.number_input("CrCl (mL/min)", 10.0, 160.0, float(active_sc.get("creatinine", 85.0)))
+            with c_sub5:
+                p_inr = st.number_input("INR", 0.8, 5.0, float(active_sc.get("inr", 1.1)))
+
+    run_clicked = st.button("⚡ Run Module 3 Genomics ML Engine", type="primary", use_container_width=True)
+
+    # Execute engine if run button is clicked or if alerts not yet generated
+    if run_clicked or ("m3_last_alerts" not in st.session_state or st.session_state.m3_last_alerts is None):
         engine = get_module3_engine()
 
+        # Build full SNP profile dictionary
+        snp_dict = {col: 0 for col in getattr(engine, "_snp_columns", [])}
+        for bg_idx in range(200):
+            snp_dict[f"rs_bg_{bg_idx:04d}"] = 0
+
+        # Inject preset variants
+        if "CYP2C19 Intermediate" in snp_preset:
+            snp_dict["rs4244285"] = 1 # CYP2C19*2
+            snp_dict["rs4986893"] = 0
+            snp_dict["rs12248560"] = 0
+        elif "CYP2C19 Poor" in snp_preset:
+            snp_dict["rs4244285"] = 2 # CYP2C19*2 homozygous
+            snp_dict["rs4986893"] = 1
+        elif "CYP2D6 Ultra-Rapid" in snp_preset:
+            snp_dict["rs3892097"] = 0
+            snp_dict["rs1065852"] = 2 # *10 duplicate / increased function
+        elif "CYP2C9 Poor" in snp_preset:
+            snp_dict["rs1799853"] = 1 # CYP2C9*2
+            snp_dict["rs1057910"] = 2 # CYP2C9*3
+            snp_dict["rs9923231"] = 2 # VKORC1 -1639G>A homozygous
+        elif "SLCO1B1" in snp_preset:
+            snp_dict["rs4149056"] = 1 # SLCO1B1 521T>C heterozygous
+        else: # Normal
+            for k in ["rs4244285", "rs4986893", "rs12248560", "rs3892097", "rs1799853", "rs1057910", "rs9923231", "rs4149056"]:
+                snp_dict[k] = 0
+
+        profile = PatientGenomicProfile(
+            snp_profile=snp_dict,
+            gene_expression={
+                "CYP2C9": 7.2, "CYP2C19": 6.8, "CYP2D6": 7.5, "VKORC1": 8.1, "SLCO1B1": 7.9
+            }
+        )
+
+        clinical_features = ClinicalFeatures(
+            age=int(p_age),
+            sex=p_sex,
+            weight_kg=float(p_weight),
+            creatinine_clearance=float(p_crcl),
+            alt=float(active_sc.get("alt", 28.0)),
+            ast=float(active_sc.get("ast", 24.0)),
+            inr=float(p_inr),
+            concurrent_medications=concurrent_meds,
+        )
+
         trigger = TriggerPayload(
-            patient_id=config["patient_id"],
+            patient_id=patient_id,
             diagnosis_codes=[diag_code.split()[0]],
             medication_names=[drug_name],
             prescribing_physician="CAREOS-CLINICIAN",
         )
 
-        clinical_features = ClinicalFeatures(
-            age=config["age"], sex=config["sex"], weight_kg=config["weight"],
-            creatinine_clearance=config["creatinine"], alt=config["alt"],
-            ast=config["ast"], inr=config["inr"],
-        )
-
-        # Generate representative SNP dosages based on preset
-        snp_dict = {f"snp_{i:03d}": 0 for i in range(230)}
-        if "Intermediate" in config["snp_preset"] or "CYP2C19" in config["snp_preset"]:
-            snp_dict["rs4244285"] = 1 # CYP2C19*2
-            snp_dict["rs4986893"] = 0
-        elif "Ultra-Rapid" in config["snp_preset"] or "CYP2D6" in config["snp_preset"]:
-            snp_dict["rs3892097"] = 0
-            snp_dict["rs1065852"] = 2
-        elif "CYP2C9" in config["snp_preset"] or "Poor" in config["snp_preset"]:
-            snp_dict["rs1799853"] = 1 # CYP2C9*2
-            snp_dict["rs1057910"] = 1 # CYP2C9*3
-            snp_dict["rs9923231"] = 2 # VKORC1
-
-        profile = PatientGenomicProfile(
-            patient_id=config["patient_id"],
-            snp_dosages=snp_dict,
-        )
-
-        with st.spinner("Executing VAE Epistasis Reduction + XGBoost Response Classification..."):
-            alert = engine.process_trigger(
+        with st.spinner("Executing Attention-VAE Epistasis Compression + XGBoost Response Classification..."):
+            alerts = engine.process_trigger(
                 trigger=trigger,
-                clinical_features=clinical_features,
                 genomic_profile=profile,
+                clinical=clinical_features,
             )
+            st.session_state.m3_last_alerts = alerts
 
-        if alert is None:
-            st.info(f"No CPIC pharmacogenomic rules matched for `{drug_name}` with this profile.")
+    # Render results
+    alerts = st.session_state.get("m3_last_alerts", [])
+    if not alerts:
+        st.info(f"ℹ️ No CPIC pharmacogenomic rules matched for `{drug_name}` with this profile. Select one of the presets above.")
+    else:
+        for alert in alerts:
+            _render_pgx_alert_card(alert)
+
+
+def _render_pgx_alert_card(alert):
+    """Render a comprehensive Catppuccin-themed Pharmacogenomic Alert card."""
+    sev = alert.severity.value.lower()
+    sev_class = "alert-critical" if "critical" in sev else ("alert-high" if "high" in sev else ("alert-moderate" if "moderate" in sev else "alert-info"))
+    sev_emoji = {"critical": "🔴", "high": "🟠", "moderate": "🟡", "informational": "🔵"}.get(sev, "🔵")
+
+    primary_gene = alert.detected_variants[0].gene if alert.detected_variants else "Target Gene"
+
+    st.markdown(f"""
+    <div class="{sev_class}" style="margin-top: 1rem; border-radius: 8px; padding: 14px 18px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <b style="font-size: 1.18rem;">{sev_emoji} Pharmacogenomic Alert — {sev.upper()} [{primary_gene}]</b>
+            <span style="font-size: 0.8rem; opacity: 0.85;">Alert ID: <code>{alert.alert_id[:8]}...</code> | Patient: <b>{alert.patient_id}</b></span>
+        </div>
+        <div style="margin: 8px 0; font-size: 0.95rem;">
+            <b>Indication:</b> {', '.join(alert.matched_diagnosis_codes)} &nbsp;|&nbsp; 
+            <b>Medication:</b> <span style="text-transform: capitalize; font-weight: 700;">{', '.join(alert.matched_medication_names)}</span> &nbsp;|&nbsp;
+            <b>Metabolizer:</b> {alert.metabolizer_phenotype.value.replace('_', ' ').title()}
+        </div>
+        <div style="font-size: 0.92rem; line-height: 1.45; margin-top: 4px;">{alert.cpic_guidance.recommendation_text}</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 3-Column Metrics: Genomic Findings, Prediction, Dose Estimate
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("#### 🧬 Genomic Findings")
+        for v in alert.detected_variants:
+            v_dip = f" ({v.star_allele_diplotype})" if v.star_allele_diplotype else ""
+            st.markdown(f"- **{v.gene}** (`{v.variant_id}`): `{v.copies_of_variant}` copies{v_dip}")
+        st.markdown(f"- **Phenotype:** `{alert.metabolizer_phenotype.value.replace('_', ' ').title()}`")
+        st.markdown(f"- **Risk Level:** `{alert.risk_level.value.upper()}`")
+
+    with col2:
+        st.markdown("#### 📊 ML Predicted Response")
+        pred = alert.drug_response_prediction
+        pred_cat = pred.predicted_category.value
+        st.metric("Predicted Response", pred_cat.replace('_', ' ').upper(), f"Confidence: {pred.confidence:.1%}")
+        for cat, prob in pred.probabilities.items():
+            color = CATPPUCCIN['green'] if cat == "responder" else (
+                CATPPUCCIN['red'] if cat == "adverse_event_risk" else CATPPUCCIN['yellow']
+            )
+            st.markdown(f"<span style='color: {color}; font-size: 0.85rem;'>● {cat.replace('_', ' ').title()}: <b>{prob:.1%}</b></span>", unsafe_allow_html=True)
+
+    with col3:
+        st.markdown("#### 💊 Precision Dose Estimate")
+        if alert.dose_estimate:
+            de = alert.dose_estimate
+            st.metric("Suggested Daily Dose", f"{de.predicted_dose:.1f} {de.unit}")
+            st.metric("Conformal 90% Bound", f"[{de.confidence_interval_lower:.1f} - {de.confidence_interval_upper:.1f}] {de.unit}")
+            st.caption(f"Status: {de.status.replace('_', ' ').title()}")
         else:
-            sev_class = "alert-critical" if alert.severity == "CRITICAL" else ("alert-high" if alert.severity == "HIGH" else "alert-moderate")
+            st.info("Standard CPIC dosing titration applies.")
 
-            st.markdown(f"""
-            <div class="{sev_class}" style="margin-top: 1rem;">
-                <b style="font-size: 1.15rem;">⚕️ {alert.title} [{alert.severity}]</b>
-                <div style="margin: 6px 0;">{alert.clinical_action}</div>
-                <div style="font-size: 0.85rem;">
-                    <b>Gene:</b> {alert.gene} | <b>Phenotype:</b> {alert.phenotype or 'Variant Carrier'} |
-                    <b>Level:</b> {alert.guideline_source}
+    # Expanders: CPIC Guidelines, Drug Interactions, TreeSHAP, Clinical Actions, SOAP Appendix, Raw JSON
+    with st.expander("📚 CPIC Guideline Evidence & Monitoring Advice", expanded=True):
+        source_link = f'<p style="font-size: 0.8rem; margin: 4px 0;"><a href="{alert.cpic_guidance.source_url}" target="_blank" style="color: {CATPPUCCIN["mauve"]};">🔗 View CPIC Guideline Documentation</a></p>' if alert.cpic_guidance.source_url else ''
+        st.markdown(f"""
+        <div style="background-color: {CATPPUCCIN['surface0']}; padding: 14px; border-radius: 8px;">
+            <p><strong>Guideline ID:</strong> {alert.cpic_guidance.guideline_id or 'CPIC Standard'} &nbsp;|&nbsp; <strong>Evidence Level:</strong> {alert.cpic_guidance.evidence_level or 'Level A (Strong)'}</p>
+            <p style="margin: 8px 0;"><strong>Clinical Recommendation:</strong><br>{alert.cpic_guidance.recommendation_text}</p>
+            <p style="margin: 8px 0; color: {CATPPUCCIN['yellow']};"><strong>Genotype-Specific Monitoring:</strong><br>{alert.cpic_guidance.monitoring_advice}</p>
+            {source_link}
+        </div>
+        """, unsafe_allow_html=True)
+
+    if alert.drug_interaction_warnings:
+        with st.expander(f"⚠️ Drug-Drug-Gene Interaction Warnings ({len(alert.drug_interaction_warnings)})", expanded=True):
+            for w in alert.drug_interaction_warnings:
+                st.markdown(f"""
+                <div style="background-color: rgba(243,139,168,0.12); border-left: 4px solid {CATPPUCCIN['red']};
+                            padding: 10px 14px; margin: 6px 0; border-radius: 0 8px 8px 0;">
+                    <b style="color: {CATPPUCCIN['red']}; font-size: 1rem;">⚠️ Interacting Agent: {w.interacting_entity.upper()} [{w.severity.value.upper()}]</b><br>
+                    <div style="color: {CATPPUCCIN['text']}; font-size: 0.9rem; margin-top: 3px;">{w.description}</div>
                 </div>
-            </div>
-            """, unsafe_allow_html=True)
+                """, unsafe_allow_html=True)
 
-            # ML Predictions (Dose + Response + Conformal Interval)
-            col_a, col_b, col_c = st.columns(3)
-            with col_a:
-                resp_cat = alert.predicted_response or "responder"
-                st.metric("Predicted Response", resp_cat.upper(), f"Confidence: {alert.response_probability:.1%}")
-            with col_b:
-                if alert.suggested_dose is not None:
-                    st.metric("Suggested Daily Dose", f"{alert.suggested_dose:.1f} mg/day")
-            with col_c:
-                if alert.dose_prediction_interval:
-                    lo, hi = alert.dose_prediction_interval
-                    st.metric("Conformal 90% Bound", f"[{lo:.1f} - {hi:.1f}] mg/day")
-
-            # SHAP Attribution Graph
-            if alert.feature_attributions:
-                st.markdown("#### 🔬 TreeSHAP Top-10 Biomarker Feature Attributions")
+    if alert.explainability and alert.explainability.top_features:
+        with st.expander("🔬 TreeSHAP Top Biomarker & Covariate Feature Attributions", expanded=True):
+            st.markdown(f"*{alert.explainability.explanation_text}*")
+            shap_dict = {f.feature_name: f.shap_value for f in alert.explainability.top_features[:10]}
+            if shap_dict:
                 df_shap = pd.DataFrame(
-                    list(alert.feature_attributions.items()),
+                    list(shap_dict.items()),
                     columns=["Biomarker / Covariate", "Attribution Weight"]
                 ).sort_values("Attribution Weight", ascending=True)
                 st.bar_chart(df_shap.set_index("Biomarker / Covariate"), color=CATPPUCCIN["mauve"])
 
-            # Formatted SOAP Note Appendix
-            st.markdown("#### 📋 Generated SOAP Appendix Text")
-            st.code(alert.to_soap_appendix(), language="markdown")
+    if alert.clinical_action_items:
+        with st.expander("📋 Physician Recommended Action Checklist", expanded=False):
+            for idx, item in enumerate(alert.clinical_action_items, 1):
+                st.markdown(f"**{idx}.** {item}")
+
+    with st.expander("📄 Formatted SOAP Note Appendix (Clinician Decision Support)", expanded=False):
+        st.code(alert.to_soap_appendix(), language="markdown")
+
+    with st.expander("🔧 Raw JSON Pharmacogenomic Alert (EHR Integration / Audit)", expanded=False):
+        st.json(json.loads(alert.model_dump_json()))
+
+    st.markdown(f"""
+    <div style="background-color: {CATPPUCCIN['surface0']}; border: 1px solid {CATPPUCCIN['surface2']};
+                border-radius: 8px; padding: 10px; text-align: center; margin-top: 14px;">
+        <span style="font-size: 0.8rem; color: {CATPPUCCIN['overlay1']};">
+            {alert.safety_notice}
+        </span>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 # ═══════════════════════════════════════════════════════════════════════════
